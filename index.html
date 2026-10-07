@@ -1,0 +1,1118 @@
+<title>Assumption Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  /* Layout: one reading column on warm paper; bold Fraunces display against quiet IBM Plex body/mono.
+     Soft surfaces and gentle shadow instead of hard rules; status carried by muted tinted pills. */
+  :root {
+    --paper: #f4f2ed;
+    --surface: #fffdf9;
+    --surface-sunk: #efede6;
+    --ink: #20222a;
+    --ink-soft: #595f6b;
+    --line: #e4e1d8;
+    --line-strong: #d7d3c8;
+    --accent: #2a4a9c;
+    --accent-soft: #e9eef8;
+    --verified: #1f7a5e;
+    --verified-soft: #e4f1ec;
+    --caution: #a6641a;
+    --caution-soft: #f4eadd;
+    --unread: #636975;
+    --unread-soft: #ebe9e3;
+    --shadow: 0 1px 2px rgba(28,28,30,.04), 0 6px 20px rgba(28,28,30,.05);
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #15161a;
+      --surface: #1d1f25;
+      --surface-sunk: #191b20;
+      --ink: #e9e7e1;
+      --ink-soft: #a3a7b1;
+      --line: #2b2e35;
+      --line-strong: #363a42;
+      --accent: #85a6ec;
+      --accent-soft: #1b2540;
+      --verified: #5cc3a3;
+      --verified-soft: #16271f;
+      --caution: #e0a35c;
+      --caution-soft: #2c2114;
+      --unread: #8b919c;
+      --unread-soft: #23252b;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #15161a;
+    --surface: #1d1f25;
+    --surface-sunk: #191b20;
+    --ink: #e9e7e1;
+    --ink-soft: #a3a7b1;
+    --line: #2b2e35;
+    --line-strong: #363a42;
+    --accent: #85a6ec;
+    --accent-soft: #1b2540;
+    --verified: #5cc3a3;
+    --verified-soft: #16271f;
+    --caution: #e0a35c;
+    --caution-soft: #2c2114;
+    --unread: #8b919c;
+    --unread-soft: #23252b;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); line-height: 1.62; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  .mono { font-family: var(--font-mono); }
+
+  /* ---- top bar ---- */
+  .bar {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+    backdrop-filter: saturate(1.3) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-inner { max-width: 54rem; margin: 0 auto; padding: 0.85rem 20px; display: flex; align-items: center; gap: 1rem; }
+  .wordmark { display: flex; align-items: baseline; gap: 0.55rem; background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink); }
+  .wordmark b { font-family: var(--font-display); font-weight: 900; font-size: 1.12rem; letter-spacing: -0.01em; }
+  .wordmark span { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+  .bar-spacer { flex: 1; }
+  .ghost-btn { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); background: none; border: 1px solid var(--line-strong); border-radius: 999px; padding: 0.35rem 0.75rem; cursor: pointer; }
+  .ghost-btn:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+  .wrap { max-width: 54rem; margin: 0 auto; padding-inline: 20px; padding-block: 0 5rem; }
+
+  /* ---- hero ---- */
+  .hero { padding-block: 3.4rem 2rem; }
+  .kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .hero h1 { font-size: clamp(2.3rem, 7vw, 3.9rem); font-weight: 900; letter-spacing: -0.02em; }
+  .hero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
+  .hero .lede { font-size: clamp(1.08rem, 2.4vw, 1.3rem); color: var(--ink-soft); max-width: 40ch; margin-top: 1.2rem; }
+
+  /* ---- front doors ---- */
+  .doors { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.4rem; }
+  .door { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem 1.4rem 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 0.7rem; min-width: 0; }
+  .door h3 { font-size: 1.28rem; font-weight: 600; }
+  .door p { font-size: 0.93rem; color: var(--ink-soft); }
+  .door form { display: flex; gap: 0.5rem; margin-top: auto; }
+  .door .row { display: flex; gap: 0.5rem; margin-top: auto; flex-wrap: wrap; }
+  input[type=search] { flex: 1; min-width: 0; font-family: var(--font-body); font-size: 0.95rem; color: var(--ink); background: var(--surface-sunk); border: 1px solid var(--line-strong); border-radius: 9px; padding: 0.6rem 0.75rem; }
+  input[type=search]::placeholder { color: var(--ink-soft); }
+  .btn { font-family: var(--font-body); font-weight: 600; font-size: 0.92rem; color: #fff; background: var(--accent); border: 0; border-radius: 9px; padding: 0.6rem 1rem; cursor: pointer; white-space: nowrap; }
+  :root[data-theme="dark"] .btn:not(.alt), :root:not([data-theme="light"]) .btn:not(.alt) { color: #0f1320; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .btn:not(.alt) { color: #fff; } }
+  .btn:hover { filter: brightness(1.06); }
+  .btn.alt { background: var(--accent-soft); color: var(--accent); }
+
+  /* ---- registry list ---- */
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 3.4rem 0 1.1rem; }
+  .sec-head h2 { font-size: 1.5rem; }
+  .sec-head .count { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-soft); letter-spacing: 0.04em; }
+  .list { display: grid; gap: 0.85rem; }
+  .entry-card { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem 1.3rem; box-shadow: var(--shadow); cursor: pointer; display: grid; gap: 0.6rem; min-width: 0; }
+  .entry-card:hover { border-color: var(--line-strong); transform: translateY(-1px); transition: transform .15s ease, border-color .15s ease; }
+  .entry-card .top { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .entry-card h3 { font-size: 1.22rem; font-weight: 600; }
+  .entry-card .claim-line { font-size: 1rem; color: var(--ink); }
+  .entry-card .sub { font-size: 0.86rem; color: var(--ink-soft); }
+  .tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.5rem; border-radius: 999px; background: var(--surface-sunk); color: var(--ink-soft); border: 1px solid var(--line); }
+  .tag.domain { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+  .empty { color: var(--ink-soft); font-size: 0.95rem; padding: 1.5rem 0.2rem; }
+
+  /* ---- facets ---- */
+  .facets { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; margin-top: 1.8rem; }
+  .facets .flabel { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-right: 0.35rem; }
+  .facet { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.03em; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px; padding: 0.34rem 0.72rem; cursor: pointer; }
+  .facet:hover { color: var(--ink); border-color: var(--ink-soft); }
+  .facet.on { color: var(--accent); background: var(--accent-soft); border-color: transparent; font-weight: 500; }
+  .reg-search { display: flex; gap: 0.5rem; margin-top: 1.6rem; flex-wrap: wrap; }
+  .reg-search input[type=search] { flex: 1; min-width: 12rem; }
+  .flag { font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.18rem 0.48rem; border-radius: 999px; }
+  .flag.new { color: var(--verified); background: var(--verified-soft); }
+  .flag.upd { color: var(--accent); background: var(--accent-soft); }
+
+  /* ---- entry meta strip ---- */
+  .metastrip { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: 0 1.5rem; margin-top: 1.4rem; padding: 0.6rem 1.3rem; background: var(--surface-sunk); border: 1px solid var(--line); border-radius: 12px; }
+  .metastrip .m { display: grid; gap: 0.28rem; padding-block: 0.7rem; min-width: 0; }
+  .metastrip dt { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+  .metastrip dd { margin: 0; font-size: 0.93rem; color: var(--ink); display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+  .metastrip dd .sub2 { font-size: 0.8rem; color: var(--ink-soft); }
+  .strip-label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-top: 1.7rem; }
+
+  .navlink { font-family: var(--font-body); font-size: 0.86rem; color: var(--ink-soft); background: none; border: 0; cursor: pointer; padding: 0.35rem 0.4rem; }
+  .navlink:hover { color: var(--accent); }
+  .herolink { margin-top: 1.5rem; font-size: 0.95rem; color: var(--ink-soft); }
+  .herolink a { font-weight: 600; }
+
+  /* method vocab + wording guide */
+  .vocab { display: grid; gap: 0.6rem; margin-top: 0.9rem; }
+  .vrow { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+  .vrow .d { color: var(--ink-soft); font-size: 0.92rem; flex: 1; min-width: 14rem; }
+  .tablewrap { overflow-x: auto; margin-top: 0.9rem; }
+  .wtable { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 30rem; }
+  .wtable th, .wtable td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .wtable th { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-soft); font-weight: 500; }
+  .wtable td.avoid { color: var(--caution); }
+  .wtable td.use { color: var(--verified); }
+  .numlist { counter-reset: n; list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.9rem; }
+  .numlist li { counter-increment: n; display: grid; grid-template-columns: 1.9rem 1fr; gap: 0.8rem; min-width: 0; }
+  .numlist li::before { content: counter(n); font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); background: var(--accent-soft); border-radius: 7px; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; }
+  .numlist b { font-weight: 600; }
+  .numlist p { font-size: 0.92rem; color: var(--ink-soft); margin-top: 0.15rem; }
+  .selfcheck { background: var(--accent-soft); border-radius: 12px; padding: 1.1rem 1.25rem; margin-top: 1.2rem; font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); }
+  .callout { background: var(--accent-soft); border-left: 4px solid var(--accent); border-radius: 12px; padding: 1.3rem 1.4rem; margin-top: 2rem; display: grid; gap: 0.55rem; box-shadow: var(--shadow); }
+  .callout p { max-width: 62ch; }
+  .callout .big { font-family: var(--font-display); font-size: clamp(1.15rem, 3vw, 1.4rem); font-weight: 600; color: var(--ink); line-height: 1.25; }
+  .callout .sub { font-size: 0.95rem; color: var(--ink-soft); }
+  .taggloss { display: grid; gap: 0.65rem; margin-top: 0.4rem; }
+  .tg { display: flex; gap: 0.75rem; align-items: baseline; flex-wrap: wrap; }
+  .tg > span:last-child { color: var(--ink-soft); font-size: 0.92rem; flex: 1; min-width: 14rem; }
+  .taggloss .pill, .taggloss .pubtag { font-size: 0.76rem; padding: 0.32rem 0.64rem; }
+  .domaingrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.4rem; margin-top: 1rem; }
+  .domaingrid div { display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.5rem; font-size: 0.92rem; align-items: baseline; }
+  .domaingrid .n { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+  @media (max-width: 560px) { .domaingrid { grid-template-columns: 1fr; } }
+
+  /* map / night sky */
+  .sky { position: relative; margin-top: 1.6rem; border-radius: 16px; overflow: hidden; border: 1px solid #1c2440; box-shadow: var(--shadow); }
+  #skyCanvas { display: block; width: 100%; height: 420px; }
+  .sky-note { position: absolute; left: 12px; bottom: 10px; font-family: var(--font-mono); font-size: 0.67rem; letter-spacing: 0.04em; color: #9aa3c2; background: rgba(8,10,20,.55); padding: 0.22rem 0.55rem; border-radius: 6px; }
+  .skey { width: 14px; height: 14px; border-radius: 50%; background: var(--c); box-shadow: 0 0 10px 2px var(--c); flex: none; align-self: center; }
+  @media (max-width: 560px) { #skyCanvas { height: 340px; } }
+
+  /* about / brand */
+  .brandplaque { display: flex; align-items: center; gap: 1.3rem; background: linear-gradient(135deg, #0d0b14, #140a1e); border: 1px solid #2a1f3a; border-radius: 16px; padding: 1.4rem 1.6rem; margin-top: 1.6rem; box-shadow: var(--shadow); flex-wrap: wrap; }
+  .brandplaque img { width: 92px; height: 92px; flex: none; mix-blend-mode: screen; }
+  .brandplaque .bn { display: grid; gap: 0.22rem; min-width: 0; }
+  .brandplaque .bn b { font-family: var(--font-display); font-weight: 900; font-size: 1.45rem; color: #ece3f7; letter-spacing: -0.01em; }
+  .brandplaque .bn .sl { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b990e8; }
+  .brandplaque .bn .op { font-size: 0.86rem; color: #9b90b4; margin-top: 0.35rem; }
+  .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+  @media (max-width: 620px) { .values { grid-template-columns: 1fr; } }
+
+  /* ---- generic pills ---- */
+  .pill { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+  .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+  .pill.v { color: var(--verified); background: var(--verified-soft); }
+  .pill.c { color: var(--caution); background: var(--caution-soft); }
+  .pill.u { color: var(--unread); background: var(--unread-soft); }
+  .pill.a { color: var(--accent); background: var(--accent-soft); }
+  .pill.tier { font-family: var(--font-mono); color: var(--ink-soft); background: transparent; border: 1px solid var(--line-strong); }
+  .pill.tier::before { display: none; }
+  .pubtag { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--ink-soft); background: transparent; }
+  .pubtag.pre { color: var(--caution); border-color: var(--caution); background: var(--caution-soft); }
+  .fnone { color: var(--ink-soft); font-style: italic; }
+  .legend { background: var(--surface-sunk); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.25rem; margin-top: 1.1rem; font-size: 0.87rem; color: var(--ink-soft); display: grid; gap: 0.55rem; }
+  .legend div { max-width: 68ch; }
+  .legend b { color: var(--ink); font-weight: 600; }
+
+  /* ---- entry view ---- */
+  .back { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.05em; text-transform: uppercase; background: none; border: 0; color: var(--ink-soft); cursor: pointer; padding: 0; margin-top: 2.2rem; }
+  .back:hover { color: var(--accent); }
+  .entry-head { margin-top: 1rem; }
+  .entry-head .kicker { margin-bottom: 0.8rem; }
+  .entry-head h1 { font-size: clamp(2rem, 5.5vw, 3rem); font-weight: 900; letter-spacing: -0.015em; }
+  .entry-head .lede { font-size: clamp(1.02rem, 2.2vw, 1.18rem); color: var(--ink-soft); max-width: 54ch; margin-top: 0.9rem; }
+
+  .claimbox { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 1.2rem 1.35rem; margin-top: 2rem; box-shadow: var(--shadow); }
+  .claimbox .k { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.5rem; }
+  .claimbox p { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
+
+  .scoreboard { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+
+  h2.block { font-size: 1.45rem; margin: 3rem 0 0.4rem; }
+  .block-note { color: var(--ink-soft); font-size: 0.95rem; max-width: 60ch; margin-bottom: 1rem; }
+
+  .tiers { list-style: none; padding: 0; margin: 1.2rem 0 0; display: grid; gap: 0.5rem; }
+  .tiers li { display: grid; grid-template-columns: 2.7rem 1fr; gap: 0.8rem; align-items: baseline; font-size: 0.95rem; min-width: 0; }
+  .tiers .tk { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-soft); border: 1px solid var(--line-strong); border-radius: 6px; padding: 0.12rem 0; text-align: center; }
+  .tiers b { color: var(--ink); }
+  .tier-flag { margin-top: 1.1rem; font-size: 0.98rem; }
+  .tier-flag b { color: var(--accent); }
+
+  /* chain */
+  .chain { margin-top: 1.6rem; }
+  .node { position: relative; display: grid; grid-template-columns: 4rem 1fr; gap: 1.1rem; padding-bottom: 1.6rem; }
+  .node::before { content: ""; position: absolute; left: 1.32rem; top: 1.7rem; bottom: -0.2rem; width: 2px; background: var(--line-strong); }
+  .node:last-child::before { display: none; }
+  .yr { font-family: var(--font-mono); font-size: 0.92rem; font-weight: 500; color: var(--ink-soft); padding-top: 0.9rem; position: relative; }
+  .yr .dot { position: absolute; left: calc(1.32rem - 0.4rem - 4px); top: 1.05rem; width: 11px; height: 11px; border-radius: 50%; background: var(--surface); border: 2px solid var(--line-strong); }
+  .ncard { background: var(--surface); border: 1px solid var(--line); border-radius: 13px; padding: 1.1rem 1.2rem; box-shadow: var(--shadow); min-width: 0; }
+  .node.brk .ncard { border-color: var(--caution); border-left: 4px solid var(--caution); }
+  .node.brk .yr .dot { border-color: var(--caution); }
+  .node.load .ncard { border-left: 4px solid var(--unread); }
+  .ncard h3 { font-size: 1.08rem; font-weight: 600; margin-bottom: 0.55rem; }
+  .ncard .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.7rem; }
+  .cite { font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; color: var(--ink-soft); word-break: break-word; margin-bottom: 0.7rem; }
+  .quote { font-family: var(--font-display); font-style: italic; font-size: 1.02rem; line-height: 1.45; border-left: 2px solid var(--line-strong); padding-left: 0.85rem; margin-bottom: 0.7rem; }
+  .quote.none { font-style: normal; font-family: var(--font-body); font-size: 0.9rem; color: var(--ink-soft); border-left-color: var(--unread); }
+  .meta { display: grid; gap: 0.4rem; font-size: 0.88rem; }
+  .meta div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.6rem; min-width: 0; }
+  .meta dt { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); padding-top: 0.15rem; }
+  .meta dd { margin: 0; min-width: 0; }
+
+  .breakmark { grid-column: 1 / -1; display: flex; align-items: center; gap: 0.7rem; margin: 0.2rem 0 1.6rem; color: var(--caution); font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .breakmark::before, .breakmark::after { content: ""; height: 1px; background: var(--caution); opacity: 0.5; flex: 1; }
+
+  ol.mech { counter-reset: m; list-style: none; padding: 0; margin: 1.1rem 0 0; display: grid; gap: 1rem; }
+  ol.mech li { counter-increment: m; display: grid; grid-template-columns: 2rem 1fr; gap: 0.85rem; min-width: 0; }
+  ol.mech li::before { content: counter(m); font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); background: var(--accent-soft); border-radius: 7px; width: 1.9rem; height: 1.9rem; display: grid; place-items: center; }
+  ol.mech b { font-weight: 600; }
+  ol.mech p { font-size: 0.93rem; color: var(--ink-soft); margin-top: 0.15rem; }
+
+  .settle { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem 1.4rem; margin-top: 1.2rem; box-shadow: var(--shadow); display: grid; gap: 1rem; }
+  .settle .step { display: grid; gap: 0.2rem; }
+  .settle .step b { font-size: 1.02rem; }
+  .settle .step p { font-size: 0.92rem; color: var(--ink-soft); }
+  .settle .nums { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 0.7rem 0.85rem; line-height: 1.6; }
+
+  .note { background: var(--surface-sunk); border: 1px dashed var(--line-strong); border-radius: 12px; padding: 1.1rem 1.25rem; margin-top: 1.4rem; font-size: 0.9rem; color: var(--ink-soft); }
+  .note b { color: var(--ink); }
+  .note .k { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--caution); margin-bottom: 0.5rem; }
+
+  footer { margin-top: 3.5rem; padding-top: 1.3rem; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+  footer .mono { font-size: 0.74rem; }
+
+  @media (max-width: 620px) {
+    .doors { grid-template-columns: 1fr; }
+    .node { grid-template-columns: 1fr; gap: 0.3rem; }
+    .node::before { display: none; }
+    .yr { padding-top: 0; }
+    .yr .dot { display: none; }
+    .meta div { grid-template-columns: 1fr; gap: 0.1rem; }
+    .meta dt { padding-top: 0.25rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="bar">
+  <div class="bar-inner">
+    <button class="wordmark" id="homeLink" aria-label="Go to home">
+      <b>Assumption Check</b><span>Prototype</span>
+    </button>
+    <div class="bar-spacer"></div>
+    <button class="navlink" id="registryLink">Registry</button>
+    <button class="navlink" id="methodLink">Method</button>
+    <button class="navlink" id="mapLink">Map</button>
+    <button class="navlink" id="aboutLink">About</button>
+    <button class="ghost-btn" id="themeBtn" aria-label="Toggle light or dark theme">Theme</button>
+  </div>
+</div>
+
+<!-- ===================== HOME ===================== -->
+<main class="wrap" id="view-home">
+  <section class="hero">
+    <p class="kicker">Evidence, in the open</p>
+    <h1>What's been <em>tested</em>, and what would settle it.</h1>
+    <p class="lede">A record of scientific claims, the evidence under each one, and the exact test still needed before the claim is settled.</p>
+  </section>
+
+  <div class="callout">
+    <p class="big">Peer-reviewed / Verified — not the same as true.</p>
+    <p class="sub">Every tag tells you how far the checking has gone — not whether the claim is right. The badges are explained on each entry and on the Method page.</p>
+  </div>
+
+  <section class="doors">
+    <div class="door">
+      <h3>Check a claim</h3>
+      <p>Heard a claim and want to know where it really stands? Search the registry in plain language.</p>
+      <div class="row"><button class="btn" id="homeBrowse" type="button">Browse the registry →</button></div>
+    </div>
+    <div class="door">
+      <h3>Find open hypotheses</h3>
+      <p>A claim with no settled answer yet, and a specified test that would give one. For labs looking for the next move.</p>
+      <div class="row"><button class="btn alt" id="homeOpen" type="button">Show open hypotheses →</button></div>
+    </div>
+  </section>
+
+  <p class="herolink" style="margin-top:2.2rem">Every entry is scored the same way. <a href="#method">Read the Method →</a></p>
+</main>
+
+<!-- ===================== REGISTRY ===================== -->
+<main class="wrap" id="view-registry" hidden>
+  <section class="hero" style="padding-block:2.6rem 0.5rem">
+    <p class="kicker">The collection</p>
+    <h1 style="font-size:clamp(1.9rem,5.5vw,2.7rem)">Registry</h1>
+    <p class="lede" style="margin-top:0.8rem">Every claim on record, newest first. Search to narrow it, or open the filters to sort by badge.</p>
+  </section>
+
+  <form class="reg-search" id="searchForm">
+    <input type="search" id="searchInput" placeholder="Search claims, domains, keywords…" aria-label="Search the registry">
+    <button class="btn" type="submit">Search</button>
+    <button class="ghost-btn" id="filtersToggle" type="button">Filters</button>
+    <button class="ghost-btn" id="clearFilterBtn" type="button" hidden>Clear</button>
+  </form>
+
+  <div class="facets" id="facetBar" hidden></div>
+
+  <div class="sec-head">
+    <h2 id="listHeading">All entries</h2>
+    <span class="count" id="listCount"></span>
+  </div>
+  <div class="list" id="entryList"></div>
+</main>
+
+<!-- ===================== ENTRY 001 ===================== -->
+<main class="wrap" id="view-entry" hidden>
+  <button class="back" id="backLink">← Registry</button>
+
+  <header class="entry-head">
+    <p class="kicker">Entry 001 · Prions · Active trace</p>
+    <h1>The exosome prion chain</h1>
+    <p class="lede">One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests.</p>
+  </header>
+
+  <div class="claimbox">
+    <p class="k">The claim being traced</p>
+    <p>Prion-bearing extracellular vesicles transmit disease to animals.</p>
+  </div>
+
+  <dl class="metastrip">
+    <div class="m"><dt>Subject</dt><dd>Prions</dd></div>
+    <div class="m"><dt>Domain</dt><dd>Cognitive, Neuroscience &amp; Mind › Molecular Neuroscience › Prion disease</dd></div>
+    <div class="m"><dt>Cross-links</dt><dd>Life &amp; Biological (Cell Biology) · Medical &amp; Health (Neurology)</dd></div>
+    <div class="m"><dt>Lifecycle</dt><dd>Active <span class="sub2">cited in current work</span></dd></div>
+    <div class="m"><dt>Hypothesis</dt><dd><span class="pill v">Resolved — Supported</span></dd></div>
+    <div class="m"><dt>Peer review</dt><dd><span class="pill c">Unreviewed</span></dd></div>
+    <div class="m"><dt>Plain status</dt><dd>Supported by two independent intracerebral bioassays in PrP-overexpressing mice (Février 2004, Vella 2007); not shown for natural routes or normal-PrP animals</dd></div>
+    <div class="m"><dt>Contested</dt><dd>No</dd></div>
+    <div class="m"><dt>Rests on / cited by</dt><dd><span class="sub2">— none linked yet</span></dd></div>
+  </dl>
+
+  <p class="strip-label">Source verification — how well each quoted sentence is confirmed</p>
+  <div class="scoreboard">
+    <span class="pill v">8 of 8 verified at source</span>
+  </div>
+
+  <div class="callout">
+    <p class="big">Peer-reviewed / Verified — not the same as true.</p>
+    <p class="sub">The badges on this entry tell you how far the checking has gone — not whether the claim is right. Each tag is explained in full just below.</p>
+  </div>
+
+  <h2 class="block">Evidence tiers</h2>
+  <p class="block-note">Four different claims get substituted for one another in this literature. Keeping them apart is what makes the drift visible.</p>
+  <ul class="tiers">
+    <li><span class="tk">T1</span><span>The protein is <b>present in</b> a vesicle preparation.</span></li>
+    <li><span class="tk">T2</span><span>It <b>transfers between cultured cells</b>, with a readout in the recipient.</span></li>
+    <li><span class="tk">T3</span><span>It <b>seeds aggregation in an animal</b> after inoculation.</span></li>
+    <li><span class="tk">T4</span><span>It <b>transmits clinical disease to an animal</b>, with an attack rate.</span></li>
+  </ul>
+  <p class="tier-flag">The claim above is a <b>T4</b> claim. Février 2004 and Vella 2007 both report <b>T4</b> results (intracerebral bioassays, different groups and strains); the other readable papers report <b>T1 or T2</b> work.</p>
+
+  <h2 class="block">The chain</h2>
+  <p class="block-note">Verification reflects checks on 6 October 2026: all eight nodes confirmed against the publishers' own pages, full text read for each.</p>
+
+  <div class="legend">
+    <div><b>Tier</b> — which of T1–T4 the paper's evidence actually reaches.</div>
+    <div><b>Verification</b> — whether we confirmed the quote against the publisher's own page. Not the same as the claim being true.</div>
+    <div><b>Peer-reviewed / Preprint</b> — peer-reviewed means experts read the manuscript before publication. It does <b>not</b> mean anyone repeated the study.</div>
+    <div><b>Replication</b> — whether another lab re-ran the study and got the same result. This is the test that actually settles a claim. "Unknown" means we haven't checked yet.</div>
+    <div><b>Files</b> — the original paper or dataset attached to the node, so anyone can check it directly. Uploads come with the full site; the slot is here now.</div>
+  </div>
+
+  <div class="chain">
+
+    <div class="node">
+      <div class="yr">2004<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>Origin — an exosome bioassay in mice</h3>
+        <div class="pills"><span class="pill tier">T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Independently corroborated</span></div>
+        <p class="cite">Février B, Vilette D, Archer F, Loew D, Faigle W, Vidal M, Laude H, Raposo G. "Cells release prions in association with exosomes." <em>Proc. Natl. Acad. Sci. U.S.A.</em> 2004;101(26):9683–9688. <a href="https://doi.org/10.1073/pnas.0308413101">doi:10.1073/pnas.0308413101</a></p>
+        <p class="quote">"we found that exosomes bearing PrPsc are infectious."</p>
+        <dl class="meta">
+          <div><dt>What it shows</dt><dd>An intracerebral bioassay (Table 1): the 100,000 × g exosome pellet from scrapie-infected Rov cells — and that fraction purified on a sucrose gradient — injected into tg338 mice (overexpress ovine PrP), strain 127. Pellet 5/5, 76.8 ± 2.6 days; purified fraction 5/5, 78 ± 1.2 days; diluent control 0/5, &gt;200 days.</dd></div>
+          <div><dt>What it does not show</dt><dd>Transmission by any route other than injection into the brain, or in mice with normal PrP levels.</dd></div>
+          <div><dt>Note</dt><dd>Independent of Vella 2007 (different group, different strain) and concordant with it — two separate demonstrations of the same claim.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node load">
+      <div class="yr">2007<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>The in-vivo experiment — read at source</h3>
+        <div class="pills"><span class="pill tier">T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Independently corroborated</span></div>
+        <p class="cite">Vella LJ, Sharples RA, Lawson VA, Masters CL, Cappai R, Hill AF. "Packaging of prions into exosomes is associated with a novel pathway of PrP processing." <em>Journal of Pathology</em> 2007;211(5):582–590. <a href="https://doi.org/10.1002/path.2145">doi:10.1002/path.2145</a></p>
+        <p class="quote">"these exosomes produced prion disease when inoculated into mice."</p>
+        <dl class="meta">
+          <div><dt>What it shows</dt><dd>An intracerebral bioassay (Table 1): material from M1000-infected moRK13 and GT1-7 cells injected into Tga20 mice, which overexpress mouse PrP. Infected exosomes — 5/5 mice developed disease, mean incubation 90–98 days. Non-infected controls — 0/3 and 0/4, no disease past 300–370 days.</dd></div>
+          <div><dt>What it does not show</dt><dd>Transmission by any route other than injection into the brain, or in mice with normal PrP levels; and how the exosomes' infectivity compares with brain tissue (no titration). Concordant with Février 2004 — an independent demonstration, different group and strain.</dd></div>
+          <div><dt>Cites</dt><dd>Février 2004 and others, for the vesicle association.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node">
+      <div class="yr">2008<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>A third reference, often bundled with the first two</h3>
+        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Replication unknown</span></div>
+        <p class="cite">Alais S, Simoes S, Baas D, Lehmann S, Raposo G, Darlix JL, Leblanc P. "Mouse neuroblastoma cells release prion infectivity associated with exosomal vesicles." <em>Biology of the Cell</em> 2008;100(10):603–618. <a href="https://doi.org/10.1042/bc20080025">doi:10.1042/bc20080025</a></p>
+        <p class="quote">"The dissemination of prions in N2a cell culture is mediated through the exosomal pathway."</p>
+        <dl class="meta">
+          <div><dt>What it shows</dt><dd>Cell-culture only: scrapie-infected N2a neuroblastoma cells release exosome-associated infectivity that transfers to target N2a cells. No animal experiment — confirms the T2 tier. The earlier "three identities" conflict was resolved by reading it.</dd></div>
+          <div><dt>Cites</dt><dd>Février 2004, for the vesicle association.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node">
+      <div class="yr">2012<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>Bundling — three references, one claim, two tiers</h3>
+        <div class="pills"><span class="pill tier">T1+T2 cited as T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
+        <p class="cite">Bellingham SA, Guo BB, Coleman BM, Hill AF. "Exosomes: vehicles for the transfer of toxic proteins associated with neurodegenerative diseases?" <em>Frontiers in Physiology</em> 2012;3:124.</p>
+        <p class="quote">"Both PrP<sup>C</sup> and PrP<sup>Sc</sup> have been isolated in association with exosomes, and PrP<sup>Sc</sup> containing exosomes were infectious in both animal and cell bioassays."</p>
+        <dl class="meta">
+          <div><dt>Cites</dt><dd>Février 2004; Vella 2007; Alais 2008 — all three behind the single phrase "animal and cell bioassays."</dd></div>
+          <div><dt>What happens</dt><dd>Three references across two evidence tiers merge into one claim, with no indication which reference supplies the animal tier. Hill is an author of both this review and Vella 2007.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node">
+      <div class="yr">2016<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>The paper that will be miscited — cell culture only</h3>
+        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Replication unknown</span></div>
+        <p class="cite">Guo BB, Bellingham SA, Hill AF. "Stimulating the release of exosomes increases the intercellular transfer of prions." <em>J. Biol. Chem.</em> 2016;291(10):5128–5137.</p>
+        <p class="quote">"Treatment of the prion-infected MoRK13 donor cells with increasing amounts of MON results in a corresponding increase in the amount of PrP<sup>Sc</sup> detected in the recipient cells."</p>
+        <dl class="meta">
+          <div><dt>Systems</dt><dd>MoRK13, GT1-7, A2 and RK13 cell lines. Transwell assays, PMCA, microscopy.</dd></div>
+          <div><dt>Animals</dt><dd><b>None.</b> No in-vivo experiment anywhere. Its own Discussion calls for "comprehensive in vivo analyses" as future work.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="breakmark">The break — below here, a cell-culture paper is cited for an animal claim</div>
+
+    <div class="node brk">
+      <div class="yr">2017<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>The miscitation — tier inflation by citation</h3>
+        <div class="pills"><span class="pill tier">T2 cited as T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
+        <p class="cite">Hartmann A, Muth C, Dabrowski O, Krasemann S, Glatzel M. "Exosomes and the prion protein: more than one truth." <em>Frontiers in Neuroscience</em> 2017;11:194.</p>
+        <p class="quote">"Pharmacological stimulation of exosome release by treatment with the ionophore Monensin increased release of infectious exosomes. Moreover, exosomes isolated from these <em>in vitro</em> experiments were able to transmit prion disease <em>in vivo</em>."</p>
+        <dl class="meta">
+          <div><dt>Cites</dt><dd>Guo 2016 (ref 25) — the cell-culture-only paper above — for the in-vivo claim.</dd></div>
+          <div><dt>Also in it</dt><dd>The same paper attributes the in-vivo claim correctly to Vella 2007 elsewhere, and cites Cervenakova 2016 for animal transmission. A different lab from Guo's, so the error is independent, which is what lets it propagate.</dd></div>
+          <div><dt>Cited ref</dt><dd>Cervenakova et al. 2016, "Are prions transported by plasma exosomes?" (<em>Transfusion and Apheresis Science</em>) — a secondary reference cited here, not one of the chain's eight nodes. Identity confirmed via Crossref; paywalled, so not read in full.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node">
+      <div class="yr">2017<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>Propagation, and apparent independent support</h3>
+        <div class="pills"><span class="pill tier">Two refs, one unreadable + one miscited</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
+        <p class="cite">Zheng T, Pu J, Chen Y, et al. "Plasma exosomes spread and cluster around β-amyloid plaques in an animal model of Alzheimer's disease." <em>Frontiers in Aging Neuroscience</em> 2017;9:12.</p>
+        <p class="quote">"The exosomes from human-derived prions infected cells are efficient initiators of prion propagation in uninfected recipient cells and produce clinical prion disease when inoculated into mice."</p>
+        <dl class="meta">
+          <div><dt>Cites</dt><dd>Vella 2007 and Guo 2016 together — the unreadable source paired with the miscited one.</dd></div>
+          <div><dt>Why it matters</dt><dd>The claim now appears to rest on two independent papers. A reader who checks the first and finds support stops there. And this is an Alzheimer's paper — the claim is now background in a field where no prion specialist is reviewing it.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="node">
+      <div class="yr">2023<span class="dot"></span></div>
+      <div class="ncard">
+        <h3>Scoped to cell culture in the title</h3>
+        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag pre">Preprint</span><span class="pubtag">Replication unknown</span></div>
+        <p class="cite">Holada lab. "Large extracellular vesicles induce stronger prion infection in cell culture than small extracellular vesicles." bioRxiv 2023 (v3 retitled "…transfer higher levels of prions and infect cell culture better…"). <a href="https://doi.org/10.1101/2023.03.01.530593">doi:10.1101/2023.03.01.530593</a></p>
+        <p class="quote none">Cell-culture only: CAD5 and N2a-PK1 prion cell-culture models, comparing large vs small vesicles. It puts "in cell culture" in the title and, for exosomal prion infectivity, cites Février 2004 — not Vella, Guo, Alais or Cervenakova. The field's scoping is visible in what the title claims and what it declines to cite.</p>
+        <dl class="meta">
+          <div><dt>Read</dt><dd>Full text read 6 Oct 2026 — confirms T2 (cell culture); no animal work.</dd></div>
+          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="block">What the trace found</h2>
+  <p class="block-note">Traced expecting citation drift. On reading the sources, the core claim largely holds — two independent primary studies support it. The residual issues are narrower than the downstream language suggests.</p>
+  <ol class="mech">
+    <li><div><b>The claim is supported.</b><p>Février 2004 and Vella 2007 — different groups, different prion strains — each show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice. The chain is not built on an unverifiable source.</p></div></li>
+    <li><div><b>But the scope is narrow.</b><p>Both use the most permissive assay: intracerebral injection into mice that overexpress PrP. Downstream text repeats "transmit to animals" without that scope, so the claim reads broader than what was shown.</p></div></li>
+    <li><div><b>One citation points to the wrong paper.</b><p>Hartmann 2017 cites Guo 2016 — a cell-culture-only study — for the in-vivo claim. The claim is true, but Guo is not where it was shown; the correct sources are Février and Vella. (Hartmann also cites Vella correctly elsewhere.)</p></div></li>
+    <li><div><b>Tiers get bundled.</b><p>The 2012 review merges references spanning cell-culture and animal work into one phrase ("animal and cell bioassays"), so a reader cannot tell which reference supports which tier.</p></div></li>
+  </ol>
+
+  <h2 class="block">Where it stands</h2>
+  <div class="settle">
+    <div class="step"><b>Established.</b><p>Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls).</p></div>
+    <div class="step"><b>Still open.</b><div class="nums">transmission by any route other than injection into the brain · transmission in mice with normal PrP levels · how infectious the exosomes are compared with brain tissue</div><p>Both demonstrations use the most permissive assay. These are the tests that would extend the claim beyond it.</p></div>
+  </div>
+
+  <div class="note">
+    <p class="k">Provenance — read before citing</p>
+    <p>All eight nodes are verified at source as of 6 October 2026 — the full text of each was read. One cautionary note from the process: while assembling an earlier draft, an automated reader returned a confidently formatted citation for the 2008 reference that gave a wrong title and journal — the same failure this map documents. Reading the paper resolved it.</p>
+  </div>
+
+  <footer>
+    <span class="mono">Entry 001 · traced October 2026</span>
+    <span class="mono">8 nodes · 2004–2023 · 8 of 8 verified at source</span>
+  </footer>
+</main>
+
+<!-- ===================== METHOD ===================== -->
+<main class="wrap" id="view-method" hidden>
+  <button class="back" id="methodBack">← Registry</button>
+
+  <header class="entry-head">
+    <p class="kicker">How the registry works</p>
+    <h1>Method</h1>
+    <p class="lede">One claim, one schema, one standard of proof — applied the same way to every entry, including the ones we'd like to be true. These are the rules that keep the registry honest as it grows.</p>
+  </header>
+
+  <div class="callout">
+    <p class="big">Peer-reviewed / Verified — not the same as true.</p>
+    <p class="sub">Every tag tells you how far the checking has gone — not whether the claim is right. Seven peer-reviewed papers can still carry a claim that drifted. Learn the badges:</p>
+    <div class="taggloss">
+      <div class="tg"><span class="pubtag">Peer-reviewed</span><span>experts read the paper before it was published — not that it's correct</span></div>
+      <div class="tg"><span class="pill v">Verified at source</span><span>we confirmed the quote against the publisher — not that the claim is right</span></div>
+      <div class="tg"><span class="pubtag">Replicated</span><span>another lab re-ran the study and agreed — the strongest signal, yet still not a final verdict, since a field's understanding keeps evolving</span></div>
+    </div>
+  </div>
+
+  <h2 class="block">What this is, and isn't</h2>
+  <p class="block-note">This is a record of scientific claims, the evidence under each, and the specific test that would settle it. It is <b>not</b> a list of things that are false, and not a forum. A claim appears here because its test hasn't been run or its evidence has been misread downstream — not because someone dislikes it. The one rule that makes it different from an opinion site: <b>every claim, including every competing hypothesis, goes through the same six fields and the same test standard.</b> A challenger idea gets no free pass for being the challenger.</p>
+
+  <h2 class="block">The six-field entry</h2>
+  <ol class="numlist">
+    <li><div><b>Claim as stated</b><p>Quoted from the paper, with a citation. A separate line records how it's been reported publicly when that differs from the paper.</p></div></li>
+    <li><div><b>Evidence base</b><p>What the study actually did: design, sample, and what was measured.</p></div></li>
+    <li><div><b>Untested assumption or unaddressed alternative</b><p>The specific gap, stated neutrally — what wasn't measured or ruled out. No guesses about motive.</p></div></li>
+    <li><div><b>What would settle it</b><p>The concrete test, with the predicted result if the claim holds and if it doesn't. When the move is re-running an existing study, the entry labels it a required replication.</p></div></li>
+    <li><div><b>Current status</b><p>Replications, published critiques, author responses, and whether the test has been run.</p></div></li>
+    <li><div><b>Entry author and conflicts</b><p>Who wrote the entry and any stake they have in the outcome.</p></div></li>
+  </ol>
+
+  <h2 class="block">Evidence tiers</h2>
+  <p class="block-note">Claims sit at different strengths of evidence, and most drift happens when one strength is quietly swapped for another. This ladder is universal — it works for biology, AI, physics, economics, anything. Each entry then defines what the tiers mean concretely for its own field, and collecting that domain-specific version is part of writing the entry. Entry 001 spells out the prion version: present in a sample → acts in cultured cells → seeds an effect in an animal → causes clinical disease.</p>
+  <ul class="tiers">
+    <li><span class="tk">T1</span><span><b>Observed or associated.</b> The pattern is seen, or two things correlate. No controlled test yet.</span></li>
+    <li><span class="tk">T2</span><span><b>Shown under controlled or model conditions.</b> Demonstrated in a lab, a simulation, or a simplified stand-in for the real thing.</span></li>
+    <li><span class="tk">T3</span><span><b>Shown in the real system, partially.</b> Demonstrated in the actual target, but limited — small scale, one setting, or preliminary.</span></li>
+    <li><span class="tk">T4</span><span><b>Established in the real system, measured.</b> The full claim demonstrated in the real-world target, with a quantified result others can reproduce.</span></li>
+  </ul>
+
+  <h2 class="block">Domains</h2>
+  <p class="block-note">Every entry files under a <b>Core › Sub › Topic</b> path: one of 14 core science categories, then a sub-science, then the specific topic. A field is placed under its best-fit primary category and cross-linked to the others it spans, so an interdisciplinary claim is findable from every angle without being duplicated. The full field index (~1,000 sub-sciences) sits behind these cores.</p>
+  <div class="domaingrid">
+    <div><span class="n">01</span><span>Physical Sciences</span></div>
+    <div><span class="n">02</span><span>Chemical Sciences</span></div>
+    <div><span class="n">03</span><span>Life &amp; Biological Sciences</span></div>
+    <div><span class="n">04</span><span>Earth, Environmental &amp; Planetary Sciences</span></div>
+    <div><span class="n">05</span><span>Space &amp; Astronomical Sciences</span></div>
+    <div><span class="n">06</span><span>Mathematics, Logic &amp; Formal Sciences</span></div>
+    <div><span class="n">07</span><span>Computer, Information &amp; Data Sciences</span></div>
+    <div><span class="n">08</span><span>Engineering &amp; Technology</span></div>
+    <div><span class="n">09</span><span>Medical &amp; Health Sciences</span></div>
+    <div><span class="n">10</span><span>Social, Behavioral &amp; Economic Sciences</span></div>
+    <div><span class="n">11</span><span>Cognitive, Neuroscience &amp; Mind Sciences</span></div>
+    <div><span class="n">12</span><span>Philosophy, Ethics &amp; Foundational Studies</span></div>
+    <div><span class="n">13</span><span>Systems, Complexity &amp; Interdisciplinary Sciences</span></div>
+    <div><span class="n">14</span><span>Cross-Disciplinary Bridge Sciences</span></div>
+  </div>
+
+  <h2 class="block">How an entry is scored</h2>
+  <p class="block-note">Three separate questions, never collapsed into one. Each has its own vocabulary so a reader can't mistake "we checked the quote" for "an expert signed off" for "the science is settled."</p>
+
+  <h3 style="margin-top:1.8rem">Hypothesis — is the science settled?</h3>
+  <div class="vocab">
+    <div class="vrow"><span class="pill a">Open Hypothesis</span><span class="d">No adequate test of the claim has been run.</span></div>
+    <div class="vrow"><span class="pill c">Under Test</span><span class="d">A test is in progress.</span></div>
+    <div class="vrow"><span class="pill v">Resolved — Supported</span><span class="d">The test was run and the claim held up.</span></div>
+    <div class="vrow"><span class="pill c">Resolved — Not supported</span><span class="d">The test was run and the claim didn't hold up.</span></div>
+    <div class="vrow"><span class="pill u">Resolved — Mixed</span><span class="d">Results conflict.</span></div>
+  </div>
+
+  <h3 style="margin-top:1.8rem">Peer review — has an expert vetted this entry?</h3>
+  <div class="vocab">
+    <div class="vrow"><span class="pill c">Unreviewed</span><span class="d">Drafted; no qualified reviewer has checked it yet.</span></div>
+    <div class="vrow"><span class="pill a">Open for review</span><span class="d">A reviewer is invited or working on it.</span></div>
+    <div class="vrow"><span class="pill v">Peer reviewed</span><span class="d">A domain reviewer has signed off.</span></div>
+  </div>
+
+  <h3 style="margin-top:1.8rem">Source verification — did we confirm each quote?</h3>
+  <div class="vocab">
+    <div class="vrow"><span class="pill v">Verified at source</span><span class="d">The quote was confirmed against the publisher's own page.</span></div>
+    <div class="vrow"><span class="pill u">Located, not read</span><span class="d">The citation is consistent across sources, but we haven't read the original.</span></div>
+    <div class="vrow"><span class="pill u">Unreadable</span><span class="d">Paywalled or otherwise unavailable to us.</span></div>
+    <div class="vrow"><span class="pill c">Identity unresolved</span><span class="d">Which paper the citation points to isn't established.</span></div>
+  </div>
+
+  <h3 style="margin-top:1.8rem">Per-source tags</h3>
+  <div class="vocab">
+    <div class="vrow"><span class="pubtag">Peer-reviewed</span><span class="d">Experts read the manuscript before publication. Not a claim that anyone repeated the study.</span></div>
+    <div class="vrow"><span class="pubtag pre">Preprint</span><span class="d">Posted publicly without peer review.</span></div>
+    <div class="vrow"><span class="pubtag">Replication</span><span class="d">Whether another lab re-ran it and got the same result — the test that actually settles a claim. "Unknown" means we haven't checked; "Not a primary test" marks reviews and cross-field citations, which have nothing to replicate.</span></div>
+    <div class="vrow"><span class="pubtag">Files</span><span class="d">The original paper or dataset attached to the node, so anyone can check it directly.</span></div>
+  </div>
+
+  <h3 style="margin-top:1.8rem">Entry flags</h3>
+  <div class="vocab">
+    <div class="vrow"><span class="tag">Active</span><span class="d">The claim is cited in current work.</span></div>
+    <div class="vrow"><span class="tag">Legacy</span><span class="d">An older open question, often one that current work quietly rests on.</span></div>
+    <div class="vrow"><span class="pill c">Contested</span><span class="d">Two credible groups disagree on the right test; the entry shows both and picks neither.</span></div>
+  </div>
+
+  <h2 class="block">What makes a good test</h2>
+  <ol class="numlist">
+    <li><div><b>Concrete and pre-specified.</b><p>It names the measurement, the design, and the threshold — before anyone runs it.</p></div></li>
+    <li><div><b>Symmetric.</b><p>It states what result would support the claim and what result would sink it. One-sided isn't a test.</p></div></li>
+    <li><div><b>Runnable in principle.</b><p>A lab could actually do it, and the entry names roughly what that would take.</p></div></li>
+    <li><div><b>It has a checkable outcome.</b><p>A test names a result to look for ahead of time, then checks whether it appears. "This deserves more study" is a fine starting point — the entry's job is to turn it into a test by naming what result would answer it.</p></div></li>
+  </ol>
+
+  <h2 class="block">Writing neutrally</h2>
+  <p class="block-note">Bias usually enters through word choice, not claims. The tables below are the house style: the left column is what to avoid, the right is what to write instead. This guide is public on purpose — readers can hold every entry to it.</p>
+
+  <h3 style="margin-top:1.6rem">Words that assume motive</h3>
+  <div class="tablewrap"><table class="wtable">
+    <tr><th>Avoid</th><th>Use instead</th></tr>
+    <tr><td class="avoid">willfully ignored, masked, hid, suppressed</td><td class="use">not addressed, not measured, not reported</td></tr>
+    <tr><td class="avoid">wants the public to believe</td><td class="use">concludes, states, reports</td></tr>
+    <tr><td class="avoid">overlooked, missed</td><td class="use">outside the study's scope, not tested in this design</td></tr>
+  </table></div>
+
+  <h3 style="margin-top:1.6rem">Words that close an open question</h3>
+  <div class="tablewrap"><table class="wtable">
+    <tr><th>Avoid</th><th>Use instead</th></tr>
+    <tr><td class="avoid">proven, verified, confirmed</td><td class="use">supported by, consistent with, replicated in</td></tr>
+    <tr><td class="avoid">debunked, disproven, myth</td><td class="use">not supported by, contradicted by [study]</td></tr>
+    <tr><td class="avoid">fact, settled, established</td><td class="use">widely accepted, current consensus</td></tr>
+  </table></div>
+
+  <h3 style="margin-top:1.6rem">Words that put people on teams</h3>
+  <div class="tablewrap"><table class="wtable">
+    <tr><th>Avoid</th><th>Use instead</th></tr>
+    <tr><td class="avoid">mainstream, establishment, institutional</td><td class="use">the study, the authors, the field's current consensus</td></tr>
+    <tr><td class="avoid">Big Pharma, industry-funded (as a dismissal)</td><td class="use">funded by [X], per the conflicts section</td></tr>
+    <tr><td class="avoid">skeptics, believers, so-called, alleged</td><td class="use">researchers who propose [alternative], or drop it</td></tr>
+  </table></div>
+
+  <h3 style="margin-top:1.6rem">Words that add heat</h3>
+  <div class="tablewrap"><table class="wtable">
+    <tr><th>Avoid</th><th>Use instead</th></tr>
+    <tr><td class="avoid">shocking, alarming, troubling</td><td class="use">notable, unresolved</td></tr>
+    <tr><td class="avoid">crisis, scandal</td><td class="use">open question, replication gap</td></tr>
+    <tr><td class="avoid">always, never, completely</td><td class="use">in [n] of [n] studies, in this sample</td></tr>
+  </table></div>
+
+  <div class="selfcheck">The test for any entry: could the study's authors read it and agree it describes their work accurately, even if they dislike the conclusion? If yes, it's neutral enough.</div>
+
+  <h2 class="block">Conflicts, provenance, and honesty</h2>
+  <ul class="tiers" style="gap:0.8rem">
+    <li><span class="tk">01</span><span>Every entry names its author and their stake. Any paid relationship touching a claim is disclosed on the entry.</span></li>
+    <li><span class="tk">02</span><span>Quotes are marked <b>located</b> or <b>verified at source</b>. AI-assisted research is disclosed, with reviewer and date.</span></li>
+    <li><span class="tk">03</span><span><b>Peer-reviewed is not the same as true. Verified is not the same as true.</b> The badges describe process, not correctness — seven peer-reviewed papers can still carry a drifted claim.</span></li>
+    <li><span class="tk">04</span><span>Paid review work is firewalled from public status. Paying never changes a rating, and this page says so plainly.</span></li>
+  </ul>
+
+  <footer>
+    <span class="mono">Method · version 0.1 · prototype</span>
+    <span class="mono">These rules are versioned; changes are dated and kept.</span>
+  </footer>
+</main>
+
+<!-- ===================== MAP ===================== -->
+<main class="wrap" id="view-map" hidden>
+  <button class="back" id="mapBack">← Registry</button>
+
+  <header class="entry-head">
+    <p class="kicker">The night sky · real-build feature</p>
+    <h1>The Map</h1>
+    <p class="lede">Every claim is a star. The more it connects — to its domains, and to the claims that rest on it — the brighter it burns. Color says what kind of star it is, so a bright one is never mistaken for a true one.</p>
+  </header>
+
+  <div class="sky">
+    <canvas id="skyCanvas"></canvas>
+    <span class="sky-note">Concept preview · illustrative stars, not live data</span>
+  </div>
+
+  <div class="legend">
+    <div><b>Brightness &amp; size</b> — how many connections a claim has. The most-linked claims shine brightest.</div>
+    <div><b>Color</b> — the claim's evidence state:</div>
+  </div>
+  <div class="vocab" style="margin-top:0.6rem">
+    <div class="vrow"><span class="skey" style="--c:#ffd24a"></span><span class="d"><b>Yellow</b> — popular hypothesis, never tested. Bright from attention, hollow underneath.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#6bb0ef"></span><span class="d"><b>Blue</b> — under test right now.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#4fe0ad"></span><span class="d"><b>Green</b> — tested and held up, or independently replicated. The paths that look right so far.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#ef6f63"></span><span class="d"><b>Red</b> — tested and did not hold up.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#b592f0"></span><span class="d"><b>Violet</b> — contested; two credible camps disagree on the test.</span></div>
+  </div>
+
+  <h2 class="block">Two ways to read it</h2>
+  <div class="doors" style="margin-top:1rem">
+    <div class="door">
+      <h3>The overview sky</h3>
+      <p>The whole registry at a glance. Claims cluster into their domains, so you can see where a field is crowded, where it's quiet, and which corners glow with popular-but-untested ideas. Zoom from a domain down to a sub-science and then a single claim. This is the front door — the sense of the whole.</p>
+    </div>
+    <div class="door">
+      <h3>A claim's constellation</h3>
+      <p>Click any star to center it and see only what it touches: the claims it rests on, the ones that cite it, and the domains it spans. Small enough to read no matter how large the registry grows — the working view, for tracing one claim and finding the open tests around it.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <p class="k">Why it's a real-build feature</p>
+    <p>A live star map needs a database and a graph engine to compute every claim's connections and redraw as the registry grows — more than a single page can hold. The groundwork is already here: every entry stores its domain memberships and its links to other entries, which are exactly the edges this map will draw. When the full site is built, the Map turns that data on.</p>
+  </div>
+
+  <footer><span class="mono">Map · concept · attached to the full build</span></footer>
+</main>
+
+<!-- ===================== ABOUT ===================== -->
+<main class="wrap" id="view-about" hidden>
+  <button class="back" id="aboutBack">← Registry</button>
+
+  <header class="entry-head">
+    <p class="kicker">Who's behind it</p>
+    <h1>About</h1>
+    <p class="lede">Assumption Check is built and operated by Priority Nexus LLC — an independent effort to turn down the noise around scientific claims and show people what the evidence actually says.</p>
+  </header>
+
+  <div class="brandplaque">
+    <img src="pn-logo.png" alt="Priority Nexus LLC logo">
+    <div class="bn">
+      <b>Priority Nexus LLC</b>
+      <span class="sl">Prioritizing Boundaries</span>
+      <span class="op">Operator of the Assumption Check registry</span>
+    </div>
+  </div>
+
+  <h2 class="block">Why this exists</h2>
+  <p class="block-note" style="font-size:1rem; max-width:64ch">Most confusion isn't a shortage of information — it's an excess of noise. Data, headlines, and urgent claims pile up faster than anyone can check them, and the original finding, the actual study and the real measurement, ends up buried under layers of citation that drift further from the source with each repetition.</p>
+  <p class="block-note" style="font-size:1rem; max-width:64ch">Assumption Check is a flashlight for that dark. It traces a claim back to what was actually measured, marks how far the checking has gone, and names the one test that would settle it. Nothing is called true for being popular, peer-reviewed, or often repeated — only when the evidence holds.</p>
+  <p class="block-note" style="font-size:1rem; max-width:64ch">The tools to do this at scale arrived just in time. Recovering a buried source and mapping how a claim drifted across a literature once took a specialist weeks; it can now be done carefully, in the open, and checked by anyone.</p>
+
+  <h2 class="block">Core values</h2>
+  <div class="values">
+    <div class="door"><h3>Identity</h3><p>Every claim, source, and reviewer is named. You always know what you're looking at, and who stands behind it.</p></div>
+    <div class="door"><h3>Transparency</h3><p>The method, the wording rules, and each entry's confidence level are public — so the work can be held to its own standard.</p></div>
+    <div class="door"><h3>Integrity</h3><p>Findings follow the evidence, not funding, popularity, or pressure. Paid review never changes a public rating.</p></div>
+  </div>
+
+  <h2 class="block">How we stay honest</h2>
+  <ul class="tiers" style="gap:0.8rem">
+    <li><span class="tk">01</span><span>Every entry names its author and any stake they hold. <a href="#method">The full conflict and provenance rules</a> are public on the Method page.</span></li>
+    <li><span class="tk">02</span><span>The paid review service (Assumption Check for labs) runs separately from the public registry. Paying for a review never changes a claim's public status.</span></li>
+    <li><span class="tk">03</span><span>Claims are scored the same way regardless of who holds them or how widely they're believed — and the score says how far the checking has gone, never that a claim is simply "true."</span></li>
+  </ul>
+
+  <h2 class="block">Get in touch</h2>
+  <p class="block-note">For collaboration, review, or funding enquiries: <b>theaistherapist@gmail.com</b> &middot; Priority Nexus LLC.</p>
+
+  <footer><span class="mono">Priority Nexus LLC · Prioritizing Boundaries</span></footer>
+</main>
+
+<script>
+  "use strict";
+
+  // --- single live entry; real content only ---
+  const entries = [
+    {
+      id: "entry-001",
+      num: "001",
+      title: "The exosome prion chain",
+      claim: "Prion-bearing extracellular vesicles transmit disease to animals.",
+      domain: { subject: "Prions", tag: "Neuroscience", path: "Cognitive, Neuroscience & Mind › Molecular Neuroscience › Prion disease", cross: "Life & Biological (Cell Biology); Medical & Health (Neurology)" },
+      lifecycle: "Active",
+      hypothesis: { key: "resolved", label: "Resolved — Supported", plain: "Supported by two independent studies; scope-limited", cls: "v" },
+      review: { key: "unreviewed", label: "Unreviewed", plain: "No external reviewer yet", cls: "c" },
+      contested: false,
+      added: "2026-10-06",
+      updated: "2026-10-06",
+      sub: "8-node trace · in-vivo claim holds — two independent i.c. bioassays; scope-limited; one downstream miscitation",
+      terms: ["prion", "prions", "exosome", "exosomes", "vesicle", "extracellular", "alzheimer", "neurodegener", "transmit", "infectivity", "neuroscience", "neurobiology", "molecular neuroscience", "cognitive", "mind", "medical", "life"]
+    }
+  ];
+
+  // --- facet model: within a group the chips are OR, across groups AND ---
+  const facetDefs = [
+    { id: "life-active", group: "Lifecycle", label: "Active",        test: e => e.lifecycle === "Active" },
+    { id: "life-legacy", group: "Lifecycle", label: "Legacy",        test: e => e.lifecycle === "Legacy" },
+    { id: "hy-open",     group: "Hypothesis", label: "Open Hypothesis", test: e => e.hypothesis.key === "open" },
+    { id: "hy-test",     group: "Hypothesis", label: "Under Test",      test: e => e.hypothesis.key === "under-test" },
+    { id: "hy-resolved", group: "Hypothesis", label: "Resolved",        test: e => e.hypothesis.key === "resolved" },
+    { id: "rv-unrev",    group: "Peer review", label: "Unreviewed",      test: e => e.review.key === "unreviewed" },
+    { id: "rv-openfor",  group: "Peer review", label: "Open for review", test: e => e.review.key === "open-for-review" },
+    { id: "rv-reviewed", group: "Peer review", label: "Peer reviewed",   test: e => e.review.key === "reviewed" },
+    { id: "fl-contested",group: "Flag",       label: "Contested",       test: e => e.contested }
+  ];
+  const activeFacets = new Set();
+
+  const listEl = document.getElementById("entryList");
+  const countEl = document.getElementById("listCount");
+  const headingEl = document.getElementById("listHeading");
+  const clearBtn = document.getElementById("clearFilterBtn");
+  const facetBar = document.getElementById("facetBar");
+  let searchTerm = "";
+
+  const anyFilter = () => !!searchTerm || activeFacets.size > 0;
+
+  function searchMatch(e) {
+    if (!searchTerm) return true;
+    const q = searchTerm.toLowerCase();
+    return e.title.toLowerCase().includes(q) ||
+           e.claim.toLowerCase().includes(q) ||
+           e.domain.path.toLowerCase().includes(q) ||
+           e.terms.some(t => t.includes(q) || q.includes(t));
+  }
+  function facetMatch(e) {
+    const groups = {};
+    facetDefs.forEach(f => { if (activeFacets.has(f.id)) { (groups[f.group] = groups[f.group] || []).push(f); } });
+    return Object.values(groups).every(fs => fs.some(f => f.test(e)));
+  }
+  function matches(e) { return searchMatch(e) && facetMatch(e); }
+
+  function renderFacets() {
+    facetBar.innerHTML = '<span class="flabel">Filter</span>';
+    facetDefs.forEach(f => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "facet" + (activeFacets.has(f.id) ? " on" : "");
+      b.textContent = f.label;
+      b.addEventListener("click", () => {
+        if (activeFacets.has(f.id)) activeFacets.delete(f.id); else activeFacets.add(f.id);
+        renderFacets(); renderList();
+      });
+      facetBar.appendChild(b);
+    });
+  }
+
+  function daysSince(iso) { return (Date.now() - new Date(iso + "T00:00:00").getTime()) / 86400000; }
+  function flagFor(e) {
+    if (!e.added) return null;
+    const a = daysSince(e.added), u = e.updated ? daysSince(e.updated) : a;
+    if (e.updated && e.updated !== e.added && u <= 30) return { cls: "upd", label: "Updated" };
+    if (a <= 30) return { cls: "new", label: "New" };
+    return null;
+  }
+
+  function renderList() {
+    const shown = entries.filter(matches).slice()
+      .sort((a, b) => (b.updated || b.added || "").localeCompare(a.updated || a.added || ""));
+    countEl.textContent = shown.length + (shown.length === 1 ? " entry" : " entries");
+    headingEl.textContent = anyFilter() ? "Matching entries" : "All entries";
+    clearBtn.hidden = !anyFilter();
+    listEl.innerHTML = "";
+    if (!shown.length) {
+      const d = document.createElement("div");
+      d.className = "empty";
+      d.textContent = "No entries match that yet. This prototype holds one entry — try “prions” or “neuroscience”.";
+      listEl.appendChild(d);
+      return;
+    }
+    shown.forEach(e => {
+      const f = flagFor(e);
+      const card = document.createElement("button");
+      card.className = "entry-card";
+      card.innerHTML =
+        '<div class="top"><span class="tag domain">' + e.domain.subject + '</span>' +
+        '<span class="tag">Entry ' + e.num + '</span>' +
+        '<span class="tag">' + e.lifecycle + '</span>' +
+        (f ? '<span class="flag ' + f.cls + '">' + f.label + '</span>' : '') +
+        '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>' +
+        '<span class="pill ' + e.review.cls + '">' + e.review.label + '</span>' +
+        (e.contested ? '<span class="pill c">Contested</span>' : '') + '</div>' +
+        '<h3>' + e.title + '</h3>' +
+        '<p class="claim-line">' + e.claim + '</p>' +
+        '<p class="sub">' + e.sub + '</p>';
+      card.addEventListener("click", () => go(e.id));
+      listEl.appendChild(card);
+    });
+  }
+
+  // --- view routing ---
+  const vHome = document.getElementById("view-home");
+  const vRegistry = document.getElementById("view-registry");
+  const vEntry = document.getElementById("view-entry");
+  const vMethod = document.getElementById("view-method");
+  const vMap = document.getElementById("view-map");
+  const vAbout = document.getElementById("view-about");
+
+  function go(hash) {
+    const h = (hash || "").replace("#", "");
+    const view = h === "entry-001" ? "entry" : h === "method" ? "method" : h === "map" ? "map" : h === "registry" ? "registry" : h === "about" ? "about" : "home";
+    vHome.hidden = view !== "home";
+    vRegistry.hidden = view !== "registry";
+    vEntry.hidden = view !== "entry";
+    vMethod.hidden = view !== "method";
+    vMap.hidden = view !== "map";
+    vAbout.hidden = view !== "about";
+    if (view === "map") { if (window.__sky) window.__sky.start(); } else { if (window.__sky) window.__sky.stop(); }
+    const target = view === "entry" ? "#entry-001" : view === "method" ? "#method" : view === "map" ? "#map" : view === "registry" ? "#registry" : view === "about" ? "#about" : "#home";
+    if (target !== location.hash) {
+      try { history.pushState(null, "", target); } catch (_) {}
+    }
+    window.scrollTo(0, 0);
+  }
+
+  document.getElementById("homeLink").addEventListener("click", () => go("home"));
+  document.getElementById("registryLink").addEventListener("click", () => go("registry"));
+  document.getElementById("backLink").addEventListener("click", () => go("registry"));
+  document.getElementById("methodLink").addEventListener("click", () => go("method"));
+  document.getElementById("methodBack").addEventListener("click", () => go("registry"));
+  document.getElementById("mapLink").addEventListener("click", () => go("map"));
+  document.getElementById("mapBack").addEventListener("click", () => go("registry"));
+  document.getElementById("aboutLink").addEventListener("click", () => go("about"));
+  document.getElementById("aboutBack").addEventListener("click", () => go("registry"));
+  window.addEventListener("popstate", () => go(location.hash || "home"));
+  window.addEventListener("hashchange", () => go(location.hash || "home"));
+
+  // --- registry search + filters ---
+  document.getElementById("searchForm").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    searchTerm = document.getElementById("searchInput").value.trim();
+    if (searchTerm) facetBar.hidden = false;
+    renderList();
+  });
+  document.getElementById("filtersToggle").addEventListener("click", () => {
+    facetBar.hidden = !facetBar.hidden;
+  });
+  clearBtn.addEventListener("click", () => {
+    searchTerm = ""; activeFacets.clear();
+    const si = document.getElementById("searchInput"); if (si) si.value = "";
+    renderFacets(); renderList();
+  });
+
+  // --- home front doors route into the registry ---
+  document.getElementById("homeBrowse").addEventListener("click", () => {
+    go("registry");
+    const si = document.getElementById("searchInput"); if (si) si.focus();
+  });
+  document.getElementById("homeOpen").addEventListener("click", () => {
+    activeFacets.add("hy-open");
+    facetBar.hidden = false;
+    renderFacets(); renderList();
+    go("registry");
+  });
+
+  // --- theme toggle (per-viewer convenience) ---
+  const root = document.documentElement;
+  const themeBtn = document.getElementById("themeBtn");
+  try {
+    const saved = localStorage.getItem("fr-theme");
+    if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+  } catch (_) {}
+  themeBtn.addEventListener("click", () => {
+    const cur = root.getAttribute("data-theme");
+    const sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const next = cur ? (cur === "dark" ? "light" : "dark") : (sysDark ? "light" : "dark");
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("fr-theme", next); } catch (_) {}
+  });
+
+  // --- night sky (concept preview; illustrative nodes, not live data) ---
+  (function () {
+    const canvas = document.getElementById("skyCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const C = { amber: "#ffd24a", blue: "#6bb0ef", green: "#4fe0ad", red: "#ef6f63", violet: "#b592f0" };
+    const nodes = [
+      { x: .50, y: .42, s: "green", c: 9, label: "Entry 001 — supported, scope-limited" },
+      { x: .30, y: .30, s: "green", c: 6 }, { x: .70, y: .27, s: "green", c: 5 },
+      { x: .20, y: .60, s: "blue", c: 3 },  { x: .81, y: .62, s: "amber", c: 7 },
+      { x: .61, y: .72, s: "red", c: 2 },   { x: .42, y: .19, s: "violet", c: 4 },
+      { x: .14, y: .40, s: "green", c: 3 }, { x: .86, y: .38, s: "blue", c: 2 },
+      { x: .50, y: .83, s: "green", c: 4 }, { x: .35, y: .52, s: "amber", c: 5 },
+      { x: .66, y: .50, s: "green", c: 3 }, { x: .25, y: .78, s: "amber", c: 2 },
+      { x: .76, y: .81, s: "blue", c: 2 },  { x: .91, y: .24, s: "green", c: 2 },
+      { x: .10, y: .72, s: "red", c: 1 },   { x: .56, y: .33, s: "green", c: 4 },
+      { x: .45, y: .63, s: "violet", c: 3 }
+    ];
+    const bg = Array.from({ length: 130 }, () => ({
+      x: Math.random(), y: Math.random(), r: Math.random() * 1.1 + 0.2,
+      a: Math.random() * 0.5 + 0.18, ph: Math.random() * 6.283
+    }));
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let W = 0, H = 0, raf = null, running = false;
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = canvas.clientWidth; H = canvas.clientHeight;
+      canvas.width = Math.max(1, W * dpr); canvas.height = Math.max(1, H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function drawSpike(x, y, len, col, a) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.globalAlpha = a;
+      ctx.lineWidth = 1;
+      for (let k = 0; k < 2; k++) {
+        ctx.rotate(k * Math.PI / 2);
+        const lg = ctx.createLinearGradient(-len, 0, len, 0);
+        lg.addColorStop(0, col + "00"); lg.addColorStop(0.5, col); lg.addColorStop(1, col + "00");
+        ctx.strokeStyle = lg;
+        ctx.beginPath(); ctx.moveTo(-len, 0); ctx.lineTo(len, 0); ctx.stroke();
+      }
+      ctx.restore();
+    }
+    function draw(t) {
+      const g = ctx.createLinearGradient(0, 0, 0, H);
+      g.addColorStop(0, "#070a16"); g.addColorStop(1, "#0e0b1a");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "lighter";
+      for (const s of bg) {
+        const tw = reduce ? 0.8 : (0.45 + 0.55 * Math.sin(t * 0.0012 + s.ph));
+        ctx.globalAlpha = s.a * tw * 0.7; ctx.fillStyle = "#aab4e0";
+        ctx.beginPath(); ctx.arc(s.x * W, s.y * H, s.r, 0, 6.2832); ctx.fill();
+      }
+      for (let i = 0; i < nodes.length; i++) {
+        const n = nodes[i], col = C[n.s], mag = n.c, coreR = 1 + mag * 0.35;
+        const tw = reduce ? 0.9 : (0.68 + 0.32 * Math.sin(t * (0.0011 + i * 0.00008) + i * 1.3));
+        const x = n.x * W, y = n.y * H, halo = coreR * 7;
+        const rg = ctx.createRadialGradient(x, y, 0, x, y, halo);
+        rg.addColorStop(0, col); rg.addColorStop(0.18, col + "88"); rg.addColorStop(1, col + "00");
+        ctx.globalAlpha = 0.5 * tw; ctx.fillStyle = rg;
+        ctx.beginPath(); ctx.arc(x, y, halo, 0, 6.2832); ctx.fill();
+        if (mag >= 3) drawSpike(x, y, coreR * (5 + mag * 0.8) * tw, col, 0.45 * tw);
+        ctx.globalAlpha = 0.95;
+        const cg = ctx.createRadialGradient(x, y, 0, x, y, coreR * 1.8);
+        cg.addColorStop(0, "#ffffff"); cg.addColorStop(0.4, col); cg.addColorStop(1, col + "00");
+        ctx.fillStyle = cg;
+        ctx.beginPath(); ctx.arc(x, y, coreR * 1.8, 0, 6.2832); ctx.fill();
+      }
+      ctx.globalCompositeOperation = "source-over";
+      const e = nodes[0];
+      ctx.globalAlpha = 0.9; ctx.fillStyle = "#dfe4f5";
+      ctx.font = '11px "IBM Plex Mono", monospace';
+      ctx.fillText(e.label, e.x * W + 14, e.y * H + 3);
+      ctx.globalAlpha = 1;
+    }
+    function loop(t) { draw(t || 0); if (!reduce && running) raf = requestAnimationFrame(loop); }
+    window.__sky = {
+      start() { resize(); running = true; if (reduce) { draw(0); } else { if (raf) cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); } },
+      stop() { running = false; if (raf) cancelAnimationFrame(raf); }
+    };
+    window.addEventListener("resize", () => { if (vMap && !vMap.hidden) { resize(); draw(performance.now()); } });
+  })();
+
+  // --- boot ---
+  renderFacets();
+  renderList();
+  go(location.hash || "home");
+</script>
