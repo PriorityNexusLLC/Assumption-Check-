@@ -86,8 +86,8 @@ Race B, Williams K, Chesebro B, et al. "Lack of transmission of chronic wasting 
 
 > "In this study, there was no clinical, pathological, or biochemical evidence suggesting that CWD was transmitted from cervids to CM." *(abstract)*
 
-- **What it shows (from the abstract):** Seven CWD-inoculated cynomolgus macaques were euthanized 11 to 13 years after inoculation, alongside eight uninoculated controls. Tissues were screened by RT-QuIC, immunohistochemistry and immunoblotting. The abstract reports no evidence of transmission.
-- **What it does not show:** Only the abstract was read. The full text, which would carry the methods and per-animal data, is paywalled, so the figures above are limited to what the abstract states.
+- **What it shows (from the abstract):** Seven CWD-inoculated cynomolgus macaques were euthanized 11 to 13 years after inoculation, alongside eight uninoculated controls. Tissues were screened by RT-QuIC, immunohistochemistry and immunoblotting.
+- **What it does not show:** Only the abstract was read; the full text (methods, per-animal data) is paywalled, so the figures above are limited to the abstract.
 - **Files:** Abstract read at Europe PMC 9 Oct 2026; publisher full text returned 403 to automated access. Not verified at source.
 
 ### 2022 — Human-PrP transgenic mice
@@ -125,7 +125,7 @@ Hannaoui S, Pritzkow S, Schulz-Schaeffer WJ, et al. "Limited transmission of cer
 
 > "One interpretation of these findings is that CWD prions retain infectivity across species and that primate infection may manifest atypically while still enabling transmission."
 
-- **What it shows:** 18 macaques were inoculated with CWD material in 2009, with uninoculated controls; most of those analysed in detail were at 5 to 6 years after inoculation. Two macaques (one oral, one intracerebral) showed clinical signs; the rest were asymptomatic. PMCA and RT-QuIC detected prion seeding activity in brain and spleen tissue of CWD-inoculated macaques, with no signal in the uninoculated controls; the PMCA substrate was brain from mice expressing human PrP (Met129). Macaque tissue inoculated into transgenic mice expressing elk PrP induced clinical disease at low attack rates, and inoculation of mice and bank voles reached 100% transmission on second passage.
+- **What it shows:** 18 macaques were inoculated with CWD material in 2009, plus uninoculated controls; most analysed in detail were at 5 to 6 years. Two (one oral, one intracerebral) showed clinical signs; the rest were asymptomatic. PMCA and RT-QuIC detected seeding activity in brain and spleen of inoculated macaques, none in controls. The PMCA substrate was human-PrP (Met129) mouse brain. Macaque tissue transmitted to elk-PrP mice at low attack rates, then to mice and bank voles at 100% on second passage.
 - **What it does not show:** Whether the macaques were themselves infected, or the assays detected material given years earlier. The authors state: *"we cannot formally exclude the possibility that the infectivity detected reflects residual inoculum—it is a plausible scenario."* No host expressing human PrP was challenged with macaque tissue. The 2017 conference report of this cohort was titled "First evidence of… transmission"; this paper is titled "Limited transmission."
 - **Files:** Full text read at PMC 9 Oct 2026.
 
@@ -140,7 +140,7 @@ The studies are not repeats of one experiment. They differ on four axes, each of
 
 ## Where infection is looked for
 
-Most of these studies detect infection in the brain and inoculate into the brain. In CWD, infectivity is not confined to the brain. Hannaoui 2022 states that "in cervids affected with CWD, infectivity has been found in the lymphatic system, salivary gland, intestinal tract, muscles, antler velvet, blood, urine" and other tissues. In the transmission studies here, seeding activity also appeared outside the brain: the 2022 study detected it in "the brains, spinal cords, and spleens of CWD-inoculated" human-PrP mice, and the 2026 macaque study detected it in spleen as well as brain. A negative result from a brain sample or a standard brain assay therefore does not by itself establish that no infection is present, because the agent may be in peripheral or lymphoid tissue or below that assay's detection threshold.
+Most of these studies detect infection in the brain and inoculate into the brain. In CWD, infectivity is not confined to the brain. Hannaoui 2022 states that "in cervids affected with CWD, infectivity has been found in the lymphatic system, salivary gland, intestinal tract, muscles, antler velvet, blood, urine" and other tissues. In the transmission studies here, seeding activity also appeared outside the brain: the 2022 study detected it in "the brains, spinal cords, and spleens of CWD-inoculated" human-PrP mice, and the 2026 macaque study detected it in spleen as well as brain. A negative result from a brain sample or a standard brain assay therefore **does not** by itself establish that no infection is present, because the agent may be in peripheral or lymphoid tissue or below that assay's detection threshold.
 
 ## What would settle it
 
