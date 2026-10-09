@@ -1,0 +1,47 @@
+name: Build entries
+
+# Rebuilds entries.js whenever an entry in entries/ changes, so edits made in
+# Obsidian (or on github.com) show up on the site without any manual step.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "entries/**"
+      - "scripts/build_entries.py"
+  pull_request:
+    paths:
+      - "entries/**"
+      - "scripts/build_entries.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # On a pull request, only check that every entry is readable.
+      - name: Check entries
+        if: github.event_name == 'pull_request'
+        run: python scripts/build_entries.py
+
+      - name: Build and commit entries.js
+        if: github.event_name != 'pull_request'
+        run: |
+          python scripts/build_entries.py
+          if git diff --quiet -- entries.js; then
+            echo "entries.js already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add entries.js
+          git commit -m "Rebuild entries.js from entries/"
+          git push

@@ -78,14 +78,23 @@ The entry corrected its own framing twice as sources were read — a demonstrati
 
 ## Running it
 
-The prototype is a single self-contained page — no build step, no server, no dependencies.
+The site is a single page with no server and no database. Entries are Markdown files in `entries/`, which a GitHub Action bundles into `entries.js` whenever they change.
 
-- **Locally:** download the repo and open `index.html` in any browser. Keep `pn-logo.png` in the same folder.
+- **Locally:** download the repo and open `index.html` in any browser. Keep `pn-logo.png` and `entries.js` in the same folder.
 - **Hosted (anyone can view), via GitHub Pages:** in the repo, go to **Settings → Pages**, set **Source** to `Deploy from a branch`, pick your `main` branch and the `/ (root)` folder, and save. After a minute the site is live at `https://<your-username>.github.io/<repo-name>/`. Put that URL at the top of this README so visitors land straight on it.
+
+## Adding entries
+
+Entries are written in Obsidian (or any editor) as Markdown, one file per claim. See **[HOW-TO-ADD-AN-ENTRY.md](./HOW-TO-ADD-AN-ENTRY.md)** for the one-time setup and the format. Anyone can propose a claim through the [suggestion form](https://github.com/PriorityNexusLLC/Assumption-Check-/issues/new?template=suggest-a-claim.yml).
 
 ## Files
 
-- `index.html` — the full prototype (Home, Registry, Entry, Method, Map, About).
+- `index.html` — the site (Home, Registry, Entry pages, Method, Map, About).
+- `entries/` — one Markdown file per registry entry. This is where the content lives.
+- `entries.js` — generated from `entries/` by `scripts/build_entries.py`; don't edit it by hand.
+- `templates/Entry template.md` — the Obsidian template for a new entry.
+- `.github/workflows/build-entries.yml` — rebuilds `entries.js` when entries change, and checks each entry for mistakes.
+- `.github/ISSUE_TEMPLATE/suggest-a-claim.yml` — the public "Suggest a claim" form.
 - `pn-logo.png` — Priority Nexus LLC logo, used on the About page.
 - `README.md` — this file.
 
@@ -93,9 +102,9 @@ The prototype is a single self-contained page — no build step, no server, no d
 
 This repository accompanies a **working prototype**, built as a self-contained page.
 
-**Prototype (now):** Home · Registry (search + badge filters) · Entry pages · Method · Map (concept) · About.
+**Prototype (now):** Home · Registry (search + badge filters) · Entry pages built from Markdown · Method · Map (real entries drawn and linked; the rest illustrative) · About · public claim suggestions via GitHub issues.
 
-**Full build (planned):** custom domain · database-backed open submissions · persistent source-file uploads · reviewer accounts and moderation · the live node map (global "night sky" + per-claim constellation) computed from stored connections.
+**Full build (planned):** custom domain · reviewer accounts and moderation · persistent source-file uploads · the full node map (global "night sky" + per-claim constellation) computed from stored connections.
 
 ---
 
@@ -106,4 +115,4 @@ For collaboration, review, or funding enquiries.
 
 ---
 
-*Last updated: 7 October 2026*
+*Last updated: 9 October 2026*
