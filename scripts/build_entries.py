@@ -19,9 +19,11 @@ ROOT = Path(__file__).resolve().parent.parent
 ENTRIES = ROOT / "entries"
 OUT = ROOT / "entries.js"
 
-REQUIRED = ["num", "title", "claim", "hypothesis", "peer_review", "lifecycle"]
+# hypothesis is optional: an entry Under Investigation gets one only once a testable form is found.
+REQUIRED = ["num", "title", "claim", "peer_review", "lifecycle"]
 HYPOTHESES = {"open hypothesis", "under test", "resolved supported", "resolved not supported", "resolved mixed"}
 REVIEWS = {"unreviewed", "open for review", "peer reviewed"}
+STAGES = {"traced", "under investigation"}
 
 
 def norm(value):
@@ -33,7 +35,7 @@ def frontmatter(text):
     match = re.match(r"^﻿?---\r?\n(.*?)\r?\n---[ \t]*(?:\r?\n|$)", text, re.S)
     if not match:
         return None
-    meta, list_key = {}, None
+    meta, list_key = {"_unquoted_colon": []}, None
     for line in match.group(1).splitlines():
         item = re.match(r"^\s*-\s+(.*)$", line)
         if item and list_key:
@@ -47,6 +49,8 @@ def frontmatter(text):
         if value == "":
             meta[key], list_key = [], key
         else:
+            if ": " in value and value[0] not in "\"'[":
+                meta["_unquoted_colon"].append(key)
             meta[key] = value.strip("\"'")
     return meta
 
@@ -67,6 +71,10 @@ def check(path, meta):
             f"'hypothesis' is {meta['hypothesis']!r}; use one of: Open Hypothesis, Under Test, "
             "Resolved — Supported, Resolved — Not supported, Resolved — Mixed"
         )
+    if meta.get("stage") and norm(meta["stage"]) not in STAGES:
+        problems.append(f"'stage' is {meta['stage']!r}; use Traced or Under Investigation")
+    for key in meta["_unquoted_colon"]:
+        problems.append(f"'{key}' contains ': ' — put double quotes around the whole value")
     if meta.get("peer_review") and norm(meta["peer_review"]) not in REVIEWS:
         problems.append(
             f"'peer_review' is {meta['peer_review']!r}; use one of: Unreviewed, Open for review, Peer reviewed"

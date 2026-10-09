@@ -6,13 +6,15 @@ subject: Prions
 domain: Cognitive, Neuroscience & Mind › Molecular Neuroscience › Prion disease
 cross_links: Life & Biological (Cell Biology) · Medical & Health (Neurology)
 lifecycle: Active
+stage: Traced
+stage_note: trace complete; 8/8 verified
 hypothesis: Resolved — Supported
 peer_review: Unreviewed
 contested: false
 plain_status: Supported by two independent intracerebral bioassays in PrP-overexpressing mice (Février 2004, Vella 2007); not shown for natural routes or normal-PrP animals
 summary: 8-node trace · in-vivo claim holds — two independent i.c. bioassays; scope-limited; one downstream miscitation
 kicker: Entry 001 · Prions · Active trace
-lede: One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests.
+lede: "One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests."
 rests_on: []
 cited_by: []
 keywords:

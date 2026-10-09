@@ -1,19 +1,21 @@
 ---
 draft: true
-num: "002"
+num: "003"
 title: 
 claim: 
 subject: 
 domain: Core › Sub › Topic
 cross_links: 
 lifecycle: Active
-hypothesis: Open Hypothesis
+stage: Under Investigation
+stage_note: 
+hypothesis: 
 peer_review: Unreviewed
 contested: false
 plain_status: 
-summary: 
-kicker: 
-lede: 
+summary: ""
+kicker: ""
+lede: ""
 rests_on: []
 cited_by: []
 keywords: []

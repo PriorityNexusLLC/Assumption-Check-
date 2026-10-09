@@ -30,11 +30,12 @@ Open the file in Obsidian, make the change, update the `updated:` date, then com
 
 | Property | What to put |
 |---|---|
-| `num` | The entry number, like `"002"`. Must be unique. |
+| `num` | The entry number, like `"003"`. Must be unique. |
 | `title`, `claim` | The entry's title and the one-sentence claim being checked. |
 | `subject`, `domain`, `cross_links` | Short subject tag; the `Core › Sub › Topic` path; other domains, separated by `·`. |
 | `lifecycle` | `Active` or `Legacy`. |
-| `hypothesis` | `Open Hypothesis`, `Under Test`, `Resolved — Supported`, `Resolved — Not supported` or `Resolved — Mixed`. A plain hyphen instead of the dash is fine. |
+| `stage`, `stage_note` | `Under Investigation` (trail mapped, sources not yet verified) or `Traced` (trace complete), plus a short note. |
+| `hypothesis` | Leave empty until a testable form of the claim is found. Then use `Open Hypothesis`, `Under Test`, `Resolved — Supported`, `Resolved — Not supported` or `Resolved — Mixed`. A plain hyphen instead of the dash is fine. |
 | `peer_review` | `Unreviewed`, `Open for review` or `Peer reviewed`. |
 | `contested` | `true` or `false`. |
 | `plain_status`, `summary` | One plain-language line for the entry page, and one for the Registry card. |
@@ -44,19 +45,22 @@ Open the file in Obsidian, make the change, update the `updated:` date, then com
 | `added`, `updated`, `traced` | Dates. |
 | `author`, `conflicts` | Who wrote the entry and any stake they hold. |
 
+If a value contains a colon followed by a space (for example `The honest result: it holds`), put double quotes around the whole value. Otherwise Obsidian can't read the properties, and the build check flags it.
+
 ## Writing the body
 
 Ordinary Markdown works: `**bold**`, `*italic*`, `[links](https://…)`, and lists. A few patterns get special styling on the site:
 
-- **`## The chain`**: each `###` heading inside it is one source, written as `### 2004 — What it did`. Directly under the heading, put the `Tier:`, `Verification:` and `Tags:` lines (tags separated by `;`). Then add the citation, the quote as a `> "…"` line, and the details as `- **Label:** text` bullets. A tag of `Load-bearing` highlights the card. The verification counts in the scoreboard and footer are worked out for you.
+- **`## The chain`** (or **`## The trail`**): each `###` heading inside it is one source, written as `### 2004 — What it did`. Directly under the heading, put the `Tier:`, `Verification:` and `Tags:` lines (tags separated by `;`). Then add the citation, the quote as a `> "…"` line, and the details as `- **Label:** text` bullets. A tag of `Load-bearing` highlights the card. The verification counts in the scoreboard and footer are worked out for you. Verification can be `Verified at source`, `Located, not read`, `Unlocated`, `Unreadable` or `Identity unresolved`. `Tier:` is optional; leave it out for sources that aren't evidence tiers (like a folklore trail).
 - **`> [!break] text`**: draws the orange "break" line in a chain. The next source is highlighted as where things go wrong.
 - **`> [!note] Title`**: a dashed provenance-style note box.
+- **`> [!callout] Headline`** placed before the first `##` section: replaces the standard "Peer-reviewed / Verified — not the same as true" box with your own (for example, "Under Investigation — this entry is a work in progress").
 - **Tier lists**: bullets starting with `**T1**`, `**T2**`, and so on become the tier ladder.
 - **Numbered lists starting with bold**: become the numbered findings cards.
-- **`## Where it stands`**: bullets starting with bold become the summary box. Indented bullets under one become the highlighted list of open tests.
+- **`## Where it stands`** or **`## What would settle it`**: bullets starting with bold become the summary box. Indented bullets under one become the highlighted list of open tests. A `> [!summary]` block right after the bullets adds a highlighted box of one-line verdicts inside it.
 - **`[[001-exosome-prion-chain|Entry 001]]`**: Obsidian-style links to other entries work on the site too.
 
-[`entries/001-exosome-prion-chain.md`](./entries/001-exosome-prion-chain.md) is a complete worked example.
+Two worked examples: [`entries/001-exosome-prion-chain.md`](./entries/001-exosome-prion-chain.md), a finished trace, and [`entries/002-origin-of-santa-claus.md`](./entries/002-origin-of-santa-claus.md), an entry still Under Investigation.
 
 ## If something goes wrong
 

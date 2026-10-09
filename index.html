@@ -69,6 +69,7 @@
   }
 
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body { background: var(--paper); color: var(--ink); font-family: var(--font-body); line-height: 1.62; -webkit-font-smoothing: antialiased; }
   h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; margin: 0; text-wrap: balance; }
   p { margin: 0; }
@@ -210,6 +211,10 @@
   .pill.a { color: var(--accent); background: var(--accent-soft); }
   .pill.tier { font-family: var(--font-mono); color: var(--ink-soft); background: transparent; border: 1px solid var(--line-strong); }
   .pill.tier::before { display: none; }
+  .pill.stage { background: transparent; border: 1px solid var(--line-strong); color: var(--ink-soft); }
+  .pill.stage.inv { color: var(--accent); border-color: var(--accent); }
+  .pill.x { color: var(--ink-soft); background: transparent; border: 1px dashed var(--line-strong); }
+  .list-foot { font-size: 0.82rem; color: var(--ink-soft); margin-top: 1rem; line-height: 1.6; }
   .pubtag { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--ink-soft); background: transparent; }
   .pubtag.pre { color: var(--caution); border-color: var(--caution); background: var(--caution-soft); }
   .fnone { color: var(--ink-soft); font-style: italic; }
@@ -415,7 +420,7 @@
     <li><div><b>Claim as stated</b><p>Quoted from the paper, with a citation. A separate line records how it's been reported publicly when that differs from the paper.</p></div></li>
     <li><div><b>Evidence base</b><p>What the study actually did: design, sample, and what was measured.</p></div></li>
     <li><div><b>Untested assumption or unaddressed alternative</b><p>The specific gap, stated neutrally — what wasn't measured or ruled out. No guesses about motive.</p></div></li>
-    <li><div><b>What would settle it</b><p>The concrete test, with the predicted result if the claim holds and if it doesn't. When the move is re-running an existing study, the entry labels it a required replication.</p></div></li>
+    <li><div><b>What would settle it</b><p>The concrete next step toward an answer — usually a specific test, with the predicted result if the claim holds and if it doesn't. When the move is re-running an existing study, the entry labels it a required replication. For a claim that can't be tested directly, this is the trail to follow instead: the path back to its earliest source.</p></div></li>
     <li><div><b>Current status</b><p>Replications, published critiques, author responses, and whether the test has been run.</p></div></li>
     <li><div><b>Entry author and conflicts</b><p>Who wrote the entry and any stake they have in the outcome.</p></div></li>
   </ol>
@@ -452,6 +457,7 @@
   <p class="block-note">Three separate questions, never collapsed into one. Each has its own vocabulary so a reader can't mistake "we checked the quote" for "an expert signed off" for "the science is settled."</p>
 
   <h3 style="margin-top:1.8rem">Hypothesis — is the science settled?</h3>
+  <p class="block-note" style="margin-top:0.4rem">A claim Under Investigation may carry no hypothesis status at all. It gets one only once a testable form of the claim is found — "Open Hypothesis" is earned, not a default.</p>
   <div class="vocab">
     <div class="vrow"><span class="pill a">Open Hypothesis</span><span class="d">No adequate test of the claim has been run.</span></div>
     <div class="vrow"><span class="pill c">Under Test</span><span class="d">A test is in progress.</span></div>
@@ -470,7 +476,8 @@
   <h3 style="margin-top:1.8rem">Source verification — did we confirm each quote?</h3>
   <div class="vocab">
     <div class="vrow"><span class="pill v">Verified at source</span><span class="d">The quote was confirmed against the publisher's own page.</span></div>
-    <div class="vrow"><span class="pill u">Located, not read</span><span class="d">The citation is consistent across sources, but we haven't read the original.</span></div>
+    <div class="vrow"><span class="pill u">Located, not read</span><span class="d">We have the specific source in hand — a consistent citation or the document itself — but haven't read it in full yet.</span></div>
+    <div class="vrow"><span class="pill x">Unlocated</span><span class="d">No source in hand yet. The node is named from general knowledge and points to where a primary source should be, but none has been pulled. The weakest state — common early in an investigation.</span></div>
     <div class="vrow"><span class="pill u">Unreadable</span><span class="d">Paywalled or otherwise unavailable to us.</span></div>
     <div class="vrow"><span class="pill c">Identity unresolved</span><span class="d">Which paper the citation points to isn't established.</span></div>
   </div>
@@ -661,7 +668,11 @@
     "open for review": { key: "open-for-review", label: "Open for review", cls: "a" },
     "peer reviewed":   { key: "reviewed",        label: "Peer reviewed",   cls: "v" }
   };
-  const VERIFY_CLS = { "verified at source": "v", "located not read": "u", "unreadable": "u", "identity unresolved": "c", "identity confirmed": "u" };
+  const STAGE = {
+    "traced":              { label: "Traced",              cls: "stage" },
+    "under investigation": { label: "Under Investigation", cls: "stage inv" }
+  };
+  const VERIFY_CLS = { "verified at source": "v", "located not read": "u", "unlocated": "x", "unreadable": "u", "identity unresolved": "c", "identity confirmed": "u" };
   const LIFECYCLE_NOTE = { "active": "cited in current work", "legacy": "older open question" };
 
   const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[—–,-]/g, " ").replace(/\s+/g, " ").trim();
@@ -713,7 +724,7 @@
         const q = [];
         while (i < lines.length && /^>/.test(lines[i])) { q.push(lines[i].replace(/^>\s?/, "")); i++; }
         const c = q[0].match(/^\[!([\w-]+)\][+-]?\s*(.*)$/);
-        if (c) out.push({ t: "callout", kind: c[1].toLowerCase(), title: c[2].trim(), text: q.slice(1).join(" ").trim() });
+        if (c) out.push({ t: "callout", kind: c[1].toLowerCase(), title: c[2].trim(), text: q.slice(1).join(" ").trim(), lines: q.slice(1).map(l => l.trim()).filter(Boolean) });
         else out.push({ t: "quote", text: q.join(" ").trim() });
         continue;
       }
@@ -771,7 +782,7 @@
     });
     const nodes = [];
     sections.forEach(s => {
-      if (!/^the chain\b/i.test(s.title)) return;
+      if (!/^the (chain|trail)\b/i.test(s.title)) return;
       s.chain = true;
       s.items = [];
       s.pre = [];
@@ -808,7 +819,9 @@
       cross: str(meta.cross_links),
       crossCount: domains.length,
       lifecycle: str(meta.lifecycle) || "Active",
-      hypothesis: HYPOTHESIS[norm(meta.hypothesis)] || HYPOTHESIS["open hypothesis"],
+      hypothesis: HYPOTHESIS[norm(meta.hypothesis)] || null,
+      stage: STAGE[norm(meta.stage)] || null,
+      stageNote: str(meta.stage_note),
       review: REVIEW[norm(meta.peer_review)] || REVIEW["unreviewed"],
       contested: meta.contested === true,
       plain: str(meta.plain_status),
@@ -888,12 +901,18 @@
   }
   function renderCallout(b) {
     if (b.kind === "break") return '<div class="breakmark">' + inline(b.title || b.text) + '</div>';
+    if (b.kind === "callout") return '<div class="callout"><p class="big">' + inline(b.title) + '</p>' + (b.text ? '<p class="sub">' + inline(b.text) + '</p>' : '') + '</div>';
     if (b.kind === "claim") return '<div class="claimbox"><p class="k">' + inline(b.title || "Claim") + '</p><p>' + inline(b.text) + '</p></div>';
     return '<div class="note">' + (b.title ? '<p class="k">' + inline(b.title) + '</p>' : '') + (b.text ? '<p>' + inline(b.text) + '</p>' : '') + '</div>';
   }
   function renderBlocks(blocks, opts) {
     let html = "", afterTiers = false;
-    blocks.forEach(b => {
+    blocks.forEach((b, i) => {
+      const prev = blocks[i - 1];
+      if (opts && opts.settle && b.t === "callout" && b.kind === "summary" && prev && prev.t === "list" && html.endsWith("</div></div>")) {
+        html = html.slice(0, -"</div>".length) + '<div class="nums">' + b.lines.map(inline).join("<br>") + '</div></div>';
+        return;
+      }
       if (b.t === "p") html += '<p class="' + (afterTiers ? "tier-flag" : "block-note") + '">' + inline(b.text) + '</p>';
       else if (b.t === "list") html += renderMdList(b, opts || {});
       else if (b.t === "callout") html += renderCallout(b);
@@ -909,11 +928,11 @@
       '<h3>' + inline(n.title) + '</h3><div class="pills">' +
       (n.tier ? '<span class="pill tier">' + inline(n.tier) + '</span>' : '') +
       (n.verification ? '<span class="pill ' + (VERIFY_CLS[norm(n.verification)] || "u") + '">' + inline(n.verification) + '</span>' : '') +
-      n.tags.map(t => '<span class="pubtag' + (norm(t) === "preprint" ? " pre" : "") + '">' + inline(t) + '</span>').join("") +
+      n.tags.filter(t => norm(t) !== "load bearing").map(t => '<span class="pubtag' + (norm(t) === "preprint" ? " pre" : "") + '">' + inline(t) + '</span>').join("") +
       '</div>';
     n.blocks.forEach(b => {
       if (b.t === "p") html += '<p class="cite">' + inline(b.text) + '</p>';
-      else if (b.t === "quote") html += '<p class="quote' + (/^["“'‘]/.test(b.text) ? "" : " none") + '">' + inline(b.text) + '</p>';
+      else if (b.t === "quote") html += '<p class="quote' + (/^["“'‘—–]/.test(b.text) ? "" : " none") + '">' + inline(b.text) + '</p>';
       else if (b.t === "list") {
         html += '<dl class="meta">' + b.items.map(it => {
           const m = it.text.match(/^\*\*(.+?):?\*\*:?\s*(.*)$/);
@@ -931,7 +950,7 @@
     const nodes = e.nodes;
     const counts = verifyCounts(nodes);
     const verified = counts["Verified at source"] || 0;
-    const years = nodes.map(n => parseInt(n.year, 10)).filter(y => !isNaN(y));
+    const years = nodes.map(n => parseInt((String(n.year).match(/\d+/) || [])[0], 10)).filter(y => !isNaN(y));
     const lifeNote = LIFECYCLE_NOTE[norm(e.lifecycle)];
     const m = (k, v) => v ? '<div class="m"><dt>' + k + '</dt><dd>' + v + '</dd></div>' : '';
 
@@ -947,7 +966,9 @@
         m("Domain", inline(e.path)) +
         m("Cross-links", inline(e.cross)) +
         m("Lifecycle", inline(e.lifecycle) + (lifeNote ? ' <span class="sub2">' + lifeNote + '</span>' : '')) +
-        m("Hypothesis", '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>') +
+        m("Stage", e.stage ? '<span class="pill ' + e.stage.cls + '">' + e.stage.label + '</span>' + (e.stageNote ? ' <span class="sub2">' + inline(e.stageNote) + '</span>' : '') : '') +
+        m("Hypothesis", e.hypothesis ? '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>'
+          : '<span class="sub2">Not set yet — assigned once a testable form of the claim is found</span>') +
         m("Peer review", '<span class="pill ' + e.review.cls + '">' + e.review.label + '</span>') +
         m("Plain status", inline(e.plain)) +
         m("Contested", e.contested ? '<span class="pill c">Contested</span>' : "No") +
@@ -964,21 +985,21 @@
           : '<span class="pill ' + (VERIFY_CLS[norm(k)] || "u") + '">' + counts[k] + ' ' + esc(k.toLowerCase()) + '</span>').join("") +
         '</div>';
     }
-    html += '<div class="callout"><p class="big">Peer-reviewed / Verified — not the same as true.</p>' +
+    if (!e.intro.some(b => b.t === "callout" && b.kind === "callout")) html += '<div class="callout"><p class="big">Peer-reviewed / Verified — not the same as true.</p>' +
       '<p class="sub">The badges on this entry tell you how far the checking has gone — not whether the claim is right. Each tag is explained in full just below, and on the <a href="#method">Method</a> page.</p></div>';
 
     html += renderBlocks(e.intro);
     e.sections.forEach(s => {
       html += '<h2 class="block">' + inline(s.title) + '</h2>';
-      if (!s.chain) { html += renderBlocks(s.blocks, { settle: /^where it stands/i.test(s.title) }); return; }
-      html += renderBlocks(s.pre) +
+      if (!s.chain) { html += renderBlocks(s.blocks, { settle: /^(where it stands|what would settle it)/i.test(s.title) }); return; }
+      html += renderBlocks(s.pre) + (!s.items.some(it => it.node && it.node.tier) ? '<div class="chain">' :
         '<div class="legend">' +
           '<div><b>Tier</b> — which of T1–T4 the paper\'s evidence actually reaches.</div>' +
           '<div><b>Verification</b> — whether we confirmed the quote against the publisher\'s own page. Not the same as the claim being true.</div>' +
           '<div><b>Peer-reviewed / Preprint</b> — peer-reviewed means experts read the manuscript before publication. It does <b>not</b> mean anyone repeated the study.</div>' +
           '<div><b>Replication</b> — whether another lab re-ran the study and got the same result. This is the test that actually settles a claim. "Unknown" means we haven\'t checked yet.</div>' +
           '<div><b>Files</b> — the original paper or dataset attached to the node, so anyone can check it directly. Uploads come with the full site; the slot is here now.</div>' +
-        '</div><div class="chain">' +
+        '</div><div class="chain">') +
         s.items.map(it => it.node ? renderNode(it.node) : '<div class="breakmark">' + inline(it.breakText) + '</div>').join("") +
         '</div>';
     });
@@ -1000,9 +1021,11 @@
   const facetDefs = [
     { id: "life-active", group: "Lifecycle", label: "Active",        test: e => e.lifecycle === "Active" },
     { id: "life-legacy", group: "Lifecycle", label: "Legacy",        test: e => e.lifecycle === "Legacy" },
-    { id: "hy-open",     group: "Hypothesis", label: "Open Hypothesis", test: e => e.hypothesis.key === "open" },
-    { id: "hy-test",     group: "Hypothesis", label: "Under Test",      test: e => e.hypothesis.key === "under-test" },
-    { id: "hy-resolved", group: "Hypothesis", label: "Resolved",        test: e => e.hypothesis.key === "resolved" },
+    { id: "stg-invest",  group: "Stage",     label: "Under Investigation", test: e => e.stage && /inv/.test(e.stage.cls) },
+    { id: "stg-traced",  group: "Stage",     label: "Traced",          test: e => e.stage && !/inv/.test(e.stage.cls) },
+    { id: "hy-open",     group: "Hypothesis", label: "Open Hypothesis", test: e => e.hypothesis && e.hypothesis.key === "open" },
+    { id: "hy-test",     group: "Hypothesis", label: "Under Test",      test: e => e.hypothesis && e.hypothesis.key === "under-test" },
+    { id: "hy-resolved", group: "Hypothesis", label: "Resolved",        test: e => e.hypothesis && e.hypothesis.key === "resolved" },
     { id: "rv-unrev",    group: "Peer review", label: "Unreviewed",      test: e => e.review.key === "unreviewed" },
     { id: "rv-openfor",  group: "Peer review", label: "Open for review", test: e => e.review.key === "open-for-review" },
     { id: "rv-reviewed", group: "Peer review", label: "Peer reviewed",   test: e => e.review.key === "reviewed" },
@@ -1059,9 +1082,14 @@
   }
 
   function renderList() {
-    const shown = entries.filter(matches).slice()
+    const all = entries.filter(matches).slice()
       .sort((a, b) => (b.updated || b.added || "").localeCompare(a.updated || a.added || ""));
-    countEl.textContent = shown.length + (shown.length === 1 ? " entry" : " entries");
+    const CAP = 10;
+    const capped = !anyFilter() && all.length > CAP;
+    const shown = capped ? all.slice(0, CAP) : all;
+    countEl.textContent = capped
+      ? ("newest " + CAP + " of " + all.length)
+      : (all.length + (all.length === 1 ? " entry" : " entries"));
     headingEl.textContent = anyFilter() ? "Matching entries" : "All entries";
     clearBtn.hidden = !anyFilter();
     listEl.innerHTML = "";
@@ -1069,7 +1097,7 @@
       const d = document.createElement("div");
       d.className = "empty";
       d.textContent = entries.length
-        ? "No entries match that yet. Try a broader word, or clear the filters."
+        ? "No entries match that yet. Try “prions”, “neuroscience”, or “santa”, or clear the filters."
         : "No entries could be loaded. If you opened this page from your computer, check that entries.js sits next to index.html.";
       listEl.appendChild(d);
       return;
@@ -1083,7 +1111,8 @@
         '<span class="tag">Entry ' + e.num + '</span>' +
         '<span class="tag">' + e.lifecycle + '</span>' +
         (f ? '<span class="flag ' + f.cls + '">' + f.label + '</span>' : '') +
-        '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>' +
+        (e.stage ? '<span class="pill ' + e.stage.cls + '">' + e.stage.label + '</span>' : '') +
+        (e.hypothesis ? '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>' : '') +
         '<span class="pill ' + e.review.cls + '">' + e.review.label + '</span>' +
         (e.contested ? '<span class="pill c">Contested</span>' : '') + '</div>' +
         '<h3>' + inline(e.title) + '</h3>' +
@@ -1092,6 +1121,14 @@
       card.addEventListener("click", () => go(e.id));
       listEl.appendChild(card);
     });
+    if (!anyFilter()) {
+      const note = document.createElement("p");
+      note.className = "list-foot";
+      note.textContent = capped
+        ? "Showing the newest " + CAP + ". Open the filters and pick a badge — e.g. Under Investigation — to see the rest. A per-domain claim archive arrives with the full build."
+        : "Newest first. Open the filters to sort by badge. A per-domain claim archive arrives with the full build.";
+      listEl.appendChild(note);
+    }
   }
 
   // --- view routing ---
@@ -1189,7 +1226,7 @@
       return {
         x: Math.min(.9, Math.max(.1, .5 + Math.cos(a) * r)),
         y: Math.min(.86, Math.max(.14, .42 + Math.sin(a) * r * 1.3)),
-        s: e.contested ? "violet" : e.hypothesis.star,
+        s: e.contested ? "violet" : e.hypothesis ? e.hypothesis.star : "amber",
         c: Math.min(10, 5 + 2 * e.crossCount + 2 * (e.restsOn.length + e.citedBy.length)),
         label: "Entry " + e.num + " — " + e.title.replace(/<[^>]+>/g, ""),
         entry: e
