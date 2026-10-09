@@ -652,7 +652,7 @@
 <script>
   "use strict";
 
-  // --- entries: written as Markdown in entries/*.md, bundled into entries.js by scripts/build_entries.py ---
+  // --- entries: written as Markdown in entries/*.md, bundled into entries.js by scripts/build_entries.py (preview build) ---
   const REPO = "https://github.com/PriorityNexusLLC/Assumption-Check-";
   const SUGGEST_URL = REPO + "/issues/new?template=suggest-a-claim.yml";
 
@@ -781,8 +781,14 @@
       else (sec ? sec.blocks : intro).push(b);
     });
     const nodes = [];
+    // A section is a chain of source nodes if it is named "The chain"/"The trail",
+    // or if it has "###" sources carrying Tier:/Verification:/Tags: lines.
+    const looksLikeChain = s =>
+      /^the (chain|trail)\b/i.test(s.title) ||
+      (s.blocks.some(b => b.t === "h") &&
+       s.blocks.some(b => b.t === "p" && b.lines && b.lines.some(l => NODE_FIELD_RE.test(l))));
     sections.forEach(s => {
-      if (!/^the (chain|trail)\b/i.test(s.title)) return;
+      if (!looksLikeChain(s)) return;
       s.chain = true;
       s.items = [];
       s.pre = [];
