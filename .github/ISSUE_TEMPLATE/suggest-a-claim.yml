@@ -1,0 +1,64 @@
+name: Suggest a claim
+description: Propose a scientific claim for the Assumption Check registry.
+title: "Claim: "
+labels: ["claim suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a claim. Suggestions are public. Every claim, including competing hypotheses, is held to the same six-field standard described on the Method page.
+        Please describe what was measured, not who you think is right. Fill in what you can; only the first two questions are required.
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim, as stated
+      description: Quote it from the paper if you can, with the citation (authors, year, journal, DOI). If it's usually reported differently in public, add that too.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where you've seen it repeated
+      description: Links to reviews, articles, textbooks or posts that repeat the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence base
+      description: What the original study actually did (design, sample, what was measured), if you know.
+  - type: textarea
+    id: gap
+    attributes:
+      label: Untested assumption or unaddressed alternative
+      description: The specific gap, stated neutrally. What wasn't measured or ruled out?
+  - type: textarea
+    id: test
+    attributes:
+      label: What would settle it
+      description: A concrete test, with what result would support the claim and what result would not.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Best-fit core domain
+      options:
+        - Physical Sciences
+        - Chemical Sciences
+        - Life & Biological Sciences
+        - Earth, Environmental & Planetary Sciences
+        - Space & Astronomical Sciences
+        - Mathematics, Logic & Formal Sciences
+        - Computer, Information & Data Sciences
+        - Engineering & Technology
+        - Medical & Health Sciences
+        - Social, Behavioral & Economic Sciences
+        - Cognitive, Neuroscience & Mind Sciences
+        - Philosophy, Ethics & Foundational Studies
+        - Systems, Complexity & Interdisciplinary Sciences
+        - Cross-Disciplinary Bridge Sciences
+        - Not sure
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Your stake, if any
+      description: Any connection you have to the claim, its authors or its funders. "None" is a fine answer.

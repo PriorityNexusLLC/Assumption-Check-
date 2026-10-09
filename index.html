@@ -293,6 +293,18 @@
     .meta div { grid-template-columns: 1fr; gap: 0.1rem; }
     .meta dt { padding-top: 0.25rem; }
   }
+  @media (max-width: 620px) {
+    .bar-inner { flex-wrap: wrap; gap: 0.3rem 0.6rem; padding-inline: 16px; }
+    .bar-spacer { flex-basis: 100%; height: 0; }
+    .wordmark span { display: none; }
+  }
+  .door.wide { grid-column: 1 / -1; }
+  a.btn { text-decoration: none; display: inline-block; }
+  .prose-list { margin: 0.8rem 0 1rem 1.2rem; padding: 0; color: var(--ink-soft); font-size: 0.95rem; max-width: 60ch; display: grid; gap: 0.4rem; }
+  .prose-list ul { margin: 0.35rem 0 0 1.1rem; padding: 0; display: grid; gap: 0.25rem; }
+  .prose-list b { color: var(--ink); }
+  .callout .sub a, footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 
@@ -334,6 +346,11 @@
       <p>A claim with no settled answer yet, and a specified test that would give one. For labs looking for the next move.</p>
       <div class="row"><button class="btn alt" id="homeOpen" type="button">Show open hypotheses →</button></div>
     </div>
+    <div class="door wide">
+      <h3>Suggest a claim</h3>
+      <p>Know a claim that's repeated more than it's tested? Send it in. Every suggestion is public, and the ones taken up become entries held to the same six-field standard.</p>
+      <div class="row"><a class="btn alt" href="https://github.com/PriorityNexusLLC/Assumption-Check-/issues/new?template=suggest-a-claim.yml" target="_blank" rel="noopener">Suggest a claim →</a></div>
+    </div>
   </section>
 
   <p class="herolink" style="margin-top:2.2rem">Every entry is scored the same way. <a href="#method">Read the Method →</a></p>
@@ -361,218 +378,13 @@
     <span class="count" id="listCount"></span>
   </div>
   <div class="list" id="entryList"></div>
+  <p class="herolink">Missing a claim? <a href="https://github.com/PriorityNexusLLC/Assumption-Check-/issues/new?template=suggest-a-claim.yml" target="_blank" rel="noopener">Suggest one for the registry →</a></p>
 </main>
 
-<!-- ===================== ENTRY 001 ===================== -->
+<!-- ===================== ENTRY (rendered from entries/*.md) ===================== -->
 <main class="wrap" id="view-entry" hidden>
   <button class="back" id="backLink">← Registry</button>
-
-  <header class="entry-head">
-    <p class="kicker">Entry 001 · Prions · Active trace</p>
-    <h1>The exosome prion chain</h1>
-    <p class="lede">One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests.</p>
-  </header>
-
-  <div class="claimbox">
-    <p class="k">The claim being traced</p>
-    <p>Prion-bearing extracellular vesicles transmit disease to animals.</p>
-  </div>
-
-  <dl class="metastrip">
-    <div class="m"><dt>Subject</dt><dd>Prions</dd></div>
-    <div class="m"><dt>Domain</dt><dd>Cognitive, Neuroscience &amp; Mind › Molecular Neuroscience › Prion disease</dd></div>
-    <div class="m"><dt>Cross-links</dt><dd>Life &amp; Biological (Cell Biology) · Medical &amp; Health (Neurology)</dd></div>
-    <div class="m"><dt>Lifecycle</dt><dd>Active <span class="sub2">cited in current work</span></dd></div>
-    <div class="m"><dt>Hypothesis</dt><dd><span class="pill v">Resolved — Supported</span></dd></div>
-    <div class="m"><dt>Peer review</dt><dd><span class="pill c">Unreviewed</span></dd></div>
-    <div class="m"><dt>Plain status</dt><dd>Supported by two independent intracerebral bioassays in PrP-overexpressing mice (Février 2004, Vella 2007); not shown for natural routes or normal-PrP animals</dd></div>
-    <div class="m"><dt>Contested</dt><dd>No</dd></div>
-    <div class="m"><dt>Rests on / cited by</dt><dd><span class="sub2">— none linked yet</span></dd></div>
-  </dl>
-
-  <p class="strip-label">Source verification — how well each quoted sentence is confirmed</p>
-  <div class="scoreboard">
-    <span class="pill v">8 of 8 verified at source</span>
-  </div>
-
-  <div class="callout">
-    <p class="big">Peer-reviewed / Verified — not the same as true.</p>
-    <p class="sub">The badges on this entry tell you how far the checking has gone — not whether the claim is right. Each tag is explained in full just below.</p>
-  </div>
-
-  <h2 class="block">Evidence tiers</h2>
-  <p class="block-note">Four different claims get substituted for one another in this literature. Keeping them apart is what makes the drift visible.</p>
-  <ul class="tiers">
-    <li><span class="tk">T1</span><span>The protein is <b>present in</b> a vesicle preparation.</span></li>
-    <li><span class="tk">T2</span><span>It <b>transfers between cultured cells</b>, with a readout in the recipient.</span></li>
-    <li><span class="tk">T3</span><span>It <b>seeds aggregation in an animal</b> after inoculation.</span></li>
-    <li><span class="tk">T4</span><span>It <b>transmits clinical disease to an animal</b>, with an attack rate.</span></li>
-  </ul>
-  <p class="tier-flag">The claim above is a <b>T4</b> claim. Février 2004 and Vella 2007 both report <b>T4</b> results (intracerebral bioassays, different groups and strains); the other readable papers report <b>T1 or T2</b> work.</p>
-
-  <h2 class="block">The chain</h2>
-  <p class="block-note">Verification reflects checks on 6 October 2026: all eight nodes confirmed against the publishers' own pages, full text read for each.</p>
-
-  <div class="legend">
-    <div><b>Tier</b> — which of T1–T4 the paper's evidence actually reaches.</div>
-    <div><b>Verification</b> — whether we confirmed the quote against the publisher's own page. Not the same as the claim being true.</div>
-    <div><b>Peer-reviewed / Preprint</b> — peer-reviewed means experts read the manuscript before publication. It does <b>not</b> mean anyone repeated the study.</div>
-    <div><b>Replication</b> — whether another lab re-ran the study and got the same result. This is the test that actually settles a claim. "Unknown" means we haven't checked yet.</div>
-    <div><b>Files</b> — the original paper or dataset attached to the node, so anyone can check it directly. Uploads come with the full site; the slot is here now.</div>
-  </div>
-
-  <div class="chain">
-
-    <div class="node">
-      <div class="yr">2004<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>Origin — an exosome bioassay in mice</h3>
-        <div class="pills"><span class="pill tier">T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Independently corroborated</span></div>
-        <p class="cite">Février B, Vilette D, Archer F, Loew D, Faigle W, Vidal M, Laude H, Raposo G. "Cells release prions in association with exosomes." <em>Proc. Natl. Acad. Sci. U.S.A.</em> 2004;101(26):9683–9688. <a href="https://doi.org/10.1073/pnas.0308413101">doi:10.1073/pnas.0308413101</a></p>
-        <p class="quote">"we found that exosomes bearing PrPsc are infectious."</p>
-        <dl class="meta">
-          <div><dt>What it shows</dt><dd>An intracerebral bioassay (Table 1): the 100,000 × g exosome pellet from scrapie-infected Rov cells — and that fraction purified on a sucrose gradient — injected into tg338 mice (overexpress ovine PrP), strain 127. Pellet 5/5, 76.8 ± 2.6 days; purified fraction 5/5, 78 ± 1.2 days; diluent control 0/5, &gt;200 days.</dd></div>
-          <div><dt>What it does not show</dt><dd>Transmission by any route other than injection into the brain, or in mice with normal PrP levels.</dd></div>
-          <div><dt>Note</dt><dd>Independent of Vella 2007 (different group, different strain) and concordant with it — two separate demonstrations of the same claim.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node load">
-      <div class="yr">2007<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>The in-vivo experiment — read at source</h3>
-        <div class="pills"><span class="pill tier">T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Independently corroborated</span></div>
-        <p class="cite">Vella LJ, Sharples RA, Lawson VA, Masters CL, Cappai R, Hill AF. "Packaging of prions into exosomes is associated with a novel pathway of PrP processing." <em>Journal of Pathology</em> 2007;211(5):582–590. <a href="https://doi.org/10.1002/path.2145">doi:10.1002/path.2145</a></p>
-        <p class="quote">"these exosomes produced prion disease when inoculated into mice."</p>
-        <dl class="meta">
-          <div><dt>What it shows</dt><dd>An intracerebral bioassay (Table 1): material from M1000-infected moRK13 and GT1-7 cells injected into Tga20 mice, which overexpress mouse PrP. Infected exosomes — 5/5 mice developed disease, mean incubation 90–98 days. Non-infected controls — 0/3 and 0/4, no disease past 300–370 days.</dd></div>
-          <div><dt>What it does not show</dt><dd>Transmission by any route other than injection into the brain, or in mice with normal PrP levels; and how the exosomes' infectivity compares with brain tissue (no titration). Concordant with Février 2004 — an independent demonstration, different group and strain.</dd></div>
-          <div><dt>Cites</dt><dd>Février 2004 and others, for the vesicle association.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node">
-      <div class="yr">2008<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>A third reference, often bundled with the first two</h3>
-        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Replication unknown</span></div>
-        <p class="cite">Alais S, Simoes S, Baas D, Lehmann S, Raposo G, Darlix JL, Leblanc P. "Mouse neuroblastoma cells release prion infectivity associated with exosomal vesicles." <em>Biology of the Cell</em> 2008;100(10):603–618. <a href="https://doi.org/10.1042/bc20080025">doi:10.1042/bc20080025</a></p>
-        <p class="quote">"The dissemination of prions in N2a cell culture is mediated through the exosomal pathway."</p>
-        <dl class="meta">
-          <div><dt>What it shows</dt><dd>Cell-culture only: scrapie-infected N2a neuroblastoma cells release exosome-associated infectivity that transfers to target N2a cells. No animal experiment — confirms the T2 tier. The earlier "three identities" conflict was resolved by reading it.</dd></div>
-          <div><dt>Cites</dt><dd>Février 2004, for the vesicle association.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node">
-      <div class="yr">2012<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>Bundling — three references, one claim, two tiers</h3>
-        <div class="pills"><span class="pill tier">T1+T2 cited as T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
-        <p class="cite">Bellingham SA, Guo BB, Coleman BM, Hill AF. "Exosomes: vehicles for the transfer of toxic proteins associated with neurodegenerative diseases?" <em>Frontiers in Physiology</em> 2012;3:124.</p>
-        <p class="quote">"Both PrP<sup>C</sup> and PrP<sup>Sc</sup> have been isolated in association with exosomes, and PrP<sup>Sc</sup> containing exosomes were infectious in both animal and cell bioassays."</p>
-        <dl class="meta">
-          <div><dt>Cites</dt><dd>Février 2004; Vella 2007; Alais 2008 — all three behind the single phrase "animal and cell bioassays."</dd></div>
-          <div><dt>What happens</dt><dd>Three references across two evidence tiers merge into one claim, with no indication which reference supplies the animal tier. Hill is an author of both this review and Vella 2007.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node">
-      <div class="yr">2016<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>The paper that will be miscited — cell culture only</h3>
-        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Replication unknown</span></div>
-        <p class="cite">Guo BB, Bellingham SA, Hill AF. "Stimulating the release of exosomes increases the intercellular transfer of prions." <em>J. Biol. Chem.</em> 2016;291(10):5128–5137.</p>
-        <p class="quote">"Treatment of the prion-infected MoRK13 donor cells with increasing amounts of MON results in a corresponding increase in the amount of PrP<sup>Sc</sup> detected in the recipient cells."</p>
-        <dl class="meta">
-          <div><dt>Systems</dt><dd>MoRK13, GT1-7, A2 and RK13 cell lines. Transwell assays, PMCA, microscopy.</dd></div>
-          <div><dt>Animals</dt><dd><b>None.</b> No in-vivo experiment anywhere. Its own Discussion calls for "comprehensive in vivo analyses" as future work.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="breakmark">The break — below here, a cell-culture paper is cited for an animal claim</div>
-
-    <div class="node brk">
-      <div class="yr">2017<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>The miscitation — tier inflation by citation</h3>
-        <div class="pills"><span class="pill tier">T2 cited as T4</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
-        <p class="cite">Hartmann A, Muth C, Dabrowski O, Krasemann S, Glatzel M. "Exosomes and the prion protein: more than one truth." <em>Frontiers in Neuroscience</em> 2017;11:194.</p>
-        <p class="quote">"Pharmacological stimulation of exosome release by treatment with the ionophore Monensin increased release of infectious exosomes. Moreover, exosomes isolated from these <em>in vitro</em> experiments were able to transmit prion disease <em>in vivo</em>."</p>
-        <dl class="meta">
-          <div><dt>Cites</dt><dd>Guo 2016 (ref 25) — the cell-culture-only paper above — for the in-vivo claim.</dd></div>
-          <div><dt>Also in it</dt><dd>The same paper attributes the in-vivo claim correctly to Vella 2007 elsewhere, and cites Cervenakova 2016 for animal transmission. A different lab from Guo's, so the error is independent, which is what lets it propagate.</dd></div>
-          <div><dt>Cited ref</dt><dd>Cervenakova et al. 2016, "Are prions transported by plasma exosomes?" (<em>Transfusion and Apheresis Science</em>) — a secondary reference cited here, not one of the chain's eight nodes. Identity confirmed via Crossref; paywalled, so not read in full.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node">
-      <div class="yr">2017<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>Propagation, and apparent independent support</h3>
-        <div class="pills"><span class="pill tier">Two refs, one unreadable + one miscited</span><span class="pill v">Verified at source</span><span class="pubtag">Peer-reviewed</span><span class="pubtag">Not a primary test</span></div>
-        <p class="cite">Zheng T, Pu J, Chen Y, et al. "Plasma exosomes spread and cluster around β-amyloid plaques in an animal model of Alzheimer's disease." <em>Frontiers in Aging Neuroscience</em> 2017;9:12.</p>
-        <p class="quote">"The exosomes from human-derived prions infected cells are efficient initiators of prion propagation in uninfected recipient cells and produce clinical prion disease when inoculated into mice."</p>
-        <dl class="meta">
-          <div><dt>Cites</dt><dd>Vella 2007 and Guo 2016 together — the unreadable source paired with the miscited one.</dd></div>
-          <div><dt>Why it matters</dt><dd>The claim now appears to rest on two independent papers. A reader who checks the first and finds support stops there. And this is an Alzheimer's paper — the claim is now background in a field where no prion specialist is reviewing it.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">— none attached</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-    <div class="node">
-      <div class="yr">2023<span class="dot"></span></div>
-      <div class="ncard">
-        <h3>Scoped to cell culture in the title</h3>
-        <div class="pills"><span class="pill tier">T2</span><span class="pill v">Verified at source</span><span class="pubtag pre">Preprint</span><span class="pubtag">Replication unknown</span></div>
-        <p class="cite">Holada lab. "Large extracellular vesicles induce stronger prion infection in cell culture than small extracellular vesicles." bioRxiv 2023 (v3 retitled "…transfer higher levels of prions and infect cell culture better…"). <a href="https://doi.org/10.1101/2023.03.01.530593">doi:10.1101/2023.03.01.530593</a></p>
-        <p class="quote none">Cell-culture only: CAD5 and N2a-PK1 prion cell-culture models, comparing large vs small vesicles. It puts "in cell culture" in the title and, for exosomal prion infectivity, cites Février 2004 — not Vella, Guo, Alais or Cervenakova. The field's scoping is visible in what the title claims and what it declines to cite.</p>
-        <dl class="meta">
-          <div><dt>Read</dt><dd>Full text read 6 Oct 2026 — confirms T2 (cell culture); no animal work.</dd></div>
-          <div><dt>Files</dt><dd><span class="fnone">Full text read 6 Oct 2026.</span></dd></div>
-        </dl>
-      </div>
-    </div>
-
-  </div>
-
-  <h2 class="block">What the trace found</h2>
-  <p class="block-note">Traced expecting citation drift. On reading the sources, the core claim largely holds — two independent primary studies support it. The residual issues are narrower than the downstream language suggests.</p>
-  <ol class="mech">
-    <li><div><b>The claim is supported.</b><p>Février 2004 and Vella 2007 — different groups, different prion strains — each show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice. The chain is not built on an unverifiable source.</p></div></li>
-    <li><div><b>But the scope is narrow.</b><p>Both use the most permissive assay: intracerebral injection into mice that overexpress PrP. Downstream text repeats "transmit to animals" without that scope, so the claim reads broader than what was shown.</p></div></li>
-    <li><div><b>One citation points to the wrong paper.</b><p>Hartmann 2017 cites Guo 2016 — a cell-culture-only study — for the in-vivo claim. The claim is true, but Guo is not where it was shown; the correct sources are Février and Vella. (Hartmann also cites Vella correctly elsewhere.)</p></div></li>
-    <li><div><b>Tiers get bundled.</b><p>The 2012 review merges references spanning cell-culture and animal work into one phrase ("animal and cell bioassays"), so a reader cannot tell which reference supports which tier.</p></div></li>
-  </ol>
-
-  <h2 class="block">Where it stands</h2>
-  <div class="settle">
-    <div class="step"><b>Established.</b><p>Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls).</p></div>
-    <div class="step"><b>Still open.</b><div class="nums">transmission by any route other than injection into the brain · transmission in mice with normal PrP levels · how infectious the exosomes are compared with brain tissue</div><p>Both demonstrations use the most permissive assay. These are the tests that would extend the claim beyond it.</p></div>
-  </div>
-
-  <div class="note">
-    <p class="k">Provenance — read before citing</p>
-    <p>All eight nodes are verified at source as of 6 October 2026 — the full text of each was read. One cautionary note from the process: while assembling an earlier draft, an automated reader returned a confidently formatted citation for the 2008 reference that gave a wrong title and journal — the same failure this map documents. Reading the paper resolved it.</p>
-  </div>
-
-  <footer>
-    <span class="mono">Entry 001 · traced October 2026</span>
-    <span class="mono">8 nodes · 2004–2023 · 8 of 8 verified at source</span>
-  </footer>
+  <div id="entryBody"></div>
 </main>
 
 <!-- ===================== METHOD ===================== -->
@@ -749,7 +561,7 @@
 
   <div class="sky">
     <canvas id="skyCanvas"></canvas>
-    <span class="sky-note">Concept preview · illustrative stars, not live data</span>
+    <span class="sky-note">Labeled stars are real entries — click one to open it · the rest are illustrative</span>
   </div>
 
   <div class="legend">
@@ -778,7 +590,7 @@
 
   <div class="note">
     <p class="k">Why it's a real-build feature</p>
-    <p>A live star map needs a database and a graph engine to compute every claim's connections and redraw as the registry grows — more than a single page can hold. The groundwork is already here: every entry stores its domain memberships and its links to other entries, which are exactly the edges this map will draw. When the full site is built, the Map turns that data on.</p>
+    <p>A live star map needs a database and a graph engine to compute every claim's connections and redraw as the registry grows — more than a single page can hold. The groundwork is already here: every entry stores its domain memberships and its links to other entries, which are exactly the edges this map will draw. The labeled stars above are already drawn from that data — each real entry, colored by its hypothesis status and joined to the entries it rests on. When the full site is built, the rest of the sky fills in.</p>
   </div>
 
   <footer><span class="mono">Map · concept · attached to the full build</span></footer>
@@ -824,31 +636,365 @@
 
   <h2 class="block">Get in touch</h2>
   <p class="block-note">For collaboration, review, or funding enquiries: <b>theaistherapist@gmail.com</b> &middot; Priority Nexus LLC.</p>
+  <p class="block-note">To propose a claim for the registry, use the public <a href="https://github.com/PriorityNexusLLC/Assumption-Check-/issues/new?template=suggest-a-claim.yml" target="_blank" rel="noopener">suggestion form</a> (a free GitHub account is needed), or email it to the address above.</p>
 
   <footer><span class="mono">Priority Nexus LLC · Prioritizing Boundaries</span></footer>
 </main>
 
+<script src="entries.js"></script>
 <script>
   "use strict";
 
-  // --- single live entry; real content only ---
-  const entries = [
-    {
-      id: "entry-001",
-      num: "001",
-      title: "The exosome prion chain",
-      claim: "Prion-bearing extracellular vesicles transmit disease to animals.",
-      domain: { subject: "Prions", tag: "Neuroscience", path: "Cognitive, Neuroscience & Mind › Molecular Neuroscience › Prion disease", cross: "Life & Biological (Cell Biology); Medical & Health (Neurology)" },
-      lifecycle: "Active",
-      hypothesis: { key: "resolved", label: "Resolved — Supported", plain: "Supported by two independent studies; scope-limited", cls: "v" },
-      review: { key: "unreviewed", label: "Unreviewed", plain: "No external reviewer yet", cls: "c" },
-      contested: false,
-      added: "2026-10-06",
-      updated: "2026-10-06",
-      sub: "8-node trace · in-vivo claim holds — two independent i.c. bioassays; scope-limited; one downstream miscitation",
-      terms: ["prion", "prions", "exosome", "exosomes", "vesicle", "extracellular", "alzheimer", "neurodegener", "transmit", "infectivity", "neuroscience", "neurobiology", "molecular neuroscience", "cognitive", "mind", "medical", "life"]
+  // --- entries: written as Markdown in entries/*.md, bundled into entries.js by scripts/build_entries.py ---
+  const REPO = "https://github.com/PriorityNexusLLC/Assumption-Check-";
+  const SUGGEST_URL = REPO + "/issues/new?template=suggest-a-claim.yml";
+
+  const HYPOTHESIS = {
+    "open hypothesis":        { key: "open",       label: "Open Hypothesis",          cls: "a", star: "amber" },
+    "under test":             { key: "under-test", label: "Under Test",               cls: "c", star: "blue" },
+    "resolved supported":     { key: "resolved",   label: "Resolved — Supported",     cls: "v", star: "green" },
+    "resolved not supported": { key: "resolved",   label: "Resolved — Not supported", cls: "c", star: "red" },
+    "resolved mixed":         { key: "resolved",   label: "Resolved — Mixed",         cls: "u", star: "violet" }
+  };
+  const REVIEW = {
+    "unreviewed":      { key: "unreviewed",      label: "Unreviewed",      cls: "c" },
+    "open for review": { key: "open-for-review", label: "Open for review", cls: "a" },
+    "peer reviewed":   { key: "reviewed",        label: "Peer reviewed",   cls: "v" }
+  };
+  const VERIFY_CLS = { "verified at source": "v", "located not read": "u", "unreadable": "u", "identity unresolved": "c", "identity confirmed": "u" };
+  const LIFECYCLE_NOTE = { "active": "cited in current work", "legacy": "older open question" };
+
+  const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[—–,-]/g, " ").replace(/\s+/g, " ").trim();
+  const str = v => Array.isArray(v) ? v.join(", ") : (v == null ? "" : String(v));
+  const list = v => Array.isArray(v) ? v.map(String).filter(Boolean) : (v ? [String(v)] : []);
+  const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const padNum = n => String(n == null ? "" : n).replace(/\D/g, "").padStart(3, "0");
+
+  // Frontmatter: the flat key/value + list subset Obsidian's Properties panel writes.
+  function scalar(v) {
+    v = v.trim();
+    if (/^(["']).*\1$/.test(v)) v = v.slice(1, -1);
+    if (v === "true") return true;
+    if (v === "false") return false;
+    return v;
+  }
+  function parseFrontmatter(src) {
+    const m = src.replace(/^﻿/, "").match(/^---\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)([\s\S]*)$/);
+    if (!m) return { meta: {}, body: src };
+    const meta = {};
+    let listKey = null;
+    m[1].split(/\r?\n/).forEach(line => {
+      const item = line.match(/^\s*-\s+(.*)$/);
+      if (item && listKey) { meta[listKey].push(scalar(item[1])); return; }
+      const kv = line.match(/^([A-Za-z_][\w-]*):\s*(.*)$/);
+      if (!kv) return;
+      const v = kv[2].trim();
+      listKey = null;
+      if (v === "") { meta[kv[1]] = []; listKey = kv[1]; }
+      else if (/^\[.*\]$/.test(v)) meta[kv[1]] = v.slice(1, -1).split(",").map(scalar).filter(x => x !== "");
+      else meta[kv[1]] = scalar(v);
+    });
+    return { meta, body: m[2] };
+  }
+
+  // Markdown blocks: headings, paragraphs, lists (one nested level), quotes and Obsidian callouts.
+  const LIST_RE = /^(\s*)([-*+]|\d+[.)])\s+(.*)$/;
+  const indentOf = ws => ws.replace(/\t/g, "    ").length;
+  function parseBlocks(md) {
+    const lines = md.replace(/\r/g, "").split("\n");
+    const out = [];
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+      if (!line.trim() || /^\s*(-{3,}|\*{3,})\s*$/.test(line)) { i++; continue; }
+      const h = line.match(/^(#{1,6})\s+(.*)$/);
+      if (h) { out.push({ t: "h", level: h[1].length, text: h[2].trim() }); i++; continue; }
+      if (/^>/.test(line)) {
+        const q = [];
+        while (i < lines.length && /^>/.test(lines[i])) { q.push(lines[i].replace(/^>\s?/, "")); i++; }
+        const c = q[0].match(/^\[!([\w-]+)\][+-]?\s*(.*)$/);
+        if (c) out.push({ t: "callout", kind: c[1].toLowerCase(), title: c[2].trim(), text: q.slice(1).join(" ").trim() });
+        else out.push({ t: "quote", text: q.join(" ").trim() });
+        continue;
+      }
+      if (LIST_RE.test(line)) {
+        const ordered = /^\s*\d/.test(line);
+        const items = [];
+        while (i < lines.length && lines[i].trim() && (LIST_RE.test(lines[i]) || /^(\t|\s{2,})\S/.test(lines[i]))) {
+          const m = lines[i].match(LIST_RE);
+          const last = items[items.length - 1];
+          if (m && indentOf(m[1]) < 2) items.push({ text: m[3], children: [] });
+          else if (m && last) last.children.push(m[3]);
+          else if (last) {
+            if (last.children.length) last.children[last.children.length - 1] += " " + lines[i].trim();
+            else last.text += " " + lines[i].trim();
+          }
+          i++;
+        }
+        out.push({ t: "list", ordered, items });
+        continue;
+      }
+      const p = [];
+      while (i < lines.length && lines[i].trim() && !/^(#{1,6}\s|>)/.test(lines[i]) && !LIST_RE.test(lines[i])) { p.push(lines[i].trim()); i++; }
+      out.push({ t: "p", lines: p, text: p.join(" ") });
     }
-  ];
+    return out;
+  }
+
+  // Inline Markdown. Entry files are written by the registry's own editors, so inline HTML (e.g. <sup>) passes through.
+  let wikiIndex = {};
+  function inline(s) {
+    return String(s == null ? "" : s)
+      .replace(/`([^`]+)`/g, (_, c) => "<code>" + esc(c) + "</code>")
+      .replace(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
+        const e = wikiIndex[norm(target)];
+        const text = label || target;
+        return e ? '<a href="#entry-' + e.num + '">' + text + '</a>' : text;
+      })
+      .replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:|#)[^)\s]*)\)/g, '<a href="$2">$1</a>')
+      .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+      .replace(/(^|[^*\w])\*([^*\s][^*]*)\*(?!\*)/g, "$1<em>$2</em>");
+  }
+
+  const NODE_FIELD_RE = /^(tier|verification|tags)\s*::?\s*(.*)$/i;
+  function buildEntry(file, src) {
+    const { meta, body } = parseFrontmatter(src);
+    if (meta.draft === true) return null;
+    const blocks = parseBlocks(body);
+
+    // Split into sections by "##", and pull chain nodes ("###" under "## The chain") out for counting.
+    const intro = [], sections = [];
+    let sec = null;
+    blocks.forEach(b => {
+      if (b.t === "h" && b.level <= 2) { sec = { title: b.text, blocks: [] }; sections.push(sec); }
+      else (sec ? sec.blocks : intro).push(b);
+    });
+    const nodes = [];
+    sections.forEach(s => {
+      if (!/^the chain\b/i.test(s.title)) return;
+      s.chain = true;
+      s.items = [];
+      s.pre = [];
+      let cur = null, brk = false;
+      s.blocks.forEach(b => {
+        if (b.t === "h") {
+          const hm = b.text.match(/^(\S+)\s+[—–-]\s+(.*)$/);
+          cur = { year: hm ? hm[1] : "", title: hm ? hm[2] : b.text, tier: "", verification: "", tags: [], brk, blocks: [] };
+          brk = false;
+          nodes.push(cur); s.items.push({ node: cur });
+        } else if (b.t === "callout" && b.kind === "break") {
+          s.items.push({ breakText: b.title || b.text }); brk = true;
+        } else if (!cur) {
+          s.pre.push(b);
+        } else if (b.t === "p" && b.lines.every(l => NODE_FIELD_RE.test(l))) {
+          b.lines.forEach(l => {
+            const fm = l.match(NODE_FIELD_RE), k = fm[1].toLowerCase();
+            if (k === "tags") cur.tags = fm[2].split(/[;,]/).map(t => t.trim()).filter(Boolean);
+            else cur[k] = fm[2].trim();
+          });
+        } else cur.blocks.push(b);
+      });
+    });
+
+    const domains = str(meta.cross_links).split(/[·;]/).map(x => x.trim()).filter(Boolean);
+    const keywords = list(meta.keywords).map(k => k.toLowerCase());
+    const e = {
+      file,
+      num: padNum(meta.num),
+      title: str(meta.title) || file,
+      claim: str(meta.claim),
+      subject: str(meta.subject),
+      path: str(meta.domain),
+      cross: str(meta.cross_links),
+      crossCount: domains.length,
+      lifecycle: str(meta.lifecycle) || "Active",
+      hypothesis: HYPOTHESIS[norm(meta.hypothesis)] || HYPOTHESIS["open hypothesis"],
+      review: REVIEW[norm(meta.peer_review)] || REVIEW["unreviewed"],
+      contested: meta.contested === true,
+      plain: str(meta.plain_status),
+      sub: str(meta.summary),
+      kicker: str(meta.kicker),
+      lede: str(meta.lede),
+      restsOn: list(meta.rests_on).map(padNum),
+      citedBy: list(meta.cited_by).map(padNum),
+      added: str(meta.added),
+      updated: str(meta.updated),
+      traced: str(meta.traced),
+      author: str(meta.author),
+      conflicts: str(meta.conflicts),
+      intro, sections, nodes
+    };
+    e.id = "entry-" + e.num;
+    e.domain = { subject: e.subject, path: e.path };
+    e.terms = keywords.concat([e.subject, e.path, e.cross].map(x => x.toLowerCase())).filter(Boolean);
+    return e;
+  }
+
+  const entries = (window.ENTRY_SOURCES || []).map(f => {
+    try { return buildEntry(f.name, f.text); }
+    catch (err) { console.warn("Could not read entry " + f.name, err); return null; }
+  }).filter(Boolean);
+  const byNum = {};
+  entries.forEach(e => {
+    byNum[e.num] = e;
+    [e.file, e.file.replace(/\.md$/i, ""), e.title, "entry " + e.num, e.num].forEach(k => { wikiIndex[norm(k)] = e; });
+  });
+  // "Cited by" is the reverse of "rests on", so each link only has to be written once.
+  entries.forEach(e => e.restsOn.forEach(n => {
+    const t = byNum[n];
+    if (t && !t.citedBy.includes(e.num)) t.citedBy.push(e.num);
+  }));
+
+  // --- entry page ---
+  function entryLinks(nums) {
+    if (!nums.length) return '<span class="sub2">— none linked yet</span>';
+    return nums.map(n => byNum[n]
+      ? '<a href="#entry-' + n + '">Entry ' + n + ' — ' + inline(byNum[n].title) + '</a>'
+      : "Entry " + n).join(" · ");
+  }
+  function verifyCounts(nodes) {
+    const counts = {};
+    nodes.forEach(n => { const k = n.verification || "Not yet checked"; counts[k] = (counts[k] || 0) + 1; });
+    return counts;
+  }
+  function boldLead(text) {
+    const m = String(text).match(/^\*\*(.+?)\*\*\s*(.*)$/);
+    return m ? { lead: m[1], rest: m[2] } : null;
+  }
+  function renderMdList(b, opts) {
+    const items = b.items;
+    if (!b.ordered && items.every(it => /^\*\*T\d\*\*/.test(it.text))) {
+      return '<ul class="tiers">' + items.map(it => {
+        const m = it.text.match(/^\*\*(T\d)\*\*\s*(.*)$/);
+        return '<li><span class="tk">' + m[1] + '</span><span>' + inline(m[2]) + '</span></li>';
+      }).join("") + '</ul>';
+    }
+    if (b.ordered) {
+      return '<ol class="mech">' + items.map(it => {
+        const bl = boldLead(it.text);
+        return '<li><div>' + (bl ? '<b>' + inline(bl.lead) + '</b><p>' + inline(bl.rest) + '</p>' : inline(it.text)) + '</div></li>';
+      }).join("") + '</ol>';
+    }
+    if (opts.settle && items.every(it => boldLead(it.text))) {
+      return '<div class="settle">' + items.map(it => {
+        const bl = boldLead(it.text);
+        return '<div class="step"><b>' + inline(bl.lead) + '</b>' +
+          (it.children.length ? '<div class="nums">' + it.children.map(inline).join(" · ") + '</div>' : '') +
+          (bl.rest ? '<p>' + inline(bl.rest) + '</p>' : '') + '</div>';
+      }).join("") + '</div>';
+    }
+    return '<ul class="prose-list">' + items.map(it => '<li>' + inline(it.text) +
+      (it.children.length ? '<ul>' + it.children.map(c => '<li>' + inline(c) + '</li>').join("") + '</ul>' : '') + '</li>').join("") + '</ul>';
+  }
+  function renderCallout(b) {
+    if (b.kind === "break") return '<div class="breakmark">' + inline(b.title || b.text) + '</div>';
+    if (b.kind === "claim") return '<div class="claimbox"><p class="k">' + inline(b.title || "Claim") + '</p><p>' + inline(b.text) + '</p></div>';
+    return '<div class="note">' + (b.title ? '<p class="k">' + inline(b.title) + '</p>' : '') + (b.text ? '<p>' + inline(b.text) + '</p>' : '') + '</div>';
+  }
+  function renderBlocks(blocks, opts) {
+    let html = "", afterTiers = false;
+    blocks.forEach(b => {
+      if (b.t === "p") html += '<p class="' + (afterTiers ? "tier-flag" : "block-note") + '">' + inline(b.text) + '</p>';
+      else if (b.t === "list") html += renderMdList(b, opts || {});
+      else if (b.t === "callout") html += renderCallout(b);
+      else if (b.t === "quote") html += '<p class="quote">' + inline(b.text) + '</p>';
+      else if (b.t === "h") html += '<h3 style="margin-top:1.6rem">' + inline(b.text) + '</h3>';
+      afterTiers = b.t === "list" && !b.ordered && b.items.every(it => /^\*\*T\d\*\*/.test(it.text));
+    });
+    return html;
+  }
+  function renderNode(n) {
+    let html = '<div class="node' + (n.brk ? " brk" : "") + (n.tags.some(t => norm(t) === "load bearing") ? " load" : "") + '">' +
+      '<div class="yr">' + esc(n.year) + '<span class="dot"></span></div><div class="ncard">' +
+      '<h3>' + inline(n.title) + '</h3><div class="pills">' +
+      (n.tier ? '<span class="pill tier">' + inline(n.tier) + '</span>' : '') +
+      (n.verification ? '<span class="pill ' + (VERIFY_CLS[norm(n.verification)] || "u") + '">' + inline(n.verification) + '</span>' : '') +
+      n.tags.map(t => '<span class="pubtag' + (norm(t) === "preprint" ? " pre" : "") + '">' + inline(t) + '</span>').join("") +
+      '</div>';
+    n.blocks.forEach(b => {
+      if (b.t === "p") html += '<p class="cite">' + inline(b.text) + '</p>';
+      else if (b.t === "quote") html += '<p class="quote' + (/^["“'‘]/.test(b.text) ? "" : " none") + '">' + inline(b.text) + '</p>';
+      else if (b.t === "list") {
+        html += '<dl class="meta">' + b.items.map(it => {
+          const m = it.text.match(/^\*\*(.+?):?\*\*:?\s*(.*)$/);
+          if (!m) return '<div><dt></dt><dd>' + inline(it.text) + '</dd></div>';
+          const label = m[1].replace(/:$/, "");
+          const dd = /^files$/i.test(label) ? '<span class="fnone">' + inline(m[2]) + '</span>' : inline(m[2]);
+          return '<div><dt>' + inline(label) + '</dt><dd>' + dd + '</dd></div>';
+        }).join("") + '</dl>';
+      }
+      else if (b.t === "callout") html += renderCallout(b);
+    });
+    return html + '</div></div>';
+  }
+  function renderEntry(e) {
+    const nodes = e.nodes;
+    const counts = verifyCounts(nodes);
+    const verified = counts["Verified at source"] || 0;
+    const years = nodes.map(n => parseInt(n.year, 10)).filter(y => !isNaN(y));
+    const lifeNote = LIFECYCLE_NOTE[norm(e.lifecycle)];
+    const m = (k, v) => v ? '<div class="m"><dt>' + k + '</dt><dd>' + v + '</dd></div>' : '';
+
+    let html =
+      '<header class="entry-head">' +
+        '<p class="kicker">' + inline(e.kicker || ("Entry " + e.num + (e.subject ? " · " + e.subject : "") + " · " + e.lifecycle)) + '</p>' +
+        '<h1>' + inline(e.title) + '</h1>' +
+        (e.lede ? '<p class="lede">' + inline(e.lede) + '</p>' : '') +
+      '</header>' +
+      (e.claim ? '<div class="claimbox"><p class="k">' + (nodes.length ? "The claim being traced" : "The claim") + '</p><p>' + inline(e.claim) + '</p></div>' : '') +
+      '<dl class="metastrip">' +
+        m("Subject", inline(e.subject)) +
+        m("Domain", inline(e.path)) +
+        m("Cross-links", inline(e.cross)) +
+        m("Lifecycle", inline(e.lifecycle) + (lifeNote ? ' <span class="sub2">' + lifeNote + '</span>' : '')) +
+        m("Hypothesis", '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>') +
+        m("Peer review", '<span class="pill ' + e.review.cls + '">' + e.review.label + '</span>') +
+        m("Plain status", inline(e.plain)) +
+        m("Contested", e.contested ? '<span class="pill c">Contested</span>' : "No") +
+        m("Rests on", entryLinks(e.restsOn)) +
+        m("Cited by", entryLinks(e.citedBy)) +
+        m("Entry author", inline(e.author)) +
+        m("Conflicts", inline(e.conflicts)) +
+      '</dl>';
+
+    if (nodes.length) {
+      html += '<p class="strip-label">Source verification — how well each quoted sentence is confirmed</p><div class="scoreboard">' +
+        Object.keys(counts).map(k => k === "Verified at source"
+          ? '<span class="pill v">' + verified + ' of ' + nodes.length + ' verified at source</span>'
+          : '<span class="pill ' + (VERIFY_CLS[norm(k)] || "u") + '">' + counts[k] + ' ' + esc(k.toLowerCase()) + '</span>').join("") +
+        '</div>';
+    }
+    html += '<div class="callout"><p class="big">Peer-reviewed / Verified — not the same as true.</p>' +
+      '<p class="sub">The badges on this entry tell you how far the checking has gone — not whether the claim is right. Each tag is explained in full just below, and on the <a href="#method">Method</a> page.</p></div>';
+
+    html += renderBlocks(e.intro);
+    e.sections.forEach(s => {
+      html += '<h2 class="block">' + inline(s.title) + '</h2>';
+      if (!s.chain) { html += renderBlocks(s.blocks, { settle: /^where it stands/i.test(s.title) }); return; }
+      html += renderBlocks(s.pre) +
+        '<div class="legend">' +
+          '<div><b>Tier</b> — which of T1–T4 the paper\'s evidence actually reaches.</div>' +
+          '<div><b>Verification</b> — whether we confirmed the quote against the publisher\'s own page. Not the same as the claim being true.</div>' +
+          '<div><b>Peer-reviewed / Preprint</b> — peer-reviewed means experts read the manuscript before publication. It does <b>not</b> mean anyone repeated the study.</div>' +
+          '<div><b>Replication</b> — whether another lab re-ran the study and got the same result. This is the test that actually settles a claim. "Unknown" means we haven\'t checked yet.</div>' +
+          '<div><b>Files</b> — the original paper or dataset attached to the node, so anyone can check it directly. Uploads come with the full site; the slot is here now.</div>' +
+        '</div><div class="chain">' +
+        s.items.map(it => it.node ? renderNode(it.node) : '<div class="breakmark">' + inline(it.breakText) + '</div>').join("") +
+        '</div>';
+    });
+
+    const src = REPO + "/blob/main/entries/" + encodeURIComponent(e.file);
+    const hist = REPO + "/commits/main/entries/" + encodeURIComponent(e.file);
+    html += '<footer>' +
+      '<span class="mono">Entry ' + e.num + (e.traced ? ' · traced ' + esc(e.traced) : e.added ? ' · added ' + esc(e.added) : '') + '</span>' +
+      (nodes.length ? '<span class="mono">' + nodes.length + (nodes.length === 1 ? ' node' : ' nodes') +
+        (years.length ? ' · ' + Math.min.apply(null, years) + (Math.max.apply(null, years) > Math.min.apply(null, years) ? '–' + Math.max.apply(null, years) : '') : '') +
+        ' · ' + verified + ' of ' + nodes.length + ' verified at source</span>' : '') +
+      '<span class="mono"><a href="' + src + '">Source</a> · <a href="' + hist + '">Change history</a></span>' +
+      '</footer>';
+    document.getElementById("entryBody").innerHTML = html;
+    document.title = e.title + " · Assumption Check";
+  }
 
   // --- facet model: within a group the chips are OR, across groups AND ---
   const facetDefs = [
@@ -922,7 +1068,9 @@
     if (!shown.length) {
       const d = document.createElement("div");
       d.className = "empty";
-      d.textContent = "No entries match that yet. This prototype holds one entry — try “prions” or “neuroscience”.";
+      d.textContent = entries.length
+        ? "No entries match that yet. Try a broader word, or clear the filters."
+        : "No entries could be loaded. If you opened this page from your computer, check that entries.js sits next to index.html.";
       listEl.appendChild(d);
       return;
     }
@@ -938,9 +1086,9 @@
         '<span class="pill ' + e.hypothesis.cls + '">' + e.hypothesis.label + '</span>' +
         '<span class="pill ' + e.review.cls + '">' + e.review.label + '</span>' +
         (e.contested ? '<span class="pill c">Contested</span>' : '') + '</div>' +
-        '<h3>' + e.title + '</h3>' +
-        '<p class="claim-line">' + e.claim + '</p>' +
-        '<p class="sub">' + e.sub + '</p>';
+        '<h3>' + inline(e.title) + '</h3>' +
+        '<p class="claim-line">' + inline(e.claim) + '</p>' +
+        (e.sub ? '<p class="sub">' + inline(e.sub) + '</p>' : '');
       card.addEventListener("click", () => go(e.id));
       listEl.appendChild(card);
     });
@@ -956,7 +1104,10 @@
 
   function go(hash) {
     const h = (hash || "").replace("#", "");
-    const view = h === "entry-001" ? "entry" : h === "method" ? "method" : h === "map" ? "map" : h === "registry" ? "registry" : h === "about" ? "about" : "home";
+    const em = h.match(/^entry-(\d+)$/);
+    const entry = em ? byNum[padNum(em[1])] : null;
+    const view = entry ? "entry" : h === "method" ? "method" : h === "map" ? "map" : h === "registry" ? "registry" : h === "about" ? "about" : "home";
+    if (entry) renderEntry(entry); else document.title = "Assumption Check";
     vHome.hidden = view !== "home";
     vRegistry.hidden = view !== "registry";
     vEntry.hidden = view !== "entry";
@@ -964,7 +1115,7 @@
     vMap.hidden = view !== "map";
     vAbout.hidden = view !== "about";
     if (view === "map") { if (window.__sky) window.__sky.start(); } else { if (window.__sky) window.__sky.stop(); }
-    const target = view === "entry" ? "#entry-001" : view === "method" ? "#method" : view === "map" ? "#map" : view === "registry" ? "#registry" : view === "about" ? "#about" : "#home";
+    const target = view === "entry" ? "#" + entry.id : view === "method" ? "#method" : view === "map" ? "#map" : view === "registry" ? "#registry" : view === "about" ? "#about" : "#home";
     if (target !== location.hash) {
       try { history.pushState(null, "", target); } catch (_) {}
     }
@@ -1032,8 +1183,21 @@
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     const C = { amber: "#ffd24a", blue: "#6bb0ef", green: "#4fe0ad", red: "#ef6f63", violet: "#b592f0" };
-    const nodes = [
-      { x: .50, y: .42, s: "green", c: 9, label: "Entry 001 — supported, scope-limited" },
+    // Labeled stars are real entries: color from the hypothesis, brightness from connections.
+    const real = entries.map((e, i) => {
+      const a = i * 2.39996, r = i ? 0.16 + 0.05 * Math.sqrt(i) : 0;
+      return {
+        x: Math.min(.9, Math.max(.1, .5 + Math.cos(a) * r)),
+        y: Math.min(.86, Math.max(.14, .42 + Math.sin(a) * r * 1.3)),
+        s: e.contested ? "violet" : e.hypothesis.star,
+        c: Math.min(10, 5 + 2 * e.crossCount + 2 * (e.restsOn.length + e.citedBy.length)),
+        label: "Entry " + e.num + " — " + e.title.replace(/<[^>]+>/g, ""),
+        entry: e
+      };
+    });
+    const realByNum = {};
+    real.forEach(n => { realByNum[n.entry.num] = n; });
+    const filler = [
       { x: .30, y: .30, s: "green", c: 6 }, { x: .70, y: .27, s: "green", c: 5 },
       { x: .20, y: .60, s: "blue", c: 3 },  { x: .81, y: .62, s: "amber", c: 7 },
       { x: .61, y: .72, s: "red", c: 2 },   { x: .42, y: .19, s: "violet", c: 4 },
@@ -1044,6 +1208,8 @@
       { x: .10, y: .72, s: "red", c: 1 },   { x: .56, y: .33, s: "green", c: 4 },
       { x: .45, y: .63, s: "violet", c: 3 }
     ];
+    // Illustrative stars stay clear of the real ones.
+    const nodes = real.concat(filler.filter(f => real.every(n => Math.hypot(n.x - f.x, n.y - f.y) > 0.09)));
     const bg = Array.from({ length: 130 }, () => ({
       x: Math.random(), y: Math.random(), r: Math.random() * 1.1 + 0.2,
       a: Math.random() * 0.5 + 0.18, ph: Math.random() * 6.283
@@ -1076,6 +1242,11 @@
       g.addColorStop(0, "#070a16"); g.addColorStop(1, "#0e0b1a");
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
       ctx.globalCompositeOperation = "lighter";
+      ctx.lineWidth = 1; ctx.strokeStyle = "#8fa0d8"; ctx.globalAlpha = 0.35;
+      for (const n of real) for (const num of n.entry.restsOn) {
+        const t = realByNum[num];
+        if (t) { ctx.beginPath(); ctx.moveTo(n.x * W, n.y * H); ctx.lineTo(t.x * W, t.y * H); ctx.stroke(); }
+      }
       for (const s of bg) {
         const tw = reduce ? 0.8 : (0.45 + 0.55 * Math.sin(t * 0.0012 + s.ph));
         ctx.globalAlpha = s.a * tw * 0.7; ctx.fillStyle = "#aab4e0";
@@ -1097,10 +1268,13 @@
         ctx.beginPath(); ctx.arc(x, y, coreR * 1.8, 0, 6.2832); ctx.fill();
       }
       ctx.globalCompositeOperation = "source-over";
-      const e = nodes[0];
       ctx.globalAlpha = 0.9; ctx.fillStyle = "#dfe4f5";
       ctx.font = '11px "IBM Plex Mono", monospace';
-      ctx.fillText(e.label, e.x * W + 14, e.y * H + 3);
+      for (const n of real) {
+        const lw = ctx.measureText(n.label).width;
+        const lx = n.x * W + 14 + lw > W - 8 ? n.x * W - 14 - lw : n.x * W + 14;
+        ctx.fillText(n.label, lx, n.y * H + 3);
+      }
       ctx.globalAlpha = 1;
     }
     function loop(t) { draw(t || 0); if (!reduce && running) raf = requestAnimationFrame(loop); }
@@ -1109,6 +1283,12 @@
       stop() { running = false; if (raf) cancelAnimationFrame(raf); }
     };
     window.addEventListener("resize", () => { if (vMap && !vMap.hidden) { resize(); draw(performance.now()); } });
+    const hit = ev => {
+      const r = canvas.getBoundingClientRect(), px = ev.clientX - r.left, py = ev.clientY - r.top;
+      return real.find(n => Math.hypot(n.x * W - px, n.y * H - py) < 18);
+    };
+    canvas.addEventListener("mousemove", ev => { canvas.style.cursor = hit(ev) ? "pointer" : "default"; });
+    canvas.addEventListener("click", ev => { const n = hit(ev); if (n) go(n.entry.id); });
   })();
 
   // --- boot ---
