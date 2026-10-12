@@ -13,14 +13,16 @@
     "Neurology"
    ],
    "stage": "Traced",
-   "stage_note": "trace complete; 8/8 verified",
-   "hypothesis": "Resolved — Supported",
+   "stage_note": "trace complete; 8/8 verified at source. The hypothesis is open, not the trace: the claim as worded depends on vesicle enclosure, which Entry 011 records as untested.",
+   "hypothesis": "Open Hypothesis",
    "peer_review": "Unreviewed",
    "contested": false,
    "lifecycle": "Active",
-   "summary": "8-node trace · in-vivo claim holds — two independent i.c. bioassays; scope-limited; one downstream miscitation",
-   "plain_status": "Supported by two independent intracerebral bioassays in PrP-overexpressing mice (Février 2004, Vella 2007); not shown for natural routes or normal-PrP animals",
-   "rests_on": [],
+   "summary": "8-node trace, all verified at source. The pellet transmits; whether the infectivity is inside the vesicles is an open question (Entry 011).",
+   "plain_status": "Material from the preparation called exosomes causes disease when injected into the brains of PrP-overexpressing mice, in two independent studies. Whether that material is carried inside vesicles, rather than as free aggregate pelleting alongside them, has not been established.",
+   "rests_on": [
+    "011"
+   ],
    "cited_by": [],
    "keywords": [
     "prion",
@@ -36,7 +38,7 @@
     "molecular neuroscience"
    ],
    "added": "2026-10-06",
-   "updated": "2026-10-06",
+   "updated": "2026-10-12",
    "author": "Priority Nexus LLC",
    "conflicts": "None declared",
    "node_count": 8,
