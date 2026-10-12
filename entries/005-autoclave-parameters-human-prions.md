@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "005"
 title: The autoclave parameters for human prions
 claim: The recommended steam-sterilisation parameters (134°C for 18 minutes) inactivate human prions on surgical instruments.
@@ -35,7 +35,7 @@ keywords:
   - who guidelines
   - infection control
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)
 conflicts: None declared
