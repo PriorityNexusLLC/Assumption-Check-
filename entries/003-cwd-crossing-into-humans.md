@@ -58,11 +58,11 @@ No human case of CWD-derived prion disease has been confirmed. Investigations of
 
 Kotkowski 2026 (*Frontiers in Public Health*, open access) investigated a 72-year-old hunter with long-term venison exposure in CWD-endemic Louisiana. Neuropathology "confirmed sporadic CJD, MM1 subtype," and the authors found "no evidence supporting confirmed CWD-to-human transmission was identified." An earlier CDC review of CJD among venison consumers (Belay 2004; cited from the search record, see Provenance) reached the same conclusion.
 
-For context, sporadic CJD occurs at about 1–2 per million per year from no known cause, and prion incubation periods can last 5–50 years in humans, which limits the surveillance weight that the absence of a confirmed case carries.
+Sporadic CJD occurs at about 1–2 per million per year with no known cause. Human prion incubation can last 5–50 years, so the absence of a confirmed case does not rule out transmission.
 
 ## The transmission studies
 
-Each study used a different model, isolate or route. Results are grouped by the model used, oldest first.
+Each used a different model, isolate or route. Listed oldest first.
 
 ### 2014 — Primates, two species
 Tier: T3
@@ -73,7 +73,7 @@ Race B, Meade-White KD, Phillips K, Striebel J, Race R, Chesebro B. "Chronic was
 
 > "We found that 100% of intracerebrally inoculated and 92% of orally inoculated squirrel monkeys were susceptible, but cynomolgus macaques were not, suggesting possible low risk for humans."
 
-- **What it shows:** Squirrel monkeys (a New World primate) were susceptible. Six cynomolgus macaques (an Old World primate, genetically closer to humans) were screened; the paper reports "No evidence of prion infection was detected by immunoblot and immunohistochemical methods," and that "The lack of CWD transmission during >10 years suggests that a substantial species barrier exists between cervids and cynomolgus macaques."
+- **What it shows:** Squirrel monkeys were susceptible. Six cynomolgus macaques, the species genetically closer to humans, were not; the paper reports "No evidence of prion infection was detected by immunoblot and immunohistochemical methods," and that "The lack of CWD transmission during >10 years suggests that a substantial species barrier exists between cervids and cynomolgus macaques."
 - **What it does not show:** Which result applies to humans.
 - **Files:** Full text (EID Dispatch) read at source 9 Oct 2026.
 
@@ -131,7 +131,7 @@ Hannaoui S, Pritzkow S, Schulz-Schaeffer WJ, et al. "Limited transmission of cer
 
 ## Why the results differ
 
-The studies are not repeats of one experiment. They differ on four axes, each of which can change the outcome:
+The studies are not repeats of one experiment. They differ in four ways, each of which can change the result:
 
 - **Isolate.** The 2022 positive used two named deer isolates (Wisc-1, 116AG); the other studies used different isolates. The species barrier is a property of the prion strain, so a result for one isolate does not carry to another.
 - **Model.** A squirrel monkey, a macaque, a mouse overexpressing human PrP, and an organoid differ in sensitivity and in what they can detect.
@@ -153,7 +153,7 @@ Most of these studies detect infection in the brain and inoculate into the brain
 > [!summary]
 > Claim (CWD causes human disease) → no confirmed case; not demonstrated.
 > Transmission studies → conflicting results across models, isolates and routes.
-> Public guidance → precautionary; CDC advises testing deer before eating and not eating a positive animal.
+> Public guidance → CDC advises testing deer in CWD areas before eating, and not eating a positive animal.
 
 > [!note] Provenance — read before citing
 > Sources were re-checked at the publisher on 9 October 2026; Race 2018 was read in full from a publisher EPUB on 12 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Race 2018 (*Journal of Virology*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); and Kotkowski 2026 (*Frontiers in Public Health*, open access), cited in the surveillance record. The Belay 2004 CDC cluster review is cited from the search record, as that journal page blocks automated access. This entry is AI-assisted research and is marked so in the author field, per the Method page.
