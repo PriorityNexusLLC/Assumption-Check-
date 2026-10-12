@@ -1,0 +1,1883 @@
+[
+ {
+  "n": 1,
+  "name": "Physical Sciences",
+  "desc": "Includes physics, mechanics, thermodynamics, electromagnetism, optics, quantum theory, condensed matter, materials physics, plasma science, acoustics, and related fields that study matter, energy, forces, and physical systems.",
+  "subs": [
+   {
+    "name": "Core Physics and Foundations",
+    "fields": [
+     "Classical Mechanics",
+     "Quantum Mechanics",
+     "Statistical Mechanics",
+     "Thermodynamics",
+     "Electromagnetism",
+     "Optics",
+     "Atomic, Molecular, and Optical Physics (AMO)",
+     "Nuclear Physics",
+     "Particle Physics",
+     "Condensed Matter Physics",
+     "Solid State Physics",
+     "Plasma Physics",
+     "Mathematical Physics",
+     "Physical Chemistry",
+     "Chemical Physics",
+     "Biophysics"
+    ]
+   },
+   {
+    "name": "Mechanics, Motion, and Dynamics",
+    "fields": [
+     "Dynamics",
+     "Statics",
+     "Kinematics",
+     "Analytical Mechanics",
+     "Lagrangian Mechanics",
+     "Hamiltonian Mechanics",
+     "Celestial Mechanics",
+     "Orbital Mechanics",
+     "Rotational/Rigid Body Dynamics",
+     "Continuum Mechanics",
+     "Solid Mechanics",
+     "Fluid Mechanics",
+     "Fluid Dynamics",
+     "Computational Fluid Dynamics",
+     "Rheology",
+     "Rheophysics",
+     "Aerodynamics",
+     "Aeroelasticity",
+     "Hydroelasticity",
+     "Poroelasticity",
+     "Viscoelasticity",
+     "Elastodynamics",
+     "Granular Mechanics",
+     "Fracture Mechanics",
+     "Contact Mechanics",
+     "Soil Mechanics",
+     "Rock Mechanics",
+     "Structural Dynamics",
+     "Rotordynamics",
+     "Multibody Dynamics",
+     "Computational Mechanics",
+     "Perturbation Theory",
+     "Singular Perturbation Theory",
+     "Asymptotic Analysis",
+     "Nonlinear Dynamics",
+     "Bifurcation Theory",
+     "KAM Theory (Kolmogorov–Arnold–Moser)",
+     "Wave Propagation Theory"
+    ]
+   },
+   {
+    "name": "Thermal, Statistical, and Non-Equilibrium Physics",
+    "fields": [
+     "Quantum Statistical Mechanics",
+     "Quantum Thermodynamics",
+     "Thermodynamics of Computation",
+     "Non-equilibrium Thermodynamics",
+     "Far-from-equilibrium Dynamics",
+     "Spin Glass Theory",
+     "Non-extensive Statistical Mechanics",
+     "Tsallis Statistics",
+     "Cryogenics",
+     "High-Energy Density Physics"
+    ]
+   },
+   {
+    "name": "Electromagnetism, Optics, Photonics, and Wave Sciences",
+    "fields": [
+     "Photonics",
+     "Nonlinear Optics",
+     "Quantum Optics",
+     "Optomechanics",
+     "Biophotonics",
+     "Optoelectronics",
+     "Photonic Crystals",
+     "Plasmonics",
+     "Plasmonic Metamaterials",
+     "Plasmonic Circuitry",
+     "Sonoluminescence",
+     "Terahertz Technology",
+     "Electrohydrodynamics",
+     "Magnetostatics",
+     "Magnetohydrodynamics",
+     "Magnetogasdynamics",
+     "Magnetic Reconnection Physics",
+     "Quantum Electrodynamics"
+    ]
+   },
+   {
+    "name": "Condensed Matter, Materials, and Nanoscale Physical Sciences",
+    "fields": [
+     "Condensed Matter Theory",
+     "Materials Physics",
+     "Soft Matter Physics",
+     "Polymer Physics",
+     "Surface Science",
+     "Nanotechnology",
+     "Molecular Nanotechnology",
+     "Metamaterials Science",
+     "Programmable Matter",
+     "Active Matter Physics",
+     "Topological Insulators",
+     "Anyon Physics",
+     "Skyrmionics",
+     "Spintronics",
+     "Spintronic Materials",
+     "Magnonics",
+     "Magnonic Logic",
+     "Phononics",
+     "Phononic Crystals",
+     "Acoustic Metamaterials",
+     "Thermoelectrics",
+     "Piezoelectrics",
+     "Ferroelectrics",
+     "Positron Annihilation Spectroscopy",
+     "Muon Spin Spectroscopy",
+     "Neutron Scattering Science",
+     "Synchrotron Radiation Science",
+     "X-ray Crystallography",
+     "Electron Microscopy",
+     "Scanning Probe Microscopy"
+    ]
+   },
+   {
+    "name": "Quantum, Relativity, Field Theory, and Fundamental Physics",
+    "fields": [
+     "Quantum Field Theory",
+     "Quantum Chromodynamics",
+     "Quantum Information Theory",
+     "Quantum Information Science",
+     "Quantum Computing",
+     "Quantum Error Correction",
+     "Quantum Sensing",
+     "Quantum Metrology",
+     "Quantum Probability",
+     "Quantum Ergodicity",
+     "Quantum Cryptography",
+     "Quantum Cryptanalysis",
+     "Topological Quantum Field Theory",
+     "Topological Quantum Computing",
+     "Non-Hermitian Quantum Mechanics",
+     "Macroscopic Quantum Phenomena",
+     "General Relativity",
+     "String Theory",
+     "String Field Theory",
+     "M-Theory",
+     "Supergravity",
+     "Loop Quantum Gravity",
+     "Loop Quantum Cosmology",
+     "Causal Dynamical Triangulations",
+     "Spin Networks",
+     "Quantum Graphity",
+     "Twistor Theory",
+     "Twistor Cosmology",
+     "Holographic Principle",
+     "AdS/CFT Correspondence",
+     "Holographic Entanglement Entropy",
+     "Superradiance Theory"
+    ]
+   },
+   {
+    "name": "Nuclear, Particle, and High-Energy Physics",
+    "fields": [
+     "Neutrino Physics",
+     "Antimatter Physics",
+     "High-Energy Astrophysics",
+     "Quark-Gluon Plasma Physics",
+     "Neutrino Astrophysics",
+     "Gyrokinetics",
+     "Attosecond Physics",
+     "Zeptosecond Physics",
+     "Yoctosecond Physics",
+     "Rydberg Atom Physics"
+    ]
+   },
+   {
+    "name": "Plasma, Fluid, and Micro/Nanoscale Flow Physics",
+    "fields": [
+     "Microgravity Fluid Dynamics",
+     "Microfluidics",
+     "Nanofluidics",
+     "Optofluidics",
+     "Acoustofluidics",
+     "Cavitation Dynamics",
+     "Granular Physics"
+    ]
+   },
+   {
+    "name": "Acoustics, Vibrations, and Sound-Related Physical Sciences",
+    "fields": [
+     "Vibrations and Acoustics",
+     "Acoustics",
+     "Aeroacoustics",
+     "Hydroacoustics",
+     "Bioacoustics",
+     "Ecoacoustics",
+     "Soundscape Ecology",
+     "Psychoacoustics"
+    ]
+   },
+   {
+    "name": "Measurement, Instrumentation, and Applied Physical Methods",
+    "fields": [
+     "Metrology",
+     "Sensor Fusion",
+     "Photogrammetry",
+     "Remote Sensing"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "name": "Chemical Sciences",
+  "desc": "Includes chemistry and its branches, such as organic, inorganic, analytical, physical, nuclear, environmental, computational, quantum, polymer, surface, food, photochemical, and materials-related chemistry.",
+  "subs": [
+   {
+    "name": "Core Chemistry Branches",
+    "fields": [
+     "Chemistry (General)",
+     "Organic Chemistry",
+     "Inorganic Chemistry",
+     "Analytical Chemistry",
+     "Biochemistry",
+     "Quantum Chemistry",
+     "Computational Chemistry",
+     "Chemoinformatics"
+    ]
+   },
+   {
+    "name": "Organic, Carbon, and Molecular Chemistry",
+    "fields": [
+     "Organometallic Chemistry",
+     "Polymer Chemistry",
+     "Supramolecular Chemistry",
+     "Medicinal Chemistry",
+     "Petrochemistry",
+     "Pharmacognosy"
+    ]
+   },
+   {
+    "name": "Inorganic, Nuclear, and Materials Chemistry",
+    "fields": [
+     "Coordination Chemistry",
+     "Solid-State Chemistry",
+     "Radiochemistry",
+     "Nuclear Chemistry",
+     "Actinide Chemistry",
+     "Magnetochemistry",
+     "Metallomics",
+     "Materials Chemistry",
+     "Nanochemistry",
+     "Electrochemistry"
+    ]
+   },
+   {
+    "name": "Analytical, Measurement, and Forensic Chemistry",
+    "fields": [
+     "Forensic Chemistry",
+     "Mass Spectrometry",
+     "Spectroscopy",
+     "Chromatography",
+     "Electrophoresis",
+     "Chemical Sensing"
+    ]
+   },
+   {
+    "name": "Physical, Quantum, and Reaction Chemistry",
+    "fields": [
+     "Quantum Chemistry Dynamics",
+     "Photochemistry",
+     "Sonochemistry",
+     "Mechanochemistry",
+     "Femtochemistry",
+     "Thermochemistry",
+     "Chemical Kinetics",
+     "Catalysis",
+     "Surface Chemistry"
+    ]
+   },
+   {
+    "name": "Biological, Medical, and Life-Related Chemistry",
+    "fields": [
+     "Secretomics",
+     "Venomics",
+     "Ionomics"
+    ]
+   },
+   {
+    "name": "Environmental, Earth, Ocean, and Space Chemistry",
+    "fields": [
+     "Environmental Chemistry",
+     "Geochemistry",
+     "Astrochemistry",
+     "Cosmochemistry"
+    ]
+   },
+   {
+    "name": "Industrial, Engineering, and Applied Chemical Sciences",
+    "fields": [
+     "Industrial Chemistry",
+     "Petroleum Engineering",
+     "Reservoir Engineering",
+     "Textile Engineering"
+    ]
+   },
+   {
+    "name": "Systems, Computational, and Emerging Chemical Sciences",
+    "fields": [
+     "Systems Chemistry",
+     "DNA Computing",
+     "Organic Computing"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "name": "Life and Biological Sciences",
+  "desc": "Includes biology, molecular and cellular biology, genetics, ecology, evolution, botany, zoology, microbiology, systems biology, synthetic biology, omics fields, agricultural biology, and biological subfields tied primarily to living organisms.",
+  "subs": [
+   {
+    "name": "Core Biology and Organismal Sciences",
+    "fields": [
+     "Biology (General)",
+     "Molecular Biology",
+     "Cellular Biology",
+     "Developmental Biology",
+     "Evolutionary Biology",
+     "Structural Biology",
+     "Systems Biology",
+     "Synthetic Biology",
+     "Computational Biology",
+     "Mathematical Biology",
+     "Theoretical Biology",
+     "Chronobiology",
+     "Chronomics"
+    ]
+   },
+   {
+    "name": "Genetics, Genomics, and Heredity Sciences",
+    "fields": [
+     "Genetics",
+     "Molecular Genetics",
+     "Epigenetics",
+     "Genomics",
+     "Epigenomics",
+     "Transcriptomics",
+     "Population Genetics",
+     "Quantitative Genetics",
+     "Ecological Genetics",
+     "Landscape Genetics",
+     "Behavioral Genetics",
+     "Phylogenetics",
+     "Phylogenomics",
+     "Paleogenomics",
+     "Toxicogenomics",
+     "Nutrigenomics",
+     "Genetic Engineering"
+    ]
+   },
+   {
+    "name": "Molecular, Cellular, and Biochemical Life Sciences",
+    "fields": [
+     "Proteomics",
+     "Interactomics",
+     "Physiomics",
+     "Phenomics",
+     "Radiomics",
+     "Synaptomics"
+    ]
+   },
+   {
+    "name": "Microbial, Viral, and Microscopic Life Sciences",
+    "fields": [
+     "Microbiology",
+     "Bacteriology",
+     "Virology",
+     "Mycology",
+     "Protistology",
+     "Microbial Ecology",
+     "Metagenomics",
+     "Parasitology",
+     "Xenobiology"
+    ]
+   },
+   {
+    "name": "Plant Sciences, Agriculture, and Botanical Life Sciences",
+    "fields": [
+     "Botany (Plant Biology)",
+     "Plant Biology",
+     "Phycology",
+     "Astrobotany",
+     "Agronomy",
+     "Horticulture",
+     "Silviculture",
+     "Arboriculture",
+     "Viticulture",
+     "Pomology",
+     "Oenology",
+     "Agroecology",
+     "Agrochemistry",
+     "Agricultural Biology",
+     "Agricultural Engineering",
+     "Forest Mensuration",
+     "Dendroecology",
+     "Dendrochronology",
+     "Ethnobotany",
+     "Archaeobotany",
+     "Paleoethnobotany",
+     "Phytolith Analysis",
+     "Palynology"
+    ]
+   },
+   {
+    "name": "Animal Sciences, Zoology, and Comparative Biology",
+    "fields": [
+     "Zoology",
+     "Marine Biology",
+     "Aquaculture",
+     "Animal Husbandry",
+     "Veterinary Medicine",
+     "Ethnozoology",
+     "Zooarchaeology",
+     "Bioarchaeology",
+     "Osteology",
+     "Craniometry",
+     "Anthropometry",
+     "Forensic Entomology",
+     "Forensic Anthropology",
+     "Forensic Odontology",
+     "Comparative Anatomy",
+     "Morphology",
+     "Ethology",
+     "Cognitive Ethology",
+     "Neuroethology",
+     "Computational Neuroethology"
+    ]
+   },
+   {
+    "name": "Ecology, Evolution, Conservation, and Environmental Biology",
+    "fields": [
+     "Ecology",
+     "Conservation Biology",
+     "Evolutionary Developmental Biology (Evo-Devo)",
+     "Evolutionary Ecology",
+     "Landscape Ecology",
+     "Population Ecology",
+     "Community Ecology",
+     "Ecosystem Ecology",
+     "Macroecology",
+     "Systems Ecology",
+     "Spatial Ecology",
+     "Macrosystems Biology",
+     "Biometeorology",
+     "Aerobiology",
+     "Limnology",
+     "Biological Oceanography",
+     "Ecological Network Analysis"
+    ]
+   },
+   {
+    "name": "Human Biology, Anatomy, Physiology, and Biomedical Foundations",
+    "fields": [
+     "Anatomy",
+     "Physiology",
+     "Histology",
+     "Pathophysiology",
+     "Etiology",
+     "Teratology",
+     "Neonatology",
+     "Gerontology",
+     "Somnology",
+     "Kinesiology",
+     "Tissue Mechanics",
+     "Hemodynamics",
+     "Respiratory Mechanics",
+     "Neuroendocrinology",
+     "Psychoendocrinology",
+     "Immunology",
+     "Hematology",
+     "Pathology",
+     "Oncology",
+     "Forensic Pathology"
+    ]
+   },
+   {
+    "name": "Bioengineering, Biotechnology, and Applied Biological Systems",
+    "fields": [
+     "Biotechnology",
+     "Bioengineering",
+     "Bionics",
+     "Biomimetics",
+     "Biorobotics",
+     "Soft Robotics"
+    ]
+   },
+   {
+    "name": "Space, Extreme, and Speculative Life Sciences",
+    "fields": [
+     "Quantum Biology",
+     "Magnetobiology",
+     "Optogenetics",
+     "Femtobiology",
+     "Synthetic Morphology"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "name": "Earth, Environmental, and Planetary Sciences",
+  "desc": "Includes geology, geophysics, oceanography, atmospheric science, climate science, hydrology, geomorphology, mineralogy, petrology, environmental science, remote sensing, geomatics, cryospheric science, and planetary surface sciences.",
+  "subs": [
+   {
+    "name": "Core Earth and Geosciences",
+    "fields": [
+     "Earth Science",
+     "Earth System Science",
+     "Geology",
+     "Geophysics",
+     "Geomorphology",
+     "Mineralogy",
+     "Petrology",
+     "Structural Geology",
+     "Tectonics",
+     "Stratigraphy",
+     "Sedimentology",
+     "Geochronology",
+     "Geodesy",
+     "Geomatics",
+     "Cartography",
+     "Geographic Information Systems (GIS)",
+     "Geoinformatics"
+    ]
+   },
+   {
+    "name": "Solid Earth, Rocks, Minerals, and Landforms",
+    "fields": [
+     "Gemology",
+     "Speleology",
+     "Volcanology",
+     "Seismology",
+     "Paleomagnetism",
+     "Economic Geology",
+     "Mining Geology",
+     "Petroleum Geology"
+    ]
+   },
+   {
+    "name": "Atmospheric, Weather, and Climate Sciences",
+    "fields": [
+     "Atmospheric Science",
+     "Atmospheric Physics",
+     "Atmospheric Chemistry",
+     "Meteorology",
+     "Dynamic Meteorology",
+     "Synoptic Meteorology",
+     "Mesoscale Meteorology",
+     "Boundary Layer Meteorology",
+     "Hydrometeorology",
+     "Aeronomy",
+     "Climate Science",
+     "Climatology",
+     "Paleoclimatology",
+     "Hydroclimatology",
+     "Agroclimatology"
+    ]
+   },
+   {
+    "name": "Water, Ocean, Ice, and Cryosphere Sciences",
+    "fields": [
+     "Hydrology",
+     "Hydrogeology",
+     "Hydrogeophysics",
+     "Ecohydrology",
+     "Oceanography",
+     "Physical Oceanography",
+     "Geological Oceanography",
+     "Marine Geology",
+     "Marine Geophysics",
+     "Paleoceanography",
+     "Glaciology",
+     "Cryospheric Science",
+     "Glaciological Modeling",
+     "Glacial Geology"
+    ]
+   },
+   {
+    "name": "Environmental, Soil, and Surface System Sciences",
+    "fields": [
+     "Environmental Science",
+     "Environmental Geology",
+     "Environmental Engineering",
+     "Environmental Economics",
+     "Pedology",
+     "Edaphology",
+     "Soil Science",
+     "Biogeochemistry",
+     "Biogeophysics",
+     "Geomicrobiology",
+     "Ecoinformatics"
+    ]
+   },
+   {
+    "name": "Paleosciences, Earth History, and Chronology",
+    "fields": [
+     "Paleontology",
+     "Micropaleontology",
+     "Paleoecology",
+     "Paleogeography",
+     "Ichnology",
+     "Taphonomy",
+     "Sclerochronology",
+     "Tephrochronology",
+     "Cosmogenic Nuclide Dating",
+     "Speleothem Science"
+    ]
+   },
+   {
+    "name": "Planetary Surface, Comparative Planetology, and Solar System Earth-Analog Sciences",
+    "fields": [
+     "Planetary Science",
+     "Planetary Differentiation",
+     "Selenography",
+     "Areology",
+     "Planetary Atmospheres",
+     "Planetary Surface Science"
+    ]
+   },
+   {
+    "name": "Natural Hazards, Resources, and Applied Earth Sciences",
+    "fields": [
+     "Coastal Engineering",
+     "Geotechnical Engineering",
+     "Mining Engineering",
+     "Safety Engineering",
+     "Risk Analysis"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "name": "Space and Astronomical Sciences",
+  "desc": "Includes astronomy, astrophysics, cosmology, space science, planetary astronomy, heliophysics, astrobiology, radio astronomy, galactic and extragalactic astronomy, orbital science, space weather, and related cosmic-scale disciplines.",
+  "subs": [
+   {
+    "name": "Core Astronomy, Space Science, and Observational Fields",
+    "fields": [
+     "Astronomy",
+     "Space Science",
+     "Astrophysics",
+     "Observational Astronomy",
+     "Theoretical Astronomy",
+     "Computational Astrophysics",
+     "Astrometry",
+     "Radio Astronomy",
+     "Astroinformatics",
+     "Astrophotography",
+     "Photometry"
+    ]
+   },
+   {
+    "name": "Astrophysics and High-Energy Cosmic Phenomena",
+    "fields": [
+     "Stellar Astrophysics",
+     "Interstellar Astrophysics",
+     "Extragalactic Astronomy",
+     "Galactic Astronomy",
+     "Galactic Dynamics",
+     "Stellar Kinematics",
+     "Extragalactic Kinematics",
+     "Compact Object Astrophysics",
+     "Black Hole Physics",
+     "Supernova Science",
+     "Gamma-Ray Burst Science"
+    ]
+   },
+   {
+    "name": "Cosmology and Universe-Scale Sciences",
+    "fields": [
+     "Cosmology",
+     "Physical Cosmology",
+     "Observational Cosmology",
+     "Quantum Cosmology",
+     "Cosmography",
+     "Cosmic Microwave Background Studies",
+     "Dark Matter Studies",
+     "Dark Energy Studies",
+     "Large-Scale Structure Studies",
+     "Inflationary Cosmology"
+    ]
+   },
+   {
+    "name": "Solar, Stellar, and Heliospheric Sciences",
+    "fields": [
+     "Solar Physics",
+     "Heliophysics",
+     "Helioseismology",
+     "Asteroseismology",
+     "Stellar Astronomy",
+     "Space Weather Science",
+     "Plasma Astrophysics",
+     "Solar-Terrestrial Physics",
+     "Solar Wind Studies"
+    ]
+   },
+   {
+    "name": "Planetary, Lunar, Martian, and Exoplanetary Sciences",
+    "fields": [
+     "Planetary Astronomy",
+     "Exoplanetology",
+     "Space Environment Science"
+    ]
+   },
+   {
+    "name": "Astrobiology, Life in Space, and Space Medicine",
+    "fields": [
+     "Astrobiology",
+     "Exobiology",
+     "Space Medicine",
+     "Bioastronautics",
+     "Planetary Habitability Studies",
+     "Extremophile Studies",
+     "Search for Extraterrestrial Intelligence (SETI)"
+    ]
+   },
+   {
+    "name": "Space Engineering, Exploration, and Applied Space Sciences",
+    "fields": [
+     "Space Architecture",
+     "Aerospace Engineering",
+     "Astrodynamics",
+     "Space Systems Engineering",
+     "Space Mission Design",
+     "Satellite Engineering",
+     "Space Weather Forecasting"
+    ]
+   },
+   {
+    "name": "Space-Related Chemistry, Materials, and Interdisciplinary Sciences",
+    "fields": [
+     "Gravitational Physics",
+     "Relativistic Astrophysics",
+     "Interstellar Medium Studies",
+     "Planetary Materials Science"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "name": "Mathematics, Logic, and Formal Sciences",
+  "desc": "Includes mathematics, statistics, logic, topology, geometry, algebra, analysis, probability, optimization, game theory, category theory, set theory, proof theory, model theory, formal systems, and other abstract or deductive disciplines.",
+  "subs": [
+   {
+    "name": "Core Mathematics and Formal Foundations",
+    "fields": [
+     "Mathematics (General)",
+     "Applied Mathematics",
+     "Mathematical Economics",
+     "Mathematical Sociology",
+     "Constructive Mathematics",
+     "Reverse Mathematics"
+    ]
+   },
+   {
+    "name": "Logic, Proof, Model, and Foundational Theories",
+    "fields": [
+     "Mathematical Logic",
+     "Set Theory",
+     "Proof Theory",
+     "Model Theory",
+     "Recursion Theory",
+     "Computability Logic",
+     "Quantum Logic",
+     "Intuitionistic Logic",
+     "Linear Logic",
+     "Paraconsistent Logic",
+     "Fuzzy Logic",
+     "Non-monotonic Logic",
+     "Temporal Logic",
+     "Deontic Logic",
+     "Erotetic Logic",
+     "Free Logic",
+     "Pluralistic Logic",
+     "Independence-Friendly Logic",
+     "Algebraic Logic",
+     "Categorical Logic",
+     "Dialetheism"
+    ]
+   },
+   {
+    "name": "Algebra, Number Theory, and Arithmetic Structures",
+    "fields": [
+     "Algebra",
+     "Abstract Algebra",
+     "Boolean Algebra",
+     "Commutative Algebra",
+     "Homological Algebra",
+     "Representation Theory",
+     "Representation Theory of Lie Algebras",
+     "Lie Theory",
+     "Number Theory",
+     "Analytic Number Theory",
+     "Algebraic Number Theory",
+     "Arithmetic Geometry",
+     "Arithmetic Topology",
+     "K-Theory",
+     "Algebraic K-Theory",
+     "Motivic Cohomology",
+     "Motivic Homotopy Theory",
+     "Derived Algebraic Geometry",
+     "Braid Group Theory",
+     "Knot Theory"
+    ]
+   },
+   {
+    "name": "Geometry, Topology, and Spatial Formal Sciences",
+    "fields": [
+     "Geometry",
+     "Differential Geometry",
+     "Algebraic Geometry",
+     "Noncommutative Geometry",
+     "Symplectic Geometry",
+     "Contact Geometry",
+     "Fractal Geometry",
+     "Discrete Geometry",
+     "Computational Geometry",
+     "Geometric Group Theory",
+     "Geometric Analysis",
+     "Harmonic Geometry",
+     "Sub-Riemannian Geometry",
+     "Finsler Geometry",
+     "Tropical Geometry",
+     "Topology",
+     "Algebraic Topology",
+     "Differential Topology",
+     "Geometric Topology",
+     "Symplectic Topology",
+     "Quantum Topology",
+     "Point-free Topology",
+     "Topological Data Analysis",
+     "Computational Topology",
+     "Information Topology",
+     "Stratified Spaces",
+     "Morse Theory",
+     "Floer Homology"
+    ]
+   },
+   {
+    "name": "Analysis, Calculus, Differential Equations, and Operators",
+    "fields": [
+     "Analysis",
+     "Mathematical Analysis",
+     "Functional Analysis",
+     "Harmonic Analysis",
+     "Numerical Analysis",
+     "Non-standard Analysis",
+     "Computable Analysis",
+     "Operator Theory",
+     "Pseudodifferential Operators",
+     "Calculus",
+     "Tensor Calculus",
+     "Fractional Calculus",
+     "Stochastic Calculus",
+     "Malliavin Calculus",
+     "Umbral Calculus",
+     "Calculus of Variations",
+     "Ordinary Differential Equations",
+     "Partial Differential Equations",
+     "Stochastic Differential Equations",
+     "Inverse Problems",
+     "Rough Path Theory"
+    ]
+   },
+   {
+    "name": "Probability, Statistics, Stochastic Processes, and Data Mathematics",
+    "fields": [
+     "Statistics",
+     "Mathematical Statistics",
+     "Biostatistics",
+     "Algebraic Statistics",
+     "Probability Theory",
+     "Stochastic Processes",
+     "Martingale Theory",
+     "Large Deviations Theory",
+     "Extreme Value Theory",
+     "Copula Theory",
+     "Random Matrix Theory",
+     "Free Probability",
+     "Time Series Analysis",
+     "Multivariate Analysis",
+     "Survival Analysis",
+     "Actuarial Science",
+     "Financial Mathematics",
+     "Financial Econometrics",
+     "Econometrics",
+     "Fractal Analysis",
+     "Singular Learning Theory"
+    ]
+   },
+   {
+    "name": "Discrete Mathematics, Combinatorics, and Graph Theory",
+    "fields": [
+     "Discrete Mathematics",
+     "Combinatorics",
+     "Algebraic Combinatorics",
+     "Extremal Combinatorics",
+     "Probabilistic Combinatorics",
+     "Graph Theory",
+     "Spectral Graph Theory",
+     "Algebraic Graph Theory",
+     "Topological Graph Theory",
+     "Random Graph Theory",
+     "Graph Drawing",
+     "Graph Signal Processing",
+     "Matroid Theory",
+     "Network Topology",
+     "Network Topology Optimization",
+     "Percolation Theory",
+     "Small-world Networks",
+     "Scale-free Networks"
+    ]
+   },
+   {
+    "name": "Optimization, Control, Games, and Decision Mathematics",
+    "fields": [
+     "Optimization Theory",
+     "Combinatorial Optimization",
+     "Infinite-dimensional Optimization",
+     "Operations Research",
+     "Decision Theory",
+     "Game Theory",
+     "Algorithmic Game Theory",
+     "Evolutionary Game Theory",
+     "Mean Field Games",
+     "Quantum Game Theory",
+     "Differential Games",
+     "Mechanism Design",
+     "Social Choice Theory",
+     "Control Theory",
+     "Quantum Control Theory",
+     "Nonlinear Control Theory",
+     "Adaptive Control Theory",
+     "Robust Control Theory",
+     "Optimal Control Theory",
+     "Stochastic Control Theory",
+     "Mean-Field Control Theory",
+     "Optimal Estimation Theory",
+     "Filtering Theory",
+     "Reliability Theory"
+    ]
+   },
+   {
+    "name": "Category Theory, Higher Structures, and Abstract Systems",
+    "fields": [
+     "Category Theory",
+     "Higher Category Theory",
+     "Applied Category Theory",
+     "Homotopy Type Theory",
+     "Topos Theory",
+     "Differential Cohomology",
+     "Geometric Measure Theory",
+     "Measure Theory",
+     "Information Geometry",
+     "Symplectic Dynamics",
+     "Ergodic Theory",
+     "Ergodic Ramsey Theory",
+     "Dynamical Systems Theory",
+     "Chaos Theory",
+     "Catastrophe Theory",
+     "Cellular Automata Theory",
+     "Formal Systems"
+    ]
+   },
+   {
+    "name": "Borderline Formal Sciences Placed Here by Best Fit",
+    "fields": [
+     "Differentiable Programming"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "name": "Computer, Information, and Data Sciences",
+  "desc": "Includes computer science, software engineering, artificial intelligence, machine learning, data science, cryptography, cybersecurity, information retrieval, computer graphics, distributed computing, cloud and edge computing, informatics, semantic web, and computing theory.",
+  "subs": [
+   {
+    "name": "Core Computer Science and Computing Foundations",
+    "fields": [
+     "Computer Science",
+     "Theoretical Computer Science",
+     "Algorithms",
+     "Data Structures",
+     "Computer Architecture",
+     "Operating Systems Theory",
+     "Database Theory",
+     "Concurrency Theory",
+     "Process Algebra",
+     "Distributed Systems Theory",
+     "Formal Language Theory",
+     "Automata Theory",
+     "Compiler Design",
+     "Programming Language Theory",
+     "Type Theory",
+     "Computability Theory",
+     "Computational Complexity Theory",
+     "Structural Complexity Theory",
+     "Parameterized Complexity"
+    ]
+   },
+   {
+    "name": "Software Engineering, Systems, and Computing Infrastructure",
+    "fields": [
+     "Software Engineering",
+     "Systems Architecture",
+     "Cloud Computing",
+     "Edge Computing",
+     "Fog Computing",
+     "Distributed Computing",
+     "Internet of Things (IoT)",
+     "Ubiquitous Computing",
+     "Pervasive Computing",
+     "Spatial Computing",
+     "Context-Aware Computing",
+     "Autonomic Computing",
+     "Fault Tolerance",
+     "Performance Engineering",
+     "Capacity Planning",
+     "Site Reliability Engineering (SRE)",
+     "DevOps",
+     "MLOps",
+     "DataOps",
+     "FinOps"
+    ]
+   },
+   {
+    "name": "Artificial Intelligence, Machine Learning, and Intelligent Systems",
+    "fields": [
+     "Artificial Intelligence",
+     "Machine Learning",
+     "Machine Learning Theory",
+     "Statistical Learning Theory",
+     "Deep Learning",
+     "Reinforcement Learning",
+     "Explainable AI (XAI)",
+     "Human-Centered AI",
+     "Ethical AI",
+     "AI Safety",
+     "Value Alignment",
+     "Machine Ethics",
+     "Artificial General Intelligence (AGI)",
+     "Machine Consciousness",
+     "Neuro-symbolic AI",
+     "Cognitive Architecture",
+     "Knowledge Representation",
+     "Computer Vision",
+     "Natural Language Processing",
+     "Computational Linguistics",
+     "Affective Computing",
+     "Swarm Intelligence",
+     "Evolutionary Computation",
+     "Ant Colony Optimization",
+     "Artificial Immune Systems",
+     "Artificial Life (ALife)"
+    ]
+   },
+   {
+    "name": "Data Science, Analytics, Visualization, and Information Retrieval",
+    "fields": [
+     "Data Science",
+     "Big Data",
+     "Data Mining",
+     "Information Retrieval",
+     "Visual Analytics",
+     "Computer Graphics",
+     "Data Visualization",
+     "Causal Inference",
+     "Probabilistic Programming",
+     "Quantified Self Studies",
+     "Web Science",
+     "Semantic Web",
+     "Linked Data",
+     "Information Architecture",
+     "Information Science",
+     "Library Science",
+     "Archival Science"
+    ]
+   },
+   {
+    "name": "Cybersecurity, Cryptography, Digital Trust, and Forensics",
+    "fields": [
+     "Cybersecurity",
+     "Computer Security",
+     "Network Security",
+     "Application Security",
+     "Cloud Security",
+     "Hardware Security",
+     "Hardware Trust",
+     "Cryptography",
+     "Post-Quantum Cryptography",
+     "Lattice-Based Cryptography",
+     "Homomorphic Encryption",
+     "Secure Multi-Party Computation",
+     "Zero-Knowledge Proofs",
+     "Steganography",
+     "Steganalysis",
+     "Digital Forensics",
+     "Computational Forensics",
+     "Malware Analysis",
+     "Reverse Engineering",
+     "Vulnerability Research",
+     "Penetration Testing",
+     "Smart Contract Auditing"
+    ]
+   },
+   {
+    "name": "Networks, Distributed Ledgers, Web Systems, and Digital Economies",
+    "fields": [
+     "Network Engineering",
+     "Telecommunications Engineering",
+     "Network Information Theory",
+     "Distributed Ledger Technology",
+     "Consensus Algorithms",
+     "Blockchain Systems",
+     "Web3 Architecture",
+     "Cryptoeconomics",
+     "Tokenomics",
+     "Decentralized Finance (DeFi)",
+     "Network Economics",
+     "Algorithmic Trading",
+     "Multi-Agent Systems"
+    ]
+   },
+   {
+    "name": "Human-Computer Interaction, Design, and User-Centered Computing",
+    "fields": [
+     "Human-Computer Interaction",
+     "Human-Centric Computing",
+     "User Experience Design (UX)",
+     "Interaction Design (IxD)",
+     "Service Design",
+     "Transition Design",
+     "Speculative Design",
+     "Design Fiction",
+     "Persuasive Technology",
+     "Human-Robot Interaction",
+     "Human-Systems Integration",
+     "Ergonomics",
+     "Human Factors Engineering",
+     "Neuroergonomics"
+    ]
+   },
+   {
+    "name": "Informatics Across Scientific Domains",
+    "fields": [
+     "Bioinformatics",
+     "Medical Informatics",
+     "Health Informatics",
+     "Neuroinformatics",
+     "Computational Neuroscience",
+     "Computational Social Science",
+     "Computational Sociology",
+     "Computational Psychiatry",
+     "Computational Philology"
+    ]
+   },
+   {
+    "name": "Robotics, Autonomous Systems, and Embodied Computing",
+    "fields": [
+     "Robotics and Autonomous Systems",
+     "Robotics",
+     "Swarm Robotics",
+     "Evolutionary Robotics",
+     "Developmental Robotics",
+     "Epigenetic Robotics",
+     "Cognitive Robotics",
+     "Cyber-Physical Systems",
+     "Mechatronics",
+     "Neuromorphic Engineering",
+     "Neuromorphic Computing",
+     "Brain-Computer Interfaces (BCI)",
+     "Neural Engineering",
+     "Neuroprosthetics"
+    ]
+   },
+   {
+    "name": "Quantum, Biological, and Unconventional Computing",
+    "fields": [
+     "Quantum Machine Learning",
+     "Quantum Communication Complexity",
+     "Quantum Shannon Theory",
+     "Membrane Computing",
+     "Photonic Computing",
+     "Reversible Computing",
+     "Analog Computing",
+     "Unconventional Computing",
+     "Amorphous Computing",
+     "Reservoir Computing",
+     "Morphological Computation"
+    ]
+   },
+   {
+    "name": "Borderline Computer, Information, and Data Fields Placed Here by Best Fit",
+    "fields": [
+     "Cybernetics",
+     "Management Cybernetics",
+     "Engineering Cybernetics",
+     "Medical Cybernetics",
+     "Sociocybernetics",
+     "Biocybernetics",
+     "Second-order Cybernetics",
+     "Systems Dynamics",
+     "Agent-Based Social Simulation",
+     "Epidemic Modeling",
+     "Opinion Dynamics",
+     "Control Systems Engineering"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "name": "Engineering and Technology",
+  "desc": "Includes engineering disciplines and applied technology fields such as civil, mechanical, electrical, aerospace, biomedical, environmental, industrial, nuclear, materials, robotics, mechatronics, telecommunications, nanotechnology, MEMS/NEMS, reliability engineering, and systems engineering.",
+  "subs": [
+   {
+    "name": "Core Engineering Disciplines",
+    "fields": [
+     "Engineering",
+     "Civil Engineering",
+     "Mechanical Engineering (Engineering Physics)",
+     "Electrical Engineering",
+     "Chemical Engineering",
+     "Industrial Engineering",
+     "Systems Engineering",
+     "Materials Science & Engineering",
+     "Biomedical Engineering",
+     "Nuclear Engineering"
+    ]
+   },
+   {
+    "name": "Civil, Structural, Geotechnical, and Built Environment Engineering",
+    "fields": [
+     "Structural Engineering",
+     "Traffic Engineering",
+     "Transportation Engineering",
+     "Architectural Engineering",
+     "Construction Engineering",
+     "Urban Systems Engineering"
+    ]
+   },
+   {
+    "name": "Mechanical, Manufacturing, Industrial, and Reliability Engineering",
+    "fields": [
+     "Manufacturing Engineering",
+     "Operations Management",
+     "Value Engineering",
+     "Reliability Engineering",
+     "Resilience Engineering",
+     "Dependability Engineering",
+     "Chaos Engineering",
+     "Tribology"
+    ]
+   },
+   {
+    "name": "Electrical, Electronics, Optical, and Telecommunications Engineering",
+    "fields": [
+     "Electronics Engineering",
+     "Optical Engineering",
+     "Photonics Engineering",
+     "Control Engineering",
+     "Signal Processing Engineering"
+    ]
+   },
+   {
+    "name": "Materials, Chemical, Nano, and Advanced Manufacturing Engineering",
+    "fields": [
+     "Metallurgical Engineering",
+     "Ceramic Engineering",
+     "Polymer Engineering",
+     "Metabolic Engineering",
+     "Protein Engineering",
+     "Antibody Engineering",
+     "Microelectromechanical Systems (MEMS)",
+     "Nanoelectromechanical Systems (NEMS)",
+     "Picoengineering",
+     "Femtoengineering"
+    ]
+   },
+   {
+    "name": "Aerospace, Naval, Marine, Automotive, and Transportation Engineering",
+    "fields": [
+     "Naval Architecture",
+     "Marine Engineering",
+     "Automotive Engineering"
+    ]
+   },
+   {
+    "name": "Computer, Software, Cyber-Physical, and Systems Engineering",
+    "fields": [
+     "Computer Engineering",
+     "Systems Analysis"
+    ]
+   },
+   {
+    "name": "Environmental, Earth Resource, Agricultural, Food, and Energy Engineering",
+    "fields": [
+     "Food Engineering",
+     "Food Science",
+     "Energy Systems Engineering"
+    ]
+   },
+   {
+    "name": "Borderline Engineering and Technology Fields Placed Here by Best Fit",
+    "fields": [
+     "Applied Technology",
+     "Engineering Technology"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "name": "Medical and Health Sciences",
+  "desc": "Includes medicine, public health, epidemiology, pharmacology, pathology, toxicology, immunology, hematology, oncology, anatomy, physiology, clinical specialties, dentistry, psychiatry, medical informatics, health informatics, rehabilitation, and space medicine.",
+  "subs": [
+   {
+    "name": "Core Medical and Health Sciences",
+    "fields": [
+     "Medicine",
+     "Public Health",
+     "Epidemiology",
+     "Clinical Medicine",
+     "Preventive Medicine",
+     "Family Medicine",
+     "Internal Medicine",
+     "Emergency Medicine",
+     "Nuclear Medicine",
+     "Aerospace Medicine",
+     "Medical Genetics and Genomics",
+     "Clinical Research"
+    ]
+   },
+   {
+    "name": "Anatomy, Physiology, Pathology, and Biomedical Foundations",
+    "fields": [
+     "Neuroimmunology",
+     "Psychoneuroimmunology",
+     "Biomechanics"
+    ]
+   },
+   {
+    "name": "Clinical Specialties and Medical Practice Fields",
+    "fields": [
+     "Clinical Psychology",
+     "Psychiatry",
+     "Neurology",
+     "Neurosurgery",
+     "Dermatology",
+     "Gastroenterology",
+     "Cardiology",
+     "Pulmonology",
+     "Nephrology",
+     "Urology",
+     "Endocrinology",
+     "Rheumatology",
+     "Orthopedics",
+     "Pediatrics",
+     "Obstetrics",
+     "Gynecology",
+     "Anesthesiology",
+     "Radiology",
+     "Surgery",
+     "Audiology",
+     "Optometry",
+     "Ophthalmology"
+    ]
+   },
+   {
+    "name": "Pharmacology, Toxicology, Therapeutics, and Drug Sciences",
+    "fields": [
+     "Systems Pharmacology",
+     "Pharmacokinetics",
+     "Pharmacodynamics",
+     "Chronopharmacology",
+     "Neuropharmacology",
+     "Pharmacogenomics",
+     "Pharmacometabolomics",
+     "Neurotoxicology"
+    ]
+   },
+   {
+    "name": "Public Health, Population Health, and Health Data Sciences",
+    "fields": [
+     "Medical Statistics",
+     "Health Economics",
+     "Environmental Health",
+     "Occupational Health",
+     "Community Health",
+     "Global Health",
+     "Health Administration"
+    ]
+   },
+   {
+    "name": "Dentistry, Oral Health, and Dental Specialties",
+    "fields": [
+     "Dentistry",
+     "Orthodontics",
+     "Periodontics",
+     "Endodontics",
+     "Prosthodontics",
+     "Oral Pathology",
+     "Dental Public Health"
+    ]
+   },
+   {
+    "name": "Rehabilitation, Movement, Hearing, Vision, and Functional Health",
+    "fields": [
+     "Rehabilitation Engineering",
+     "Clinical Engineering",
+     "Exercise Science"
+    ]
+   },
+   {
+    "name": "Forensic, Legal, and Diagnostic Health Sciences",
+    "fields": [
+     "Legal Psychology",
+     "Criminological Psychology",
+     "Medical Imaging",
+     "Clinical Informatics",
+     "Diagnostic Medical Physics"
+    ]
+   },
+   {
+    "name": "Specialized, Extreme, and Interdisciplinary Health Sciences",
+    "fields": [
+     "Neuroethics",
+     "Bioethics",
+     "Somatic Psychology",
+     "Cyberpsychology",
+     "Personalized Medicine",
+     "Precision Medicine"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "name": "Social, Behavioral, and Economic Sciences",
+  "desc": "Includes psychology, sociology, anthropology, archaeology, political science, economics, criminology, demography, geography, organizational behavior, decision science, social simulation, computational social science, and other fields centered on human behavior, society, institutions, and culture.",
+  "subs": [
+   {
+    "name": "Core Social and Behavioral Sciences",
+    "fields": [
+     "Social Science",
+     "Behavioral Science",
+     "Sociology",
+     "Anthropology",
+     "Psychology (General)",
+     "Political Science",
+     "Economics",
+     "Human Geography",
+     "Demography",
+     "Criminology",
+     "Archaeology",
+     "Communication Studies"
+    ]
+   },
+   {
+    "name": "Psychology, Human Behavior, and Applied Behavioral Sciences",
+    "fields": [
+     "Developmental Psychology",
+     "Perception Psychology",
+     "Neuropsychology",
+     "Evolutionary Psychology",
+     "Environmental Psychology",
+     "Industrial-Organizational Psychology",
+     "Psychometrics"
+    ]
+   },
+   {
+    "name": "Sociology, Social Systems, and Collective Behavior",
+    "fields": [
+     "Historical Sociology",
+     "Organizational Behavior",
+     "Social Epistemology",
+     "Social Psychology"
+    ]
+   },
+   {
+    "name": "Anthropology, Archaeology, and Human Cultural Sciences",
+    "fields": [
+     "Cognitive Anthropology",
+     "Economic Anthropology",
+     "Political Anthropology",
+     "Paleoanthropology",
+     "Ethnobiology",
+     "Prosopography",
+     "Epigraphy",
+     "Paleography"
+    ]
+   },
+   {
+    "name": "Economics, Finance, Management, and Decision Sciences",
+    "fields": [
+     "Microeconomics",
+     "Macroeconomics",
+     "Behavioral Economics",
+     "Ecological Economics",
+     "Development Economics",
+     "Labor Economics",
+     "Financial Economics",
+     "Public Economics",
+     "International Economics",
+     "Evolutionary Economics",
+     "Quantitative Finance"
+    ]
+   },
+   {
+    "name": "Political, Legal, Governance, and Institutional Sciences",
+    "fields": [
+     "Law",
+     "Governance Studies",
+     "Policy Studies"
+    ]
+   },
+   {
+    "name": "Geography, Demography, Population, and Spatial Social Sciences",
+    "fields": [
+     "Mathematical Demography",
+     "Traffic Physics"
+    ]
+   },
+   {
+    "name": "Linguistics, Communication, History, and Cultural Information Sciences",
+    "fields": [
+     "Linguistics",
+     "Phonetics",
+     "Sociolinguistics",
+     "Cognitive Linguistics",
+     "Philology",
+     "Quantitative History",
+     "Cliometrics"
+    ]
+   },
+   {
+    "name": "Computational, Quantitative, and Networked Social Sciences",
+    "fields": [
+     "Cliodynamics",
+     "Sociophysics",
+     "Econophysics",
+     "Neuroeconomics"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "name": "Cognitive, Neuroscience, and Mind Sciences",
+  "desc": "Includes cognitive science, neuroscience, neurobiology, neuropsychology, cognitive neuroscience, computational neuroscience, affective science, perception, psychophysics, embodied cognition, consciousness theories, neuroinformatics, brain-computer interfaces, and philosophy-adjacent mind sciences.",
+  "subs": [
+   {
+    "name": "Core Cognitive and Neuroscience Fields",
+    "fields": [
+     "Cognitive Science",
+     "Neuroscience",
+     "Neurobiology",
+     "Behavioral Neuroscience",
+     "Cognitive Neuroscience",
+     "Molecular Neuroscience",
+     "Systems Neuroscience",
+     "Developmental Neuroscience",
+     "Clinical Neuroscience",
+     "Affective Neuroscience",
+     "Social Neuroscience",
+     "Cultural Neuroscience"
+    ]
+   },
+   {
+    "name": "Neural Structure, Function, and Biological Mind Sciences",
+    "fields": [
+     "Neuroanatomy",
+     "Neurophysiology",
+     "Neurochemistry",
+     "Neurogenetics",
+     "Neuromorphology",
+     "Connectomics"
+    ]
+   },
+   {
+    "name": "Cognition, Perception, Language, and Behavior",
+    "fields": [
+     "Cognitive Psychology",
+     "Psychophysics",
+     "Psycholinguistics",
+     "Neurolinguistics",
+     "Quantum Cognition"
+    ]
+   },
+   {
+    "name": "Embodied, Situated, Distributed, and Ecological Mind Sciences",
+    "fields": [
+     "Embodied Cognition",
+     "Enactivism",
+     "Situated Cognition",
+     "Distributed Cognition",
+     "Extended Cognition",
+     "4E Cognition",
+     "Ecological Psychology",
+     "Neurophenomenology",
+     "Biosemiotics",
+     "Zoosemiotics",
+     "Cybersemiotics"
+    ]
+   },
+   {
+    "name": "Consciousness, Mind Theory, and Philosophy-Adjacent Cognitive Sciences",
+    "fields": [
+     "Computational Theory of Mind",
+     "Functionalism (Philosophy of Mind)",
+     "Panpsychism",
+     "Integrated Information Theory (IIT)",
+     "Global Workspace Theory",
+     "Predictive Processing",
+     "Active Inference",
+     "Free Energy Principle",
+     "Neurophilosophy",
+     "Philosophy of Mind",
+     "Quantum Epistemology",
+     "Ontic Structural Realism",
+     "Integral Information Dynamics"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "name": "Philosophy, Ethics, and Foundational Studies",
+  "desc": "Includes philosophy of science, mind, language, mathematics, physics, and biology; ethics and applied ethics; epistemology; ontology; axiology; systems philosophy; and foundational studies that examine the assumptions, meaning, structure, and values of scientific inquiry.",
+  "subs": [
+   {
+    "name": "Core Philosophy and Foundational Inquiry",
+    "fields": [
+     "Philosophy",
+     "Philosophy of Science",
+     "Metaphysics",
+     "Epistemology",
+     "Ontology",
+     "Ethics",
+     "Logic",
+     "Axiology",
+     "Aesthetics",
+     "Political Philosophy",
+     "Systems Philosophy",
+     "Foundational Studies"
+    ]
+   },
+   {
+    "name": "Philosophy of Science and Discipline-Specific Philosophies",
+    "fields": [
+     "Philosophy of Mathematics",
+     "Philosophy of Physics",
+     "Philosophy of Biology",
+     "Philosophy of Language",
+     "Philosophy of Information",
+     "Philosophy of Technology",
+     "Philosophy of Artificial Intelligence",
+     "Philosophy of Computing",
+     "Philosophy of Medicine",
+     "Philosophy of Cognitive Science"
+    ]
+   },
+   {
+    "name": "Epistemology, Knowledge, and Belief Studies",
+    "fields": [
+     "Formal Epistemology",
+     "Computational Epistemology",
+     "Evolutionary Epistemology",
+     "Epistemic Logic",
+     "Doxastic Logic"
+    ]
+   },
+   {
+    "name": "Ontology, Metaphysics, Structure, and Reality",
+    "fields": [
+     "Applied Ontology",
+     "Computational Ontology",
+     "Mereology",
+     "Mereotopology",
+     "Structural Realism"
+    ]
+   },
+   {
+    "name": "Ethics, Applied Ethics, and Moral Philosophy",
+    "fields": [
+     "Moral Philosophy",
+     "Applied Ethics",
+     "Information Ethics",
+     "Environmental Ethics",
+     "Medical Ethics",
+     "Research Ethics",
+     "Technology Ethics"
+    ]
+   },
+   {
+    "name": "Logic, Reasoning, and Formal-Philosophical Foundations",
+    "fields": [
+     "Philosophical Logic"
+    ]
+   },
+   {
+    "name": "Axiology, Value Theory, Action, and Human Meaning",
+    "fields": [
+     "Formal Axiology",
+     "Value Theory",
+     "Praxeology",
+     "Social Philosophy",
+     "Philosophy of Culture",
+     "Philosophy of History",
+     "Philosophy of Design",
+     "Design Ethics"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "name": "Systems, Complexity, and Interdisciplinary Sciences",
+  "desc": "Includes systems theory, complex systems, cybernetics, network science, general systems theory, complex adaptive systems, synergetics, autopoiesis, living systems theory, anticipatory systems, ecological network analysis, econophysics, sociophysics, and fields that deliberately bridge multiple scientific domains.",
+  "subs": [
+   {
+    "name": "Core Systems Science and Systems Theory",
+    "fields": [
+     "Systems Science",
+     "Systems Theory",
+     "General Systems Theory",
+     "Systems Thinking",
+     "Living Systems Theory",
+     "Viable System Model",
+     "Homeokinetics",
+     "Tectology",
+     "Anticipatory Systems Theory"
+    ]
+   },
+   {
+    "name": "Complexity Science and Complex Adaptive Systems",
+    "fields": [
+     "Complex Systems Science",
+     "Complexity Science",
+     "Complex Adaptive Systems",
+     "Synergetics",
+     "Autopoiesis",
+     "Self-Organization Theory",
+     "Emergence Studies",
+     "Criticality Studies",
+     "Pattern Formation",
+     "Agent-Based Modeling"
+    ]
+   },
+   {
+    "name": "Network Science, Graph Systems, and Connectivity",
+    "fields": [
+     "Network Science",
+     "Social Network Analysis",
+     "Network Medicine"
+    ]
+   },
+   {
+    "name": "Interdisciplinary Physics, Biology, Ecology, and Society Bridges",
+    "fields": [
+     "Astrosociology"
+    ]
+   },
+   {
+    "name": "Modeling, Simulation, Forecasting, and Decision Systems",
+    "fields": [
+     "Mathematical Modeling",
+     "Computational Modeling",
+     "Simulation Science",
+     "Agent-Based Modeling",
+     "Queueing Theory"
+    ]
+   },
+   {
+    "name": "Information, Computation, Cognition, and Artificial-Life Systems",
+    "fields": [
+     "Bio-inspired Computing"
+    ]
+   },
+   {
+    "name": "Borderline Systems, Complexity, and Interdisciplinary Fields Placed Here by Best Fit",
+    "fields": [
+     "Complexity Data Science",
+     "Digital Twins",
+     "Pattern Detection",
+     "Network Visualization",
+     "Multiscale Modeling",
+     "Robustness Studies",
+     "Self-Similarity Studies",
+     "Spatiotemporal Systems",
+     "Adaptive Networks",
+     "Temporal Networks",
+     "Multilayer Networks",
+     "Multiplex Networks",
+     "Dynamic Networks",
+     "Critical Transitions",
+     "Resilience Science",
+     "Complexity Economics",
+     "Complexity Social Science",
+     "Complexity Biology",
+     "Complexity Medicine"
+    ]
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "name": "Cross-Disciplinary Bridge Sciences and Highly Connected Fields",
+  "desc": "This section identifies fields that intentionally connect multiple major categories. These entries may remain in their best-fit disciplinary sections above while also serving here as bridge fields for later cross-references, definitions, and conceptual mapping.",
+  "subs": [
+   {
+    "name": "Bio-Physical, Bio-Chemical, and Living-System Bridges",
+    "fields": [
+     "Biophysical Chemistry"
+    ]
+   },
+   {
+    "name": "Engineering, Health, and Applied Technology Bridges",
+    "fields": [
+     "Biochemical Engineering",
+     "Biomolecular Engineering",
+     "Bioprocess Engineering",
+     "Tissue Engineering"
+    ]
+   },
+   {
+    "name": "Earth, Environment, Space, and Planetary Bridges",
+    "fields": [
+     "Chemical Oceanography",
+     "Planetary Geology",
+     "Astrogeology"
+    ]
+   },
+   {
+    "name": "Systems, Complexity, Networks, and Modeling Bridges",
+    "fields": [
+     "Agent-Based Modeling",
+     "Digital Twins"
+    ]
+   },
+   {
+    "name": "Design, Interaction, Information, and Knowledge Bridges",
+    "fields": [
+     "Information Theory"
+    ]
+   }
+  ]
+ }
+]

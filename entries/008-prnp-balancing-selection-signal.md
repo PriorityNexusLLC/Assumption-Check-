@@ -4,8 +4,10 @@ num: "008"
 title: The PRNP balancing-selection signal
 claim: The worldwide signal of balancing selection at the prion protein gene is real, not an artefact of how the variants were sampled.
 subject: PRNP selection signal
-domain: Life & Biological › Evolutionary & Population Genetics › Selection detection methods
-cross_links: Cognitive, Neuroscience & Mind (Prion disease)
+domain: Population Genetics
+also_in:
+  - Statistics
+  - Bioinformatics
 lifecycle: Active
 stage: Under Investigation
 stage_note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the reanalyses and the 2003 anchor are read at abstract only, full texts paywalled or rate-limited"

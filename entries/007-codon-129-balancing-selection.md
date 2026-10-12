@@ -4,8 +4,10 @@ num: "007"
 title: Cannibalism and codon 129
 claim: Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.
 subject: PRNP codon 129
-domain: Life & Biological › Evolutionary & Population Genetics › Human balancing selection
-cross_links: Cognitive, Neuroscience & Mind (Prion disease) · Social & Behavioural (Anthropology)
+domain: Population Genetics
+also_in:
+  - Anthropology
+  - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
 stage_note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the 2003 anchor paper is paywalled and its former open copy is a dead link, so it is read at abstract only"

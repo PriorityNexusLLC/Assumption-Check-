@@ -3,8 +3,9 @@ num: "002"
 title: The origin of Santa Claus
 claim: Santa Claus is a real figure who delivers gifts to children everywhere on one night.
 subject: Santa Claus
-domain: Social, Behavioral & Economic › Folklore & Cultural History › Modern legend
-cross_links: Cross-Disciplinary Bridge (History)
+domain: Anthropology
+also_in:
+  - Quantitative History
 lifecycle: Active
 stage: Under Investigation
 stage_note: trail mapped; sources not yet verified

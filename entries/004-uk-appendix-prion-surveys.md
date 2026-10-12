@@ -3,8 +3,10 @@ num: "004"
 title: The UK appendix prion surveys
 claim: Abnormal prion protein found in UK appendix tissue (about 1 in 2,000 people) indicates incubating variant CJD infection.
 subject: Variant CJD
-domain: Medical & Health › Neurology & Prion Disease › Prion surveillance & prevalence
-cross_links: Social, Behavioral & Economic (Public Health Policy)
+domain: Epidemiology
+also_in:
+  - Public Health
+  - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
 stage_note: "all five sources read in full at source; stage held at Under Investigation while three citation DOIs, corrected 12 Oct 2026, are re-checked against the nodes they support"
