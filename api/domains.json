@@ -1,10 +1,11 @@
 {
- "count": 12,
+ "count": 13,
  "fields": [
   {
    "field": "Anthropology",
    "entries": [
-    "002"
+    "002",
+    "007"
    ]
   },
   {
@@ -53,6 +54,7 @@
     "003",
     "004",
     "005",
+    "007",
     "011"
    ]
   },
@@ -60,6 +62,12 @@
    "field": "Neurology",
    "entries": [
     "001"
+   ]
+  },
+  {
+   "field": "Population Genetics",
+   "entries": [
+    "007"
    ]
   },
   {

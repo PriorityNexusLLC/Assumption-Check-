@@ -1,0 +1,358 @@
+{
+ "num": "007",
+ "slug": "007-codon-129-balancing-selection",
+ "file": "007-codon-129-balancing-selection.md",
+ "draft": false,
+ "title": "Codon 129 and kuru selection",
+ "claim": "Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.",
+ "subject": "PRNP codon 129",
+ "domain": "Population Genetics",
+ "also_in": [
+  "Anthropology",
+  "Molecular Neuroscience"
+ ],
+ "not_linked": [
+  "001 — shares Molecular Neuroscience, but this entry's argument does not rest on exosome transmission. The overlap is the phrase 'unrelated to prions' in What would settle it, not a dependency."
+ ],
+ "would_settle": [],
+ "lifecycle": "Active",
+ "stage": "Traced",
+ "stage_note": "all three chain sources verified at source, the last two read from the original papers on 12 Oct 2026",
+ "hypothesis": "Under Test",
+ "peer_review": "Unreviewed",
+ "contested": true,
+ "plain_status": "Kuru is documented to have selected codon 129 in one population (the Fore) within living memory. Whether similar selection acted across human prehistory worldwide is unproven; the original statistical evidence did not survive resequencing.",
+ "summary": "Codon 129 selection. Demonstrated in the Fore within living memory. The species-wide claim rests on a disputed statistical signal; no through-time test has been run.",
+ "kicker": "Entry 007 · PRNP codon 129 · Traced",
+ "lede": "The claim that repeated prehistoric epidemics of a kuru-like prion disease left a balancing-selection signature on the prion protein gene across human populations. Selection in one population, the Fore, is well documented. The worldwide claim is contested.",
+ "rests_on": [
+  "008"
+ ],
+ "cited_by": [],
+ "keywords": [
+  "prnp",
+  "codon 129",
+  "m129v",
+  "balancing selection",
+  "heterozygote advantage",
+  "kuru",
+  "cannibalism",
+  "endocannibalism",
+  "fore",
+  "papua new guinea",
+  "prion",
+  "population genetics",
+  "human evolution",
+  "tajima's d",
+  "g127v"
+ ],
+ "added": "2026-10-09",
+ "updated": "2026-10-12",
+ "traced": "October 2026",
+ "author": "Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)",
+ "conflicts": "None declared",
+ "preamble": [],
+ "sections": [
+  {
+   "heading": "Claim as stated",
+   "id": "claim-as-stated",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Mead and colleagues titled the 2003 paper \"Balancing Selection at the Prion Protein Gene Consistent with Prehistoric Kuru-like Epidemics.\" The abstract states that \"Kuru imposed strong balancing selection on the Fore, essentially eliminating PRNP 129 homozygotes,\" and that \"Worldwide PRNP haplotype diversity and coding allele frequencies suggest that strong balancing selection at this locus occurred\" during human evolution."
+    },
+    {
+     "type": "paragraph",
+     "text": "The claim has two halves, and they are not equally supported. The first is that kuru selected codon 129 in the Fore. The second is that selection of the same kind acted repeatedly across human prehistory, worldwide. The title says \"consistent with,\" not \"caused by.\""
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence base",
+   "id": "evidence-base",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Codon 129 of PRNP carries either methionine (M) or valine (V), so a person is MM, MV or VV. Heterozygotes (MV) are more resistant to prion disease. Balancing selection is the preservation of both variants by the removal of homozygotes; it is inferred when heterozygotes are in excess of the proportion random mating would produce (Hardy–Weinberg equilibrium)."
+    },
+    {
+     "type": "paragraph",
+     "text": "**The Fore (documented).** Mead et al. 2008 report that elderly survivors of the kuru epidemic \"are predominantly PRNP codon 129 heterozygotes and this group show marked Hardy–Weinberg disequilibrium,\" that \"the deviation from Hardy–Weinberg equilibrium is most marked in elderly women, but is also significant in a slightly younger cohort of men, consistent with their exposure to kuru as boys,\" and that \"young Fore and the elderly from populations with no history of kuru show Hardy–Weinberg equilibrium.\" A sliding-window analysis of male genotypes by date of birth found \"a peak of heterozygosity in the mid-1950s,\" matching the epidemic's peak. Endocannibalism, the route of transmission, ceased \"by 1960.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "A second, independent line of evidence is G127V, a variant reported by Mead et al. 2009 \"found exclusively in people who lived in the region in which kuru was prevalent.\" The 2009 abstract concludes that \"the 127V polymorphism is an acquired prion disease resistance factor selected during the kuru epidemic,\" and describes codons 127 and 129 together as \"a powerful episode of recent selection in humans.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "**Worldwide (contested).** The species-wide half rests on statistical signatures of balancing selection in global PRNP samples. That signal is the subject of [[008-prnp-balancing-selection-signal|Entry 008]]; three resequencing reanalyses did not recover it, and the original authors later accepted part of the statistical criticism while maintaining the shape of the gene genealogy."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Untested assumption",
+   "id": "untested-assumption",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "That the selection documented in one population within living memory can be extrapolated to repeated episodes across human prehistory. The inference runs from a worldwide statistical signal to an unobserved cause (prehistoric kuru-like epidemics). No through-time genetic evidence, and no second exposed population, has been tested. The assumption also requires that institutionalised cannibalism was common enough, infectious enough and sustained enough to register on the genome of the whole species."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence tiers",
+   "id": "evidence-tiers",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "What T1–T4 mean for this claim."
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**T1** A selection signature at codon 129 is **observed in one population** and correlates with documented exposure."
+      },
+      {
+       "depth": 0,
+       "text": "**T2** Statistical signatures of balancing selection are **reported in worldwide population samples**."
+      },
+      {
+       "depth": 0,
+       "text": "**T3** A **second independent exposed population** shows the same pattern, or one region shows it directly through time."
+      },
+      {
+       "depth": 0,
+       "text": "**T4** **Ancient-DNA genotyping across a dated skeletal series** shows codon 129 heterozygote excess tracking prehistoric episodes — direct evidence of selection acting then and there."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "The claim above is a **T4** claim. The evidence reaches **T1** (the Fore) and a **contested T2** (the worldwide statistics, see Entry 008). No T3 or T4 evidence exists."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "The chain",
+   "id": "the-chain",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Oldest first. Sources were checked at the publisher on 9 October 2026; the 2003 and 2009 papers were read in full on 12 October 2026."
+    }
+   ],
+   "nodes": [
+    {
+     "heading": "The anchor claim",
+     "year": "2003",
+     "tier": "T1 strong + T2 contested",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Load-bearing"
+     ],
+     "citation": "Mead S, Stumpf MPH, Whitfield J, Beck JA, Poulter M, Campbell T, Uphill JB, Goldstein D, Alpers M, Fisher EMC, Collinge J. \"Balancing Selection at the Prion Protein Gene Consistent with Prehistoric Kuru-like Epidemics.\" *Science* 2003;300(5619):640–643. [doi:10.1126/science.1083320](https://doi.org/10.1126/science.1083320) · PMID 12690204",
+     "quote": "\"Kuru imposed strong balancing selection on the Fore, essentially eliminating PRNP 129 homozygotes. Worldwide PRNP haplotype diversity and coding allele frequencies suggest that strong balancing selection at this locus occurred\" *(abstract)*",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Elderly kuru-exposed Fore are predominantly codon 129 heterozygotes against unexposed Fore; a worldwide signature is interpreted as balancing selection over human evolution."
+      },
+      {
+       "label": "What it does not show",
+       "text": "That the worldwide signal was caused by cannibalism — the title says \"consistent with,\" and the authors call the source of such selection \"open to speculation.\""
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at source 12 Oct 2026. Both quoted sentences are verbatim, and the \"open to speculation\" wording is in the discussion. The per-population Tajima's D values are in Table 2 and are set out in [[008-prnp-balancing-selection-signal|Entry 008]]."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "The stratified Fore data, by the same group",
+     "year": "2008",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Open access",
+      "Load-bearing"
+     ],
+     "citation": "Mead S, Whitfield J, Poulter M, Shah P, Uphill J, Beck J, Campbell T, Al-Dujaily H, Hummerich H, Alpers MP, Collinge J. \"Genetic susceptibility, evolution and the kuru epidemic.\" *Phil. Trans. R. Soc. B* 2008;363(1510):3741–3746. [doi:10.1098/rstb.2008.0087](https://doi.org/10.1098/rstb.2008.0087) · PMC2576515",
+     "quote": "\"The deviation from Hardy–Weinberg equilibrium is most marked in elderly women, but is also significant in a slightly younger cohort of men, consistent with their exposure to kuru as boys.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "The Fore heterozygote excess stratified by age, sex and date of birth, with the gradient tracking exposure across all three axes; heterozygosity peaks in men born in the mid-1950s; endocannibalism ceased by 1960."
+      },
+      {
+       "label": "What it does not show",
+       "text": "That the pattern generalises beyond the Fore. The paper's worldwide statistics are treated in Entry 008."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "An independent selection signal in the Fore",
+     "year": "2009",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Mead S, Whitfield J, Poulter M, Shah P, Uphill J, et al. \"A novel protective prion protein variant that colocalizes with kuru exposure.\" *New England Journal of Medicine* 2009;361(21):2056–2065. [doi:10.1056/NEJMoa0809716](https://doi.org/10.1056/NEJMoa0809716) · PMID 19923577",
+     "quote": "\"The 127V polymorphism is an acquired prion disease resistance factor selected during the kuru epidemic, rather than a pathogenic mutation that could have triggered the kuru epidemic. Variants at codons 127 and 129 of PRNP demonstrate the population genetic response to an epidemic of prion disease and represent a powerful episode of recent selection in humans.\" *(abstract)*",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "A second protective variant, G127V, found only in the kuru region and never in a kuru patient, assessed across more than 3000 people including 709 mortuary-feast participants. Independent evidence of recent, intense selection in the Fore."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Anything about selection outside the kuru region; G127V \"is not found in patients with kuru and in unexposed population groups worldwide.\""
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at source 12 Oct 2026. The quoted conclusion is verbatim, and the sampling is confirmed in the Methods: \"more than 3000 persons from Eastern Highland populations, including 709 who participated in cannibalistic mortuary feasts, 152 of whom subsequently died of kuru.\""
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    }
+   ]
+  },
+  {
+   "heading": "What would settle it",
+   "id": "what-would-settle-it",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**If the claim holds:** ancient-DNA genotyping across a dated skeletal series would show codon 129 heterozygote excess, relative to Hardy–Weinberg expectation, in particular periods or regions — the same signature the Fore show. Thousands of ancient genomes now exist. No such analysis was found; the search is recorded in the research notes rather than here, so this is an absence reported, not an absence established."
+      },
+      {
+       "depth": 0,
+       "text": "**If it doesn't:** ancient populations would sit at Hardy–Weinberg equilibrium throughout, and a modern selection scan (see Entry 008) would recover no balancing-selection signal at PRNP."
+      },
+      {
+       "depth": 0,
+       "text": "**A second exposed population** with independently documented endocannibalism showing the Fore pattern would remove the sample-of-one limitation."
+      },
+      {
+       "depth": 0,
+       "text": "**Resolving what PrP normally does** would show whether any selection signal has a competing explanation unrelated to prions."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Current status",
+   "id": "current-status",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "The two halves have moved in opposite directions since 2003:"
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "The Fore half has strengthened: the 2008 stratified genotype data and the 2009 G127V variant are independent evidence of recent selection in that population."
+      },
+      {
+       "depth": 0,
+       "text": "The worldwide half has weakened: resequencing reanalyses did not recover the original balancing-selection signal, and the authors issued a partial statistical concession (see Entry 008)."
+      },
+      {
+       "depth": 0,
+       "text": "Bitarello et al. 2023, a methods review of balancing selection in humans, works through the canonical examples (the MHC, ABO, sickle-cell) and does not list PRNP (verified at source in Entry 008)."
+      },
+      {
+       "depth": 0,
+       "text": "No ancient-DNA through-time test and no second-population test has been run."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Where it stands",
+   "id": "where-it-stands",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Shown.** Kuru drove balancing selection at codon 129 in the Fore within living memory, documented across age, sex and birth-date gradients, and reinforced by the kuru-region-only G127V variant."
+      },
+      {
+       "depth": 0,
+       "text": "**Still open.** Whether selection of the same kind acted repeatedly across human prehistory worldwide."
+      },
+      {
+       "depth": 1,
+       "text": "ancient-DNA genotyping of codon 129 across a dated skeletal series"
+      },
+      {
+       "depth": 1,
+       "text": "a modern whole-genome selection scan at PRNP with demographic history modelled (Entry 008)"
+      },
+      {
+       "depth": 1,
+       "text": "a second exposed population showing the Fore pattern"
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "summary",
+     "title": "",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Fore selection → documented (two independent lines). Worldwide prehistoric selection → unproven; original statistical evidence did not survive resequencing. The test that would settle it (ancient DNA through time) → not run."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "note",
+     "title": "Provenance — read before citing",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "All three chain sources are verified at source. Mead et al. 2008 (*Phil. Trans. R. Soc. B*, open access) was read at PMC on 9 October 2026. Mead et al. 2003 (*Science*) and Mead et al. 2009 (*NEJM*) were read in full from the original papers on 12 October 2026, having previously been recorded here as paywalled and read at abstract only. The statistical dispute underlying the worldwide half is traced in [[008-prnp-balancing-selection-signal|Entry 008]]. This entry is AI-assisted research and is marked so in the author field."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  }
+ ],
+ "verification_counts": {
+  "verified at source": 3
+ },
+ "node_count": 3,
+ "verified_count": 3,
+ "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/007-codon-129-and-kuru-selection/"
+}

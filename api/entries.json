@@ -1,6 +1,6 @@
 {
  "name": "Assumption Check",
- "count": 7,
+ "count": 8,
  "entries": [
   {
    "num": "001",
@@ -284,6 +284,57 @@
    "node_count": 3,
    "verified_count": 3,
    "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/006-the-appendix-assay-false-positive-rate/"
+  },
+  {
+   "num": "007",
+   "title": "Codon 129 and kuru selection",
+   "claim": "Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.",
+   "subject": "PRNP codon 129",
+   "domain": "Population Genetics",
+   "also_in": [
+    "Anthropology",
+    "Molecular Neuroscience"
+   ],
+   "stage": "Traced",
+   "stage_note": "all three chain sources verified at source, the last two read from the original papers on 12 Oct 2026",
+   "hypothesis": "Under Test",
+   "peer_review": "Unreviewed",
+   "contested": true,
+   "lifecycle": "Active",
+   "summary": "Codon 129 selection. Demonstrated in the Fore within living memory. The species-wide claim rests on a disputed statistical signal; no through-time test has been run.",
+   "plain_status": "Kuru is documented to have selected codon 129 in one population (the Fore) within living memory. Whether similar selection acted across human prehistory worldwide is unproven; the original statistical evidence did not survive resequencing.",
+   "rests_on": [
+    "008"
+   ],
+   "cited_by": [],
+   "would_settle": [],
+   "not_linked": [
+    "001 — shares Molecular Neuroscience, but this entry's argument does not rest on exosome transmission. The overlap is the phrase 'unrelated to prions' in What would settle it, not a dependency."
+   ],
+   "keywords": [
+    "prnp",
+    "codon 129",
+    "m129v",
+    "balancing selection",
+    "heterozygote advantage",
+    "kuru",
+    "cannibalism",
+    "endocannibalism",
+    "fore",
+    "papua new guinea",
+    "prion",
+    "population genetics",
+    "human evolution",
+    "tajima's d",
+    "g127v"
+   ],
+   "added": "2026-10-09",
+   "updated": "2026-10-12",
+   "author": "Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)",
+   "conflicts": "None declared",
+   "node_count": 3,
+   "verified_count": 3,
+   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/007-codon-129-and-kuru-selection/"
   },
   {
    "num": "011",

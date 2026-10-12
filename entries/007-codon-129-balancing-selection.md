@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "007"
 title: Codon 129 and kuru selection
 claim: Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.
