@@ -1,0 +1,77 @@
+{
+ "count": 11,
+ "fields": [
+  {
+   "field": "Anthropology",
+   "entries": [
+    "002"
+   ]
+  },
+  {
+   "field": "Cellular Biology",
+   "entries": [
+    "001"
+   ]
+  },
+  {
+   "field": "Epidemiology",
+   "entries": [
+    "003",
+    "004",
+    "006"
+   ]
+  },
+  {
+   "field": "Medical Statistics",
+   "entries": [
+    "006"
+   ]
+  },
+  {
+   "field": "Metrology",
+   "entries": [
+    "006"
+   ]
+  },
+  {
+   "field": "Microbiology",
+   "entries": [
+    "005"
+   ]
+  },
+  {
+   "field": "Molecular Neuroscience",
+   "entries": [
+    "001",
+    "003",
+    "004",
+    "005"
+   ]
+  },
+  {
+   "field": "Neurology",
+   "entries": [
+    "001"
+   ]
+  },
+  {
+   "field": "Public Health",
+   "entries": [
+    "004",
+    "005"
+   ]
+  },
+  {
+   "field": "Quantitative History",
+   "entries": [
+    "002"
+   ]
+  },
+  {
+   "field": "Veterinary Medicine",
+   "entries": [
+    "003"
+   ]
+  }
+ ]
+}

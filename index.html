@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Assumption Check</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -312,11 +317,13 @@
 
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
+</head>
+<body>
 
 <div class="bar">
   <div class="bar-inner">
     <button class="wordmark" id="homeLink" aria-label="Go to home">
-      <b>Assumption Check</b><span>Prototype</span>
+      <b>Assumption Check</b><span>Registry</span>
     </button>
     <div class="bar-spacer"></div>
     <button class="navlink" id="registryLink">Registry</button>
@@ -561,22 +568,23 @@
   <button class="back" id="mapBack">← Registry</button>
 
   <header class="entry-head">
-    <p class="kicker">The night sky · real-build feature</p>
+    <p class="kicker">The night sky</p>
     <h1>The Map</h1>
-    <p class="lede">Every claim is a star. The more it connects — to its domains, and to the claims that rest on it — the brighter it burns. Color says what kind of star it is, so a bright one is never mistaken for a true one.</p>
+    <p class="lede">Every claim is a star. The more it connects — to its fields, and to the claims that rest on it — the brighter it burns. Colour says what state the claim is in, so a bright one is never mistaken for a true one.</p>
   </header>
 
   <div class="sky">
     <canvas id="skyCanvas"></canvas>
-    <span class="sky-note">Labeled stars are real entries — click one to open it · the rest are illustrative</span>
+    <span class="sky-note">Every star is an entry — hover to see what it connects to, click to open it</span>
   </div>
 
   <div class="legend">
-    <div><b>Brightness &amp; size</b> — how many connections a claim has. The most-linked claims shine brightest.</div>
+    <div><b>Brightness &amp; size</b> — how much turns on the claim: how many unresolved claims rest on it, or wait on it to be settled. A claim that would settle a test someone is running now shines brightest; a claim nothing waits on stays dim however much has been written about it. Brightness is leverage, never truth.</div>
     <div><b>Color</b> — the claim's evidence state:</div>
   </div>
   <div class="vocab" style="margin-top:0.6rem">
-    <div class="vrow"><span class="skey" style="--c:#ffd24a"></span><span class="d"><b>Yellow</b> — popular hypothesis, never tested. Bright from attention, hollow underneath.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#8e9ab8"></span><span class="d"><b>Slate</b> — under investigation, with no testable form of the claim found yet. No verdict has been offered.</span></div>
+    <div class="vrow"><span class="skey" style="--c:#ffd24a"></span><span class="d"><b>Yellow</b> — an open hypothesis: a test exists and has not been run.</span></div>
     <div class="vrow"><span class="skey" style="--c:#6bb0ef"></span><span class="d"><b>Blue</b> — under test right now.</span></div>
     <div class="vrow"><span class="skey" style="--c:#4fe0ad"></span><span class="d"><b>Green</b> — tested and held up, or independently replicated. The paths that look right so far.</span></div>
     <div class="vrow"><span class="skey" style="--c:#ef6f63"></span><span class="d"><b>Red</b> — tested and did not hold up.</span></div>
@@ -596,11 +604,11 @@
   </div>
 
   <div class="note">
-    <p class="k">Why it's a real-build feature</p>
-    <p>A live star map needs a database and a graph engine to compute every claim's connections and redraw as the registry grows — more than a single page can hold. The groundwork is already here: every entry stores its domain memberships and its links to other entries, which are exactly the edges this map will draw. The labeled stars above are already drawn from that data — each real entry, colored by its hypothesis status and joined to the entries it rests on. When the full site is built, the rest of the sky fills in.</p>
+    <p class="k">What you are looking at</p>
+    <p>Every star is a registry entry and every line is a connection the registry records: a solid line is a dependency one entry declares on another, a dashed line is a field the two share. A field holding most of the registry is not drawn as a line — it would join everything to everything — but it still pulls those claims together, so a crowded field reads as a cluster with a faint haze between its members rather than a thicket. Position is computed from those links, so claims that depend on each other sit together; the layout is seeded, so the same registry always draws the same sky. Nothing here is illustrative, and there is no filler: an empty region means nobody has filed a claim there yet.</p>
   </div>
 
-  <footer><span class="mono">Map · concept · attached to the full build</span></footer>
+  <footer><span class="mono">Map · drawn from the registry</span></footer>
 </main>
 
 <!-- ===================== ABOUT ===================== -->
@@ -813,7 +821,7 @@
       });
     });
 
-    const domains = str(meta.cross_links).split(/[·;]/).map(x => x.trim()).filter(Boolean);
+    const domains = list(meta.also_in).map(x => String(x).trim()).filter(Boolean);
     const keywords = list(meta.keywords).map(k => k.toLowerCase());
     const e = {
       file,
@@ -822,8 +830,8 @@
       claim: str(meta.claim),
       subject: str(meta.subject),
       path: str(meta.domain),
-      cross: str(meta.cross_links),
       crossCount: domains.length,
+      fields: [str(meta.domain)].concat(domains).filter(Boolean),
       lifecycle: str(meta.lifecycle) || "Active",
       hypothesis: HYPOTHESIS[norm(meta.hypothesis)] || null,
       stage: STAGE[norm(meta.stage)] || null,
@@ -835,6 +843,7 @@
       kicker: str(meta.kicker),
       lede: str(meta.lede),
       restsOn: list(meta.rests_on).map(padNum),
+      wouldSettle: list(meta.would_settle).map(padNum),
       citedBy: list(meta.cited_by).map(padNum),
       added: str(meta.added),
       updated: str(meta.updated),
@@ -845,7 +854,7 @@
     };
     e.id = "entry-" + e.num;
     e.domain = { subject: e.subject, path: e.path };
-    e.terms = keywords.concat([e.subject, e.path, e.cross].map(x => x.toLowerCase())).filter(Boolean);
+    e.terms = keywords.concat([e.subject, e.path].concat(domains).map(x => String(x || "").toLowerCase())).filter(Boolean);
     return e;
   }
 
@@ -1227,45 +1236,135 @@
     try { localStorage.setItem("fr-theme", next); } catch (_) {}
   });
 
-  // --- night sky (concept preview; illustrative nodes, not live data) ---
+  // --- the map: every node and every line comes from the registry ---
   (function () {
     const canvas = document.getElementById("skyCanvas");
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    const C = { amber: "#ffd24a", blue: "#6bb0ef", green: "#4fe0ad", red: "#ef6f63", violet: "#b592f0" };
-    // Labeled stars are real entries: color from the hypothesis, brightness from connections.
-    const real = entries.map((e, i) => {
-      const a = i * 2.39996, r = i ? 0.16 + 0.05 * Math.sqrt(i) : 0;
-      return {
-        x: Math.min(.9, Math.max(.1, .5 + Math.cos(a) * r)),
-        y: Math.min(.86, Math.max(.14, .42 + Math.sin(a) * r * 1.3)),
-        s: e.contested ? "violet" : e.hypothesis ? e.hypothesis.star : "amber",
-        c: Math.min(10, 5 + 2 * e.crossCount + 2 * (e.restsOn.length + e.citedBy.length)),
-        label: "Entry " + e.num + " — " + e.title.replace(/<[^>]+>/g, ""),
-        entry: e
-      };
-    });
-    const realByNum = {};
-    real.forEach(n => { realByNum[n.entry.num] = n; });
-    const filler = [
-      { x: .30, y: .30, s: "green", c: 6 }, { x: .70, y: .27, s: "green", c: 5 },
-      { x: .20, y: .60, s: "blue", c: 3 },  { x: .81, y: .62, s: "amber", c: 7 },
-      { x: .61, y: .72, s: "red", c: 2 },   { x: .42, y: .19, s: "violet", c: 4 },
-      { x: .14, y: .40, s: "green", c: 3 }, { x: .86, y: .38, s: "blue", c: 2 },
-      { x: .50, y: .83, s: "green", c: 4 }, { x: .35, y: .52, s: "amber", c: 5 },
-      { x: .66, y: .50, s: "green", c: 3 }, { x: .25, y: .78, s: "amber", c: 2 },
-      { x: .76, y: .81, s: "blue", c: 2 },  { x: .91, y: .24, s: "green", c: 2 },
-      { x: .10, y: .72, s: "red", c: 1 },   { x: .56, y: .33, s: "green", c: 4 },
-      { x: .45, y: .63, s: "violet", c: 3 }
-    ];
-    // Illustrative stars stay clear of the real ones.
-    const nodes = real.concat(filler.filter(f => real.every(n => Math.hypot(n.x - f.x, n.y - f.y) > 0.09)));
-    const bg = Array.from({ length: 130 }, () => ({
-      x: Math.random(), y: Math.random(), r: Math.random() * 1.1 + 0.2,
-      a: Math.random() * 0.5 + 0.18, ph: Math.random() * 6.283
+    const C = {
+      amber: "#ffd24a", blue: "#6bb0ef", green: "#4fe0ad",
+      red: "#ef6f63", violet: "#b592f0", slate: "#8e9ab8"
+    };
+
+    // Nodes are entries. Colour is the claim's state; an entry with no
+    // hypothesis yet is slate, not amber — "no testable form found" must not
+    // look like "popular but untested".
+    const nodes = entries.map(e => ({
+      entry: e,
+      colour: e.contested ? "violet" : (e.hypothesis ? e.hypothesis.star : "slate"),
+      label: "Entry " + e.num + " — " + e.title.replace(/<[^>]+>/g, ""),
+      x: 0, y: 0, vx: 0, vy: 0, deg: 0
     }));
+    const byNum = {};
+    nodes.forEach(n => { byNum[n.entry.num] = n; });
+
+    // Two kinds of edge. A dependency is a hard tie; a shared field is a soft
+    // one, and is only drawn when the field is specific — a field holding most
+    // of the registry says nothing about any particular pair.
+    const fieldCount = {};
+    nodes.forEach(n => (n.entry.fields || []).forEach(f => {
+      fieldCount[f] = (fieldCount[f] || 0) + 1;
+    }));
+    const edges = [];
+    const seen = new Set();
+    nodes.forEach(n => (n.entry.restsOn || []).forEach(num => {
+      const t = byNum[num];
+      if (!t) return;
+      const key = [n.entry.num, num].sort().join("-") + ":dep";
+      if (seen.has(key)) return;
+      seen.add(key);
+      edges.push({ a: n, b: t, kind: "dep" });
+    }));
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const all = (a.entry.fields || []).filter(f => (b.entry.fields || []).includes(f));
+        if (!all.length) continue;
+        const narrow = all.filter(f => fieldCount[f] <= 3);
+        const key = [a.entry.num, b.entry.num].sort().join("-") + ":field";
+        if (seen.has(key)) continue;
+        seen.add(key);
+        // A field holding most of the registry is too common to draw as a line —
+        // it would join everything to everything. It still says these claims
+        // belong near each other, so it pulls in the layout and shows as a faint
+        // haze rather than a hairball.
+        edges.push({ a, b, kind: narrow.length ? "field" : "broad",
+                     via: (narrow[0] || all[0]) });
+      }
+    }
+    edges.forEach(e => { if (e.kind !== "broad") { e.a.deg++; e.b.deg++; } });
+
+    // Brightness is leverage, not popularity: how much unresolved work turns on
+    // this claim. A claim that would settle a test someone is running now is the
+    // most useful thing in the registry; a claim nothing waits on is dim however
+    // much has been written about it. Colour still carries the claim's own state,
+    // so a bright star is never a true one — only a load-bearing one.
+    const NEED = { "under-test": 3, "open": 2, "resolved": 0.4 };
+    const needOf = e => e.hypothesis ? (NEED[e.hypothesis.key] || 1) : 1.5;
+    nodes.forEach(n => {
+      let lift = 0;
+      nodes.forEach(o => {
+        if (o === n) return;
+        const dependsOnIt = (o.entry.restsOn || []).includes(n.entry.num);
+        const settlesIt = (n.entry.wouldSettle || []).includes(o.entry.num);
+        if (dependsOnIt || settlesIt) lift += needOf(o.entry) * (settlesIt ? 1.3 : 1);
+      });
+      // work already finished needs no one's effort
+      if (n.entry.hypothesis && n.entry.hypothesis.key === "resolved") lift *= 0.5;
+      n.lift = lift;
+    });
+    const topLift = Math.max(1, ...nodes.map(n => n.lift));
+
+    // A fixed seed, so the same registry always draws the same sky. A map that
+    // rearranged itself on every visit could not be referred to.
+    let seed = 20261012;
+    const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+    nodes.forEach((n, i) => {
+      const a = i * 2.39996;
+      n.x = 0.5 + Math.cos(a) * (0.08 + rnd() * 0.22);
+      n.y = 0.5 + Math.sin(a) * (0.08 + rnd() * 0.22);
+    });
+
+    // Force layout: linked nodes pull together, every pair pushes apart.
+    (function settle() {
+      for (let step = 0; step < 420; step++) {
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const a = nodes[i], b = nodes[j];
+            let dx = b.x - a.x, dy = b.y - a.y;
+            let d = Math.hypot(dx, dy) || 0.0001;
+            const push = 0.00055 / (d * d);
+            dx /= d; dy /= d;
+            a.vx -= dx * push; a.vy -= dy * push;
+            b.vx += dx * push; b.vy += dy * push;
+          }
+        }
+        for (const e of edges) {
+          const want = e.kind === "dep" ? 0.16 : (e.kind === "field" ? 0.26 : 0.3);
+          const k = e.kind === "dep" ? 0.014 : (e.kind === "field" ? 0.006 : 0.0055);
+          let dx = e.b.x - e.a.x, dy = e.b.y - e.a.y;
+          const d = Math.hypot(dx, dy) || 0.0001;
+          const f = (d - want) * k;
+          dx /= d; dy /= d;
+          e.a.vx += dx * f; e.a.vy += dy * f;
+          e.b.vx -= dx * f; e.b.vy -= dy * f;
+        }
+        for (const n of nodes) {
+          n.vx += (0.5 - n.x) * 0.0016;
+          n.vy += (0.5 - n.y) * 0.0016;
+          n.x += n.vx; n.y += n.vy;
+          n.vx *= 0.86; n.vy *= 0.86;
+          n.x = Math.min(0.93, Math.max(0.07, n.x));
+          n.y = Math.min(0.88, Math.max(0.12, n.y));
+        }
+      }
+    })();
+
     const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let W = 0, H = 0, raf = null, running = false;
+    const bg = Array.from({ length: 110 }, () => ({
+      x: rnd(), y: rnd(), r: rnd() * 1.1 + 0.2, a: rnd() * 0.5 + 0.18, ph: rnd() * 6.283
+    }));
+    let W = 0, H = 0, raf = null, running = false, hover = null;
 
     function resize() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -1273,11 +1372,18 @@
       canvas.width = Math.max(1, W * dpr); canvas.height = Math.max(1, H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
+    function magnitude(n) {
+      // a floor so every claim is visible, then leverage scaled against the
+      // most load-bearing claim on the map
+      return Math.min(10, 3.2 + 6.8 * (n.lift / topLift));
+    }
+    function near(n) {
+      if (!hover) return false;
+      if (n === hover) return true;
+      return edges.some(e => (e.a === hover && e.b === n) || (e.b === hover && e.a === n));
+    }
     function drawSpike(x, y, len, col, a) {
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.globalAlpha = a;
-      ctx.lineWidth = 1;
+      ctx.save(); ctx.translate(x, y); ctx.globalAlpha = a; ctx.lineWidth = 1;
       for (let k = 0; k < 2; k++) {
         ctx.rotate(k * Math.PI / 2);
         const lg = ctx.createLinearGradient(-len, 0, len, 0);
@@ -1292,52 +1398,124 @@
       g.addColorStop(0, "#070a16"); g.addColorStop(1, "#0e0b1a");
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
       ctx.globalCompositeOperation = "lighter";
-      ctx.lineWidth = 1; ctx.strokeStyle = "#8fa0d8"; ctx.globalAlpha = 0.35;
-      for (const n of real) for (const num of n.entry.restsOn) {
-        const t = realByNum[num];
-        if (t) { ctx.beginPath(); ctx.moveTo(n.x * W, n.y * H); ctx.lineTo(t.x * W, t.y * H); ctx.stroke(); }
-      }
+
       for (const s of bg) {
         const tw = reduce ? 0.8 : (0.45 + 0.55 * Math.sin(t * 0.0012 + s.ph));
-        ctx.globalAlpha = s.a * tw * 0.7; ctx.fillStyle = "#aab4e0";
+        ctx.globalAlpha = s.a * tw * 0.6; ctx.fillStyle = "#aab4e0";
         ctx.beginPath(); ctx.arc(s.x * W, s.y * H, s.r, 0, 6.2832); ctx.fill();
       }
-      for (let i = 0; i < nodes.length; i++) {
-        const n = nodes[i], col = C[n.s], mag = n.c, coreR = 1 + mag * 0.35;
-        const tw = reduce ? 0.9 : (0.68 + 0.32 * Math.sin(t * (0.0011 + i * 0.00008) + i * 1.3));
+
+      for (const e of edges) {
+        const lit = hover && (e.a === hover || e.b === hover);
+        const dep = e.kind === "dep", broad = e.kind === "broad";
+        const base = dep ? 0.4 : (broad ? 0.06 : 0.14);
+        ctx.globalAlpha = lit ? (broad ? 0.3 : 0.85) : (hover ? base * 0.4 : base);
+        ctx.strokeStyle = dep ? "#9fb0e8" : "#6d7aa8";
+        ctx.lineWidth = dep ? 1.3 : (broad ? 0.6 : 0.8);
+        if (!dep) ctx.setLineDash(broad ? [2, 6] : [3, 4]);
+        ctx.beginPath();
+        ctx.moveTo(e.a.x * W, e.a.y * H);
+        ctx.lineTo(e.b.x * W, e.b.y * H);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      nodes.forEach((n, i) => {
+        const col = C[n.colour], mag = magnitude(n), coreR = 1 + mag * 0.35;
+        const dim = hover && !near(n) ? 0.22 : 1;
+        const tw = reduce ? 0.9 : (0.7 + 0.3 * Math.sin(t * (0.0011 + i * 0.00008) + i * 1.3));
         const x = n.x * W, y = n.y * H, halo = coreR * 7;
         const rg = ctx.createRadialGradient(x, y, 0, x, y, halo);
         rg.addColorStop(0, col); rg.addColorStop(0.18, col + "88"); rg.addColorStop(1, col + "00");
-        ctx.globalAlpha = 0.5 * tw; ctx.fillStyle = rg;
+        ctx.globalAlpha = 0.5 * tw * dim; ctx.fillStyle = rg;
         ctx.beginPath(); ctx.arc(x, y, halo, 0, 6.2832); ctx.fill();
-        if (mag >= 3) drawSpike(x, y, coreR * (5 + mag * 0.8) * tw, col, 0.45 * tw);
-        ctx.globalAlpha = 0.95;
+        if (mag >= 6) drawSpike(x, y, coreR * (5 + mag * 0.8) * tw, col, 0.4 * tw * dim);
+        ctx.globalAlpha = 0.95 * dim;
         const cg = ctx.createRadialGradient(x, y, 0, x, y, coreR * 1.8);
         cg.addColorStop(0, "#ffffff"); cg.addColorStop(0.4, col); cg.addColorStop(1, col + "00");
         ctx.fillStyle = cg;
         ctx.beginPath(); ctx.arc(x, y, coreR * 1.8, 0, 6.2832); ctx.fill();
-      }
+      });
+
       ctx.globalCompositeOperation = "source-over";
-      ctx.globalAlpha = 0.9; ctx.fillStyle = "#dfe4f5";
       ctx.font = '11px "IBM Plex Mono", monospace';
-      for (const n of real) {
-        const lw = ctx.measureText(n.label).width;
-        const lx = n.x * W + 14 + lw > W - 8 ? n.x * W - 14 - lw : n.x * W + 14;
-        ctx.fillText(n.label, lx, n.y * H + 3);
+      // Place each label in the first spot that does not collide with one already
+      // drawn. Two stars close together used to print their names on top of each
+      // other, which made the busiest part of the map the least readable.
+      const placed = [];
+      const ordered = nodes.slice().sort((a, b) => magnitude(b) - magnitude(a));
+      for (const n of ordered) {
+        const dim = hover && !near(n) ? 0.25 : 1;
+        const lw = ctx.measureText(n.label).width, lh = 13;
+        const x = n.x * W, y = n.y * H, gap = 14;
+        const spots = [
+          [x + gap, y + 3], [x - gap - lw, y + 3],
+          [x + gap, y - 11], [x - gap - lw, y - 11],
+          [x - lw / 2, y - 16], [x - lw / 2, y + 20]
+        ];
+        let at = null;
+        for (const [sx, sy] of spots) {
+          if (sx < 4 || sx + lw > W - 4 || sy < 10 || sy > H - 6) continue;
+          const box = { x: sx, y: sy - lh + 3, w: lw, h: lh };
+          const clash = placed.some(q => !(box.x + box.w < q.x || q.x + q.w < box.x
+                                        || box.y + box.h < q.y || q.y + q.h < box.y));
+          if (!clash) { at = box; break; }
+        }
+        // Still nowhere to put it: show it only when the star is hovered, rather
+        // than printing it over a neighbour's name.
+        if (!at) {
+          if (hover !== n) continue;
+          at = { x: Math.min(W - lw - 4, Math.max(4, x - lw / 2)), y: y + 20 - lh + 3, w: lw, h: lh };
+        }
+        placed.push(at);
+        ctx.globalAlpha = 0.9 * dim; ctx.fillStyle = "#dfe4f5";
+        ctx.fillText(n.label, at.x, at.y + lh - 3);
+      }
+      if (hover) {
+        const links = edges.filter(e => e.a === hover || e.b === hover);
+        const deps = links.filter(e => e.kind === "dep").length;
+        const flds = links.filter(e => e.kind === "field");
+        const brd = links.filter(e => e.kind === "broad");
+        const bits = [];
+        if (deps) bits.push(deps + (deps === 1 ? " dependency" : " dependencies"));
+        if (flds.length) bits.push("shares " + [...new Set(flds.map(e => e.via))].join(", "));
+        if (brd.length) bits.push("also in " + [...new Set(brd.map(e => e.via))].join(", ")
+                                  + " with " + brd.length + " other" + (brd.length === 1 ? "" : "s"));
+        const holds = nodes.filter(o => o !== hover
+          && (((o.entry.restsOn || []).includes(hover.entry.num))
+              || ((hover.entry.wouldSettle || []).includes(o.entry.num))));
+        if (holds.length) bits.unshift("would help settle " + holds.length
+          + " open " + (holds.length === 1 ? "claim" : "claims"));
+        if (!bits.length) bits.push("no connections recorded yet");
+        ctx.globalAlpha = 0.95; ctx.fillStyle = "#aab4e0";
+        ctx.fillText(bits.join(" · "), 12, H - 12);
       }
       ctx.globalAlpha = 1;
     }
     function loop(t) { draw(t || 0); if (!reduce && running) raf = requestAnimationFrame(loop); }
     window.__sky = {
-      start() { resize(); running = true; if (reduce) { draw(0); } else { if (raf) cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); } },
+      nodes,
+      edges,
+      start() {
+        resize(); running = true;
+        if (reduce) { draw(0); }
+        else { if (raf) cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); }
+      },
       stop() { running = false; if (raf) cancelAnimationFrame(raf); }
     };
-    window.addEventListener("resize", () => { if (vMap && !vMap.hidden) { resize(); draw(performance.now()); } });
+    window.addEventListener("resize", () => {
+      if (vMap && !vMap.hidden) { resize(); draw(performance.now()); }
+    });
     const hit = ev => {
       const r = canvas.getBoundingClientRect(), px = ev.clientX - r.left, py = ev.clientY - r.top;
-      return real.find(n => Math.hypot(n.x * W - px, n.y * H - py) < 18);
+      return nodes.find(n => Math.hypot(n.x * W - px, n.y * H - py) < 18);
     };
-    canvas.addEventListener("mousemove", ev => { canvas.style.cursor = hit(ev) ? "pointer" : "default"; });
+    canvas.addEventListener("mousemove", ev => {
+      const n = hit(ev);
+      canvas.style.cursor = n ? "pointer" : "default";
+      if (n !== hover) { hover = n || null; if (reduce) draw(0); }
+    });
+    canvas.addEventListener("mouseleave", () => { hover = null; if (reduce) draw(0); });
     canvas.addEventListener("click", ev => { const n = hit(ev); if (n) go(n.entry.id); });
   })();
 
@@ -1346,3 +1524,6 @@
   renderList();
   go(location.hash || "home");
 </script>
+
+</body>
+</html>

@@ -18,7 +18,10 @@ plain_status: "The amplification method proposed to test the ~1-in-2,000 appendi
 summary: "The assay proposed to test the UK appendix-survey positives has no measured false-positive rate on negative appendix; its validation used a handful of non-CJD controls, not a quantified specificity."
 kicker: Entry 006 · Variant CJD · Under investigation
 lede: "Before the amplification assay can say whether a survey-positive appendix really carries vCJD-type seeding activity, it needs a known false-positive rate on appendix that is certainly negative. The method paper tested a small non-CJD control set that stayed negative — but a specificity on survey-era negative appendix has not been measured, and the substrate is tuned to a genotype most of the positives do not have."
-rests_on: []
+rests_on:
+  - "004"
+would_settle:
+  - "004"
 cited_by: []
 keywords:
   - vcjd
@@ -47,7 +50,7 @@ The UK appendix surveys found abnormal prion protein in roughly 1 in 2,000 archi
 
 This entry examines a companion claim that is specific and testable on its own: **is the appendix-survey amplification false-positive rate measured?**
 
-See also the broader entry on what the appendix positives mean (the UK appendix prion surveys), to which this is a method companion.
+See also [[004-uk-appendix-prion-surveys|Entry 004]], the broader entry on what the appendix positives mean, to which this is a method companion.
 
 ## Evidence base
 

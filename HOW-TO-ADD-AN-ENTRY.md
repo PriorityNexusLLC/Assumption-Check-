@@ -41,6 +41,8 @@ Open the file in Obsidian, make the change, update the `updated:` date, then com
 | `plain_status`, `summary` | One plain-language line for the entry page, and one for the Registry card. |
 | `kicker`, `lede` | Optional small line above the title, and the intro paragraph under it. |
 | `rests_on` | Numbers of other entries this one depends on, like `- "001"`. "Cited by" fills itself in on the other entry, and the Map draws the link. |
+| `would_settle` | Entries whose open test this claim would help settle, like `- "004"`. This is the "would it help?" link, and it is what makes a claim shine on the Map: brightness is how much unresolved work turns on a claim, so a claim that would settle a test someone is running now is the brightest thing on the map. |
+| `not_linked` | Entries you checked against this one and decided *not* to link, with the reason, like `- "004 — both concern prion safety but neither depends on the other"`. This keeps the judgement on the record so nobody re-opens it, and stops `scripts/connections.py` flagging the pair again. |
 | `keywords` | Extra search words. |
 | `added`, `updated`, `traced` | Dates. |
 | `author`, `conflicts` | Who wrote the entry and any stake they hold. |
