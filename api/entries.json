@@ -296,7 +296,7 @@
     "Biochemistry"
    ],
    "stage": "Under Investigation",
-   "stage_note": "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source",
+   "stage_note": "Soukup 2023 read in full at source 12 Oct 2026; both quoted sentences confirmed. The claim stays open because no experiment has separated enclosed from co-pelleting material and assayed each for infectivity",
    "hypothesis": "Open Hypothesis",
    "peer_review": "Unreviewed",
    "contested": true,
@@ -329,8 +329,8 @@
    "updated": "2026-10-12",
    "author": "Priority Nexus LLC (AI-assisted research; drafted from the project's Prion Research Notes, sources not yet pulled)",
    "conflicts": "None declared",
-   "node_count": 3,
-   "verified_count": 0,
+   "node_count": 2,
+   "verified_count": 2,
    "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/011-prion-infectivity-inside-extracellular-vesicles/"
   }
  ]

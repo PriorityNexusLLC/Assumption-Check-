@@ -87,7 +87,7 @@ Tier: T2
 Verification: Verified at source
 Tags: Peer-reviewed; Replication unknown
 
-Alais S, Simoes S, Baas D, Lehmann S, Raposo G, Darlix JL, Leblanc P. "Mouse neuroblastoma cells release prion infectivity associated with exosomal vesicles." *Biology of the Cell* 2008;100(10):603–618. [doi:10.1042/bc20080025](https://doi.org/10.1042/bc20080025)
+Alais S, Simoes S, Baas D, Lehmann S, Raposo G, Darlix JL, Leblanc P. "Mouse neuroblastoma cells release prion infectivity associated with exosomal vesicles." *Biology of the Cell* 2008;100(10):603–615. [doi:10.1042/bc20080025](https://doi.org/10.1042/bc20080025)
 
 > "The dissemination of prions in N2a cell culture is mediated through the exosomal pathway."
 
@@ -157,7 +157,7 @@ Tags: Peer-reviewed; Replication unknown
 
 Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208) · first posted as bioRxiv [10.1101/2023.03.01.530593](https://doi.org/10.1101/2023.03.01.530593)
 
-> Cell-culture only: CAD5 and N2a-PK1 prion cell-culture models, comparing large vs small vesicles. It puts "in cell culture" in the title and, for exosomal prion infectivity, cites Février 2004 — not Vella, Guo, Alais or Cervenakova. The field's scoping is visible in what the title claims and what it declines to cite.
+> Cell-culture only: CAD5 and N2a-PK1 prion cell-culture models, comparing large versus small vesicles. It keeps "in cell culture" in its own title, and it cites Février, Vella, Guo, Alais and Cervenakova — Vella specifically for infection "both in vitro and in vivo". An earlier version of this entry said the paper declined to cite those authors; reading the reference list on 12 October 2026 showed that was wrong, and the inference drawn from it has been withdrawn.
 
 - **Read:** Full text read 6 Oct 2026 — confirms T2 (cell culture); no animal work.
 - **Files:** Full text read 6 Oct 2026.

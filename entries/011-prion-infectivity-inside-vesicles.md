@@ -10,7 +10,7 @@ Also in:
   - Biochemistry
 lifecycle: Active
 stage: Under Investigation
-Stage note: "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source"
+Stage note: "Soukup 2023 read in full at source 12 Oct 2026; both quoted sentences confirmed. The claim stays open because no experiment has separated enclosed from co-pelleting material and assayed each for infectivity"
 hypothesis: Open Hypothesis
 Peer review: Unreviewed
 contested: true
@@ -41,8 +41,9 @@ author: Priority Nexus LLC (AI-assisted research; drafted from the project's Pri
 conflicts: None declared
 ---
 
-> [!callout] Under Investigation — the source is identified, the full text is blocked
-> The study behind these nodes is named and peer-reviewed. Its full text sits behind a publisher block and could not be opened while writing this entry, so every node is marked Located, not read rather than verified at source. The quoted sentence and figures come from the project's own research notes, which record them as verified there. Treat this as a map of where to look until someone reads the paper again.
+> [!callout] Under Investigation — the sources are read, the question is open
+> The key paper has been read in full and both quoted sentences confirmed. What keeps this entry open is not missing reading: no experiment has separated vesicle-enclosed prion material from the free aggregate that pellets with it and assayed each for infectivity, and the test the field normally uses to show enclosure cannot do it for this protein.
+
 
 ## Claim as stated
 
@@ -62,7 +63,7 @@ Three things sit under the claim, none of them resolved.
 
 1. **Co-sedimentation is not enclosure.** Free prion aggregate and small vesicles pellet together. A method that separates by density rather than speed is needed before the fraction can be called vesicular, and the research notes record at least one paper introducing a sucrose cushion explicitly in order to separate the two.
 2. **The usual localisation test cannot work here.** Enclosure inside a vesicle is normally shown by protease protection: material inside is shielded, material outside is digested. Misfolded prion protein is defined by its resistance to protease. The assay therefore returns the same answer whether the protein is inside a vesicle or free in solution. This is a structural limitation of the method against this analyte, not a lapse by any particular study.
-3. **The better-separated comparison points the other way.** Where large and small vesicles have been compared with the isolation and characterisation controls reported, the research notes record the large fraction carrying substantially more seeding activity and infecting cells more efficiently — that is, the active material sits in the fraction the field did not name "exosomes".
+3. **The better-separated comparison points the other way, unevenly.** Where large and small vesicles are compared with isolation and characterisation controls reported, the large fraction carried the greater converting activity — but the difference was absent in one of two isolations and reversed at one passage, so it establishes a direction rather than a magnitude.
 
 ## Evidence tiers
 
@@ -79,47 +80,35 @@ The claim is a T3/T4 claim. The evidence currently reaches **T1**.
 
 ### 2023 — The sucrose cushion
 Tier: T1
-Verification: Located, not read
+Verification: Verified at source
 Tags: Peer-reviewed; Replication unknown
 
 Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208)
 
-The project's research notes record this sentence as verified verbatim at source; the full text is behind a publisher block and could not be re-opened here, so this node is Located, not read until someone reads it again.
+> "To purify sEVs from aggregated PrP (also pelleted at 110,000×g), we introduced a sucrose cushion in the isolation of sEVs. Without the sucrose cushion step, the measurement would be biased by pelleted PrP aggregates."
 
-> "To purify sEVs from aggregated PrP (also pelleted at 110,000 × g), we introduced a sucrose cushion."
+- **What it shows:** practitioners in the field state plainly that free prion aggregate pellets with small vesicles at the standard speed, and that a preparation made without a density step is biased by it. The mixture is documented, not inferred.
+- **What it does not show:** where infectivity sits once the two are separated. The paper separates them to measure vesicles cleanly; it does not assay the discarded aggregate.
+- **Files:** full text read at source 12 October 2026; both sentences present verbatim.
 
-- **What it shows, if the citation resolves:** the field's own practitioners treat the standard pellet as containing free prion aggregate alongside vesicles, and take an extra step to separate them. The mixture is acknowledged, not hypothetical.
-- **What it does not show:** anything about where infectivity sits once the two are separated.
-- **Files:** none. The identity of this paper is recorded in sections of the Prion Research Notes not mirrored locally; it must be pulled and read before this node can be verified at source.
-
-### 2023 — The large-versus-small vesicle comparison
+### 2023 — Large versus small vesicles
 Tier: T2
-Verification: Located, not read
+Verification: Verified at source
 Tags: Peer-reviewed; Replication unknown
 
-Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208) — the same study as the node above.
+The same study, comparing vesicles isolated at 20,000 × g (large) and 110,000 × g (small) in CAD5 and N2a-PK1 prion cell-culture models.
 
-Large vesicles carry roughly 20–26 times more prion seeding activity than small ones and infect cells between about 1.2 and 24.6 times better, with isolation speeds, marker panels and cryo-electron-microscopy sizes reported. [[001-the-exosome-prion-chain|Entry 001]] records its full text as read on 6 October 2026; the quotes here have not been re-confirmed since, so this node stays Located, not read.
+> "Both fractions were enriched in prion protein, but the lEVs contained a higher prion-converting activity."
 
-- **What it shows, if the citation resolves:** the seeding-active material is concentrated in the fraction that is not the one called exosomes, which inverts the usual framing.
-- **What it does not show:** whether either fraction's activity is enclosed rather than adherent, and seeding activity is not infectivity.
-- **Files:** none; see above.
-
-### 2023 — What the field now cites
-Verification: Located, not read
-Tags: Not a primary test
-
-The same study. For exosomal prion infectivity it cites Février 2004 and not Vella, Guo, Alais or Cervenakova — the papers usually offered for the broader claim.
-
-- **What it shows, if the citation resolves:** specialists have quietly narrowed what they will cite, without any published retraction or correction. That is a signal about the evidence, not a substitute for examining it.
-- **What it does not show:** that the narrowed claim is wrong — only that the broader one has lost support without announcement.
-- **Files:** none; see above.
+- **What it shows:** the larger fraction — the one this literature does not call exosomes — carried the greater converting activity and produced stronger infection signals.
+- **What it does not show:** a stable size of that difference. It is not uniform and in places reverses. Converting activity was about 26× higher in large vesicles in the first isolation of N2a-PK1-RML cells and showed **no difference in the second**; the authors call that cell model's result "less convincing". The infection signal was 24.6× stronger at passage 8 but fell to 7.0× as small-vesicle infection caught up, was 1.2× in another scheme, and at passage 5 small vesicles infected naïve cells more. The honest statement is a direction, not a ratio.
+- **Files:** full text read at source 12 October 2026.
 
 ## Where it stands
 
 - **Established.** Preparations called exosomal contain prion protein, and material from them transmits disease on intracerebral injection into PrP-overexpressing mice (see [[001-the-exosome-prion-chain|Entry 001]], where that chain is verified at source).
 - **Unresolved.** Whether the transmitting material is inside vesicles. The preparation is a mixture by construction, and the standard enclosure assay cannot distinguish the cases for this protein.
-- **Pointing away from the claim.** The better-separated comparison recorded in the research notes puts the activity in the fraction the field named least carefully.
+- **Pointing away from the claim.** The better-separated comparison in Soukup 2023 puts the greater converting activity in the large-vesicle fraction, which this literature does not call exosomes — though the size of that difference is unstable and in places reverses.
 
 ## What would settle it
 
