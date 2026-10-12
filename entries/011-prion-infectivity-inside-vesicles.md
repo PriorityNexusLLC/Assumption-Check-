@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "011"
 title: Prion infectivity inside extracellular vesicles
 claim: The prion infectivity recovered in extracellular-vesicle preparations is enclosed inside the vesicles, rather than free aggregate co-pelleting with them.

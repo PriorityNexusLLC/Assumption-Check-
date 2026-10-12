@@ -263,7 +263,8 @@ def collect():
 def summary_of(e):
     keep = ("num", "title", "claim", "subject", "domain", "also_in", "stage", "stage_note",
             "hypothesis", "peer_review", "contested", "lifecycle", "summary", "plain_status",
-            "rests_on", "cited_by", "keywords", "added", "updated", "author", "conflicts",
+            "rests_on", "cited_by", "would_settle", "not_linked", "keywords", "added", "updated",
+            "author", "conflicts",
             "node_count", "verified_count", "url")
     return {k: e[k] for k in keep if k in e}
 
