@@ -1,6 +1,6 @@
 {
  "name": "Assumption Check",
- "count": 6,
+ "count": 7,
  "entries": [
   {
    "num": "001",
@@ -24,6 +24,8 @@
     "011"
    ],
    "cited_by": [],
+   "would_settle": [],
+   "not_linked": [],
    "keywords": [
     "prion",
     "exosome",
@@ -64,6 +66,8 @@
    "plain_status": "Taken literally — one figure, all children, one night — not supported. The figure's origin is real and datable; that trace is in progress.",
    "rests_on": [],
    "cited_by": [],
+   "would_settle": [],
+   "not_linked": [],
    "keywords": [
     "santa",
     "santa claus",
@@ -107,6 +111,8 @@
    "plain_status": "No confirmed human case has been reported. Transmission studies report conflicting results across different models, isolates and routes.",
    "rests_on": [],
    "cited_by": [],
+   "would_settle": [],
+   "not_linked": [],
    "keywords": [
     "cwd",
     "chronic wasting disease",
@@ -155,6 +161,8 @@
    "cited_by": [
     "006"
    ],
+   "would_settle": [],
+   "not_linked": [],
    "keywords": [
     "vcjd",
     "variant cjd",
@@ -199,6 +207,10 @@
    "plain_status": "The 134°C / 18-minute figure is in the WHO guidance, which cites no inactivation study for it and concedes incomplete removal in worst cases. A readable 2026 bioassay shows a single 134°C cycle does not eliminate one sporadic-CJD strain; chemical and combination treatments do better.",
    "rests_on": [],
    "cited_by": [],
+   "would_settle": [],
+   "not_linked": [
+    "004 — both concern prion safety policy and both sit in Public Health, but neither's evidence depends on the other. The shared field is the accurate connection; a rests_on link would overstate it."
+   ],
    "keywords": [
     "prion",
     "decontamination",
@@ -246,6 +258,10 @@
     "004"
    ],
    "cited_by": [],
+   "would_settle": [
+    "004"
+   ],
+   "not_linked": [],
    "keywords": [
     "vcjd",
     "variant cjd",
@@ -268,6 +284,54 @@
    "node_count": 3,
    "verified_count": 3,
    "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/006-the-appendix-assay-false-positive-rate/"
+  },
+  {
+   "num": "011",
+   "title": "Prion infectivity inside extracellular vesicles",
+   "claim": "The prion infectivity recovered in extracellular-vesicle preparations is enclosed inside the vesicles, rather than free aggregate co-pelleting with them.",
+   "subject": "Prion vesicle enclosure",
+   "domain": "Cellular Biology",
+   "also_in": [
+    "Molecular Neuroscience",
+    "Biochemistry"
+   ],
+   "stage": "Under Investigation",
+   "stage_note": "trail mapped from the project's research notes; no node yet verified at source, because the citations sit in sections of the Prion Research Notes not mirrored locally",
+   "hypothesis": "Open Hypothesis",
+   "peer_review": "Unreviewed",
+   "contested": true,
+   "lifecycle": "Active",
+   "summary": "Prion preparations called \\\"exosomes\\\" are a pellet that also contains free prion aggregate. Whether the infectivity is inside vesicles is untested, and the standard localisation assay cannot settle it.",
+   "plain_status": "Prion material is recovered from the fraction labelled \\\"exosomes\\\", and that fraction transmits disease. Whether the infectious material is inside the vesicles, or free clumps of prion protein that settle at the same speed, has not been established — and the test the field normally uses cannot answer it.",
+   "rests_on": [],
+   "cited_by": [
+    "001"
+   ],
+   "would_settle": [
+    "001"
+   ],
+   "not_linked": [
+    "010 — shares Biochemistry, and both ask whether material is what its label says. But cross-seeding is about templating between proteins and this is about where a protein sits; neither's evidence bears on the other. The shared field is the accurate connection."
+   ],
+   "keywords": [
+    "exosome",
+    "extracellular vesicle",
+    "vesicle",
+    "prion",
+    "prpsc",
+    "co-pelleting",
+    "sucrose cushion",
+    "protease protection",
+    "tetraspanin",
+    "cryo-electron microscopy"
+   ],
+   "added": "2026-10-12",
+   "updated": "2026-10-12",
+   "author": "Priority Nexus LLC (AI-assisted research; drafted from the project's Prion Research Notes, sources not yet pulled)",
+   "conflicts": "None declared",
+   "node_count": 3,
+   "verified_count": 0,
+   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/011-prion-infectivity-inside-extracellular-vesicles/"
   }
  ]
 }

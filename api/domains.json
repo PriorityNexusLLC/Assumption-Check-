@@ -1,5 +1,5 @@
 {
- "count": 11,
+ "count": 12,
  "fields": [
   {
    "field": "Anthropology",
@@ -8,9 +8,16 @@
    ]
   },
   {
+   "field": "Biochemistry",
+   "entries": [
+    "011"
+   ]
+  },
+  {
    "field": "Cellular Biology",
    "entries": [
-    "001"
+    "001",
+    "011"
    ]
   },
   {
@@ -45,7 +52,8 @@
     "001",
     "003",
     "004",
-    "005"
+    "005",
+    "011"
    ]
   },
   {
