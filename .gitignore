@@ -1,3 +1,10 @@
 # Obsidian workspace settings (per computer)
 .obsidian/
 .trash/
+
+# Local test artifacts
+[A-Z]0[0-9][0-9].png
+[A-Z]0[0-9][0-9].txt
+[A-Z]reg.txt
+[A-Z]facets.txt
+[A-Z]map.png

@@ -652,7 +652,7 @@
 <script>
   "use strict";
 
-  // --- entries: written as Markdown in entries/*.md, bundled into entries.js by scripts/build_entries.py ---
+  // --- entries: written as Markdown in entries/*.md, bundled into entries.js by scripts/build_entries.py (preview build) ---
   const REPO = "https://github.com/PriorityNexusLLC/Assumption-Check-";
   const SUGGEST_URL = REPO + "/issues/new?template=suggest-a-claim.yml";
 
@@ -781,8 +781,14 @@
       else (sec ? sec.blocks : intro).push(b);
     });
     const nodes = [];
+    // A section is a chain of source nodes if it is named "The chain"/"The trail",
+    // or if it has "###" sources carrying Tier:/Verification:/Tags: lines.
+    const looksLikeChain = s =>
+      /^the (chain|trail)\b/i.test(s.title) ||
+      (s.blocks.some(b => b.t === "h") &&
+       s.blocks.some(b => b.t === "p" && b.lines && b.lines.some(l => NODE_FIELD_RE.test(l))));
     sections.forEach(s => {
-      if (!/^the (chain|trail)\b/i.test(s.title)) return;
+      if (!looksLikeChain(s)) return;
       s.chain = true;
       s.items = [];
       s.pre = [];
@@ -1055,7 +1061,14 @@
     facetDefs.forEach(f => { if (activeFacets.has(f.id)) { (groups[f.group] = groups[f.group] || []).push(f); } });
     return Object.values(groups).every(fs => fs.some(f => f.test(e)));
   }
-  function matches(e) { return searchMatch(e) && facetMatch(e); }
+  // Permanent rule: Under Investigation entries are kept out of the default registry list.
+  // They appear only when the "Under Investigation" stage filter is chosen. An explicit
+  // keyword search still surfaces a matching one, so deliberate look-ups don't come up empty.
+  function stageVisible(e) {
+    if (!(e.stage && /inv/.test(e.stage.cls))) return true;      // not Under Investigation → always eligible
+    return activeFacets.has("stg-invest") || !!searchTerm;        // Under Investigation → only via its filter (or a search)
+  }
+  function matches(e) { return searchMatch(e) && facetMatch(e) && stageVisible(e); }
 
   function renderFacets() {
     facetBar.innerHTML = '<span class="flabel">Filter</span>';
@@ -1125,8 +1138,8 @@
       const note = document.createElement("p");
       note.className = "list-foot";
       note.textContent = capped
-        ? "Showing the newest " + CAP + ". Open the filters and pick a badge — e.g. Under Investigation — to see the rest. A per-domain claim archive arrives with the full build."
-        : "Newest first. Open the filters to sort by badge. A per-domain claim archive arrives with the full build.";
+        ? "Showing the newest " + CAP + ". Entries still Under Investigation are kept behind the filters — open them and pick Under Investigation to see those. A per-domain claim archive arrives with the full build."
+        : "Newest first. Entries still Under Investigation are kept behind the filters — open them and pick Under Investigation to see those. A per-domain claim archive arrives with the full build.";
       listEl.appendChild(note);
     }
   }

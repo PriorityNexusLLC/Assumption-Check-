@@ -55,12 +55,32 @@ def frontmatter(text):
     return meta
 
 
-def check(path, meta):
+def body_after_frontmatter(text):
+    m = re.match(r"^﻿?---\r?\n.*?\r?\n---[ \t]*(?:\r?\n|$)(.*)$", text, re.S)
+    return m.group(1) if m else text
+
+
+def node_verifications(body):
+    """The 'Verification:' value under each '###' source node, lowercased."""
+    return [norm(m.group(1)) for m in re.finditer(r"(?mi)^verification\s*:\s*(.+)$", body)]
+
+
+def check(path, meta, body=""):
     problems = []
     if meta is None:
         return ["missing the --- properties block at the top"]
     if meta.get("draft") == "true":
         return []
+    # Stage rule: an entry is "Traced" only when every chain node is verified at
+    # source. Any node still needing original source data keeps it Under Investigation.
+    if meta.get("stage") and norm(meta["stage"]) == "traced":
+        unverified = [v for v in node_verifications(body) if v and v != "verified at source"]
+        if unverified:
+            problems.append(
+                "stage is Traced but a chain node is not verified at source "
+                f"({', '.join(sorted(set(unverified)))}); use Under Investigation until every "
+                "node is Verified at source"
+            )
     for key in REQUIRED:
         if not meta.get(key):
             problems.append(f"'{key}' is empty")
@@ -87,7 +107,7 @@ def build():
     for path in sorted(ENTRIES.glob("*.md")):
         text = path.read_text(encoding="utf-8")
         meta = frontmatter(text)
-        problems += [f"{path.name}: {p}" for p in check(path, meta)]
+        problems += [f"{path.name}: {p}" for p in check(path, meta, body_after_frontmatter(text))]
         if meta and meta.get("draft") != "true" and meta.get("num"):
             num = str(meta["num"]).zfill(3)
             if num in nums:
