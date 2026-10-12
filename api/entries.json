@@ -1,6 +1,6 @@
 {
  "name": "Assumption Check",
- "count": 11,
+ "count": 12,
  "entries": [
   {
    "num": "001",
@@ -523,6 +523,50 @@
    "node_count": 2,
    "verified_count": 2,
    "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/011-prion-infectivity-inside-extracellular-vesicles/"
+  },
+  {
+   "num": "012",
+   "title": "Open-access flags and the papers behind them",
+   "claim": "A paper flagged open access by the major bibliographic indexes can be read in full at the location they give.",
+   "subject": "Open-access metadata",
+   "domain": "Information Science",
+   "also_in": [
+    "Library Science",
+    "Research Ethics"
+   ],
+   "stage": "Traced",
+   "stage_note": "both nodes verified at source — they are the registry's own direct observations, so there is no citation chain outstanding. The hypothesis stays open: the rate is unmeasured, and a first sample of 600 records found no second case",
+   "hypothesis": "Open Hypothesis",
+   "peer_review": "Unreviewed",
+   "contested": false,
+   "lifecycle": "Active",
+   "summary": "An index saying a paper is free is a claim about a file, not about a readable paper. One verified case where the file is an image; the rate is unmeasured, and our first sample of 600 found no second case.",
+   "plain_status": "Three large indexes told us a paper was free to read. The file all three pointed at was a photograph of one figure, not the paper. How often that happens is not known — our own first count of 600 records found no other case like it.",
+   "rests_on": [],
+   "cited_by": [],
+   "would_settle": [],
+   "not_linked": [
+    "010 — Rasmussen 2018 is the paper this entry's counterexample concerns, but 010's argument is about protein cross-seeding and does not depend on anything here. The connection is that this entry explains why 010's node is marked Unreadable."
+   ],
+   "keywords": [
+    "open access",
+    "metadata",
+    "unpaywall",
+    "openalex",
+    "semantic scholar",
+    "repository",
+    "green open access",
+    "retrieval",
+    "citation drift",
+    "reproducibility"
+   ],
+   "added": "2026-10-12",
+   "updated": "2026-10-12",
+   "author": "Priority Nexus LLC (AI-assisted research; the counterexample and the sample were produced directly from the named APIs on 12 October 2026)",
+   "conflicts": "This entry arose from the registry's own work. The counterexample was found while trying to read a source for Entry 010, and the measurement below was run by the registry rather than taken from a published study.",
+   "node_count": 2,
+   "verified_count": 2,
+   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/012-open-access-flags-and-the-papers-behind-them/"
   }
  ]
 }

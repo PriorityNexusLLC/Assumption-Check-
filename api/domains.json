@@ -1,5 +1,5 @@
 {
- "count": 16,
+ "count": 19,
  "fields": [
   {
    "field": "Anthropology",
@@ -35,6 +35,18 @@
     "004",
     "006",
     "009"
+   ]
+  },
+  {
+   "field": "Information Science",
+   "entries": [
+    "012"
+   ]
+  },
+  {
+   "field": "Library Science",
+   "entries": [
+    "012"
    ]
   },
   {
@@ -92,6 +104,12 @@
    "field": "Quantitative History",
    "entries": [
     "002"
+   ]
+  },
+  {
+   "field": "Research Ethics",
+   "entries": [
+    "012"
    ]
   },
   {
