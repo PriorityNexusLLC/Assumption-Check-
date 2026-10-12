@@ -1,0 +1,320 @@
+{
+ "num": "006",
+ "slug": "006-appendix-assay-false-positive-rate",
+ "file": "006-appendix-assay-false-positive-rate.md",
+ "draft": false,
+ "title": "The appendix-assay false-positive rate",
+ "claim": "The amplification assay proposed to test the UK appendix-survey positives has a measured false-positive rate on known-negative appendix tissue.",
+ "subject": "Variant CJD",
+ "domain": "Medical Statistics",
+ "also_in": [
+  "Metrology",
+  "Epidemiology"
+ ],
+ "not_linked": [],
+ "lifecycle": "Active",
+ "stage": "Under Investigation",
+ "stage_note": "key method paper verified at source; the claim is a documented gap, not a positive finding",
+ "hypothesis": "Under Test",
+ "peer_review": "Unreviewed",
+ "contested": false,
+ "plain_status": "The amplification method proposed to test the ~1-in-2,000 appendix positives was validated against a small non-CJD control set that did not amplify. Its specificity — a false-positive rate on known-negative survey-era appendix — has not been quantified, and the assay's substrate is built for one genotype most survey positives do not share.",
+ "summary": "The assay proposed to test the UK appendix-survey positives has no measured false-positive rate on negative appendix; its validation used a handful of non-CJD controls, not a quantified specificity.",
+ "kicker": "Entry 006 · Variant CJD · Under investigation",
+ "lede": "Before the amplification assay can say whether a survey-positive appendix really carries vCJD-type seeding activity, it needs a known false-positive rate on appendix that is certainly negative. The method paper tested a small non-CJD control set that stayed negative — but a specificity on survey-era negative appendix has not been measured, and the substrate is tuned to a genotype most of the positives do not have.",
+ "rests_on": [
+  "004"
+ ],
+ "cited_by": [],
+ "keywords": [
+  "vcjd",
+  "variant cjd",
+  "appendix",
+  "prion",
+  "pmca",
+  "amplification",
+  "false positive",
+  "specificity",
+  "codon 129",
+  "surveillance",
+  "prpsc",
+  "ffpe",
+  "uk"
+ ],
+ "added": "2026-10-09",
+ "updated": "2026-10-12",
+ "traced": "October 2026",
+ "author": "Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)",
+ "conflicts": "None declared",
+ "preamble": [],
+ "sections": [
+  {
+   "heading": "Claim as stated",
+   "id": "claim-as-stated",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "The UK appendix surveys found abnormal prion protein in roughly 1 in 2,000 archived appendixes (Gill 2013). A highly sensitive protein-misfolding cyclic amplification (hsPMCA) platform has been proposed as the way to test whether those survey positives carry genuine vCJD-type seeding activity. Using it that way carries an implicit claim: that a positive result would mean real seeding rather than an assay artefact — in other words, that the assay's false-positive rate on known-negative appendix tissue is established. The method paper states its forward plan directly: the platform provides \"a highly sensitive and reliable platform for subsequent analysis of the archived FFPE appendix tissue derived from the Appendix II and III surveys,\" and \"our upcoming research will be dedicated to employing this protocol in extracting PrP aggregates from the positive Appendix study samples.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "This entry examines a companion claim that is specific and testable on its own: **is the appendix-survey amplification false-positive rate measured?**"
+    },
+    {
+     "type": "paragraph",
+     "text": "See also [[004-uk-appendix-prion-surveys|Entry 004]], the broader entry on what the appendix positives mean, to which this is a method companion."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence base",
+   "id": "evidence-base",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "The method paper (Suleiman 2023) recovers an amplifiable, strain-faithful prion signal from formalin-fixed paraffin-embedded (FFPE) appendix of confirmed vCJD cases and confirms by mouse bioassay that the amplified product is infectious with vCJD properties. Its design, read at source: FFPE and frozen samples from six neuropathologically confirmed vCJD cases and two non-CJD control patients; the seed amplified in \"codon 129MM transgenic mouse substrate.\" The negative controls were \"FFPE brain and appendix tissues from a non-CJD case,\" and the paper reports that \"no amplification was observed from the reaction incubated with PBS or the non-CJD seeded material used as negative controls.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "So negative appendix controls existed and stayed negative — but that is a handful of non-CJD control patients, not a quantified specificity. No false-positive rate on known-negative archived appendix of the survey era has been measured."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Untested assumption",
+   "id": "untested-assumption",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "That a positive amplification result on a survey specimen would reliably indicate genuine seeding. Two gaps sit under it, both verifiable at source:"
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Specificity is not quantified.** The assay was validated against a small non-CJD control set, not against a measured panel of known-negative survey-era appendix blocks. A false-positive rate — the quantity needed to interpret a positive on 23 irreplaceable specimens — has not been established."
+      },
+      {
+       "depth": 0,
+       "text": "**The substrate is single-genotype.** The substrate is 129MM, built for vCJD (every confirmed clinical vCJD case is 129MM). The survey positives span all three codon-129 genotypes. A 129MM substrate can under-amplify non-129MM seeds (Bélondrade 2021), so a negative cannot separate \"not seeding\" from \"not vCJD,\" and a positive's meaning depends on a specificity the assay has not been given."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence tiers",
+   "id": "evidence-tiers",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "What T1–T4 mean for this claim about the assay."
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**T1** The assay **detects** survey-positive material (a positive amplification)."
+      },
+      {
+       "depth": 0,
+       "text": "**T2** The assay's **specificity is characterised** — a false-positive rate on a defined negative-appendix panel."
+      },
+      {
+       "depth": 0,
+       "text": "**T3** That specificity is measured on **era-matched survey-archive negatives** across the relevant genotypes."
+      },
+      {
+       "depth": 0,
+       "text": "**T4** The false-positive rate is **established and reproduced** well enough to interpret a result on the irreplaceable survey positives."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "The claim (\"the false-positive rate is measured\") would require **T2** at least. The readable evidence reaches only a small non-CJD control set (below T2): negatives were included and stayed negative, but no specificity figure exists."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "What would settle it",
+   "id": "what-would-settle-it",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**If the claim holds:** a published specificity — the assay run on a defined set of known-negative appendix blocks, ideally era-matched to the surveys (Appendix-III alone retains large numbers of negative blocks), with a reported false-positive rate across codon-129 genotypes."
+      },
+      {
+       "depth": 0,
+       "text": "**If it doesn't:** the current state — a method validated on a small non-CJD control set, applied to the positives without a measured false-positive rate, so a positive cannot be read as genuine seeding with a known error rate."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "The chain",
+   "id": "the-chain",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Verification reflects checks on 9 October 2026."
+    }
+   ],
+   "nodes": [
+    {
+     "heading": "The prevalence the assay would be applied to",
+     "year": "2013",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Open access"
+     ],
+     "citation": "Gill ON, Spencer Y, Richard-Loendt A, Kelly C, et al. \"Prevalent abnormal prion protein in human appendixes after bovine spongiform encephalopathy epizootic: large scale survey.\" *BMJ* 2013;347:f5675. [doi:10.1136/bmj.f5675](https://doi.org/10.1136/bmj.f5675) · PMC3805509 · open access",
+     "quote": "\"Of the 32 441 appendix samples 16 were positive for abnormal PrP, indicating an overall prevalence of 493 per million population (95% confidence interval 282 to 801 per million).\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Abnormal prion protein is present in appendix tissue at about 1 in 2,000 — the specimens the amplification assay would be applied to."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Whether that protein is infectious or is vCJD; immunostaining detects presence, not seeding activity."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "Why a single-genotype substrate cannot stand alone",
+     "year": "2021",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Open access"
+     ],
+     "citation": "Bélondrade M, Nicot S, Mayran C, Bruyere-Ostells L, et al. \"Sensitive protein misfolding cyclic amplification of sporadic Creutzfeldt–Jakob disease prions is strongly seed and substrate dependent.\" *Scientific Reports* 2021;11:4058. [doi:10.1038/s41598-021-83630-1](https://doi.org/10.1038/s41598-021-83630-1) · PMC7893054 · open access",
+     "quote": "\"The level of amplification obtained in the TgMet substrate in our study was somewhat disappointing, especially in the homologous PMCA context for MM1 and MM2 prions.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Amplification of human prions is \"strongly seed and substrate dependent.\" A 129-methionine substrate missed or barely amplified several non-vCJD human prion types. Because the survey positives are not all 129MM, a 129MM-only assay can return a negative on a genuinely seeding-competent specimen — which is why its specificity and genotype coverage matter before any result is interpreted."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Any result on the appendix specimens; this is the methodological constraint, not a test of them."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "The proposed method, and the gap in its controls",
+     "year": "2023",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Open access",
+      "Load-bearing"
+     ],
+     "citation": "Suleiman S, McGuire LI, Chong A, Ritchie DL, et al. \"Conservation of vCJD Strain Properties After Extraction and In Vitro Propagation of PrP<sup>Sc</sup> from Archived Formalin-Fixed Brain and Appendix Tissues Using Highly Sensitive Protein Misfolding Cyclic Amplification.\" *Molecular Neurobiology* 2023;60(11):6275–6293. [doi:10.1007/s12035-023-03444-2](https://doi.org/10.1007/s12035-023-03444-2) · PMC10533579 · open access",
+     "quote": "\"In parallel, FFPE brain and appendix tissues from a non-CJD case were similarly processed and tested as negative controls … no amplification was observed from the reaction incubated with PBS or the non-CJD seeded material used as negative controls.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "The platform recovers a strain-faithful, infectious vCJD signal from FFPE appendix of confirmed cases, using a \"codon 129MM transgenic mouse substrate,\" and is proposed as the assay for the survey positives. Negative controls (a non-CJD case's brain and appendix) did not amplify."
+      },
+      {
+       "label": "What it does not show",
+       "text": "A measured false-positive rate. The negative set is two non-CJD control patients, not a quantified specificity on survey-era negative appendix; and the substrate is single-genotype (129MM) while the survey positives span MM, MV and VV. No result on the survey positives themselves has been reported."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [
+      {
+       "type": "quote",
+       "text": "\"This provides a highly sensitive and reliable platform for subsequent analysis of the archived FFPE appendix tissue derived from the Appendix II and III surveys.\""
+      }
+     ],
+     "break_before": null
+    }
+   ]
+  },
+  {
+   "heading": "Where it stands",
+   "id": "where-it-stands",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Established.** The hsPMCA platform works on FFPE vCJD appendix and is the proposed route to test the survey positives; its non-CJD negative controls did not amplify (Suleiman 2023, verified at source)."
+      },
+      {
+       "depth": 0,
+       "text": "**Unmeasured.** The assay's false-positive rate on known-negative appendix. Validation used a small non-CJD control set, not a quantified specificity on survey-era negatives across genotypes — so the companion claim (\"the false-positive rate is measured\") is not supported."
+      },
+      {
+       "depth": 0,
+       "text": "**Compounding.** The substrate is 129MM while the positives are not all 129MM (Bélondrade 2021, verified), so interpreting any result also needs genotype-matched substrate, not just a specificity figure."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "summary",
+     "title": "",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "The method exists and is proposed for the positives → established (Suleiman 2023). A measured false-positive rate on negative appendix → not established; validation used a handful of non-CJD controls. A single-genotype substrate can decide the question alone → no; it under-amplifies non-129MM seeds (Bélondrade 2021)."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "note",
+     "title": "Provenance — read before citing",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Verified at source: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Suleiman 2023 (*Molecular Neurobiology*), all open access at PMC, with the quoted sentences present. Reading Suleiman 2023 at source corrected a secondary impression that the method's negative controls were brain only: the paper's negative controls were a non-CJD case's brain **and** appendix, which did not amplify — the gap is that this is a small control set, not a quantified false-positive rate. This entry is AI-assisted research and is marked so in the author field, per the Method page."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  }
+ ],
+ "verification_counts": {
+  "verified at source": 3
+ },
+ "node_count": 3,
+ "verified_count": 3,
+ "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/006-the-appendix-assay-false-positive-rate/"
+}

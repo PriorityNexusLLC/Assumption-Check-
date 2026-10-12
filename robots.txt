@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prioritynexusllc.github.io/Assumption-Check-/sitemap.xml

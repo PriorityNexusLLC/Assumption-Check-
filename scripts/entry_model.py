@@ -30,7 +30,16 @@ VERIFICATIONS = {
     "unreadable",
     "identity unresolved",
 }
-LIST_KEYS = {"rests_on", "cited_by", "keywords", "cross_links"}
+LIST_KEYS = {"rests_on", "cited_by", "keywords", "also_in", "not_linked"}
+
+
+def as_list(value):
+    """A frontmatter value that may be a real list, a '·'-separated string, or absent."""
+    if isinstance(value, list):
+        return [str(x).strip() for x in value if str(x).strip()]
+    if not value or str(value).strip() in ("[]", ""):
+        return []
+    return [x.strip() for x in re.split(r"[·,]", str(value)) if x.strip()]
 
 
 def norm(value):
@@ -331,8 +340,8 @@ def build_entry(name, text, entry_urls=None):
         "claim": meta.get("claim", ""),
         "subject": meta.get("subject", ""),
         "domain": meta.get("domain", ""),
-        "cross_links": meta.get("cross_links", []) if isinstance(meta.get("cross_links"), list)
-        else [x.strip() for x in str(meta.get("cross_links", "")).split("·") if x.strip()],
+        "also_in": as_list(meta.get("also_in")),
+        "not_linked": as_list(meta.get("not_linked")),
         "lifecycle": meta.get("lifecycle", ""),
         "stage": stage,
         "stage_note": meta.get("stage_note", ""),

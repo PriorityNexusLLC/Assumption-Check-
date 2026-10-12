@@ -1,0 +1,359 @@
+{
+ "num": "003",
+ "slug": "003-cwd-crossing-into-humans",
+ "file": "003-cwd-crossing-into-humans.md",
+ "draft": false,
+ "title": "Chronic wasting disease and humans",
+ "claim": "Chronic wasting disease (CWD) can transmit to humans and cause prion disease.",
+ "subject": "Chronic wasting disease",
+ "domain": "Epidemiology",
+ "also_in": [
+  "Veterinary Medicine",
+  "Molecular Neuroscience"
+ ],
+ "not_linked": [],
+ "lifecycle": "Active",
+ "stage": "Traced",
+ "stage_note": "trace complete; all sources verified at source",
+ "hypothesis": "Under Test",
+ "peer_review": "Unreviewed",
+ "contested": true,
+ "plain_status": "No confirmed human case has been reported. Transmission studies report conflicting results across different models, isolates and routes.",
+ "summary": "CWD-to-human transmission. No confirmed human case. Transmission studies conflict across models, isolates and routes.",
+ "kicker": "Entry 003 · Chronic wasting disease · Traced",
+ "lede": "The claim that chronic wasting disease — a prion disease of deer, elk and moose — can transmit to humans. No human case has been confirmed. Laboratory and animal transmission studies report conflicting results.",
+ "rests_on": [],
+ "cited_by": [],
+ "keywords": [
+  "cwd",
+  "chronic wasting disease",
+  "zombie deer",
+  "prion",
+  "cervid",
+  "deer",
+  "elk",
+  "moose",
+  "zoonosis",
+  "zoonotic",
+  "species barrier",
+  "venison",
+  "creutzfeldt jakob",
+  "cjd",
+  "macaque",
+  "humanized mice"
+ ],
+ "added": "2026-10-09",
+ "updated": "2026-10-12",
+ "traced": "October 2026",
+ "author": "Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9–12 Oct 2026)",
+ "conflicts": "None declared",
+ "preamble": [],
+ "sections": [
+  {
+   "heading": "Evidence tiers",
+   "id": "evidence-tiers",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "What T1–T4 mean for this claim."
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**T1** A CJD case or cluster is **observed in people exposed to CWD** (venison, hunting), with no strain link established."
+      },
+      {
+       "depth": 0,
+       "text": "**T2** Transmission is **shown in a laboratory model of a human**: human-PrP transgenic mice, human cerebral organoids, or in-vitro conversion of human prion protein."
+      },
+      {
+       "depth": 0,
+       "text": "**T3** Transmission is **shown to a primate**, or infectious CWD material is shown present in primate tissue."
+      },
+      {
+       "depth": 0,
+       "text": "**T4** A **confirmed human case** of CWD-derived prion disease, strain-typed to CWD."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "The claim above is a **T4** claim. The available evidence reaches **T2 and T3**, and the T3 results conflict. No T4 evidence exists."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Surveillance record",
+   "id": "surveillance-record",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "No human case of CWD-derived prion disease has been confirmed. Investigations of CJD cases and clusters among people with venison exposure have not identified a link to CWD."
+    },
+    {
+     "type": "paragraph",
+     "text": "Kotkowski 2026 (*Frontiers in Public Health*, open access) investigated a 72-year-old hunter with long-term venison exposure in CWD-endemic Louisiana. Neuropathology \"confirmed sporadic CJD, MM1 subtype,\" and the authors found \"no evidence supporting confirmed CWD-to-human transmission was identified.\" An earlier CDC review (Belay 2004) examined the unusual CJD cases among deer hunters and venison consumers and concluded that \"no human cases of prion disease with strong evidence of a link with CWD have been identified.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "Sporadic CJD occurs at about 1–2 per million per year with no known cause. Human prion incubation can last 5–50 years, so the absence of a confirmed case does not rule out transmission."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "The transmission studies",
+   "id": "the-transmission-studies",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Each used a different model, isolate or route. Listed oldest first."
+    }
+   ],
+   "nodes": [
+    {
+     "heading": "Primates, two species",
+     "year": "2014",
+     "tier": "T3",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Race B, Meade-White KD, Phillips K, Striebel J, Race R, Chesebro B. \"Chronic wasting disease agents in nonhuman primates.\" *Emerging Infectious Diseases* 2014;20(5):833–837. [EID 20(5)](https://wwwnc.cdc.gov/eid/article/20/5/13-0778_article) · PMC4012792",
+     "quote": "\"We found that 100% of intracerebrally inoculated and 92% of orally inoculated squirrel monkeys were susceptible, but cynomolgus macaques were not, suggesting possible low risk for humans.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Squirrel monkeys were susceptible. Six cynomolgus macaques, the species genetically closer to humans, were not; the paper reports \"No evidence of prion infection was detected by immunoblot and immunohistochemical methods,\" and that \"The lack of CWD transmission during >10 years suggests that a substantial species barrier exists between cervids and cynomolgus macaques.\""
+      },
+      {
+       "label": "What it does not show",
+       "text": "Which result applies to humans."
+      },
+      {
+       "label": "Files",
+       "text": "Full text (EID Dispatch) read at source 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "Macaques, full cohort reported",
+     "year": "2018",
+     "tier": "T3",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Race B, Williams K, Orrú CD, et al. \"Lack of transmission of chronic wasting disease to cynomolgus macaques.\" *Journal of Virology* 2018;92(14):e00550-18. [doi:10.1128/jvi.00550-18](https://doi.org/10.1128/jvi.00550-18) · PMC6026755",
+     "quote": "\"In this study, there was no clinical, pathological, or biochemical evidence suggesting that CWD was transmitted from cervids to CM.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Fourteen cynomolgus macaques were inoculated with deer and elk CWD (mule deer, white-tailed deer, elk) by the intracerebral or oral route in 2003–2004 and observed 4.0 to 13.4 years. This paper reports the final seven, euthanized at 10.9 to 13.4 years, and adds eight uninoculated controls. All 14 CWD-inoculated macaques were negative for prion disease by RT-QuIC, immunohistochemistry and immunoblotting, and could not be distinguished from the uninoculated controls. Unusual anti-PrP staining appeared in some animals, including a clustered pattern in two orally inoculated macaques (CM121, CM614), but similar staining occurred in uninoculated controls, was not accompanied by gliosis or vacuolation, and was negative by RT-QuIC and immunoblot."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Whether a different CWD strain, a longer time, or a model other than the macaque would transmit. The paper notes another group (Canada and Germany) reported possible positive transmission to some macaques, with spinal-cord PrP immunostaining as the main feature; this paper states \"we saw similar PrP staining by IHC in spinal cords of both uninoculated and CWD-inoculated CM\" and did not count it as infection."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at source (publisher EPUB supplied) 12 Oct 2026. Quotes present verbatim."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "Human-PrP transgenic mice",
+     "year": "2022",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Hannaoui S, Zemlyankina I, Chang SC, et al. \"Transmission of cervid prions to humanized mice demonstrates the zoonotic potential of CWD.\" *Acta Neuropathologica* 2022;144(4):767–784. [doi:10.1007/s00401-022-02482-9](https://doi.org/10.1007/s00401-022-02482-9) · PMC9468132",
+     "quote": "\"We demonstrated in a human transgenic mouse model that the species barrier for transmission of CWD to humans is not absolute.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Mice overexpressing human M129 PrP (tg650) were inoculated intracerebrally with two deer CWD isolates (Wisc-1 and 116AG). The paper reports that \"93.75% of the mice, irrespective of the inoculum, developed myoclonus,\" with an atypical biochemical signature, and concludes the species barrier is \"not absolute.\""
+      },
+      {
+       "label": "What it does not show",
+       "text": "Transmission at natural human PrP levels. The model overexpresses human PrP, and the inoculation route was intracerebral."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "Human cerebral organoids",
+     "year": "2024",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Groveman BR, Williams K, Race B, et al. \"Lack of transmission of chronic wasting disease prions to human cerebral organoids.\" *Emerging Infectious Diseases* 2024;30(6):1193–1202. [EID 30(6)](https://wwwnc.cdc.gov/eid/article/30/6/23-1568_article)",
+     "quote": "\"a strong species barrier to transmission of CWD prions to humans\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Human cerebral organoids (129MM and 129MV) were exposed to pooled mule deer, white-tailed deer and elk isolates for up to 180 days. The paper reports \"No de novo CWD propagation or deposition of protease-resistant forms of human prions was evident in CWD-exposed\" organoids, against positive CJD controls."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Outcomes over longer periods, with a periphery and an immune system, or with strains not in the pool. A residual inoculum signal was present but \"equivalent in prion gene knockout organoids,\" so it was not attributable to human prion propagation."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at EID 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "Macaques, the 2009 cohort reported",
+     "year": "2026",
+     "tier": "T3",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Same cohort as a 2017 conference report"
+     ],
+     "citation": "Hannaoui S, Pritzkow S, Schulz-Schaeffer WJ, et al. \"Limited transmission of cervid prions to nonhuman primates provides insights into the zoonotic potential of chronic wasting disease.\" *Science Advances* 2026;12(22):eaeb7613. [doi:10.1126/sciadv.aeb7613](https://doi.org/10.1126/sciadv.aeb7613) · PMC13215175 · open access",
+     "quote": "\"One interpretation of these findings is that CWD prions retain infectivity across species and that primate infection may manifest atypically while still enabling transmission.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "18 macaques were inoculated with CWD material in 2009, plus uninoculated controls; most analysed in detail were at 5 to 6 years. Two (one oral, one intracerebral) showed clinical signs; the rest were asymptomatic. PMCA and RT-QuIC detected seeding activity in brain and spleen of inoculated macaques, none in controls. The PMCA substrate was human-PrP (Met129) mouse brain. Macaque tissue transmitted to elk-PrP mice at low attack rates, then to mice and bank voles at 100% on second passage."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Whether the macaques were themselves infected, or the assays detected material given years earlier. The authors state: *\"we cannot formally exclude the possibility that the infectivity detected reflects residual inoculum—it is a plausible scenario.\"* No host expressing human PrP was challenged with macaque tissue. The 2017 conference report of this cohort was titled \"First evidence of… transmission\"; this paper is titled \"Limited transmission.\""
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    }
+   ]
+  },
+  {
+   "heading": "Why the results differ",
+   "id": "why-the-results-differ",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "The studies are not repeats of one experiment. They differ in four ways, each of which can change the result:"
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Isolate.** The 2022 positive used two named deer isolates (Wisc-1, 116AG); the other studies used different isolates. The species barrier is a property of the prion strain, so a result for one isolate does not carry to another."
+      },
+      {
+       "depth": 0,
+       "text": "**Model.** A squirrel monkey, a macaque, a mouse overexpressing human PrP, and an organoid differ in sensitivity and in what they can detect."
+      },
+      {
+       "depth": 0,
+       "text": "**Route and dose.** Intracerebral inoculation bypasses the gut and peripheral nervous system; an oral result is a narrower claim than an intracerebral one."
+      },
+      {
+       "depth": 0,
+       "text": "**Detection method.** The 2018 negative used RT-QuIC; the 2026 positive used PMCA and RT-QuIC. Some infected animals in these studies had seeding activity without protease-resistant PrP on immunoblot, and some clinically affected animals had neither."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Where infection is looked for",
+   "id": "where-infection-is-looked-for",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Most of these studies detect infection in the brain and inoculate into the brain. In CWD, infectivity is not confined to the brain. Hannaoui 2022 states that \"in cervids affected with CWD, infectivity has been found in the lymphatic system, salivary gland, intestinal tract, muscles, antler velvet, blood, urine\" and other tissues. In the transmission studies here, seeding activity also appeared outside the brain: the 2022 study detected it in \"the brains, spinal cords, and spleens of CWD-inoculated\" human-PrP mice, and the 2026 macaque study detected it in spleen as well as brain. A negative result from a brain sample or a standard brain assay therefore **does not** by itself establish that no infection is present, because the agent may be in peripheral or lymphoid tissue or below that assay's detection threshold."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "What would settle it",
+   "id": "what-would-settle-it",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "A confirmed human prion disease in an exposed population, strain-typed to CWD. This is how BSE-to-human transmission was recognised in 1996. It fails if a CWD-derived human disease is indistinguishable from sporadic CJD."
+      },
+      {
+       "depth": 0,
+       "text": "A macaque developing prion disease with spongiform change and protease-resistant PrP, rather than seeding activity alone. The 2026 study reported 7 of 18 animals; the remaining 11 have not been reported."
+      },
+      {
+       "depth": 0,
+       "text": "A cohort study of an exposed population (for example, hunters) with decades of follow-up. None exists."
+      },
+      {
+       "depth": 0,
+       "text": "Testing of a host expressing human PrP against primate-passaged material, and testing of additional CWD strains against human models."
+      },
+      {
+       "depth": 0,
+       "text": "Sampling of peripheral and lymphoid tissue (spleen, gut-associated lymphoid tissue), not brain alone, in both exposed people and exposed animals, using assays that detect protease-sensitive and seeding-active forms."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "summary",
+     "title": "",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Claim (CWD causes human disease) → no confirmed case; not demonstrated. Transmission studies → conflicting results across models, isolates and routes. Public guidance → CDC advises testing deer in CWD areas before eating, and not eating a positive animal."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "note",
+     "title": "Provenance — read before citing",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Sources were re-checked at the publisher on 9 October 2026; Race 2018 and Belay 2004 were read in full on 12 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Race 2018 (*Journal of Virology*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); Kotkowski 2026 (*Frontiers in Public Health*, open access); and Belay 2004 (*Emerging Infectious Diseases* 2004;10(6):977–984, [doi:10.3201/eid1006.031082](https://doi.org/10.3201/eid1006.031082); read at PMC), the last two cited in the surveillance record. This entry is AI-assisted research and is marked so in the author field, per the Method page."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  }
+ ],
+ "verification_counts": {
+  "verified at source": 5
+ },
+ "node_count": 5,
+ "verified_count": 5,
+ "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/003-chronic-wasting-disease-and-humans/"
+}
