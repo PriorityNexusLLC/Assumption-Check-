@@ -1,0 +1,534 @@
+{
+ "num": "009",
+ "slug": "009-atypical-bse-spontaneous",
+ "file": "009-atypical-bse-spontaneous.md",
+ "draft": false,
+ "title": "Atypical BSE and spontaneous origin",
+ "claim": "Atypical BSE (H-type and L-type) arises spontaneously in cattle, rather than from an infectious or feed-borne source.",
+ "subject": "Atypical BSE",
+ "domain": "Veterinary Medicine",
+ "also_in": [
+  "Epidemiology",
+  "Molecular Neuroscience"
+ ],
+ "not_linked": [],
+ "would_settle": [],
+ "lifecycle": "Active",
+ "stage": "Under Investigation",
+ "stage_note": "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check",
+ "hypothesis": "Open Hypothesis",
+ "peer_review": "Unreviewed",
+ "contested": true,
+ "plain_status": "International animal-health rules treat atypical BSE as spontaneous. The rules themselves say \\\"believed\\\"; a 2016 review calls the assumption \\\"still mainly speculative\\\"; no test has settled it.",
+ "summary": "Atypical BSE spontaneous origin. Written into the international BSE framework as a belief. Supporting evidence is circumstantial; the defining test has not been run.",
+ "kicker": "Entry 009 · Atypical BSE · Under investigation",
+ "lede": "The claim that the two atypical forms of bovine spongiform encephalopathy, H-type and L-type, arise spontaneously in cattle at a low background rate. The international BSE risk framework is built on it. The evidence for it is circumstantial, and its sources describe it as a belief.",
+ "rests_on": [],
+ "cited_by": [],
+ "keywords": [
+  "atypical bse",
+  "h-type",
+  "l-type",
+  "base",
+  "bovine amyloidotic spongiform encephalopathy",
+  "mad cow",
+  "bse",
+  "spontaneous",
+  "sporadic",
+  "e211k",
+  "prnp",
+  "woah",
+  "oie",
+  "terrestrial code",
+  "feed ban",
+  "sporadic cjd"
+ ],
+ "added": "2026-10-09",
+ "updated": "2026-10-09",
+ "traced": "October 2026",
+ "author": "Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)",
+ "conflicts": "None declared",
+ "preamble": [],
+ "sections": [
+  {
+   "heading": "Claim as stated",
+   "id": "claim-as-stated",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "The World Organisation for Animal Health (WOAH) Terrestrial Animal Health Code, Chapter 11.4, Article 11.4.1:"
+    },
+    {
+     "type": "quote",
+     "text": "\"For the purposes of official BSE risk status recognition, BSE excludes 'atypical BSE' as a condition believed to occur spontaneously in all cattle populations at a very low rate.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "WOAH's public disease page states the same assumption and, in the same paragraph, a qualification: \"whilst to date there is no evidence that atypical BSE is transmissible, recycling of the atypical BSE agent has not been ruled out, and therefore measures to manage exposure risk in the feed chain continue to be recommended as a precautionary measure.\""
+    },
+    {
+     "type": "paragraph",
+     "text": "In secondary use the claim is usually shortened to \"atypical BSE is spontaneous.\" The source wording is \"believed.\""
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence base",
+   "id": "evidence-base",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Classical BSE is a feed-borne disease of cattle. Atypical BSE was recognised in the early 2000s, once active testing of slaughtered cattle began, as two molecular signatures distinct from classical BSE: H-type (Biacabe et al. 2004, France) and L-type, also called BASE (Casalone et al. 2004, Italy)."
+    },
+    {
+     "type": "paragraph",
+     "text": "The case for a spontaneous origin is circumstantial. It rests on four observations:"
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Age.** Cases have \"only been identified in older bovines when conducting intensive surveillance\" (WOAH). The two Italian L-type cattle were \"older than other affected bovines\" in the series (Casalone 2004)."
+      },
+      {
+       "depth": 0,
+       "text": "**Low, steady rate.** WOAH describes the yearly incidence as \"estimated to be negligible.\""
+      },
+      {
+       "depth": 0,
+       "text": "**Independence from the classical epidemic.** Cases are reported in countries with and without a history of classical BSE."
+      },
+      {
+       "depth": 0,
+       "text": "**One genetic case.** A 10-year-old H-type cow in Alabama (2006) carried E211K, a PRNP variant at the position corresponding to a pathogenic mutation in human genetic CJD (Richt & Hall 2008). The K211 allele was not detected in any of 6,062 other US cattle screened (Heaton et al. 2008)."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "Each of these is also consistent with other explanations. Age concentration is what a long incubation from an early-life exposure would produce. A low rate seen only under intensive testing is what any rare condition looks like once testing begins. One heritable case shows a genetic route exists in one animal; it does not show that other cases are spontaneous."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Untested assumption",
+   "id": "untested-assumption",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "That cases with no identified exposure arose without one. Spontaneous origin is the residual explanation once a feed or genetic source is not found, and it has not been tested directly. A 2016 review from the German national reference laboratory states that \"due to lack of data, the assumptions regarding the spontaneous etiology of both atypical BSE forms (H-BSE and L-BSE) and also the origin of the classical BSE epidemic are still mainly speculative\" (Balkema-Buschmann et al. 2016)."
+    },
+    {
+     "type": "paragraph",
+     "text": "A related, separately testable point: in mouse and hamster passage experiments, \"both the atypical BSE forms may alter their phenotypes and become indistinguishable from classical BSE\" (same review). If that occurs in cattle, atypical BSE is a possible source of classical BSE, which is why WOAH keeps feed controls in place for it."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Evidence tiers",
+   "id": "evidence-tiers",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "What T1–T4 mean for this claim."
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**T1** Atypical cases are **observed** with features consistent with a spontaneous disease (old age, low steady rate, no identified exposure)."
+      },
+      {
+       "depth": 0,
+       "text": "**T2** A spontaneous mechanism is **shown under model conditions**: for example, a PRNP variant or a spontaneous misfolding event producing atypical BSE in an experimental animal."
+      },
+      {
+       "depth": 0,
+       "text": "**T3** Spontaneous origin is **shown for some real cases**: a heritable or de novo cause identified in field cases, or exposure excluded case by case."
+      },
+      {
+       "depth": 0,
+       "text": "**T4** Spontaneous origin is **established for atypical BSE generally**: a measured, stable incidence in a herd demonstrably unexposed, at the rate the hypothesis predicts."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": "The claim above is a **T4** claim. The evidence reaches **T1** for atypical BSE generally, and **T3** for one H-type case (E211K). No T4 evidence exists."
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "What would settle it",
+   "id": "what-would-settle-it",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**If the claim holds:** a stable incidence of atypical BSE, at about the same age-specific rate, in large herds with no possible feed exposure, across decades and across countries with different feed histories. Brown et al. 2006 set out the scale: \"To achieve 95% statistical confidence that the prevalence for sporadic BSE is no greater than 1 per million (i.e., the annual incidence of sporadic Creutzfeldt-Jakob disease [CJD] in humans) would require negative tests in 3 million randomly selected older cattle.\""
+      },
+      {
+       "depth": 0,
+       "text": "**If it doesn't:** atypical cases cluster by feed source, birth cohort, region or herd; or a transmissible source is identified for cases outside the E211K family."
+      },
+      {
+       "depth": 0,
+       "text": "**Limits.** Brown et al. note that a country guaranteed never to have been exposed \"will never be realized,\" and that \"a study of sporadic BSE would only be truly convincing if no cases were identified.\" The hypothesis is therefore hard to confirm directly; it can more readily be weakened by clustering."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "Current status",
+   "id": "current-status",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "No published study tests the spontaneous hypothesis directly. The international framework treats it as a working assumption."
+      },
+      {
+       "depth": 0,
+       "text": "A dedicated published critique of the hypothesis was not found in the research notes (§27 of the Prion Research Notes) and was not found again for this entry."
+      },
+      {
+       "depth": 0,
+       "text": "L-type atypical BSE has crossed to human-PrP models: in mice expressing human PrP Met129, \"L-type prions appeared to propagate in these mice with no obvious transmission barrier\" and \"H-type prions failed to infect the mice\" (Béringue et al. 2008). A single cynomolgus macaque inoculated intracerebrally with L-type (BASE) had a shorter survival than classical-BSE-inoculated animals (Comoy et al. 2008). These bear on the human risk of atypical BSE, not on its origin."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  },
+  {
+   "heading": "The chain",
+   "id": "the-chain",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Each heading is one source, oldest first."
+    }
+   ],
+   "nodes": [
+    {
+     "heading": "H-type described",
+     "year": "2004",
+     "tier": "T1",
+     "verification": "Located, not read",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Biacabe AG, Laplanche JL, Ryder S, Baron T. \"Distinct molecular phenotypes in bovine prion diseases.\" *EMBO Reports* 2004;5(1):110–115. [doi:10.1038/sj.embor.7400054](https://doi.org/10.1038/sj.embor.7400054) · PMC1298965",
+     "quote": null,
+     "details": [
+      {
+       "label": "What it shows (from the citation record)",
+       "text": "The first description of a BSE molecular phenotype distinct from classical BSE in French cattle, later named H-type."
+      },
+      {
+       "label": "What it does not show",
+       "text": "The cause of the distinct phenotype."
+      },
+      {
+       "label": "Files",
+       "text": "Full text at PMC blocked by a browser check on 9 Oct 2026; Europe PMC returned the abstract only. Not verified at source."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "L-type (BASE) described",
+     "year": "2004",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Casalone C, Zanusso G, Acutis P, et al. \"Identification of a second bovine amyloidotic spongiform encephalopathy: molecular similarities with sporadic Creutzfeldt-Jakob disease.\" *PNAS* 2004;101(9):3065–3070. [doi:10.1073/pnas.0305777101](https://doi.org/10.1073/pnas.0305777101) · PMC365745",
+     "quote": "\"In two cattle, older than other affected bovines, the PrPSc glycotype was clearly different from the BSE-associated PrPSc molecule, and widespread PrP-amyloid plaques were seen in supratentorial brain regions.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Two of eight PrPSc-positive Italian cattle (aged 5 to 15 years across the series) carried a distinct PrPSc signature, which the authors report as similar to a subtype of sporadic CJD."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Origin. The authors write that \"the present findings dictate caution.\""
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "The test that would be needed",
+     "year": "2006",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Perspective"
+     ],
+     "citation": "Brown P, McShane LM, Zanusso G, Detwiler L. \"On the question of sporadic or atypical bovine spongiform encephalopathy and Creutzfeldt-Jakob disease.\" *Emerging Infectious Diseases* 2006;12(12):1816–1821. [doi:10.3201/eid1212.060965](https://doi.org/10.3201/eid1212.060965) · PMC3291375",
+     "quote": "\"To achieve 95% statistical confidence that the prevalence for sporadic BSE is no greater than 1 per million (i.e., the annual incidence of sporadic Creutzfeldt-Jakob disease [CJD] in humans) would require negative tests in 3 million randomly selected older cattle.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "The sample size a direct test would need, and the authors' view that the two hypotheses for the origin of classical BSE (scrapie, or a recycled spontaneous cattle case) \"will ever be convincingly proved or disproved\" — the full sentence reads \"neither will ever be convincingly proved or disproved.\""
+      },
+      {
+       "label": "What it does not show",
+       "text": "Data on atypical BSE incidence; it is an analysis of what such data would need to show."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "One H-type case with a PRNP mutation",
+     "year": "2008",
+     "tier": "T3",
+     "verification": "Verified at source",
+     "tags": [
+      "Load-bearing"
+     ],
+     "citation": "Richt JA, Hall SM. \"BSE case associated with prion protein gene mutation.\" *PLoS Pathogens* 2008;4(9):e1000156. [doi:10.1371/journal.ppat.1000156](https://doi.org/10.1371/journal.ppat.1000156) · PMC2525843",
+     "quote": "\"This finding represents the first report of a confirmed case of BSE with a potential pathogenic mutation within the bovine Prnp gene.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "An approximately 10-year-old crossbred beef cow in Alabama with H-type BSE carried E211K, the bovine equivalent of a mutation that causes genetic CJD in humans."
+      },
+      {
+       "label": "What it does not show",
+       "text": "That other atypical cases have a genetic cause, or that any are spontaneous in the sense of having no cause. It is one animal."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026. The abstract's final sentence reads \"E221K\"; the body uses E211K throughout, and E211K is used here."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "The variant is rare in US cattle",
+     "year": "2008",
+     "tier": "T1",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Heaton MP, Keele JW, Harhay GP, et al. \"Prevalence of the prion protein gene E211K variant in U.S. cattle.\" *BMC Veterinary Research* 2008;4:25. [doi:10.1186/1746-6148-4-25](https://doi.org/10.1186/1746-6148-4-25) · PMC2478677",
+     "quote": "\"6062 cattle tested, including those from five commercial beef processing plants in three states (3892 carcasses) and 2170 registered cattle from 42 breeds\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "The K211 allele was not found in 6,062 US cattle. Richt & Hall summarise this as \"an extremely low prevalence of the E211K variant (less than 1 in 2000) in cattle.\""
+      },
+      {
+       "label": "What it does not show",
+       "text": "Anything about atypical cases without E211K."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026. The research notes describe this as \"one germline mutation in one animal out of 6,062 screened\"; the 6,062 are the screened population in which the allele was absent, and the Alabama cow was a separate case."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "L-type in human-PrP mice",
+     "year": "2008",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed"
+     ],
+     "citation": "Béringue V, Herzog L, Reine F, et al. \"Transmission of atypical bovine prions to mice transgenic for human prion protein.\" *Emerging Infectious Diseases* 2008;14(12):1898–1901. [doi:10.3201/eid1412.080941](https://doi.org/10.3201/eid1412.080941) · PMC2634647",
+     "quote": "\"Unlike classical BSE agent, L-type prions appeared to propagate in these mice with no obvious transmission barrier. H-type prions failed to infect the mice.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "A difference between the two atypical forms in a human-PrP (Met129) mouse model."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Origin of atypical BSE. Included because it is the reason the origin question carries public-health weight."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "L-type in one primate",
+     "year": "2008",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Peer-reviewed",
+      "Single animal"
+     ],
+     "citation": "Comoy EE, Casalone C, Lescoutra-Etchegaray N, et al. \"Atypical BSE (BASE) transmitted from asymptomatic aging cattle to a primate.\" *PLoS ONE* 2008;3(8):e3017. [doi:10.1371/journal.pone.0003017](https://doi.org/10.1371/journal.pone.0003017) · PMC2515088",
+     "quote": "\"The single monkey infected with BASE had a shorter survival, and a different clinical evolution, histopathology, and prion protein (PrPres) pattern than was observed for either classical BSE or vCJD-inoculated animals.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "Intracerebral transmission of L-type BSE to one cynomolgus macaque."
+      },
+      {
+       "label": "What it does not show",
+       "text": "Oral transmissibility, or origin. One animal."
+      },
+      {
+       "label": "Files",
+       "text": "Full text read at PMC 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "\"Still mainly speculative\"",
+     "year": "2016",
+     "tier": "T2",
+     "verification": "Verified at source",
+     "tags": [
+      "Load-bearing"
+     ],
+     "citation": "Balkema-Buschmann A, Priemer G, Keller M, Mazza M, Hills B, Groschup MH. \"Intra- and interspecies transmission of atypical BSE — what can we learn from it?\" *Food Safety* 2016;4(4):121–129. [doi:10.14252/foodsafetyfscj.2016023](https://doi.org/10.14252/foodsafetyfscj.2016023) · PMC6989211",
+     "quote": "\"However, due to lack of data, the assumptions regarding the spontaneous etiology of both atypical BSE forms (H-BSE and L-BSE) and also the origin of the classical BSE epidemic are still mainly speculative.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "A national reference laboratory's assessment that the spontaneous hypothesis lacks data, and passage results in which \"both the atypical BSE forms may alter their phenotypes and become indistinguishable from classical BSE.\""
+      },
+      {
+       "label": "What it does not show",
+       "text": "A test of spontaneous origin."
+      },
+      {
+       "label": "Files",
+       "text": "Full text (J-STAGE PDF, 9 pages) read 9 Oct 2026."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    },
+    {
+     "heading": "The rule built on the assumption",
+     "year": "2022",
+     "tier": null,
+     "verification": "Verified at source",
+     "tags": [
+      "Regulatory standard"
+     ],
+     "citation": "World Organisation for Animal Health. *Terrestrial Animal Health Code*, Chapter 11.4, Bovine spongiform encephalopathy, Article 11.4.1 (version dated 3 August 2022). [WOAH chapter PDF](https://www.woah.org/fileadmin/Home/eng/Health_standards/tahc/current/chapitre_bse.pdf)",
+     "quote": "\"For the purposes of official BSE risk status recognition, BSE excludes 'atypical BSE' as a condition believed to occur spontaneously in all cattle populations at a very low rate.\"",
+     "details": [
+      {
+       "label": "What it shows",
+       "text": "The assumption is operative in international trade rules: a country's BSE risk status is assessed without counting atypical cases."
+      },
+      {
+       "label": "What it does not show",
+       "text": "A cited evidence base for the belief. The chapter gives none."
+      },
+      {
+       "label": "Files",
+       "text": "Chapter PDF read 9 Oct 2026. WOAH's disease page (last updated 30 May 2023) was also read; the \"recycling … has not been ruled out\" sentence is quoted from it."
+      }
+     ],
+     "blocks": [],
+     "break_before": null
+    }
+   ]
+  },
+  {
+   "heading": "Where it stands",
+   "id": "where-it-stands",
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "depth": 0,
+       "text": "**Shown.** Atypical BSE exists as two molecular forms distinct from classical BSE, found mainly in older cattle under active surveillance. One H-type case had a heritable PRNP mutation."
+      },
+      {
+       "depth": 0,
+       "text": "**Still open.** Whether cases without a known mutation arise spontaneously, or from an unidentified source. The international framework records the spontaneous origin as a belief, not a finding."
+      },
+      {
+       "depth": 1,
+       "text": "a stable age-specific incidence in large herds with no possible feed exposure, across decades and feed histories"
+      },
+      {
+       "depth": 1,
+       "text": "exposure excluded, or a heritable or de novo cause identified, in field cases outside the E211K family"
+      },
+      {
+       "depth": 1,
+       "text": "a published critique of the spontaneous hypothesis, which does not yet exist"
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "summary",
+     "title": "",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Atypical BSE exists as two distinct forms → established. Spontaneous origin → a working assumption in trade rules; its own sources say \"believed\" and \"mainly speculative.\" The test that would settle it (negative tests across millions of unexposed older cattle) → not run, and hard to run."
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "kind": "note",
+     "title": "Provenance — read before citing",
+     "blocks": [
+      {
+       "type": "paragraph",
+       "text": "Sources were checked at the publisher on 9 October 2026. Verified at source with the quoted sentence present: Casalone 2004 (*PNAS*, PMC365745); Brown 2006 (*Emerging Infectious Diseases*, PMC3291375); Richt & Hall 2008 (*PLoS Pathogens*, PMC2525843); Heaton 2008 (*BMC Veterinary Research*, PMC2478677); Béringue 2008 (*Emerging Infectious Diseases*, PMC2634647); Comoy 2008 (*PLoS ONE*, PMC2515088); Balkema-Buschmann 2016 (*Food Safety*, J-STAGE PDF); and the WOAH Terrestrial Code Chapter 11.4 (2022 PDF) and WOAH disease page (30 May 2023). Biacabe 2004 (*EMBO Reports*), the first H-type description, is cited from its abstract and the citation record; its PMC full text was behind a browser check on the day, so it is marked Located, not read. This entry is AI-assisted research and is marked so in the author field, per the Method page."
+      }
+     ]
+    }
+   ],
+   "nodes": []
+  }
+ ],
+ "verification_counts": {
+  "located not read": 1,
+  "verified at source": 8
+ },
+ "node_count": 9,
+ "verified_count": 8,
+ "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/009-atypical-bse-and-spontaneous-origin/"
+}

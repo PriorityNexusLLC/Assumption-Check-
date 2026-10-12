@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "010"
 title: Cross-seeding as true templating
 claim: One misfolded protein cross-seeds a different protein by acting as a structural template (true heterotypic templating), rather than by an indirect route.

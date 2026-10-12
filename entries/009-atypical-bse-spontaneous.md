@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "009"
 title: Atypical BSE and spontaneous origin
 claim: Atypical BSE (H-type and L-type) arises spontaneously in cattle, rather than from an infectious or feed-borne source.

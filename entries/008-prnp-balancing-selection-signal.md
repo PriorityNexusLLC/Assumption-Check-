@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "008"
 title: The PRNP balancing-selection signal
 claim: The worldwide signal of balancing selection at the prion protein gene is real, not an artefact of how the variants were sampled.
