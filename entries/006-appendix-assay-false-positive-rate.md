@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 num: "006"
 title: The appendix-assay false-positive rate
 claim: The amplification assay proposed to test the UK appendix-survey positives has a measured false-positive rate on known-negative appendix tissue.
@@ -33,7 +33,7 @@ keywords:
   - ffpe
   - uk
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)
 conflicts: None declared
