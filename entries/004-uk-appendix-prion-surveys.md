@@ -6,14 +6,14 @@ subject: Variant CJD
 domain: Medical & Health › Neurology & Prion Disease › Prion surveillance & prevalence
 cross_links: Social, Behavioral & Economic (Public Health Policy)
 lifecycle: Active
-stage: Traced
-stage_note: "trace complete; all sources verified at source"
+stage: Under Investigation
+stage_note: "all five sources read in full at source; stage held at Under Investigation while three citation DOIs, corrected 12 Oct 2026, are re-checked against the nodes they support"
 hypothesis: Under Test
 peer_review: Unreviewed
 contested: true
 plain_status: "Abnormal prion protein is present in appendix tissue at about 1 in 2,000. Whether it means incubating vCJD is unresolved: one molecular test leans against it, the direct infectivity test found no transmission from the fixed survey positives, and the amplification test on the positive specimens has not been reported."
 summary: "UK surveys found abnormal prion protein in ~1 in 2,000 appendixes. Whether that is incubating vCJD is unresolved; the settling experiment is funded but unreported."
-kicker: Entry 004 · Variant CJD · Traced
+kicker: Entry 004 · Variant CJD · Under Investigation
 lede: "UK surveys of archived appendix tissue found abnormal prion protein in roughly 1 in 2,000 people. The open question is what it means: incubating variant CJD, lifelong carriage that never causes disease, or a laboratory artefact. The direct infectivity test on the surviving fixed material showed no transmission; the test that could discriminate has not been reported."
 rests_on: []
 cited_by: []
@@ -34,7 +34,6 @@ keywords:
   - uk
 added: 2026-10-09
 updated: 2026-10-12
-traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9–12 Oct 2026)
 conflicts: None declared
 ---
@@ -74,7 +73,7 @@ Tier: T3
 Verification: Verified at source
 Tags: Peer-reviewed
 
-Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and lymphoreticular vCJD prions and bioassay of key positive specimens from a retrospective vCJD prevalence study." *Journal of Pathology* 2011;223(4):511–518. [doi:10.1002/path.2810](https://doi.org/10.1002/path.2810) · OnlineOpen
+Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and lymphoreticular vCJD prions and bioassay of key positive specimens from a retrospective vCJD prevalence study." *Journal of Pathology* 2011;223(4):511–518. [doi:10.1002/path.2821](https://doi.org/10.1002/path.2821) · OnlineOpen
 
 > "The absence of detectable infectivity in fixed, known positive vCJD lymphoreticular tissue precludes interpreting negative transmissions from vCJD prevalence study appendix specimens."
 
@@ -87,7 +86,7 @@ Tier: T2
 Verification: Verified at source
 Tags: Peer-reviewed
 
-Bélondrade M, Nicot S, Mayran C, et al. "Sensitive protein misfolding cyclic amplification of sporadic Creutzfeldt–Jakob disease prions is strongly seed and substrate dependent." *Scientific Reports* 2021;11:4058. [doi:10.1038/s41598-021-83604-3](https://doi.org/10.1038/s41598-021-83604-3) · PMC7893054 · open access
+Bélondrade M, Nicot S, Mayran C, et al. "Sensitive protein misfolding cyclic amplification of sporadic Creutzfeldt–Jakob disease prions is strongly seed and substrate dependent." *Scientific Reports* 2021;11:4058. [doi:10.1038/s41598-021-83630-1](https://doi.org/10.1038/s41598-021-83630-1) · PMC7893054 · open access
 
 > "the amplification obtained in the TgMet substrate in our study was somewhat disappointing, especially in the homologous PMCA context for MM1 and MM2 prions."
 
@@ -100,7 +99,7 @@ Tier: T1
 Verification: Verified at source
 Tags: Peer-reviewed
 
-Guntoro F, Viré E, Giordani C, et al. "DNA methylation analysis of archival lymphoreticular tissues in Creutzfeldt–Jakob disease." *Acta Neuropathologica* 2022;144:785–787. [doi:10.1007/s00401-022-02476-7](https://doi.org/10.1007/s00401-022-02476-7) · PMC9468073 · open access
+Guntoro F, Viré E, Giordani C, et al. "DNA methylation analysis of archival lymphoreticular tissues in Creutzfeldt–Jakob disease." *Acta Neuropathologica* 2022;144:785–787. [doi:10.1007/s00401-022-02481-w](https://doi.org/10.1007/s00401-022-02481-w) · PMC9468073 · open access
 
 > "14/15 test PrP-positive samples were classified as controls (1 as vCJD)."
 
@@ -140,3 +139,5 @@ Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties a
 
 > [!note] Provenance — read before citing
 > Verified at source with the quoted sentence present: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Guntoro 2022 (*Acta Neuropathologica*), all open access; Suleiman 2023 (*Molecular Neurobiology*, open access); and Wadsworth 2011 (*Journal of Pathology*, OnlineOpen) — the last two read in full from the publisher PDFs on 12 October 2026. This entry is AI-assisted research and is marked so in the author field, per the Method page.
+>
+> Correction, 12 October 2026: three DOI strings in this entry pointed to unrelated papers (`10.1002/path.2810` to a breast-carcinoma study, `10.1038/s41598-021-83604-3` to a synchrotron imaging paper, `10.1007/s00401-022-02476-7` to a multiple-system-atrophy paper). The cited authors, titles, journals, volumes and pages were correct throughout and identify the intended papers unambiguously; only the identifiers were mistranscribed. Corrected to `10.1002/path.2821`, `10.1038/s41598-021-83630-1` and `10.1007/s00401-022-02481-w`, each confirmed at Crossref against the journal, volume and pages cited here. The stage is held at Under Investigation until each node is re-checked against its corrected identifier.
