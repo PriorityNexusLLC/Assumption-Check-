@@ -579,7 +579,7 @@
   </div>
 
   <div class="legend">
-    <div><b>Brightness &amp; size</b> — how many connections a claim has. The most-linked claims shine brightest.</div>
+    <div><b>Brightness &amp; size</b> — how much turns on the claim: how many unresolved claims rest on it, or wait on it to be settled. A claim that would settle a test someone is running now shines brightest; a claim nothing waits on stays dim however much has been written about it. Brightness is leverage, never truth.</div>
     <div><b>Color</b> — the claim's evidence state:</div>
   </div>
   <div class="vocab" style="margin-top:0.6rem">
@@ -843,6 +843,7 @@
       kicker: str(meta.kicker),
       lede: str(meta.lede),
       restsOn: list(meta.rests_on).map(padNum),
+      wouldSettle: list(meta.would_settle).map(padNum),
       citedBy: list(meta.cited_by).map(padNum),
       added: str(meta.added),
       updated: str(meta.updated),
@@ -1293,6 +1294,27 @@
     }
     edges.forEach(e => { if (e.kind !== "broad") { e.a.deg++; e.b.deg++; } });
 
+    // Brightness is leverage, not popularity: how much unresolved work turns on
+    // this claim. A claim that would settle a test someone is running now is the
+    // most useful thing in the registry; a claim nothing waits on is dim however
+    // much has been written about it. Colour still carries the claim's own state,
+    // so a bright star is never a true one — only a load-bearing one.
+    const NEED = { "under-test": 3, "open": 2, "resolved": 0.4 };
+    const needOf = e => e.hypothesis ? (NEED[e.hypothesis.key] || 1) : 1.5;
+    nodes.forEach(n => {
+      let lift = 0;
+      nodes.forEach(o => {
+        if (o === n) return;
+        const dependsOnIt = (o.entry.restsOn || []).includes(n.entry.num);
+        const settlesIt = (n.entry.wouldSettle || []).includes(o.entry.num);
+        if (dependsOnIt || settlesIt) lift += needOf(o.entry) * (settlesIt ? 1.3 : 1);
+      });
+      // work already finished needs no one's effort
+      if (n.entry.hypothesis && n.entry.hypothesis.key === "resolved") lift *= 0.5;
+      n.lift = lift;
+    });
+    const topLift = Math.max(1, ...nodes.map(n => n.lift));
+
     // A fixed seed, so the same registry always draws the same sky. A map that
     // rearranged itself on every visit could not be referred to.
     let seed = 20261012;
@@ -1350,7 +1372,11 @@
       canvas.width = Math.max(1, W * dpr); canvas.height = Math.max(1, H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
-    function magnitude(n) { return Math.min(10, 4 + 1.7 * n.deg); }
+    function magnitude(n) {
+      // a floor so every claim is visible, then leverage scaled against the
+      // most load-bearing claim on the map
+      return Math.min(10, 3.2 + 6.8 * (n.lift / topLift));
+    }
     function near(n) {
       if (!hover) return false;
       if (n === hover) return true;
@@ -1455,6 +1481,11 @@
         if (flds.length) bits.push("shares " + [...new Set(flds.map(e => e.via))].join(", "));
         if (brd.length) bits.push("also in " + [...new Set(brd.map(e => e.via))].join(", ")
                                   + " with " + brd.length + " other" + (brd.length === 1 ? "" : "s"));
+        const holds = nodes.filter(o => o !== hover
+          && (((o.entry.restsOn || []).includes(hover.entry.num))
+              || ((hover.entry.wouldSettle || []).includes(o.entry.num))));
+        if (holds.length) bits.unshift("would help settle " + holds.length
+          + " open " + (holds.length === 1 ? "claim" : "claims"));
         if (!bits.length) bits.push("no connections recorded yet");
         ctx.globalAlpha = 0.95; ctx.fillStyle = "#aab4e0";
         ctx.fillText(bits.join(" · "), 12, H - 12);

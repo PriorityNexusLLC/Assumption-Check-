@@ -20,6 +20,8 @@ kicker: Entry 006 · Variant CJD · Under investigation
 lede: "Before the amplification assay can say whether a survey-positive appendix really carries vCJD-type seeding activity, it needs a known false-positive rate on appendix that is certainly negative. The method paper tested a small non-CJD control set that stayed negative — but a specificity on survey-era negative appendix has not been measured, and the substrate is tuned to a genotype most of the positives do not have."
 rests_on:
   - "004"
+would_settle:
+  - "004"
 cited_by: []
 keywords:
   - vcjd

@@ -169,6 +169,10 @@ def render_entry_body(e, urls, by_num):
         rows.append(("Rests on", " · ".join(
             "<a href='../%s-%s/'>Entry %s</a>" % (n, em.slugify(by_num[n]["title"]), n)
             if n in by_num else "Entry " + n for n in e["rests_on"])))
+    if e.get("would_settle"):
+        rows.append(("Would help settle", " · ".join(
+            "<a href='../%s-%s/'>Entry %s</a>" % (n, em.slugify(by_num[n]["title"]), n)
+            if n in by_num else "Entry " + n for n in e["would_settle"])))
     if e.get("cited_by"):
         rows.append(("Cited by", " · ".join(
             "<a href='../%s-%s/'>Entry %s</a>" % (n, em.slugify(by_num[n]["title"]), n)

@@ -342,6 +342,7 @@ def build_entry(name, text, entry_urls=None):
         "domain": meta.get("domain", ""),
         "also_in": as_list(meta.get("also_in")),
         "not_linked": as_list(meta.get("not_linked")),
+        "would_settle": [str(x).strip().zfill(3) for x in as_list(meta.get("would_settle"))],
         "lifecycle": meta.get("lifecycle", ""),
         "stage": stage,
         "stage_note": meta.get("stage_note", ""),

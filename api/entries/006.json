@@ -12,6 +12,9 @@
   "Epidemiology"
  ],
  "not_linked": [],
+ "would_settle": [
+  "004"
+ ],
  "lifecycle": "Active",
  "stage": "Under Investigation",
  "stage_note": "key method paper verified at source; the claim is a documented gap, not a positive finding",

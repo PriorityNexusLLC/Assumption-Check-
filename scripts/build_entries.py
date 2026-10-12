@@ -141,6 +141,11 @@ def check(path, meta, body="", vocab=None):
                 )
             elif name == primary:
                 problems.append(f"'also_in' repeats the primary domain {name!r}; list it once")
+    for key in ("rests_on", "would_settle"):
+        for ref in (meta.get(key) or []):
+            ref = str(ref).strip().strip("[]\"' ")
+            if ref and not re.fullmatch(r"\d{1,3}", ref):
+                problems.append(f"'{key}' names {ref!r}; use an entry number like \"004\"")
     for key in meta["_unquoted_colon"]:
         problems.append(f"'{key}' contains ': ' — put double quotes around the whole value")
     if meta.get("peer_review") and norm(meta["peer_review"]) not in REVIEWS:
