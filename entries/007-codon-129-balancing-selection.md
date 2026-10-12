@@ -16,7 +16,7 @@ Peer review: Unreviewed
 contested: true
 Plain status: "Kuru is documented to have selected codon 129 in one population (the Fore) within living memory. Whether similar selection acted across human prehistory worldwide is unproven; the original statistical evidence did not survive resequencing."
 summary: "Codon 129 selection. Demonstrated in the Fore within living memory. The species-wide claim rests on a disputed statistical signal; no through-time test has been run."
-kicker: Entry 007 · PRNP codon 129 · Under investigation
+kicker: Entry 007 · PRNP codon 129 · Traced
 lede: "The claim that repeated prehistoric epidemics of a kuru-like prion disease left a balancing-selection signature on the prion protein gene across human populations. Selection in one population, the Fore, is well documented. The worldwide claim is contested."
 Rests on:
   - "008"
@@ -40,7 +40,7 @@ keywords:
   - tajima's d
   - g127v
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)
 conflicts: None declared
@@ -50,7 +50,7 @@ conflicts: None declared
 
 Mead and colleagues titled the 2003 paper "Balancing Selection at the Prion Protein Gene Consistent with Prehistoric Kuru-like Epidemics." The abstract states that "Kuru imposed strong balancing selection on the Fore, essentially eliminating PRNP 129 homozygotes," and that "Worldwide PRNP haplotype diversity and coding allele frequencies suggest that strong balancing selection at this locus occurred" during human evolution.
 
-The claim has two halves that are not equally supported, and most summaries merge them. The first is that kuru selected codon 129 in the Fore. The second is that selection of the same kind acted repeatedly across human prehistory, worldwide. The title says "consistent with," not "caused by."
+The claim has two halves, and they are not equally supported. The first is that kuru selected codon 129 in the Fore. The second is that selection of the same kind acted repeatedly across human prehistory, worldwide. The title says "consistent with," not "caused by."
 
 ## Evidence base
 
@@ -60,11 +60,11 @@ Codon 129 of PRNP carries either methionine (M) or valine (V), so a person is MM
 
 A second, independent line of evidence is G127V, a variant reported by Mead et al. 2009 "found exclusively in people who lived in the region in which kuru was prevalent." The 2009 abstract concludes that "the 127V polymorphism is an acquired prion disease resistance factor selected during the kuru epidemic," and describes codons 127 and 129 together as "a powerful episode of recent selection in humans."
 
-**Worldwide (contested).** The species-wide half rests on statistical signatures of balancing selection in global PRNP samples. That signal is the subject of [[008-prnp-balancing-selection-signal|Entry 008]]; three resequencing reanalyses did not recover it, and the original authors later issued a partial statistical concession while maintaining the shape of the gene genealogy.
+**Worldwide (contested).** The species-wide half rests on statistical signatures of balancing selection in global PRNP samples. That signal is the subject of [[008-prnp-balancing-selection-signal|Entry 008]]; three resequencing reanalyses did not recover it, and the original authors later accepted part of the statistical criticism while maintaining the shape of the gene genealogy.
 
 ## Untested assumption
 
-That the selection documented in one population within living memory can be extrapolated to repeated episodes across human prehistory. The inference runs from a worldwide statistical signal to an unobserved cause (prehistoric kuru-like epidemics). No through-time genetic evidence, and no second exposed population, has been tested. The assumption also requires that institutionalised cannibalism was common enough, infectious enough and sustained enough to register on the genome of the whole species — a premise that carries its own anthropological dispute.
+That the selection documented in one population within living memory can be extrapolated to repeated episodes across human prehistory. The inference runs from a worldwide statistical signal to an unobserved cause (prehistoric kuru-like epidemics). No through-time genetic evidence, and no second exposed population, has been tested. The assumption also requires that institutionalised cannibalism was common enough, infectious enough and sustained enough to register on the genome of the whole species.
 
 ## Evidence tiers
 
@@ -75,11 +75,11 @@ What T1–T4 mean for this claim.
 - **T3** A **second independent exposed population** shows the same pattern, or one region shows it directly through time.
 - **T4** **Ancient-DNA genotyping across a dated skeletal series** shows codon 129 heterozygote excess tracking prehistoric episodes — direct evidence of selection acting then and there.
 
-The claim above is a **T4** claim. The evidence reaches a strong **T1** (the Fore) and a **contested T2** (the worldwide statistics, see Entry 008). No T3 or T4 evidence exists.
+The claim above is a **T4** claim. The evidence reaches **T1** (the Fore) and a **contested T2** (the worldwide statistics, see Entry 008). No T3 or T4 evidence exists.
 
 ## The chain
 
-Oldest first. Verification reflects checks at the publisher on 9 October 2026.
+Oldest first. Sources were checked at the publisher on 9 October 2026; the 2003 and 2009 papers were read in full on 12 October 2026.
 
 ### 2003 — The anchor claim
 Tier: T1 strong + T2 contested
@@ -92,7 +92,7 @@ Mead S, Stumpf MPH, Whitfield J, Beck JA, Poulter M, Campbell T, Uphill JB, Gold
 
 - **What it shows:** Elderly kuru-exposed Fore are predominantly codon 129 heterozygotes against unexposed Fore; a worldwide signature is interpreted as balancing selection over human evolution.
 - **What it does not show:** That the worldwide signal was caused by cannibalism — the title says "consistent with," and the authors call the source of such selection "open to speculation."
-- **Files:** Full text read at source 12 Oct 2026. Both quoted sentences present verbatim, and the "open to speculation" wording confirmed in the discussion. Earlier drafts of this entry recorded the full text as paywalled. The specific figures in that copy (per-population Tajima's D values, genealogical depth, Fore counts) are therefore not verified at an original here; only the abstract is. Marked Located, not read.
+- **Files:** Full text read at source 12 Oct 2026. Both quoted sentences are verbatim, and the "open to speculation" wording is in the discussion. The per-population Tajima's D values are in Table 2 and are set out in [[008-prnp-balancing-selection-signal|Entry 008]].
 
 ### 2008 — The stratified Fore data, by the same group
 Tier: T1
@@ -103,7 +103,7 @@ Mead S, Whitfield J, Poulter M, Shah P, Uphill J, Beck J, Campbell T, Al-Dujaily
 
 > "The deviation from Hardy–Weinberg equilibrium is most marked in elderly women, but is also significant in a slightly younger cohort of men, consistent with their exposure to kuru as boys."
 
-- **What it shows:** The Fore heterozygote excess stratified by age, sex and date of birth, with the gradient tracking exposure across all three axes; heterozygosity peaks in men born in the mid-1950s; endocannibalism ceased by 1960. This is the strongest, least disputed part of the overall claim.
+- **What it shows:** The Fore heterozygote excess stratified by age, sex and date of birth, with the gradient tracking exposure across all three axes; heterozygosity peaks in men born in the mid-1950s; endocannibalism ceased by 1960.
 - **What it does not show:** That the pattern generalises beyond the Fore. The paper's worldwide statistics are treated in Entry 008.
 - **Files:** Full text read at PMC 9 Oct 2026.
 
@@ -122,18 +122,18 @@ Mead S, Whitfield J, Poulter M, Shah P, Uphill J, et al. "A novel protective pri
 
 ## What would settle it
 
-- **If the claim holds:** ancient-DNA genotyping across a dated skeletal series would show codon 129 heterozygote excess, relative to Hardy–Weinberg expectation, in particular periods or regions — the same signature the Fore show. Thousands of ancient genomes now exist; this analysis appears not to have been published.
+- **If the claim holds:** ancient-DNA genotyping across a dated skeletal series would show codon 129 heterozygote excess, relative to Hardy–Weinberg expectation, in particular periods or regions — the same signature the Fore show. Thousands of ancient genomes now exist. No such analysis was found; the search is recorded in the research notes rather than here, so this is an absence reported, not an absence established.
 - **If it doesn't:** ancient populations would sit at Hardy–Weinberg equilibrium throughout, and a modern selection scan (see Entry 008) would recover no balancing-selection signal at PRNP.
 - **A second exposed population** with independently documented endocannibalism showing the Fore pattern would remove the sample-of-one limitation.
 - **Resolving what PrP normally does** would show whether any selection signal has a competing explanation unrelated to prions.
 
 ## Current status
 
-The two halves have moved in opposite directions since 2003.
+The two halves have moved in opposite directions since 2003:
 
 - The Fore half has strengthened: the 2008 stratified genotype data and the 2009 G127V variant are independent evidence of recent selection in that population.
 - The worldwide half has weakened: resequencing reanalyses did not recover the original balancing-selection signal, and the authors issued a partial statistical concession (see Entry 008).
-- A 2023 methods review of balancing selection in humans works through the canonical examples (the MHC, ABO, sickle-cell) and does not list PRNP.
+- Bitarello et al. 2023, a methods review of balancing selection in humans, works through the canonical examples (the MHC, ABO, sickle-cell) and does not list PRNP (verified at source in Entry 008).
 - No ancient-DNA through-time test and no second-population test has been run.
 
 ## Where it stands
@@ -150,4 +150,4 @@ The two halves have moved in opposite directions since 2003.
 > The test that would settle it (ancient DNA through time) → not run.
 
 > [!note] Provenance — read before citing
-> Verified at source with the quoted sentence present: Mead et al. 2008 (*Phil. Trans. R. Soc. B*, open access, PMC2576515). Read at abstract only, full text paywalled, and so marked Located, not read: Mead et al. 2003 (*Science*) and Mead et al. 2009 (*NEJM*). The Science Express copy of the 2003 paper formerly hosted by the University of Washington, used in the research notes, now returns a 404, so the specific figures in it are not stated here as verified. This entry is AI-assisted research and is marked so in the author field, per the Method page. The statistical dispute underlying the worldwide claim is traced in Entry 008.
+> All three chain sources are verified at source. Mead et al. 2008 (*Phil. Trans. R. Soc. B*, open access) was read at PMC on 9 October 2026. Mead et al. 2003 (*Science*) and Mead et al. 2009 (*NEJM*) were read in full from the original papers on 12 October 2026, having previously been recorded here as paywalled and read at abstract only. The statistical dispute underlying the worldwide half is traced in [[008-prnp-balancing-selection-signal|Entry 008]]. This entry is AI-assisted research and is marked so in the author field.
