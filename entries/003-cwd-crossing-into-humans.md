@@ -6,14 +6,14 @@ subject: Chronic wasting disease
 domain: Medical & Health › Neurology & Prion Disease › Zoonotic prion transmission
 cross_links: Life & Biological (Wildlife & Veterinary Science) · Cognitive, Neuroscience & Mind (Prion disease)
 lifecycle: Active
-stage: Under Investigation
-stage_note: "5 of 5 transmission-study sources verified at source; the surveillance record also cites Belay 2004, not yet verified at source"
+stage: Traced
+stage_note: "trace complete; all sources verified at source"
 hypothesis: Under Test
 peer_review: Unreviewed
 contested: true
 plain_status: "No confirmed human case has been reported. Transmission studies report conflicting results across different models, isolates and routes."
 summary: "CWD-to-human transmission. No confirmed human case. Transmission studies conflict across models, isolates and routes."
-kicker: Entry 003 · Chronic wasting disease · Under investigation
+kicker: Entry 003 · Chronic wasting disease · Traced
 lede: "The claim that chronic wasting disease — a prion disease of deer, elk and moose — can transmit to humans. No human case has been confirmed. Laboratory and animal transmission studies report conflicting results."
 rests_on: []
 cited_by: []
@@ -37,7 +37,7 @@ keywords:
 added: 2026-10-09
 updated: 2026-10-12
 traced: October 2026
-author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9 Oct 2026)
+author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9–12 Oct 2026)
 conflicts: None declared
 ---
 
@@ -56,7 +56,7 @@ The claim above is a **T4** claim. The available evidence reaches **T2 and T3**,
 
 No human case of CWD-derived prion disease has been confirmed. Investigations of CJD cases and clusters among people with venison exposure have not identified a link to CWD.
 
-Kotkowski 2026 (*Frontiers in Public Health*, open access) investigated a 72-year-old hunter with long-term venison exposure in CWD-endemic Louisiana. Neuropathology "confirmed sporadic CJD, MM1 subtype," and the authors found "no evidence supporting confirmed CWD-to-human transmission was identified." An earlier CDC review of CJD among venison consumers (Belay 2004; cited from the search record, see Provenance) reached the same conclusion.
+Kotkowski 2026 (*Frontiers in Public Health*, open access) investigated a 72-year-old hunter with long-term venison exposure in CWD-endemic Louisiana. Neuropathology "confirmed sporadic CJD, MM1 subtype," and the authors found "no evidence supporting confirmed CWD-to-human transmission was identified." An earlier CDC review (Belay 2004) examined the unusual CJD cases among deer hunters and venison consumers and concluded that "no human cases of prion disease with strong evidence of a link with CWD have been identified."
 
 Sporadic CJD occurs at about 1–2 per million per year with no known cause. Human prion incubation can last 5–50 years, so the absence of a confirmed case does not rule out transmission.
 
@@ -156,4 +156,4 @@ Most of these studies detect infection in the brain and inoculate into the brain
 > Public guidance → CDC advises testing deer in CWD areas before eating, and not eating a positive animal.
 
 > [!note] Provenance — read before citing
-> Sources were re-checked at the publisher on 9 October 2026; Race 2018 was read in full from a publisher EPUB on 12 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Race 2018 (*Journal of Virology*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); and Kotkowski 2026 (*Frontiers in Public Health*, open access), cited in the surveillance record. The Belay 2004 CDC cluster review is cited from the search record, as that journal page blocks automated access. This entry is AI-assisted research and is marked so in the author field, per the Method page.
+> Sources were re-checked at the publisher on 9 October 2026; Race 2018 and Belay 2004 were read in full on 12 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Race 2018 (*Journal of Virology*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); Kotkowski 2026 (*Frontiers in Public Health*, open access); and Belay 2004 (*Emerging Infectious Diseases* 2004;10(6):977–984, [doi:10.3201/eid1006.031082](https://doi.org/10.3201/eid1006.031082); read at PMC), the last two cited in the surveillance record. This entry is AI-assisted research and is marked so in the author field, per the Method page.
