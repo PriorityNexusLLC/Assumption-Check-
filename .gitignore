@@ -9,3 +9,6 @@
 [A-Z]facets.txt
 [A-Z]map.png
 .claude/
+
+# Publisher PDFs are copyright; they live in the private vault, never here.
+*.pdf
