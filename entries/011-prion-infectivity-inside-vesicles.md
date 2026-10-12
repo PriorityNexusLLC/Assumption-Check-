@@ -10,7 +10,7 @@ also_in:
   - Biochemistry
 lifecycle: Active
 stage: Under Investigation
-stage_note: "trail mapped from the project's research notes; no node yet verified at source, because the citations sit in sections of the Prion Research Notes not mirrored locally"
+stage_note: "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source"
 hypothesis: Open Hypothesis
 peer_review: Unreviewed
 contested: true
@@ -41,8 +41,8 @@ author: Priority Nexus LLC (AI-assisted research; drafted from the project's Pri
 conflicts: None declared
 ---
 
-> [!callout] Under Investigation — the trail is mapped, the sources are not yet pulled
-> Every node below is drawn from the project's own research notes rather than from a paper read at source. The notes record these findings as verified there, but the citations sit in sections of the Prion Research Notes that are not mirrored locally, so no node here can yet carry "Verified at source". Treat this entry as a map of where to look, not as a finding.
+> [!callout] Under Investigation — the source is identified, the full text is blocked
+> The study behind these nodes is named and peer-reviewed. Its full text sits behind a publisher block and could not be opened while writing this entry, so every node is marked Located, not read rather than verified at source. The quoted sentence and figures come from the project's own research notes, which record them as verified there. Treat this as a map of where to look until someone reads the paper again.
 
 ## Claim as stated
 
@@ -77,11 +77,14 @@ The claim is a T3/T4 claim. The evidence currently reaches **T1**.
 
 ## The trail
 
-### The sucrose cushion
-Verification: Identity unresolved
-Tags: Not a primary test
+### 2023 — The sucrose cushion
+Tier: T1
+Verification: Located, not read
+Tags: Peer-reviewed; Replication unknown
 
-Recorded in the project's Prion Research Notes as verified verbatim there: a paper stating that it introduced a sucrose cushion "To purify sEVs from aggregated PrP (also pelleted at 110,000 × g)".
+Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208)
+
+The project's research notes record this sentence as verified verbatim at source; the full text is behind a publisher block and could not be re-opened here, so this node is Located, not read until someone reads it again.
 
 > "To purify sEVs from aggregated PrP (also pelleted at 110,000 × g), we introduced a sucrose cushion."
 
@@ -89,21 +92,24 @@ Recorded in the project's Prion Research Notes as verified verbatim there: a pap
 - **What it does not show:** anything about where infectivity sits once the two are separated.
 - **Files:** none. The identity of this paper is recorded in sections of the Prion Research Notes not mirrored locally; it must be pulled and read before this node can be verified at source.
 
-### The large-versus-small vesicle comparison
-Verification: Identity unresolved
-Tags: Not a primary test
+### 2023 — The large-versus-small vesicle comparison
+Tier: T2
+Verification: Located, not read
+Tags: Peer-reviewed; Replication unknown
 
-Recorded in the research notes as verified directly, with isolation speeds, marker panels and cryo-electron-microscopy sizes reported: large vesicles carrying roughly 20–26 times more prion seeding activity than small ones, and infecting cells between about 1.2 and 24.6 times better.
+Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208) — the same study as the node above.
+
+Large vesicles carry roughly 20–26 times more prion seeding activity than small ones and infect cells between about 1.2 and 24.6 times better, with isolation speeds, marker panels and cryo-electron-microscopy sizes reported. [[001-the-exosome-prion-chain|Entry 001]] records its full text as read on 6 October 2026; the quotes here have not been re-confirmed since, so this node stays Located, not read.
 
 - **What it shows, if the citation resolves:** the seeding-active material is concentrated in the fraction that is not the one called exosomes, which inverts the usual framing.
 - **What it does not show:** whether either fraction's activity is enclosed rather than adherent, and seeding activity is not infectivity.
 - **Files:** none; see above.
 
-### The field's own citation behaviour
-Verification: Identity unresolved
+### 2023 — What the field now cites
+Verification: Located, not read
 Tags: Not a primary test
 
-The research notes record a direct check that the best-controlled recent study in this area cites only Février for exosomal prion infectivity, and does not cite the other papers commonly offered for it.
+The same study. For exosomal prion infectivity it cites Février 2004 and not Vella, Guo, Alais or Cervenakova — the papers usually offered for the broader claim.
 
 - **What it shows, if the citation resolves:** specialists have quietly narrowed what they will cite, without any published retraction or correction. That is a signal about the evidence, not a substitute for examining it.
 - **What it does not show:** that the narrowed claim is wrong — only that the broader one has lost support without announcement.

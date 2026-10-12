@@ -296,7 +296,7 @@
     "Biochemistry"
    ],
    "stage": "Under Investigation",
-   "stage_note": "trail mapped from the project's research notes; no node yet verified at source, because the citations sit in sections of the Prion Research Notes not mirrored locally",
+   "stage_note": "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source",
    "hypothesis": "Open Hypothesis",
    "peer_review": "Unreviewed",
    "contested": true,

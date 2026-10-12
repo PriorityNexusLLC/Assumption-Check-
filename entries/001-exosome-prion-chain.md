@@ -153,9 +153,9 @@ Zheng T, Pu J, Chen Y, et al. "Plasma exosomes spread and cluster around β-amyl
 ### 2023 — Scoped to cell culture in the title
 Tier: T2
 Verification: Verified at source
-Tags: Preprint; Replication unknown
+Tags: Peer-reviewed; Replication unknown
 
-Holada lab. "Large extracellular vesicles induce stronger prion infection in cell culture than small extracellular vesicles." bioRxiv 2023 (v3 retitled "…transfer higher levels of prions and infect cell culture better…"). [doi:10.1101/2023.03.01.530593](https://doi.org/10.1101/2023.03.01.530593)
+Soukup J, Moško T, Kereïche S, Holada K. "Large extracellular vesicles transfer more prions and infect cell culture better than small extracellular vesicles." *Biochemical and Biophysical Research Communications* 2023;687:149208. [doi:10.1016/j.bbrc.2023.149208](https://doi.org/10.1016/j.bbrc.2023.149208) · first posted as bioRxiv [10.1101/2023.03.01.530593](https://doi.org/10.1101/2023.03.01.530593)
 
 > Cell-culture only: CAD5 and N2a-PK1 prion cell-culture models, comparing large vs small vesicles. It puts "in cell culture" in the title and, for exosomal prion infectivity, cites Février 2004 — not Vella, Guo, Alais or Cervenakova. The field's scoping is visible in what the title claims and what it declines to cite.
 
@@ -164,9 +164,9 @@ Holada lab. "Large extracellular vesicles induce stronger prion infection in cel
 
 ## What the trace found
 
-Traced expecting citation drift. On reading the sources, the core claim largely holds — two independent primary studies support it. The residual issues are narrower than the downstream language suggests.
+Traced expecting citation drift. The transmission evidence held up: two independent primary studies show the preparation causes disease. What did not hold is the wording. The claim says "extracellular vesicles", and nothing in the chain establishes that the infectious material is inside the vesicles rather than free aggregate pelleting with them — see [[011-prion-infectivity-inside-extracellular-vesicles|Entry 011]].
 
-1. **The claim is supported.** Février 2004 and Vella 2007 — different groups, different prion strains — each show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice. The chain is not built on an unverifiable source.
+1. **The transmission is supported; the wording is not.** Février 2004 and Vella 2007 — different groups, different prion strains — each show material from the preparation causes disease when injected into the brains of PrP-overexpressing mice. Whether that material is vesicle-enclosed is a separate, open question. The chain is not built on an unverifiable source.
 2. **But the scope is narrow.** Both use the most permissive assay: intracerebral injection into mice that overexpress PrP. Downstream text repeats "transmit to animals" without that scope, so the claim reads broader than what was shown.
 3. **One citation points to the wrong paper.** Hartmann 2017 cites Guo 2016 — a cell-culture-only study — for the in-vivo claim. The claim is true, but Guo is not where it was shown; the correct sources are Février and Vella. (Hartmann also cites Vella correctly elsewhere.)
 4. **Tiers get bundled.** The 2012 review merges references spanning cell-culture and animal work into one phrase ("animal and cell bioassays"), so a reader cannot tell which reference supports which tier.
