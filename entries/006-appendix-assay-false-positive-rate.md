@@ -5,24 +5,24 @@ title: The appendix-assay false-positive rate
 claim: The amplification assay proposed to test the UK appendix-survey positives has a measured false-positive rate on known-negative appendix tissue.
 subject: Variant CJD
 domain: Medical Statistics
-also_in:
+Also in:
   - Metrology
   - Epidemiology
 lifecycle: Active
 stage: Under Investigation
-stage_note: "key method paper verified at source; the claim is a documented gap, not a positive finding"
+Stage note: "key method paper verified at source; the claim is a documented gap, not a positive finding"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: false
-plain_status: "The amplification method proposed to test the ~1-in-2,000 appendix positives was validated against a small non-CJD control set that did not amplify. Its specificity — a false-positive rate on known-negative survey-era appendix — has not been quantified, and the assay's substrate is built for one genotype most survey positives do not share."
+Plain status: "The amplification method proposed to test the ~1-in-2,000 appendix positives was validated against a small non-CJD control set that did not amplify. Its specificity — a false-positive rate on known-negative survey-era appendix — has not been quantified, and the assay's substrate is built for one genotype most survey positives do not share."
 summary: "The assay proposed to test the UK appendix-survey positives has no measured false-positive rate on negative appendix; its validation used a handful of non-CJD controls, not a quantified specificity."
 kicker: Entry 006 · Variant CJD · Under investigation
 lede: "Before the amplification assay can say whether a survey-positive appendix really carries vCJD-type seeding activity, it needs a known false-positive rate on appendix that is certainly negative. The method paper tested a small non-CJD control set that stayed negative — but a specificity on survey-era negative appendix has not been measured, and the substrate is tuned to a genotype most of the positives do not have."
-rests_on:
+Rests on:
   - "004"
-would_settle:
+Would settle:
   - "004"
-cited_by: []
+Cited by: []
 keywords:
   - vcjd
   - variant cjd

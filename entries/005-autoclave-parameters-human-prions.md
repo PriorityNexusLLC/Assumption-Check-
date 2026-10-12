@@ -5,22 +5,22 @@ title: The autoclave parameters for human prions
 claim: The recommended steam-sterilisation parameters (134°C for 18 minutes) inactivate human prions on surgical instruments.
 subject: Prion decontamination
 domain: Public Health
-also_in:
+Also in:
   - Microbiology
   - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
-stage_note: "3 of 4 sources verified at source; the 1994 decontamination study usually cited for the figure is paywalled (located, not read)"
+Stage note: "3 of 4 sources verified at source; the 1994 decontamination study usually cited for the figure is paywalled (located, not read)"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "The 134°C / 18-minute figure is in the WHO guidance, which cites no inactivation study for it and concedes incomplete removal in worst cases. A readable 2026 bioassay shows a single 134°C cycle does not eliminate one sporadic-CJD strain; chemical and combination treatments do better."
+Plain status: "The 134°C / 18-minute figure is in the WHO guidance, which cites no inactivation study for it and concedes incomplete removal in worst cases. A readable 2026 bioassay shows a single 134°C cycle does not eliminate one sporadic-CJD strain; chemical and combination treatments do better."
 summary: "The most-quoted autoclave figure (134°C/18 min) is not tied to a cited inactivation experiment; a single steam cycle leaves residual sporadic-CJD infectivity, while chemical and two-step methods work."
 kicker: Entry 005 · Prion decontamination · Under investigation
 lede: "The two numbers recited worldwide for prion decontamination — 134°C for 18 minutes, and 1 M sodium hydroxide for an hour — come from a 1999 WHO consultation that lists no inactivation experiment behind them. What the readable bioassays show is that a single steam cycle does not fully inactivate human prions, and that the treatments which do work are chemical or combined."
-rests_on: []
-cited_by: []
-not_linked:
+Rests on: []
+Cited by: []
+Not linked:
   - "004 — both concern prion safety policy and both sit in Public Health, but neither's evidence depends on the other. The shared field is the accurate connection; a rests_on link would overstate it."
 keywords:
   - prion

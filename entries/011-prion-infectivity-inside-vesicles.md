@@ -5,24 +5,24 @@ title: Prion infectivity inside extracellular vesicles
 claim: The prion infectivity recovered in extracellular-vesicle preparations is enclosed inside the vesicles, rather than free aggregate co-pelleting with them.
 subject: Prion vesicle enclosure
 domain: Cellular Biology
-also_in:
+Also in:
   - Molecular Neuroscience
   - Biochemistry
 lifecycle: Active
 stage: Under Investigation
-stage_note: "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source"
+Stage note: "the key source is identified and peer-reviewed (Soukup 2023); its full text is behind a publisher block, so every node is Located, not read rather than verified at source"
 hypothesis: Open Hypothesis
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "Prion material is recovered from the fraction labelled \"exosomes\", and that fraction transmits disease. Whether the infectious material is inside the vesicles, or free clumps of prion protein that settle at the same speed, has not been established — and the test the field normally uses cannot answer it."
+Plain status: "Prion material is recovered from the fraction labelled \"exosomes\", and that fraction transmits disease. Whether the infectious material is inside the vesicles, or free clumps of prion protein that settle at the same speed, has not been established — and the test the field normally uses cannot answer it."
 summary: "Prion preparations called \"exosomes\" are a pellet that also contains free prion aggregate. Whether the infectivity is inside vesicles is untested, and the standard localisation assay cannot settle it."
 kicker: Entry 011 · Prion vesicle enclosure · Under Investigation
 lede: "A widely repeated claim says prions travel inside extracellular vesicles. The material behind it is a pellet spun at around 100,000 g — a fraction that also contains free prion aggregate, which settles at the same speed. Nothing yet shows the infectivity is inside the vesicles rather than beside them, and the assay the field normally uses to show enclosure cannot work for this particular protein."
-rests_on: []
-cited_by: []
-not_linked:
+Rests on: []
+Cited by: []
+Not linked:
   - "010 — shares Biochemistry, and both ask whether material is what its label says. But cross-seeding is about templating between proteins and this is about where a protein sits; neither's evidence bears on the other. The shared field is the accurate connection."
-would_settle:
+Would settle:
   - "001"
 keywords:
   - exosome

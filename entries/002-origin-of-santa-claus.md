@@ -4,20 +4,20 @@ title: The origin of Santa Claus
 claim: Santa Claus is a real figure who delivers gifts to children everywhere on one night.
 subject: Santa Claus
 domain: Anthropology
-also_in:
+Also in:
   - Quantitative History
 lifecycle: Active
 stage: Under Investigation
-stage_note: trail mapped; sources not yet verified
+Stage note: trail mapped; sources not yet verified
 hypothesis: 
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: false
-plain_status: Taken literally — one figure, all children, one night — not supported. The figure's origin is real and datable; that trace is in progress.
+Plain status: Taken literally — one figure, all children, one night — not supported. The figure's origin is real and datable; that trace is in progress.
 summary: "Origin trail: St. Nicholas of Myra → Sinterklaas → Moore (1823) → Nast → Coca-Cola. A worked example of tracing a claim to its source — mid-trace."
 kicker: Entry 002 · Santa Claus · Under Investigation
 lede: "A claim everyone grows up with, run through the same format as any other. Taken literally the claim fails — but the figure has a real, datable origin, and tracing that is the actual work. This entry is *mid-trace*: the trail is mapped, the primary sources aren't all confirmed yet."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - santa
   - santa claus

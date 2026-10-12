@@ -711,13 +711,16 @@
     m[1].split(/\r?\n/).forEach(line => {
       const item = line.match(/^\s*-\s+(.*)$/);
       if (item && listKey) { meta[listKey].push(scalar(item[1])); return; }
-      const kv = line.match(/^([A-Za-z_][\w-]*):\s*(.*)$/);
+      const kv = line.match(/^([A-Za-z_][\w .-]*?)\s*:\s*(.*)$/);
       if (!kv) return;
+      // Property names are written for people ("Rests on"); the code uses one
+      // spelling (rests_on). Both are accepted so a rename cannot break an entry.
+      const key = kv[1].trim().replace(/[ .-]+/g, "_").toLowerCase();
       const v = kv[2].trim();
       listKey = null;
-      if (v === "") { meta[kv[1]] = []; listKey = kv[1]; }
-      else if (/^\[.*\]$/.test(v)) meta[kv[1]] = v.slice(1, -1).split(",").map(scalar).filter(x => x !== "");
-      else meta[kv[1]] = scalar(v);
+      if (v === "") { meta[key] = []; listKey = key; }
+      else if (/^\[.*\]$/.test(v)) meta[key] = v.slice(1, -1).split(",").map(scalar).filter(x => x !== "");
+      else meta[key] = scalar(v);
     });
     return { meta, body: m[2] };
   }

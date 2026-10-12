@@ -4,21 +4,21 @@ title: The UK appendix prion surveys
 claim: Abnormal prion protein found in UK appendix tissue (about 1 in 2,000 people) indicates incubating variant CJD infection.
 subject: Variant CJD
 domain: Epidemiology
-also_in:
+Also in:
   - Public Health
   - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
-stage_note: "all five sources read in full at source; stage held at Under Investigation while three citation DOIs, corrected 12 Oct 2026, are re-checked against the nodes they support"
+Stage note: "all five sources read in full at source; stage held at Under Investigation while three citation DOIs, corrected 12 Oct 2026, are re-checked against the nodes they support"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "Abnormal prion protein is present in appendix tissue at about 1 in 2,000. Whether it means incubating vCJD is unresolved: one molecular test leans against it, the direct infectivity test found no transmission from the fixed survey positives, and the amplification test on the positive specimens has not been reported."
+Plain status: "Abnormal prion protein is present in appendix tissue at about 1 in 2,000. Whether it means incubating vCJD is unresolved: one molecular test leans against it, the direct infectivity test found no transmission from the fixed survey positives, and the amplification test on the positive specimens has not been reported."
 summary: "UK surveys found abnormal prion protein in ~1 in 2,000 appendixes. Whether that is incubating vCJD is unresolved; the settling experiment is funded but unreported."
 kicker: Entry 004 · Variant CJD · Under Investigation
 lede: "UK surveys of archived appendix tissue found abnormal prion protein in roughly 1 in 2,000 people. The open question is what it means: incubating variant CJD, lifelong carriage that never causes disease, or a laboratory artefact. The direct infectivity test on the surviving fixed material showed no transmission; the test that could discriminate has not been reported."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - vcjd
   - variant cjd

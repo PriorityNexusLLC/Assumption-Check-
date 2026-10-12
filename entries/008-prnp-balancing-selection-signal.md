@@ -5,21 +5,21 @@ title: The PRNP balancing-selection signal
 claim: The worldwide signal of balancing selection at the prion protein gene is real, not an artefact of how the variants were sampled.
 subject: PRNP selection signal
 domain: Population Genetics
-also_in:
+Also in:
   - Statistics
   - Bioinformatics
 lifecycle: Active
 stage: Under Investigation
-stage_note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the reanalyses and the 2003 anchor are read at abstract only, full texts paywalled or rate-limited"
+Stage note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the reanalyses and the 2003 anchor are read at abstract only, full texts paywalled or rate-limited"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "The original positive Tajima's D signal did not survive resequencing that captured rare variants. Reanalyses attribute it to ascertainment bias; the original authors partly conceded the statistics. A different signal (positive or purifying selection) may still be present."
+Plain status: "The original positive Tajima's D signal did not survive resequencing that captured rare variants. Reanalyses attribute it to ascertainment bias; the original authors partly conceded the statistics. A different signal (positive or purifying selection) may still be present."
 summary: "Is the PRNP balancing-selection signal real? The high-frequency-variant signal did not survive rare-variant resequencing; attributed to ascertainment bias. Authors partly conceded. PRNP absent from current canonical lists."
 kicker: Entry 008 · PRNP selection signal · Under investigation
 lede: "Whether the statistical signature of balancing selection reported at the prion protein gene in 2003 is a genuine selection signal or an artefact of scoring only common variants. The specific signal did not survive resequencing designed to catch rare variants."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - prnp
   - balancing selection

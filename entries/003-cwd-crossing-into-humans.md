@@ -4,21 +4,21 @@ title: Chronic wasting disease and humans
 claim: Chronic wasting disease (CWD) can transmit to humans and cause prion disease.
 subject: Chronic wasting disease
 domain: Epidemiology
-also_in:
+Also in:
   - Veterinary Medicine
   - Molecular Neuroscience
 lifecycle: Active
 stage: Traced
-stage_note: "trace complete; all sources verified at source"
+Stage note: "trace complete; all sources verified at source"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "No confirmed human case has been reported. Transmission studies report conflicting results across different models, isolates and routes."
+Plain status: "No confirmed human case has been reported. Transmission studies report conflicting results across different models, isolates and routes."
 summary: "CWD-to-human transmission. No confirmed human case. Transmission studies conflict across models, isolates and routes."
 kicker: Entry 003 · Chronic wasting disease · Traced
 lede: "The claim that chronic wasting disease — a prion disease of deer, elk and moose — can transmit to humans. No human case has been confirmed. Laboratory and animal transmission studies report conflicting results."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - cwd
   - chronic wasting disease

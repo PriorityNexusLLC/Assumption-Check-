@@ -52,6 +52,12 @@ REVIEWS = {"unreviewed", "open for review", "peer reviewed"}
 STAGES = {"traced", "under investigation"}
 
 
+def canon(key):
+    """Property names are written for people ("Rests on"); the code uses one
+    spelling (rests_on). Both are accepted so a rename cannot break an entry."""
+    return re.sub(r"[ .-]+", "_", key.strip()).lower()
+
+
 def norm(value):
     return re.sub(r"\s+", " ", re.sub(r"[—–,-]", " ", str(value).lower())).strip()
 
@@ -67,10 +73,10 @@ def frontmatter(text):
         if item and list_key:
             meta[list_key].append(item.group(1).strip().strip("\"'"))
             continue
-        kv = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+        kv = re.match(r"^([A-Za-z_][\w .-]*?)\s*:\s*(.*)$", line)
         if not kv:
             continue
-        key, value = kv.group(1), kv.group(2).strip()
+        key, value = canon(kv.group(1)), kv.group(2).strip()
         list_key = None
         if value == "":
             meta[key], list_key = [], key

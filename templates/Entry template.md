@@ -5,19 +5,19 @@ title:
 claim: 
 subject: 
 domain: Core › Sub › Topic
-cross_links: 
+Cross links: 
 lifecycle: Active
 stage: Under Investigation
-stage_note: 
+Stage note: 
 hypothesis: 
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: false
-plain_status: 
+Plain status: 
 summary: ""
 kicker: ""
 lede: ""
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords: []
 added: {{date:YYYY-MM-DD}}
 updated: {{date:YYYY-MM-DD}}

@@ -4,22 +4,22 @@ title: The exosome prion chain
 claim: Prion-bearing extracellular vesicles transmit disease to animals.
 subject: Prions
 domain: Molecular Neuroscience
-also_in:
+Also in:
   - Cellular Biology
   - Neurology
 lifecycle: Active
 stage: Traced
-stage_note: "trace complete; 8/8 verified at source. The hypothesis is open, not the trace: the claim as worded depends on vesicle enclosure, which Entry 011 records as untested."
+Stage note: "trace complete; 8/8 verified at source. The hypothesis is open, not the trace: the claim as worded depends on vesicle enclosure, which Entry 011 records as untested."
 hypothesis: Open Hypothesis
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: false
-plain_status: "Material from the preparation called exosomes causes disease when injected into the brains of PrP-overexpressing mice, in two independent studies. Whether that material is carried inside vesicles, rather than as free aggregate pelleting alongside them, has not been established."
+Plain status: "Material from the preparation called exosomes causes disease when injected into the brains of PrP-overexpressing mice, in two independent studies. Whether that material is carried inside vesicles, rather than as free aggregate pelleting alongside them, has not been established."
 summary: "8-node trace, all verified at source. The pellet transmits; whether the infectivity is inside the vesicles is an open question (Entry 011)."
 kicker: Entry 001 · Prions · Active trace
 lede: "One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests."
-rests_on:
+Rests on:
   - "011"
-cited_by: []
+Cited by: []
 keywords:
   - prion
   - exosome

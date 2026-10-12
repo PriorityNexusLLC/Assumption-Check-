@@ -5,21 +5,21 @@ title: Cross-seeding as true templating
 claim: One misfolded protein cross-seeds a different protein by acting as a structural template (true heterotypic templating), rather than by an indirect route.
 subject: Protein cross-seeding
 domain: Structural Biology
-also_in:
+Also in:
   - Biochemistry
   - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
-stage_note: "7 of 8 chain sources verified at source; one (Rasmussen 2018, the key negative) read at abstract and title only — full text behind a publisher browser check"
+Stage note: "7 of 8 chain sources verified at source; one (Rasmussen 2018, the key negative) read at abstract and title only — full text behind a publisher browser check"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "Cross-seeding between two amyloid proteins is easy to show in a test tube and harder in animals. Whether it works by one protein templating another, or by an indirect route, is unresolved, and the two best-controlled mouse studies of the main pair concluded against direct templating."
+Plain status: "Cross-seeding between two amyloid proteins is easy to show in a test tube and harder in animals. Whether it works by one protein templating another, or by an indirect route, is unresolved, and the two best-controlled mouse studies of the main pair concluded against direct templating."
 summary: "Protein cross-seeding. Readily shown in vitro at high concentrations. Whether it is true templating or an indirect effect is unresolved; the clearest animal studies point to an indirect route."
 kicker: Entry 010 · Protein cross-seeding · Under investigation
 lede: "The claim that a misfolded protein can force a different protein into its shape, the way a prion templates more of itself. The chemical interaction is well demonstrated. That it proceeds by direct templating, at the concentrations found in a living brain, is contested."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - cross-seeding
   - heterotypic seeding

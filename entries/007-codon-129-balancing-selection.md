@@ -5,23 +5,23 @@ title: Cannibalism and codon 129
 claim: Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.
 subject: PRNP codon 129
 domain: Population Genetics
-also_in:
+Also in:
   - Anthropology
   - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
-stage_note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the 2003 anchor paper is paywalled and its former open copy is a dead link, so it is read at abstract only"
+Stage note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the 2003 anchor paper is paywalled and its former open copy is a dead link, so it is read at abstract only"
 hypothesis: Under Test
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "Kuru is documented to have selected codon 129 in one population (the Fore) within living memory. Whether similar selection acted across human prehistory worldwide is unproven; the original statistical evidence did not survive resequencing."
+Plain status: "Kuru is documented to have selected codon 129 in one population (the Fore) within living memory. Whether similar selection acted across human prehistory worldwide is unproven; the original statistical evidence did not survive resequencing."
 summary: "Codon 129 selection. Demonstrated in the Fore within living memory. The species-wide claim rests on a disputed statistical signal; no through-time test has been run."
 kicker: Entry 007 · PRNP codon 129 · Under investigation
 lede: "The claim that repeated prehistoric epidemics of a kuru-like prion disease left a balancing-selection signature on the prion protein gene across human populations. Selection in one population, the Fore, is well documented. The worldwide claim is contested."
-rests_on:
+Rests on:
   - "008"
-cited_by: []
-not_linked:
+Cited by: []
+Not linked:
   - "001 — shares Molecular Neuroscience, but this entry's argument does not rest on exosome transmission. The overlap is the phrase 'unrelated to prions' in What would settle it, not a dependency."
 keywords:
   - prnp

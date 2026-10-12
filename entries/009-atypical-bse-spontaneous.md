@@ -5,21 +5,21 @@ title: Atypical BSE and spontaneous origin
 claim: Atypical BSE (H-type and L-type) arises spontaneously in cattle, rather than from an infectious or feed-borne source.
 subject: Atypical BSE
 domain: Veterinary Medicine
-also_in:
+Also in:
   - Epidemiology
   - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
-stage_note: "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check"
+Stage note: "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check"
 hypothesis: Open Hypothesis
-peer_review: Unreviewed
+Peer review: Unreviewed
 contested: true
-plain_status: "International animal-health rules treat atypical BSE as spontaneous. The rules themselves say \"believed\"; a 2016 review calls the assumption \"still mainly speculative\"; no test has settled it."
+Plain status: "International animal-health rules treat atypical BSE as spontaneous. The rules themselves say \"believed\"; a 2016 review calls the assumption \"still mainly speculative\"; no test has settled it."
 summary: "Atypical BSE spontaneous origin. Written into the international BSE framework as a belief. Supporting evidence is circumstantial; the defining test has not been run."
 kicker: Entry 009 · Atypical BSE · Under investigation
 lede: "The claim that the two atypical forms of bovine spongiform encephalopathy, H-type and L-type, arise spontaneously in cattle at a low background rate. The international BSE risk framework is built on it. The evidence for it is circumstantial, and its sources describe it as a belief."
-rests_on: []
-cited_by: []
+Rests on: []
+Cited by: []
 keywords:
   - atypical bse
   - h-type

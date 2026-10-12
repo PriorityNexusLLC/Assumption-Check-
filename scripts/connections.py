@@ -41,12 +41,16 @@ def read_entries():
             continue
         num = m.group(1).zfill(3)
 
+        def key_re(key):
+            # matches rests_on, "Rests on", "rests-on"
+            return r"(?mi)^%s\s*:" % key.replace("_", r"[ _.-]")
+
         def one(key):
-            mm = re.search(r"(?m)^%s:\s*(.*)$" % key, text)
+            mm = re.search(key_re(key) + r"\s*(.*)$", text)
             return (mm.group(1).strip().strip("\"'") if mm else "")
 
         def many(key):
-            mm = re.search(r"(?m)^%s:\s*\n((?:[ \t]+-[ \t]*.+\n)+)" % key, text)
+            mm = re.search(key_re(key) + r"\s*\n((?:[ \t]+-[ \t]*.+\n)+)", text)
             if not mm:
                 inline = one(key)
                 if inline and inline not in ("[]", ""):
