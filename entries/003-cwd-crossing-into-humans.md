@@ -7,7 +7,7 @@ domain: Medical & Health › Neurology & Prion Disease › Zoonotic prion transm
 cross_links: Life & Biological (Wildlife & Veterinary Science) · Cognitive, Neuroscience & Mind (Prion disease)
 lifecycle: Active
 stage: Under Investigation
-stage_note: "4 of 5 chain sources verified at source; one (Race 2018) still needs the original full text — paywalled"
+stage_note: "5 of 5 transmission-study sources verified at source; the surveillance record also cites Belay 2004, not yet verified at source"
 hypothesis: Under Test
 peer_review: Unreviewed
 contested: true
@@ -35,7 +35,7 @@ keywords:
   - macaque
   - humanized mice
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9 Oct 2026)
 conflicts: None declared
@@ -77,18 +77,18 @@ Race B, Meade-White KD, Phillips K, Striebel J, Race R, Chesebro B. "Chronic was
 - **What it does not show:** Which result applies to humans.
 - **Files:** Full text (EID Dispatch) read at source 9 Oct 2026.
 
-### 2018 — Macaques, longer follow-up
+### 2018 — Macaques, full cohort reported
 Tier: T3
-Verification: Located, not read
+Verification: Verified at source
 Tags: Peer-reviewed
 
-Race B, Williams K, Chesebro B, et al. "Lack of transmission of chronic wasting disease to cynomolgus macaques." *Journal of Virology* 2018;92(14):e00550-18. [doi:10.1128/jvi.00550-18](https://journals.asm.org/doi/10.1128/jvi.00550-18) · PMC6026755
+Race B, Williams K, Orrú CD, et al. "Lack of transmission of chronic wasting disease to cynomolgus macaques." *Journal of Virology* 2018;92(14):e00550-18. [doi:10.1128/jvi.00550-18](https://doi.org/10.1128/jvi.00550-18) · PMC6026755
 
-> "In this study, there was no clinical, pathological, or biochemical evidence suggesting that CWD was transmitted from cervids to CM." *(abstract)*
+> "In this study, there was no clinical, pathological, or biochemical evidence suggesting that CWD was transmitted from cervids to CM."
 
-- **What it shows (from the abstract):** Seven CWD-inoculated cynomolgus macaques were euthanized 11 to 13 years after inoculation, alongside eight uninoculated controls. Tissues were screened by RT-QuIC, immunohistochemistry and immunoblotting.
-- **What it does not show:** Only the abstract was read; the full text (methods, per-animal data) is paywalled, so the figures above are limited to the abstract.
-- **Files:** Abstract read at Europe PMC 9 Oct 2026; publisher full text returned 403 to automated access. Not verified at source.
+- **What it shows:** Fourteen cynomolgus macaques were inoculated with deer and elk CWD (mule deer, white-tailed deer, elk) by the intracerebral or oral route in 2003–2004 and observed 4.0 to 13.4 years. This paper reports the final seven, euthanized at 10.9 to 13.4 years, and adds eight uninoculated controls. All 14 CWD-inoculated macaques were negative for prion disease by RT-QuIC, immunohistochemistry and immunoblotting, and could not be distinguished from the uninoculated controls. Unusual anti-PrP staining appeared in some animals, including a clustered pattern in two orally inoculated macaques (CM121, CM614), but similar staining occurred in uninoculated controls, was not accompanied by gliosis or vacuolation, and was negative by RT-QuIC and immunoblot.
+- **What it does not show:** Whether a different CWD strain, a longer time, or a model other than the macaque would transmit. The paper notes another group (Canada and Germany) reported possible positive transmission to some macaques, with spinal-cord PrP immunostaining as the main feature; this paper states "we saw similar PrP staining by IHC in spinal cords of both uninoculated and CWD-inoculated CM" and did not count it as infection.
+- **Files:** Full text read at source (publisher EPUB supplied) 12 Oct 2026. Quotes present verbatim.
 
 ### 2022 — Human-PrP transgenic mice
 Tier: T2
@@ -156,4 +156,4 @@ Most of these studies detect infection in the brain and inoculate into the brain
 > Public guidance → precautionary; CDC advises testing deer before eating and not eating a positive animal.
 
 > [!note] Provenance — read before citing
-> Sources were re-checked at the publisher on 9 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); and Kotkowski 2026 (*Frontiers in Public Health*, open access), cited in the surveillance record. Race 2018 was verified by its publisher abstract only; its full text is paywalled (403 to automated access), so it is marked Located, not read. The Belay 2004 CDC cluster review is cited from the search record, as that journal page blocks automated access. This entry is AI-assisted research and is marked so in the author field, per the Method page.
+> Sources were re-checked at the publisher on 9 October 2026; Race 2018 was read in full from a publisher EPUB on 12 October 2026. Verified at source with the quoted sentence present: Race 2014 and Groveman 2024 (*Emerging Infectious Diseases*); Race 2018 (*Journal of Virology*); Hannaoui 2022 (*Acta Neuropathologica*); Hannaoui 2026 (*Science Advances*, open access); and Kotkowski 2026 (*Frontiers in Public Health*, open access), cited in the surveillance record. The Belay 2004 CDC cluster review is cited from the search record, as that journal page blocks automated access. This entry is AI-assisted research and is marked so in the author field, per the Method page.
