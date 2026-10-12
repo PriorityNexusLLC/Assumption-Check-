@@ -14,8 +14,8 @@ Stage note: "both nodes verified at source — the registry's own direct observa
 hypothesis: Open Hypothesis
 Peer review: Unreviewed
 contested: false
-Plain status: "Three large indexes told us a paper was free to read; the file all three pointed at was a photograph of one figure. That particular failure is rare — none of 5,000 records repeated it. The commoner problem is plainer: two thirds of repository-hosted open-access records give no direct link to a full text at all, only a page about the paper."
-summary: "An index saying a paper is free is a claim about a file, not a readable paper. Two of three repository-hosted records (5,000 sampled) carry no direct full-text link; one verified case points at an image."
+Plain status: "Two thirds of repository-hosted open-access records give no direct link to a paper, only a page about it. Opening 250 of those pages, about half of the ones that answered led to a PDF, and nearly three in ten would not open at all. A separate failure — three indexes pointing at a photograph of one figure instead of the paper — is real but rare."
+summary: "Two of three repository-hosted open-access records (5,000 sampled) carry no direct full-text link. Of 250 such pages opened, 52.8% of those reached offered a PDF; 28.8% could not be reached."
 kicker: Entry 012 · Open-access metadata · Traced
 lede: "Researchers find papers through indexes that mark which are free to read. That mark is generated from the presence of a deposited file, not from any check that the file is the paper. This entry records one case where it was a photograph of a figure, and reports an attempt to measure how often that happens."
 Rests on: []
@@ -87,20 +87,30 @@ Tags: Not a primary test
 The registry's own measurement, 12 October 2026, against the OpenAlex API: 5,000 consecutive records with `oa_status: green` — the class where the free copy sits in a repository rather than with the publisher.
 
 - **What it shows:** **Two of every three carried no direct link to a full text.** 1,666 of 5,000 (33.3%) had a `pdf_url`; the remaining 3,334 (66.7%) offered only a landing page. Separately, **none of the 5,000 pointed at an image**, so the Rasmussen case is rare rather than typical, and the first thing this entry looked for is not what it found.
-- **A smaller test of those landing pages.** 40 of the landing-page-only locations were requested once each. 18 (45%) returned a page that links a PDF; 15 (37.5%) returned a page where no PDF link could be found; 7 (17.5%) refused the request or failed. So fewer than half visibly offered a paper to an automated reader.
-- **What it does not show:** That the other half hold no paper. A page with no detectable PDF link may carry the full text as HTML, or build the link with scripts this test does not run, and a refusal is usually bot-blocking rather than absence. The 40-record check is small and indicative; only the 5,000-record count is firm.
-- **Files:** Both runs are reproducible from the OpenAlex API with the filter, sample size and seed stated here.
+- **Resolving those landing pages.** 250 of the landing-page-only locations were requested once each, drawn at random from a pool of 2,000:
+
+| Outcome | n | % |
+| --- | --- | --- |
+| Page links a PDF | 94 | 37.6% |
+| Page, no full text found | 79 | 31.6% |
+| Page, possible HTML full text | 5 | 2.0% |
+| Could not be reached | 72 | 28.8% |
+
+  Of the 178 that answered, **94 offered a PDF — 52.8%**. Among those that could not be reached, 27 refused outright (403) and 34 failed to connect; **6 were dead links** (404 or 410), where the record points at a location that no longer exists.
+- **What it does not show:** That the rest hold no paper. A page with no detectable PDF link may carry the full text as HTML, or build the link with scripts this test does not run, and most refusals are bot-blocking rather than absence — the same obstacle that produced this entry. The detection is crude: a link ending `.pdf` or a `citation_pdf_url` tag, nothing more.
+- **Files:** Both runs are reproducible from the OpenAlex API with the filter, sample size and random seed (20261012) stated here.
 
 ## Where it stands
 
 - **Shown.** Two thirds of repository-hosted open-access records carry no direct link to a full text — 3,334 of 5,000 offered only a landing page. The flag answers "a file exists somewhere" and is read as "you can read this".
 - **Shown.** A flag can point at something that is not the paper, and the three largest indexes can carry the same wrong location at once, because they derive from overlapping sources rather than checking independently.
 - **Not shown.** That the image case is common. None of 5,000 records repeated it, and that negative result is reported here whether or not it suits the entry.
-- **Unmeasured.** What share of those landing pages yields a readable paper to a person. A 40-record check found fewer than half visibly offering one, which is indicative and not a rate.
+- **Shown.** Of 250 of those landing pages, about half of the ones that answered offered a PDF — 94 of 178 reached, 52.8%. Nearly three in ten could not be reached at all by an ordinary request, and six pointed at locations that no longer exist.
+- **Unmeasured.** Whether the pages with no detectable PDF link carry the paper in some other form, and whether the ones that refused an automated request would open for a person. Both need a human to look, but at the scale of dozens, not thousands.
 
 ## What would settle it
 
-- Take a defined sample of flagged open-access records — several hundred, stratified by index and repository platform — resolve each location, and classify what comes back: full text, landing page, fragment, nothing. That produces the rate. The obstacle is that repositories commonly block automated requests, so the sample has to be small enough to resolve by hand or run with repository cooperation.
+- Open by hand the pages this test could not classify — the 79 with no detectable PDF link and the 72 that refused — and record what a person actually gets. That is roughly 150 pages from this sample, not thousands, and it converts the largest remaining uncertainty into a number.
 - Repeat the Rasmussen check across indexes for a sample of works to measure how often a wrong location is shared between them rather than unique to one.
 - **If the claim holds:** flagged locations resolve to full texts at a high rate, and cases like Rasmussen are isolated data errors.
 - **If it doesn't:** a measurable share of "free to read" marks do not yield a readable paper, and the mark means something weaker than every tool presenting it implies.
