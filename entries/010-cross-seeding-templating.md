@@ -189,7 +189,7 @@ Rasmussen J, Krasemann S, Altmeppen H, et al. "Infectious prions do not induce A
 
 - **What it shows (from the title and abstract):** The most direct test of the prion-to-Aβ direction returned negative — infectious prions inoculated into amyloid-overexpressing mouse brain produced no Aβ deposition.
 - **What it does not show:** Only the title and abstract were read; the full text is behind a publisher browser check, so its figures are not stated here.
-- **Files:** Title and record read at Crossref and Europe PMC 9 Oct 2026; Springer full text returned a browser challenge to automated access. Not verified at source.
+- **Files:** Title and record read at Crossref and Europe PMC 9 Oct 2026; the Springer full text returns a browser challenge to automated access. An open copy is self-archived by the authors at the University of Zurich repository ([ZORA eprint 151136](https://www.zora.uzh.ch/id/eprint/151136/), [10.5167/uzh-151136](https://doi.org/10.5167/uzh-151136)); that repository also refuses automated requests, so it remains to be read by hand. Not verified at source.
 
 ### 2020 — Tau and alpha-synuclein cross-seed in both directions
 Tier: T3

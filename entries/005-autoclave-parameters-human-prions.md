@@ -81,14 +81,14 @@ Verification reflects checks on 9 October 2026.
 
 ### 1994 — The decontamination study usually cited for the figure
 Tier: T2
-Verification: Located, not read
+Verification: Unreadable
 Tags: Peer-reviewed; Paywalled
 
 Taylor DM, Fraser H, McConnell I, Brown DA, et al. "Decontamination studies with the agents of bovine spongiform encephalopathy and scrapie." *Archives of Virology* 1994;139(3–4):313–326. [doi:10.1007/BF01310794](https://doi.org/10.1007/BF01310794)
 
 - **What it shows (from secondary summaries):** None of the autoclave regimes tested, up to 138°C for 60 minutes, produced complete inactivation of the scrapie/BSE agents in bulk tissue, and sodium hydroxide up to 2 M for up to two hours did not either; hypochlorite was the most effective.
 - **What it does not show:** Figures above are from secondary summaries, not the original. The paper is paywalled (Springer); its full text was not read at source, so no quote or number from it is treated as verified here.
-- **Files:** Citation and metadata confirmed via Crossref; full text not read.
+- **Files:** Citation and metadata confirmed at Crossref. Searched for a free copy on 12 Oct 2026 across OpenAlex, Europe PMC and PubMed Central: none exists. The publisher sells it for about $40. Marked **Unreadable** rather than Located, not read — the distinction matters, because this is not work left undone but a source we cannot reach without paying.
 
 ### 1999 — The WHO guidance that globalised the parameters
 Tier: —

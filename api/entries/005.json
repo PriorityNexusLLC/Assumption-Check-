@@ -158,7 +158,7 @@
      "heading": "The decontamination study usually cited for the figure",
      "year": "1994",
      "tier": "T2",
-     "verification": "Located, not read",
+     "verification": "Unreadable",
      "tags": [
       "Peer-reviewed",
       "Paywalled"
@@ -176,7 +176,7 @@
       },
       {
        "label": "Files",
-       "text": "Citation and metadata confirmed via Crossref; full text not read."
+       "text": "Citation and metadata confirmed at Crossref. Searched for a free copy on 12 Oct 2026 across OpenAlex, Europe PMC and PubMed Central: none exists. The publisher sells it for about $40. Marked **Unreadable** rather than Located, not read — the distinction matters, because this is not work left undone but a source we cannot reach without paying."
       }
      ],
      "blocks": [],
@@ -338,7 +338,7 @@
   }
  ],
  "verification_counts": {
-  "located not read": 1,
+  "unreadable": 1,
   "verified at source": 3
  },
  "node_count": 4,
