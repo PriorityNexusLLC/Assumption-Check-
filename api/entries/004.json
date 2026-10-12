@@ -256,6 +256,14 @@
       },
       {
        "depth": 0,
+       "text": "**Not untried — unreported.** The deciding experiment is often described as one nobody has done. It was commissioned in 2016, is funded under a named Department of Health and Social Care award whose title is the experiment itself, and was announced as imminent in a 2023 paper. Three years on, no result has been published. A sibling award from the same programme funded the Guntoro methylation study above, which did report."
+      },
+      {
+       "depth": 0,
+       "text": "**The obstacles are technical, not ethical.** The barrier is commonly assumed to be tissue access or donor consent. Neither holds: no unfixed tissue exists and never did, but the derived sections were banked for exactly this purpose and access has been granted three times, and consent is not required precisely because the specimens were irreversibly anonymised. What actually blocks the work is an unmeasured detection floor for the assay, an unmeasured false-positive rate on this tissue (see [[006-the-appendix-assay-false-positive-rate|Entry 006]]), a substrate tuned to a genotype most of the specimens do not have, and blocks up to sixty years old against a method validated to about twenty."
+      },
+      {
+       "depth": 0,
        "text": "**Unanswerable.** Whether a given donor would have developed disease. The tissue was irreversibly unlinked from the donors, so no one can be followed up; most pre-BSE donors have since died of other causes without prion disease."
       }
      ]

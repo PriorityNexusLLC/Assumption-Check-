@@ -284,6 +284,18 @@
       },
       {
        "depth": 0,
+       "text": "**Also unmeasured: the floor.** The assay's detection limit on this tissue has not been established either, so a negative result cannot be read as absence any more than a positive can be read as presence."
+      },
+      {
+       "depth": 0,
+       "text": "**The specimens are older than the method.** Survey blocks run up to about sixty years old; the amplification protocol is validated on material around twenty. Nothing establishes how recovery behaves across that gap, and the survey specimens are irreplaceable, so the first run on them is also the last."
+      },
+      {
+       "depth": 0,
+       "text": "**Why this is the bottleneck, not funding.** The deciding experiment has been commissioned and funded since 2016 and was announced as imminent in 2023 (see [[004-the-uk-appendix-prion-surveys|Entry 004]]). What stands between the platform and a usable answer is this entry's measurement, not money or access."
+      },
+      {
+       "depth": 0,
        "text": "**Compounding.** The substrate is 129MM while the positives are not all 129MM (Bélondrade 2021, verified), so interpreting any result also needs genotype-matched substrate, not just a specificity figure."
       }
      ]
