@@ -17,12 +17,12 @@
  "would_settle": [],
  "lifecycle": "Active",
  "stage": "Traced",
- "stage_note": "both nodes verified at source — they are the registry's own direct observations, so there is no citation chain outstanding. The hypothesis stays open: the rate is unmeasured, and a first sample of 600 records found no second case",
+ "stage_note": "both nodes verified at source — the registry's own direct observations, so no citation chain is outstanding. The hypothesis stays open: two thirds of 5,000 records carried no direct full-text link, but what share of those landing pages yields a paper to a person is not measured",
  "hypothesis": "Open Hypothesis",
  "peer_review": "Unreviewed",
  "contested": false,
- "plain_status": "Three large indexes told us a paper was free to read. The file all three pointed at was a photograph of one figure, not the paper. How often that happens is not known — our own first count of 600 records found no other case like it.",
- "summary": "An index saying a paper is free is a claim about a file, not about a readable paper. One verified case where the file is an image; the rate is unmeasured, and our first sample of 600 found no second case.",
+ "plain_status": "Three large indexes told us a paper was free to read; the file all three pointed at was a photograph of one figure. That particular failure is rare — none of 5,000 records repeated it. The commoner problem is plainer: two thirds of repository-hosted open-access records give no direct link to a full text at all, only a page about the paper.",
+ "summary": "An index saying a paper is free is a claim about a file, not a readable paper. Two of three repository-hosted records (5,000 sampled) carry no direct full-text link; one verified case points at an image.",
  "kicker": "Entry 012 · Open-access metadata · Traced",
  "lede": "Researchers find papers through indexes that mark which are free to read. That mark is generated from the presence of a deposited file, not from any check that the file is the paper. This entry records one case where it was a photograph of a figure, and reports an attempt to measure how often that happens.",
  "rests_on": [],
@@ -126,7 +126,7 @@
     },
     {
      "type": "paragraph",
-     "text": "The claim is a T3/T4 matter. The evidence here reaches **T2**. One attempt at T3 is reported below and did not find a second case of the same kind."
+     "text": "The claim is a T3/T4 matter. The evidence here reaches **T2** for the image case and a partial **T3** for the broader one: a rate is measured for whether a direct full-text link exists, but not for whether a landing page yields a paper."
     }
    ],
    "nodes": []
@@ -164,27 +164,31 @@
      "break_before": null
     },
     {
-     "heading": "A first attempt at the rate, which found nothing",
+     "heading": "Measuring what a flag delivers",
      "year": "2026",
      "tier": null,
      "verification": "Verified at source",
      "tags": [
       "Not a primary test"
      ],
-     "citation": "The registry's own measurement, 12 October 2026: 600 consecutive OpenAlex records with `oa_status: green` — the class where the free copy sits in a repository rather than with the publisher — examined for what kind of file the `oa_url` points at.",
+     "citation": "The registry's own measurement, 12 October 2026, against the OpenAlex API: 5,000 consecutive records with `oa_status: green` — the class where the free copy sits in a repository rather than with the publisher.",
      "quote": null,
      "details": [
       {
        "label": "What it shows",
-       "text": "None of the 600 pointed at an image. About 11% ended in `.pdf`, roughly 74% had no file extension at all (repository landing pages), and the remainder were script or identifier endings. On this measure, the figure-image case is rare rather than typical."
+       "text": "**Two of every three carried no direct link to a full text.** 1,666 of 5,000 (33.3%) had a `pdf_url`; the remaining 3,334 (66.7%) offered only a landing page. Separately, **none of the 5,000 pointed at an image**, so the Rasmussen case is rare rather than typical, and the first thing this entry looked for is not what it found."
+      },
+      {
+       "label": "A smaller test of those landing pages.",
+       "text": "40 of the landing-page-only locations were requested once each. 18 (45%) returned a page that links a PDF; 15 (37.5%) returned a page where no PDF link could be found; 7 (17.5%) refused the request or failed. So fewer than half visibly offered a paper to an automated reader."
       },
       {
        "label": "What it does not show",
-       "text": "Whether the 74% without an extension resolve to a readable paper. That is the question which matters most and this sample does not answer it: deciding it means fetching each location and inspecting what comes back, and many repositories refuse automated requests — the same obstacle that produced this entry."
+       "text": "That the other half hold no paper. A page with no detectable PDF link may carry the full text as HTML, or build the link with scripts this test does not run, and a refusal is usually bot-blocking rather than absence. The 40-record check is small and indicative; only the 5,000-record count is firm."
       },
       {
        "label": "Files",
-       "text": "Query and counts reproducible from the OpenAlex API; the filter and sample size are stated above."
+       "text": "Both runs are reproducible from the OpenAlex API with the filter, sample size and seed stated here."
       }
      ],
      "blocks": [],
@@ -201,15 +205,19 @@
      "items": [
       {
        "depth": 0,
-       "text": "**Shown.** An open-access flag can point at a file that is not the paper, and the three largest indexes can carry the same wrong file at once, because they derive from overlapping sources rather than checking independently."
+       "text": "**Shown.** Two thirds of repository-hosted open-access records carry no direct link to a full text — 3,334 of 5,000 offered only a landing page. The flag answers \"a file exists somewhere\" and is read as \"you can read this\"."
       },
       {
        "depth": 0,
-       "text": "**Not shown.** That this is common. The registry's own first count found no second case in 600 records and is reported here whether or not it suits the entry."
+       "text": "**Shown.** A flag can point at something that is not the paper, and the three largest indexes can carry the same wrong location at once, because they derive from overlapping sources rather than checking independently."
       },
       {
        "depth": 0,
-       "text": "**Unmeasured.** The rate at which a flagged location yields a readable full text, which is the number a researcher actually needs."
+       "text": "**Not shown.** That the image case is common. None of 5,000 records repeated it, and that negative result is reported here whether or not it suits the entry."
+      },
+      {
+       "depth": 0,
+       "text": "**Unmeasured.** What share of those landing pages yields a readable paper to a person. A 40-record check found fewer than half visibly offering one, which is indicative and not a rate."
       }
      ]
     }
