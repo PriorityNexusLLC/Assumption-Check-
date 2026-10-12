@@ -180,7 +180,7 @@ Ezpeleta J, Baudouin V, Arellano-Anaya ZE, et al. "Production of seedable Amyloi
 
 ### 2018 — The key negative: infectious prions do not induce Aβ
 Tier: T3
-Verification: Located, not read
+Verification: Unreadable
 Tags: Peer-reviewed
 
 Rasmussen J, Krasemann S, Altmeppen H, et al. "Infectious prions do not induce Aβ deposition in an in vivo seeding model." *Acta Neuropathologica* 2018;135(6):965–967. [doi:10.1007/s00401-018-1848-5](https://doi.org/10.1007/s00401-018-1848-5)
@@ -189,7 +189,7 @@ Rasmussen J, Krasemann S, Altmeppen H, et al. "Infectious prions do not induce A
 
 - **What it shows (from the title and abstract):** The most direct test of the prion-to-Aβ direction returned negative — infectious prions inoculated into amyloid-overexpressing mouse brain produced no Aβ deposition.
 - **What it does not show:** Only the title and abstract were read; the full text is behind a publisher browser check, so its figures are not stated here.
-- **Files:** Title and record read at Crossref and Europe PMC 9 Oct 2026; the Springer full text returns a browser challenge to automated access. An open copy is self-archived by the authors at the University of Zurich repository ([ZORA eprint 151136](https://www.zora.uzh.ch/id/eprint/151136/), [10.5167/uzh-151136](https://doi.org/10.5167/uzh-151136)); that repository also refuses automated requests, so it remains to be read by hand. Not verified at source.
+- **Files:** Title and record read at Crossref and Europe PMC 9 Oct 2026; the publisher's full text returns a browser challenge to automated access. **The paper is listed as open access and is not.** OpenAlex, Unpaywall and Semantic Scholar all report a free copy at the University of Zurich repository, and the file every one of them links to is `151136_figure.jpg` — an image of a single figure, not the text. The repository also refuses automated requests, and a reader attempting it by hand on 12 Oct 2026 found nothing usable. Marked **Unreadable**: no route to the full text was found that does not involve paying the publisher.
 
 ### 2020 — Tau and alpha-synuclein cross-seed in both directions
 Tier: T3
