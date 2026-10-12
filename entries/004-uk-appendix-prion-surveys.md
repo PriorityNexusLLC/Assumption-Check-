@@ -82,7 +82,7 @@ Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and 
 - **What it does not show:** Whether the survey-positive appendixes are truly non-infectious. The known-positive control — formalin-fixed vCJD spleen — also failed to transmit, so infectivity in fixed lymphoreticular tissue was below the assay's detection limit; the authors state the prevalence-study positives could still be prion-infected at a titre or fixation state their bioassay could not detect. No frozen survey material exists, so the test cannot be repeated on the original specimens.
 - **Files:** Full text read at source (publisher PDF supplied) 12 Oct 2026. Quote present verbatim.
 
-### 2021 — Why a single-substrate assay cannot settle it
+### 2021 — Amplification depends on seed and substrate
 Tier: T2
 Verification: Verified at source
 Tags: Peer-reviewed
@@ -91,11 +91,11 @@ Bélondrade M, Nicot S, Mayran C, et al. "Sensitive protein misfolding cyclic am
 
 > "the amplification obtained in the TgMet substrate in our study was somewhat disappointing, especially in the homologous PMCA context for MM1 and MM2 prions."
 
-- **What it shows:** Amplification of human prions is "strongly seed and substrate dependent." A 129-methionine substrate missed or barely amplified several non-vCJD human prion types. Because the appendix positives are not all 129MM, an amplification assay built on a 129MM substrate could return a negative on a specimen that is genuinely seeding-competent but not vCJD.
+- **What it shows:** Amplification of human prions is "strongly seed and substrate dependent." A 129-methionine substrate missed or barely amplified several non-vCJD human prion types. Because the appendix positives are not all 129MM, an amplification assay built on a 129MM substrate could return a negative on a specimen that genuinely seeds but is not vCJD.
 - **What it does not show:** Any result on the appendix specimens themselves; this is the methodological constraint, not a test of them.
 - **Files:** Full text read at PMC 9 Oct 2026.
 
-### 2022 — A molecular test that leans against infection
+### 2022 — A DNA-methylation test of the positives
 Tier: T1
 Verification: Verified at source
 Tags: Peer-reviewed
