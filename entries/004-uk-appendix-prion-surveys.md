@@ -7,7 +7,7 @@ domain: Medical & Health › Neurology & Prion Disease › Prion surveillance & 
 cross_links: Social, Behavioral & Economic (Public Health Policy)
 lifecycle: Active
 stage: Under Investigation
-stage_note: "4 of 5 sources verified at source; one (Wadsworth 2011) still needs the original full text — Wiley paywall"
+stage_note: "5 of 5 sources verified at source"
 hypothesis: Under Test
 peer_review: Unreviewed
 contested: true
@@ -71,14 +71,16 @@ Gill ON, Spencer Y, Richard-Loendt A, et al. "Prevalent abnormal prion protein i
 
 ### 2011 — The direct infectivity test on the survey positives
 Tier: T3
-Verification: Located, not read
+Verification: Verified at source
 Tags: Peer-reviewed
 
-Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and lymphoreticular vCJD prions and bioassay of key positive specimens from a retrospective vCJD prevalence study." *Journal of Pathology* 2011;223(4):511–518. [doi:10.1002/path.2810](https://doi.org/10.1002/path.2810)
+Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and lymphoreticular vCJD prions and bioassay of key positive specimens from a retrospective vCJD prevalence study." *Journal of Pathology* 2011;223(4):511–518. [doi:10.1002/path.2810](https://doi.org/10.1002/path.2810) · OnlineOpen
 
-- **What it shows (as summarized in Suleiman 2023, a verified source citing it):** Frozen vCJD brain and appendix and formalin-fixed vCJD brain transmitted infection to mice, but the two formalin-fixed appendix specimens from the survey positives did not transmit. The authors concluded that further prevalence studies or more sensitive assays were needed.
-- **What it does not show:** Whether the survey-positive appendix is genuinely non-infectious, or whether fixation or a low prion titre in lymphoid tissue prevented detection. No frozen survey material exists, so the bioassay cannot be repeated on the original specimens.
-- **Files:** Publisher is Wiley (paywalled); original full text not read at source. The account above is from Suleiman 2023, which cites it. Not verified at source.
+> "The absence of detectable infectivity in fixed, known positive vCJD lymphoreticular tissue precludes interpreting negative transmissions from vCJD prevalence study appendix specimens."
+
+- **What it shows:** Two of the three prevalence-study abnormal-PrP-positive appendix specimens were inoculated into transgenic mice overexpressing human PrP (129MM Tg45). Frozen vCJD brain and appendix and formalin-fixed vCJD brain all transmitted infection; formalin-fixed vCJD spleen and both formalin-fixed prevalence-study appendix specimens transmitted nothing (0 of 4 and 0 of 8 mice). vCJD strain properties were preserved and were not altered by fixation.
+- **What it does not show:** Whether the survey-positive appendixes are truly non-infectious. The known-positive control — formalin-fixed vCJD spleen — also failed to transmit, so infectivity in fixed lymphoreticular tissue was below the assay's detection limit; the authors state the prevalence-study positives could still be prion-infected at a titre or fixation state their bioassay could not detect. No frozen survey material exists, so the test cannot be repeated on the original specimens.
+- **Files:** Full text read at source (publisher PDF supplied) 12 Oct 2026. Quote present verbatim.
 
 ### 2021 — Why a single-substrate assay cannot settle it
 Tier: T2
@@ -129,7 +131,7 @@ Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties a
 
 - Run the amplification assay on the survey positives against a substrate panel (129MM, 129VV, bank vole) and strain-type the product. This distinguishes "vCJD" from "a different prion-like entity" and from "nothing" — which a single-substrate yes/no does not.
 - Measure the assay's false-positive rate on known-negative archived appendix of the same processing era, before interpreting any positive. This has not been done.
-- Establish whether the survey blocks were treated with formic acid during processing, which reduces seeding activity by about three orders of magnitude and would make a negative result uninterpretable.
+- Establish whether the survey blocks were treated with formic acid during processing, which Wadsworth 2011 notes reduces prion infectivity by about two to three orders of magnitude and would make a negative result uninterpretable.
 
 > [!summary]
 > Presence of abnormal PrP at ~1 in 2,000 → established (Gill 2013).
@@ -137,4 +139,4 @@ Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties a
 > That a donor would have fallen ill → unanswerable; the tissue was unlinked from donors.
 
 > [!note] Provenance — read before citing
-> Verified at source: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Guntoro 2022 (*Acta Neuropathologica*), all open access; and Suleiman 2023 (*Molecular Neurobiology*, open access), read in full from the publisher PDF on 12 October 2026 — all with the quoted sentences present. Wadsworth 2011 (*Journal of Pathology*, Wiley) is paywalled; it is summarised here from Suleiman 2023, which cites it — Located, not read. This entry is AI-assisted research and is marked so in the author field, per the Method page.
+> Verified at source with the quoted sentence present: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Guntoro 2022 (*Acta Neuropathologica*), all open access; Suleiman 2023 (*Molecular Neurobiology*, open access); and Wadsworth 2011 (*Journal of Pathology*, OnlineOpen) — the last two read in full from the publisher PDFs on 12 October 2026. This entry is AI-assisted research and is marked so in the author field, per the Method page.
