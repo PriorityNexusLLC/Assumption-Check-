@@ -7,14 +7,14 @@ domain: Medical & Health › Neurology & Prion Disease › Prion surveillance & 
 cross_links: Social, Behavioral & Economic (Public Health Policy)
 lifecycle: Active
 stage: Under Investigation
-stage_note: "3 of 5 sources verified at source; the bioassay and the amplification-method papers still need the original full text"
+stage_note: "4 of 5 sources verified at source; one (Wadsworth 2011) still needs the original full text — Wiley paywall"
 hypothesis: Under Test
 peer_review: Unreviewed
 contested: true
-plain_status: "Abnormal prion protein is present in appendix tissue at about 1 in 2,000. Whether it means incubating vCJD is unresolved: one molecular test leans against it, the direct infectivity test is foreclosed by fixation, and the amplification test on the positive specimens has not been reported."
+plain_status: "Abnormal prion protein is present in appendix tissue at about 1 in 2,000. Whether it means incubating vCJD is unresolved: one molecular test leans against it, the direct infectivity test found no transmission from the fixed survey positives, and the amplification test on the positive specimens has not been reported."
 summary: "UK surveys found abnormal prion protein in ~1 in 2,000 appendixes. Whether that is incubating vCJD is unresolved; the settling experiment is funded but unreported."
 kicker: Entry 004 · Variant CJD · Under investigation
-lede: "UK surveys of archived appendix tissue found abnormal prion protein in roughly 1 in 2,000 people. The open question is what it means: incubating variant CJD, lifelong carriage that never causes disease, or a laboratory artefact. The direct test of infectivity cannot be run on the surviving material; the test that could discriminate has not been reported."
+lede: "UK surveys of archived appendix tissue found abnormal prion protein in roughly 1 in 2,000 people. The open question is what it means: incubating variant CJD, lifelong carriage that never causes disease, or a laboratory artefact. The direct infectivity test on the surviving fixed material showed no transmission; the test that could discriminate has not been reported."
 rests_on: []
 cited_by: []
 keywords:
@@ -33,9 +33,9 @@ keywords:
   - prpsc
   - uk
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
-author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9 Oct 2026)
+author: Priority Nexus LLC (AI-assisted research; sources re-checked at publisher 9–12 Oct 2026)
 conflicts: None declared
 ---
 
@@ -48,7 +48,7 @@ What T1–T4 mean for this claim.
 - **T3** The original tissue is **infectious** — a bioassay transmits disease.
 - **T4** A survey donor **developed, or would have developed, vCJD**.
 
-The claim is a **T3/T4** claim. The evidence reaches **T1** (presence). The T2 test on the survey positives has not been reported; the T3 test is foreclosed (see below); T4 cannot be reached because the tissue was irreversibly unlinked from the donors.
+The claim is a **T3/T4** claim. The evidence reaches **T1** (presence). The T2 test on the survey positives has not been reported; the T3 test on the fixed survey positives showed no transmission (see below); T4 cannot be reached because the tissue was irreversibly unlinked from the donors.
 
 ## What the surveys found
 
@@ -69,16 +69,16 @@ Gill ON, Spencer Y, Richard-Loendt A, et al. "Prevalent abnormal prion protein i
 - **What it does not show:** Whether that protein is infectious, is vCJD, or would ever cause disease. Immunostaining detects presence, not any of those.
 - **Files:** Full text read at PMC 9 Oct 2026.
 
-### 2011 — The direct infectivity test, foreclosed by fixation
+### 2011 — The direct infectivity test on the survey positives
 Tier: T3
 Verification: Located, not read
 Tags: Peer-reviewed
 
 Wadsworth JDF, Dalmau-Mena I, Joiner S, et al. "Effect of fixation on brain and lymphoreticular vCJD prions and bioassay of key positive specimens from a retrospective vCJD prevalence study." *Journal of Pathology* 2011;223(4):511–518. [doi:10.1002/path.2810](https://doi.org/10.1002/path.2810)
 
-- **What it shows (from secondary summaries):** Formalin-fixed appendix material from survey positives was inoculated into transgenic mice and transmitted nothing. The positive control — fixed spleen from a confirmed vCJD patient — also transmitted nothing, while frozen material from the same source transmitted readily.
-- **What it does not show:** That the positives are not infectious. The failed positive control shows the result is a property of fixation, not of the tissue: formalin-fixed lymphoid tissue cannot be bioassayed. No frozen survey material was ever taken, so this test cannot be repeated.
-- **Files:** Publisher is Wiley (paywalled); full text not read at source. Figures above are from secondary summaries. Not verified at source.
+- **What it shows (as summarized in Suleiman 2023, a verified source citing it):** Frozen vCJD brain and appendix and formalin-fixed vCJD brain transmitted infection to mice, but the two formalin-fixed appendix specimens from the survey positives did not transmit. The authors concluded that further prevalence studies or more sensitive assays were needed.
+- **What it does not show:** Whether the survey-positive appendix is genuinely non-infectious, or whether fixation or a low prion titre in lymphoid tissue prevented detection. No frozen survey material exists, so the bioassay cannot be repeated on the original specimens.
+- **Files:** Publisher is Wiley (paywalled); original full text not read at source. The account above is from Suleiman 2023, which cites it. Not verified at source.
 
 ### 2021 — Why a single-substrate assay cannot settle it
 Tier: T2
@@ -106,21 +106,23 @@ Guntoro F, Viré E, Giordani C, et al. "DNA methylation analysis of archival lym
 - **What it does not show:** That the positives are false. The authors state that to read this as a false-positive finding "would be an over-interpretation," because "subclinical or preclinical infection may associate with poorly developed DNA me[thylation]" signatures. It is evidence that leans away from established infection, not a disproof.
 - **Files:** Full text read at PMC 9 Oct 2026.
 
-### 2023 — The amplification method, proposed but not yet run on the positives
+### 2023 — The amplification method, demonstrated on a known vCJD case
 Tier: T2
-Verification: Located, not read
+Verification: Verified at source
 Tags: Peer-reviewed
 
-Suleiman S, McGuire LI, Chong A, Barria MA, et al. "A sensitive protein misfolding cyclic amplification platform for the detection of variant CJD prions in formalin-fixed paraffin-embedded tissues." (2023). *(citation located; full text not yet read at source.)*
+Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties after extraction and in vitro propagation of PrPSc from archived formalin-fixed brain and appendix tissues using highly sensitive protein misfolding cyclic amplification." *Molecular Neurobiology* 2023;60(11):6275–6293. [doi:10.1007/s12035-023-03444-2](https://doi.org/10.1007/s12035-023-03444-2) · open access
 
-- **What it shows (from secondary summaries):** The method recovers an amplifiable, strain-faithful prion signal from formalin-fixed appendix of confirmed vCJD cases, and is proposed as the platform to test the survey positives.
-- **What it does not show:** Any result on the survey positives. The authors name them as the target of "subsequent analysis"; no such result has been reported. The assay's false-positive rate on known-negative appendix has not been measured.
-- **Files:** Citation located; full text not read at source.
+> "In particular, our upcoming research will be dedicated to employing this protocol in extracting PrP aggregates from the positive Appendix study samples, using the extracted material to seed hsPMCA reaction and producing material for animal inoculation."
+
+- **What it shows:** Abnormal prion protein was extracted from formalin-fixed brain and appendix tissue of a single pathologically confirmed vCJD patient, amplified by highly sensitive PMCA, and the amplified product transmitted to two mouse lines (gene-targeted HuMM and wild-type RIII) with the biochemical and strain features of vCJD. The method is proposed as the platform to test the survey positives.
+- **What it does not show:** Any result on the Appendix II/III survey positives. Those are named as the target of the authors' "upcoming research"; no such result is reported here. The paper does not report the assay's false-positive rate on known-negative survey-era appendix.
+- **Files:** Full text read at source (publisher OA PDF supplied) 12 Oct 2026. Quote present verbatim.
 
 ## Where it stands
 
 - **Established.** Abnormal prion protein is present in UK appendix tissue at about 1 in 2,000 (Gill 2013, verified).
-- **Unresolved.** Whether it means incubating vCJD. One molecular test (Guntoro 2022) leans against established infection; the direct infectivity test (Wadsworth 2011) is foreclosed by fixation; the amplification-plus-strain-typing test that could discriminate has been funded since 2016 and announced (2023) but not reported for the positive specimens.
+- **Unresolved.** Whether it means incubating vCJD. One molecular test (Guntoro 2022) leans against established infection; the direct infectivity test (Wadsworth 2011) found no transmission from the formalin-fixed survey positives, which fixation or a low prion titre could explain; the amplification-plus-strain-typing platform that could discriminate (Suleiman 2023) has been built but not yet run on the positive specimens.
 - **Unanswerable.** Whether a given donor would have developed disease. The tissue was irreversibly unlinked from the donors, so no one can be followed up; most pre-BSE donors have since died of other causes without prion disease.
 
 ## What would settle it
@@ -135,4 +137,4 @@ Suleiman S, McGuire LI, Chong A, Barria MA, et al. "A sensitive protein misfoldi
 > That a donor would have fallen ill → unanswerable; the tissue was unlinked from donors.
 
 > [!note] Provenance — read before citing
-> Verified at source: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Guntoro 2022 (*Acta Neuropathologica*), all open access, with the quoted sentences present. Wadsworth 2011 (*Journal of Pathology*, Wiley) is paywalled and summarised from secondary sources — Located, not read. The Suleiman 2023 amplification-method paper is cited (located) but its full text was not read at source. This entry is AI-assisted research and is marked so in the author field, per the Method page.
+> Verified at source: Gill 2013 (*BMJ*), Bélondrade 2021 (*Scientific Reports*) and Guntoro 2022 (*Acta Neuropathologica*), all open access; and Suleiman 2023 (*Molecular Neurobiology*, open access), read in full from the publisher PDF on 12 October 2026 — all with the quoted sentences present. Wadsworth 2011 (*Journal of Pathology*, Wiley) is paywalled; it is summarised here from Suleiman 2023, which cites it — Located, not read. This entry is AI-assisted research and is marked so in the author field, per the Method page.
