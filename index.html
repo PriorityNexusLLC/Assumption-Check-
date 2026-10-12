@@ -603,6 +603,12 @@
     </div>
   </div>
 
+  <h2 class="block">What to settle next</h2>
+  <p class="block-note">The same measure as the brightness above, written out. A claim is here because
+  unresolved work waits on it — directly, or further up a chain. This is the list to read if you are
+  deciding where to spend effort; the sky is for seeing the shape, this is for choosing.</p>
+  <div class="list" id="leverageList"></div>
+
   <div class="note">
     <p class="k">What you are looking at</p>
     <p>Every star is a registry entry and every line is a connection the registry records: a solid line is a dependency one entry declares on another, a dashed line is a field the two share. A field holding most of the registry is not drawn as a line — it would join everything to everything — but it still pulls those claims together, so a crowded field reads as a cluster with a faint haze between its members rather than a thicket. Position is computed from those links, so claims that depend on each other sit together; the layout is seeded, so the same registry always draws the same sky. Nothing here is illustrative, and there is no filler: an empty region means nobody has filed a claim there yet.</p>
@@ -1301,17 +1307,36 @@
     // so a bright star is never a true one — only a load-bearing one.
     const NEED = { "under-test": 3, "open": 2, "resolved": 0.4 };
     const needOf = e => e.hypothesis ? (NEED[e.hypothesis.key] || 1) : 1.5;
+    // Leverage travels down a chain. If C waits on B and B waits on A, then A is
+    // holding up C too, one step further back. Without this a foundational claim
+    // sits dark while everything above it glows — which is exactly backwards for
+    // anyone deciding what to go and measure.
+    const DECAY = 0.6;
+    nodes.forEach(n => { n.lift = 0; });
+    nodes.forEach(start => {
+      // walk from `start` down through what it waits on, crediting each
+      const seenHop = new Set([start.entry.num]);
+      let frontier = [{ node: start, weight: needOf(start.entry) }];
+      for (let hop = 0; hop < 6 && frontier.length; hop++) {
+        const next = [];
+        for (const { node, weight } of frontier) {
+          for (const o of nodes) {
+            if (o === node || seenHop.has(o.entry.num)) continue;
+            const nodeWaitsOnO = (node.entry.restsOn || []).includes(o.entry.num);
+            const oWouldSettleNode = (o.entry.wouldSettle || []).includes(node.entry.num);
+            if (!nodeWaitsOnO && !oWouldSettleNode) continue;
+            const w = weight * (oWouldSettleNode ? 1.3 : 1) * (hop ? DECAY : 1);
+            o.lift += w;
+            seenHop.add(o.entry.num);
+            next.push({ node: o, weight: w });
+          }
+        }
+        frontier = next;
+      }
+    });
+    // work already finished needs no one's effort
     nodes.forEach(n => {
-      let lift = 0;
-      nodes.forEach(o => {
-        if (o === n) return;
-        const dependsOnIt = (o.entry.restsOn || []).includes(n.entry.num);
-        const settlesIt = (n.entry.wouldSettle || []).includes(o.entry.num);
-        if (dependsOnIt || settlesIt) lift += needOf(o.entry) * (settlesIt ? 1.3 : 1);
-      });
-      // work already finished needs no one's effort
-      if (n.entry.hypothesis && n.entry.hypothesis.key === "resolved") lift *= 0.5;
-      n.lift = lift;
+      if (n.entry.hypothesis && n.entry.hypothesis.key === "resolved") n.lift *= 0.5;
     });
     const topLift = Math.max(1, ...nodes.map(n => n.lift));
 
@@ -1517,6 +1542,40 @@
     });
     canvas.addEventListener("mouseleave", () => { hover = null; if (reduce) draw(0); });
     canvas.addEventListener("click", ev => { const n = hit(ev); if (n) go(n.entry.id); });
+
+    // The worklist: the same leverage, as text. A researcher deciding what to run
+    // should not have to judge it by how bright a dot looks.
+    (function renderLeverage() {
+      const host = document.getElementById("leverageList");
+      if (!host) return;
+      const ranked = nodes.filter(n => n.lift > 0)
+        .sort((a, b) => b.lift - a.lift || a.entry.num.localeCompare(b.entry.num));
+      if (!ranked.length) {
+        host.innerHTML = '<p class="empty">Nothing waits on anything yet. Once entries record what '
+          + 'they rest on, or what open test they would settle, the most load-bearing claims appear here.</p>';
+        return;
+      }
+      host.innerHTML = ranked.map(n => {
+        const waiting = nodes.filter(o => o !== n
+          && (((o.entry.restsOn || []).includes(n.entry.num))
+              || ((n.entry.wouldSettle || []).includes(o.entry.num))));
+        const names = waiting.map(o => "Entry " + o.entry.num).join(", ");
+        const state = n.entry.hypothesis ? n.entry.hypothesis.label : "No hypothesis yet";
+        return '<button class="entry-card" data-go="' + n.entry.id + '">'
+          + '<div class="top"><span class="tag domain">' + n.entry.subject + '</span>'
+          + '<span class="pill ' + (n.entry.hypothesis ? n.entry.hypothesis.cls : "u") + '">' + state + '</span></div>'
+          + '<h3>' + n.entry.title + '</h3>'
+          + '<p class="claim-line">' + n.entry.claim + '</p>'
+          + '<p class="sub">' + (waiting.length
+              ? waiting.length + " unresolved " + (waiting.length === 1 ? "claim waits" : "claims wait")
+                + " on this — " + names
+              : "carries weight from further up a chain") + '</p>'
+          + '</button>';
+      }).join("");
+      host.querySelectorAll("button[data-go]").forEach(btn => {
+        btn.addEventListener("click", () => go(btn.getAttribute("data-go")));
+      });
+    })();
   })();
 
   // --- boot ---

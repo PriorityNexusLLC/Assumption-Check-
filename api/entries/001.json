@@ -15,15 +15,17 @@
  "would_settle": [],
  "lifecycle": "Active",
  "stage": "Traced",
- "stage_note": "trace complete; 8/8 verified",
- "hypothesis": "Resolved — Supported",
+ "stage_note": "trace complete; 8/8 verified at source. The hypothesis is open, not the trace: the claim as worded depends on vesicle enclosure, which Entry 011 records as untested.",
+ "hypothesis": "Open Hypothesis",
  "peer_review": "Unreviewed",
  "contested": false,
- "plain_status": "Supported by two independent intracerebral bioassays in PrP-overexpressing mice (Février 2004, Vella 2007); not shown for natural routes or normal-PrP animals",
- "summary": "8-node trace · in-vivo claim holds — two independent i.c. bioassays; scope-limited; one downstream miscitation",
+ "plain_status": "Material from the preparation called exosomes causes disease when injected into the brains of PrP-overexpressing mice, in two independent studies. Whether that material is carried inside vesicles, rather than as free aggregate pelleting alongside them, has not been established.",
+ "summary": "8-node trace, all verified at source. The pellet transmits; whether the infectivity is inside the vesicles is an open question (Entry 011).",
  "kicker": "Entry 001 · Prions · Active trace",
  "lede": "One claim, traced link by link through its citations — with the exact sentence at each step and how well each one can be verified. The honest result: on reading the sources, the core claim holds, with narrower caveats than the downstream language suggests.",
- "rests_on": [],
+ "rests_on": [
+  "011"
+ ],
  "cited_by": [],
  "keywords": [
   "prion",
@@ -39,7 +41,7 @@
   "molecular neuroscience"
  ],
  "added": "2026-10-06",
- "updated": "2026-10-06",
+ "updated": "2026-10-12",
  "traced": "October 2026",
  "author": "Priority Nexus LLC",
  "conflicts": "None declared",
@@ -362,7 +364,11 @@
      "items": [
       {
        "depth": 0,
-       "text": "**Established.** Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show exosome-associated prions cause disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls)."
+       "text": "**Established.** Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show that material from the ~100,000 × g pellet of infected-cell medium causes disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls)."
+      },
+      {
+       "depth": 0,
+       "text": "**Not established: that the pellet's infectivity is carried inside vesicles.** The pellet contains free prion aggregate as well as vesicles, and the protease-protection test normally used to show enclosure cannot distinguish them for this protein. Février's sucrose-gradient fraction transmitted 5/5, which answers part of the objection; it does not establish enclosure. This claim as stated therefore rests on an open question — see [[011-prion-infectivity-inside-vesicles|Entry 011]]."
       },
       {
        "depth": 0,
