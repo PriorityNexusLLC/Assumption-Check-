@@ -1,17 +1,19 @@
-name: Build entries
+name: Build entries and pages
 
-# Rebuilds entries.js whenever an entry in entries/ changes, so edits made in
-# Obsidian (or on github.com) show up on the site without any manual step.
 on:
   push:
     branches: [main]
     paths:
       - "entries/**"
-      - "scripts/build_entries.py"
+      - "domains/**"
+      - "scripts/**"
+      - "index.html"
   pull_request:
     paths:
       - "entries/**"
-      - "scripts/build_entries.py"
+      - "domains/**"
+      - "scripts/**"
+      - "index.html"
   workflow_dispatch:
 
 permissions:
@@ -27,21 +29,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      # On a pull request, only check that every entry is readable.
       - name: Check entries
         if: github.event_name == 'pull_request'
-        run: python scripts/build_entries.py
+        run: |
+          python scripts/build_entries.py
+          python scripts/make_domains.py --check
+          python scripts/connections.py
 
-      - name: Build and commit entries.js
+      - name: Build and commit
         if: github.event_name != 'pull_request'
         run: |
           python scripts/build_entries.py
-          if git diff --quiet -- entries.js; then
-            echo "entries.js already up to date."
+          python scripts/build_site.py
+          if git diff --quiet -- entries.js entry api domains Domains.html sitemap.xml robots.txt; then
+            echo "generated files already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add entries.js
-          git commit -m "Rebuild entries.js from entries/"
+          git add entries.js entry api domains Domains.html sitemap.xml robots.txt
+          git commit -m "Rebuild entries.js and the generated pages"
           git push
