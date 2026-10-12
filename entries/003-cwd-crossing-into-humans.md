@@ -3,8 +3,10 @@ num: "003"
 title: Chronic wasting disease and humans
 claim: Chronic wasting disease (CWD) can transmit to humans and cause prion disease.
 subject: Chronic wasting disease
-domain: Medical & Health › Neurology & Prion Disease › Zoonotic prion transmission
-cross_links: Life & Biological (Wildlife & Veterinary Science) · Cognitive, Neuroscience & Mind (Prion disease)
+domain: Epidemiology
+also_in:
+  - Veterinary Medicine
+  - Molecular Neuroscience
 lifecycle: Active
 stage: Traced
 stage_note: "trace complete; all sources verified at source"

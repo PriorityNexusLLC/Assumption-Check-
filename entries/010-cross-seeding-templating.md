@@ -4,8 +4,10 @@ num: "010"
 title: Cross-seeding as true templating
 claim: One misfolded protein cross-seeds a different protein by acting as a structural template (true heterotypic templating), rather than by an indirect route.
 subject: Protein cross-seeding
-domain: Life & Biological › Molecular & Cell Biology › Protein misfolding
-cross_links: Medical & Health (Neurodegeneration) · Cognitive, Neuroscience & Mind (Alzheimer's & Parkinson's disease) · Chemical (Amyloid structure)
+domain: Structural Biology
+also_in:
+  - Biochemistry
+  - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
 stage_note: "7 of 8 chain sources verified at source; one (Rasmussen 2018, the key negative) read at abstract and title only — full text behind a publisher browser check"

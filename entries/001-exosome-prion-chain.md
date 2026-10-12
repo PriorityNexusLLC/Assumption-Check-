@@ -3,8 +3,10 @@ num: "001"
 title: The exosome prion chain
 claim: Prion-bearing extracellular vesicles transmit disease to animals.
 subject: Prions
-domain: Cognitive, Neuroscience & Mind › Molecular Neuroscience › Prion disease
-cross_links: Life & Biological (Cell Biology) · Medical & Health (Neurology)
+domain: Molecular Neuroscience
+also_in:
+  - Cellular Biology
+  - Neurology
 lifecycle: Active
 stage: Traced
 stage_note: trace complete; 8/8 verified

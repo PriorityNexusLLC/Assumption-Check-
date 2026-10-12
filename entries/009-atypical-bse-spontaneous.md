@@ -4,8 +4,10 @@ num: "009"
 title: Atypical BSE and spontaneous origin
 claim: Atypical BSE (H-type and L-type) arises spontaneously in cattle, rather than from an infectious or feed-borne source.
 subject: Atypical BSE
-domain: Life & Biological › Wildlife & Veterinary Science › Bovine prion disease
-cross_links: Medical & Health (Prion disease, food safety) · Social, Behavioral & Economic (Animal health regulation)
+domain: Veterinary Medicine
+also_in:
+  - Epidemiology
+  - Molecular Neuroscience
 lifecycle: Active
 stage: Under Investigation
 stage_note: "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check"

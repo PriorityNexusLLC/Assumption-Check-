@@ -4,8 +4,10 @@ num: "006"
 title: The appendix-assay false-positive rate
 claim: The amplification assay proposed to test the UK appendix-survey positives has a measured false-positive rate on known-negative appendix tissue.
 subject: Variant CJD
-domain: Medical & Health › Neurology & Prion Disease › Prion surveillance & methods
-cross_links: Social, Behavioral & Economic (Public Health Policy)
+domain: Medical Statistics
+also_in:
+  - Metrology
+  - Epidemiology
 lifecycle: Active
 stage: Under Investigation
 stage_note: "key method paper verified at source; the claim is a documented gap, not a positive finding"

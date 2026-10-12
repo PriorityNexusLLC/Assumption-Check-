@@ -18,6 +18,32 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ENTRIES = ROOT / "entries"
 OUT = ROOT / "entries.js"
+DOMAINS = ROOT / "domains"
+
+
+def domain_vocabulary():
+    """Field name -> note name, from domains/*.md.
+
+    The domain notes are the vocabulary. An entry may only name a field that
+    exists, which is what stops a near-miss like "Cell Biology" (the list calls
+    it "Cellular Biology") from silently linking to nothing.
+    """
+    vocab = {}
+    if not DOMAINS.is_dir():
+        return vocab
+    for path in sorted(DOMAINS.glob("*.md")):
+        vocab[path.stem] = path.stem
+        head = path.read_text(encoding="utf-8")[:600]
+        m = re.search(r"(?m)^field:\s*(.+)$", head)
+        if m:
+            vocab.setdefault(m.group(1).strip().strip("\"'"), path.stem)
+    return vocab
+
+
+def closest(name, vocab, limit=3):
+    """Near-miss suggestions, so a typo names its own fix."""
+    import difflib
+    return difflib.get_close_matches(name, list(vocab), n=limit, cutoff=0.7)
 
 # hypothesis is optional: an entry Under Investigation gets one only once a testable form is found.
 REQUIRED = ["num", "title", "claim", "peer_review", "lifecycle"]
@@ -65,7 +91,7 @@ def node_verifications(body):
     return [norm(m.group(1)) for m in re.finditer(r"(?mi)^verification\s*:\s*(.+)$", body)]
 
 
-def check(path, meta, body=""):
+def check(path, meta, body="", vocab=None):
     problems = []
     if meta is None:
         return ["missing the --- properties block at the top"]
@@ -93,6 +119,28 @@ def check(path, meta, body=""):
         )
     if meta.get("stage") and norm(meta["stage"]) not in STAGES:
         problems.append(f"'stage' is {meta['stage']!r}; use Traced or Under Investigation")
+    if vocab:
+        primary = str(meta.get("domain", "") or "").strip()
+        if not primary:
+            problems.append("'domain' is empty; name one field from Domains.md")
+        elif primary not in vocab:
+            hint = closest(primary, vocab)
+            problems.append(
+                f"'domain' is {primary!r}, which is not a field in domains/"
+                + (f" — did you mean {' or '.join(repr(h) for h in hint)}?" if hint else "")
+            )
+        also = meta.get("also_in") or []
+        if isinstance(also, str):
+            also = [x.strip() for x in re.split(r"[·,]", also) if x.strip()]
+        for name in also:
+            if name not in vocab:
+                hint = closest(name, vocab)
+                problems.append(
+                    f"'also_in' names {name!r}, which is not a field in domains/"
+                    + (f" — did you mean {' or '.join(repr(h) for h in hint)}?" if hint else "")
+                )
+            elif name == primary:
+                problems.append(f"'also_in' repeats the primary domain {name!r}; list it once")
     for key in meta["_unquoted_colon"]:
         problems.append(f"'{key}' contains ': ' — put double quotes around the whole value")
     if meta.get("peer_review") and norm(meta["peer_review"]) not in REVIEWS:
@@ -104,10 +152,11 @@ def check(path, meta, body=""):
 
 def build():
     sources, problems, nums = [], [], {}
+    vocab = domain_vocabulary()
     for path in sorted(ENTRIES.glob("*.md")):
         text = path.read_text(encoding="utf-8")
         meta = frontmatter(text)
-        problems += [f"{path.name}: {p}" for p in check(path, meta, body_after_frontmatter(text))]
+        problems += [f"{path.name}: {p}" for p in check(path, meta, body_after_frontmatter(text), vocab)]
         if meta and meta.get("draft") != "true" and meta.get("num"):
             num = str(meta["num"]).zfill(3)
             if num in nums:
