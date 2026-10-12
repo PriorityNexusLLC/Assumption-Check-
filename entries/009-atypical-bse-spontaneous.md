@@ -9,14 +9,14 @@ Also in:
   - Epidemiology
   - Molecular Neuroscience
 lifecycle: Active
-stage: Under Investigation
-Stage note: "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check"
+stage: Traced
+Stage note: "all nine chain sources verified at source; Biacabe 2004, the last one, read from the original paper on 12 Oct 2026"
 hypothesis: Open Hypothesis
 Peer review: Unreviewed
 contested: true
 Plain status: "International animal-health rules treat atypical BSE as spontaneous. The rules themselves say \"believed\"; a 2016 review calls the assumption \"still mainly speculative\"; no test has settled it."
 summary: "Atypical BSE spontaneous origin. Written into the international BSE framework as a belief. Supporting evidence is circumstantial; the defining test has not been run."
-kicker: Entry 009 · Atypical BSE · Under investigation
+kicker: Entry 009 · Atypical BSE · Traced
 lede: "The claim that the two atypical forms of bovine spongiform encephalopathy, H-type and L-type, arise spontaneously in cattle at a low background rate. The international BSE risk framework is built on it. The evidence for it is circumstantial, and its sources describe it as a belief."
 Rests on: []
 Cited by: []
@@ -38,7 +38,7 @@ keywords:
   - feed ban
   - sporadic cjd
 added: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 traced: October 2026
 author: Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)
 conflicts: None declared
@@ -100,16 +100,19 @@ The claim above is a **T4** claim. The evidence reaches **T1** for atypical BSE 
 
 Each heading is one source, oldest first.
 
-### 2004 — H-type described
+### 2004 — The first atypical cattle phenotype
 Tier: T1
-Verification: Located, not read
-Tags: Peer-reviewed
+Verification: Verified at source
+Tags: Peer-reviewed; Load-bearing
 
 Biacabe AG, Laplanche JL, Ryder S, Baron T. "Distinct molecular phenotypes in bovine prion diseases." *EMBO Reports* 2004;5(1):110–115. [doi:10.1038/sj.embor.7400054](https://doi.org/10.1038/sj.embor.7400054) · PMC1298965
 
-- **What it shows (from the citation record):** The first description of a BSE molecular phenotype distinct from classical BSE in French cattle, later named H-type.
-- **What it does not show:** The cause of the distinct phenotype.
-- **Files:** Full text at PMC blocked by a browser check on 9 Oct 2026; Europe PMC returned the abstract only. Not verified at source.
+> "it has been speculated that a spontaneous rare sporadic form of these diseases could exist in cattle as in humans, and might have been the origin of the BSE epidemic… this hypothesis might also explain our finding"
+
+- **What it shows:** Three cattle in France, among cases found by routine abattoir and rendering-plant testing of animals over 24 months, carried a protease-resistant prion protein pattern unlike classical BSE — a higher molecular mass of the unglycosylated band. The paper does not use the term "H-type"; that name came later.
+- **What it does not show:** That the phenotype arises spontaneously. The paper offers that as one of two candidate explanations, in a section headed **SPECULATION**, and names the other: experimental infection of cattle with a British natural sheep scrapie source "led to similar differences in the PrPres electrophoretic profiles compared to typical cattle BSE". It closes by saying "further studies are now required to determine the frequency of such novel molecular phenotypes in cattle and the biological features of the involved infecting strain."
+- **Load-bearing note:** this entry's claim is that atypical BSE arises spontaneously. The paper usually cited as its origin raises that idea as labelled speculation with a scrapie alternative beside it, on three animals.
+- **Files:** Full text read at source 12 Oct 2026. Earlier drafts recorded PMC as blocked by a browser check.
 
 ### 2004 — L-type (BASE) described
 Tier: T1

@@ -391,8 +391,8 @@
     "Epidemiology",
     "Molecular Neuroscience"
    ],
-   "stage": "Under Investigation",
-   "stage_note": "7 of 8 chain sources verified at source; one (Biacabe 2004, the first H-type description) read at abstract only — full text behind a browser check",
+   "stage": "Traced",
+   "stage_note": "all nine chain sources verified at source; Biacabe 2004, the last one, read from the original paper on 12 Oct 2026",
    "hypothesis": "Open Hypothesis",
    "peer_review": "Unreviewed",
    "contested": true,
@@ -422,11 +422,11 @@
     "sporadic cjd"
    ],
    "added": "2026-10-09",
-   "updated": "2026-10-09",
+   "updated": "2026-10-12",
    "author": "Priority Nexus LLC (AI-assisted research; sources checked at publisher 9 Oct 2026)",
    "conflicts": "None declared",
    "node_count": 9,
-   "verified_count": 8,
+   "verified_count": 9,
    "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/009-atypical-bse-and-spontaneous-origin/"
   },
   {
