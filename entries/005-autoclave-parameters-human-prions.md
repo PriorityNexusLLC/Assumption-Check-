@@ -20,6 +20,8 @@ kicker: Entry 005 · Prion decontamination · Under investigation
 lede: "The two numbers recited worldwide for prion decontamination — 134°C for 18 minutes, and 1 M sodium hydroxide for an hour — come from a 1999 WHO consultation that lists no inactivation experiment behind them. What the readable bioassays show is that a single steam cycle does not fully inactivate human prions, and that the treatments which do work are chemical or combined."
 rests_on: []
 cited_by: []
+not_linked:
+  - "004 — both concern prion safety policy and both sit in Public Health, but neither's evidence depends on the other. The shared field is the accurate connection; a rests_on link would overstate it."
 keywords:
   - prion
   - decontamination

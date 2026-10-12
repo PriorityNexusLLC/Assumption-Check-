@@ -21,6 +21,8 @@ lede: "The claim that repeated prehistoric epidemics of a kuru-like prion diseas
 rests_on:
   - "008"
 cited_by: []
+not_linked:
+  - "001 — shares Molecular Neuroscience, but this entry's argument does not rest on exosome transmission. The overlap is the phrase 'unrelated to prions' in What would settle it, not a dependency."
 keywords:
   - prnp
   - codon 129

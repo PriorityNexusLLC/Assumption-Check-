@@ -67,6 +67,8 @@ def read_entries():
             "also_in": many("also_in"),
             "keywords": [k.lower() for k in many("keywords")],
             "rests_on": [x.zfill(3) for x in many("rests_on") if x.strip("[] ")],
+            "not_linked": [x.split("—")[0].split("-")[0].strip().zfill(3)
+                           for x in many("not_linked") if x.strip("[] ")],
             "cited_by": [x.zfill(3) for x in many("cited_by") if x.strip("[] ")],
             "dois": {d.rstrip(".").lower() for d in DOI.findall(text)},
             "settle": settle_text(body),
@@ -113,7 +115,12 @@ def overlap(a, b):
 
 
 def declared(a, b):
-    return b["num"] in a["rests_on"] + a["cited_by"] or a["num"] in b["rests_on"] + b["cited_by"]
+    """A connection counts as handled once it is recorded either way: linked in
+    rests_on / cited_by, or considered and rejected in not_linked with a reason."""
+    return (
+        b["num"] in a["rests_on"] + a["cited_by"] + a["not_linked"]
+        or a["num"] in b["rests_on"] + b["cited_by"] + b["not_linked"]
+    )
 
 
 def main(argv):
