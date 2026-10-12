@@ -135,7 +135,7 @@ Mohri S, Matsuura Y, Parchi P, Kitamoto T. "A two-step processing method is reco
 
 ## Where it stands
 
-- **Established.** The 134°C / 18-minute figure originates in the 1999 WHO guidance (verified at source), which presents it as "best available evidence," cites no inactivation study for it, and concedes incomplete removal in worst cases. Chemical standards (1 N NaOH, 20,000 ppm hypochlorite, one hour) abolish vCJD transmission on steel wires (Bélondrade 2020, verified).
+- **Shown.** The 134°C / 18-minute figure originates in the 1999 WHO guidance (verified at source), which presents it as "best available evidence," cites no inactivation study for it, and concedes incomplete removal in worst cases. Chemical standards (1 N NaOH, 20,000 ppm hypochlorite, one hour) abolish vCJD transmission on steel wires (Bélondrade 2020, verified).
 - **Runs against the claim.** A single steam cycle does not eliminate sporadic-CJD infectivity on wires for the more resistant strain; a two-step chemical-then-autoclave method does (Mohri 2026, verified).
 - **Still open.** Whether 134°C / 18 minutes reduces human-prion infectivity to zero.
     - a bioassay dose–response of the exact cycle on human-prion-contaminated steel, reported as a measured floor rather than "no detectable signal"

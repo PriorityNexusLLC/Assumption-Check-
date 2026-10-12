@@ -162,7 +162,7 @@ Bitarello BD, Brandt DYC, Meyer D, Andrés AM. "Inferring Balancing Selection Fr
 
 ## Where it stands
 
-- **Established.** The specific balancing-selection statistic reported in 2003 is not robust to a resequencing design that captures rare variants; the ascertainment-bias objection is accepted by the reanalyses and, on the original statistics, partly by the authors.
+- **Shown.** The specific balancing-selection statistic reported in 2003 is not robust to a resequencing design that captures rare variants; the ascertainment-bias objection is accepted by the reanalyses and, on the original statistics, partly by the authors.
 - **Still open.** Whether any genuine selection signal remains at PRNP once demography is modelled, and of what kind.
     - a modern whole-genome selection scan at PRNP with explicit demographic modelling
     - reconciliation of the differing resequenced regions and populations across the 2006 reanalyses

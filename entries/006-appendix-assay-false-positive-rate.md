@@ -128,7 +128,7 @@ Suleiman S, McGuire LI, Chong A, Ritchie DL, et al. "Conservation of vCJD Strain
 
 ## Where it stands
 
-- **Established.** The hsPMCA platform works on FFPE vCJD appendix and is the proposed route to test the survey positives; its non-CJD negative controls did not amplify (Suleiman 2023, verified at source).
+- **Shown.** The hsPMCA platform works on FFPE vCJD appendix and is the proposed route to test the survey positives; its non-CJD negative controls did not amplify (Suleiman 2023, verified at source).
 - **Unmeasured.** The assay's false-positive rate on known-negative appendix. Validation used a small non-CJD control set, not a quantified specificity on survey-era negatives across genotypes — so the companion claim ("the false-positive rate is measured") is not supported.
 - **Also unmeasured: the floor.** The assay's detection limit on this tissue has not been established either, so a negative result cannot be read as absence any more than a positive can be read as presence.
 - **The specimens are older than the method.** Survey blocks run up to about sixty years old; the amplification protocol is validated on material around twenty. Nothing establishes how recovery behaves across that gap, and the survey specimens are irreplaceable, so the first run on them is also the last.

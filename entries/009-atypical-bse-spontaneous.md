@@ -218,7 +218,7 @@ World Organisation for Animal Health. *Terrestrial Animal Health Code*, Chapter 
 
 ## Where it stands
 
-- **Established.** Atypical BSE exists as two molecular forms distinct from classical BSE, found mainly in older cattle under active surveillance. One H-type case had a heritable PRNP mutation.
+- **Shown.** Atypical BSE exists as two molecular forms distinct from classical BSE, found mainly in older cattle under active surveillance. One H-type case had a heritable PRNP mutation.
 - **Still open.** Whether cases without a known mutation arise spontaneously, or from an unidentified source. The international framework records the spontaneous origin as a belief, not a finding.
     - a stable age-specific incidence in large herds with no possible feed exposure, across decades and feed histories
     - exposure excluded, or a heritable or de novo cause identified, in field cases outside the E211K family

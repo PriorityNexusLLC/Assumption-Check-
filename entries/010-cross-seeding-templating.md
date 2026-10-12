@@ -206,7 +206,7 @@ Williams T, Sorrentino Z, Weinrich M, et al. "Differential cross-seeding propert
 
 ## Where it stands
 
-- **Established.** Amyloid proteins can accelerate one another's aggregation in vitro, and co-pathologies are common in human brains. Strain-dependent cross-seeding of tau by α-synuclein is shown in mice.
+- **Shown.** Amyloid proteins can accelerate one another's aggregation in vitro, and co-pathologies are common in human brains. Strain-dependent cross-seeding of tau by α-synuclein is shown in mice.
 - **Still open.** Whether this proceeds by direct templating or by surface catalysis, co-aggregation or a permissive environment — and whether any of it occurs at brain concentrations. For the most-studied pair, Aβ and tau, the best-controlled animal studies point away from direct templating.
     - inject purified A into an animal not overexpressing B, at physiological levels, and test for templated B pathology in contact with A
     - an atomic structure of a mixed A–B fibril from human brain

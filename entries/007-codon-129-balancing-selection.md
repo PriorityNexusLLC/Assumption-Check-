@@ -1,7 +1,7 @@
 ---
 draft: true
 num: "007"
-title: Cannibalism and codon 129
+title: Codon 129 and kuru selection
 claim: Balancing selection, driven by prehistoric kuru-like epidemics, shaped codon 129 of the human prion protein gene worldwide.
 subject: PRNP codon 129
 domain: Population Genetics
@@ -138,7 +138,7 @@ The two halves have moved in opposite directions since 2003:
 
 ## Where it stands
 
-- **Established.** Kuru drove balancing selection at codon 129 in the Fore within living memory, documented across age, sex and birth-date gradients, and reinforced by the kuru-region-only G127V variant.
+- **Shown.** Kuru drove balancing selection at codon 129 in the Fore within living memory, documented across age, sex and birth-date gradients, and reinforced by the kuru-region-only G127V variant.
 - **Still open.** Whether selection of the same kind acted repeatedly across human prehistory worldwide.
     - ancient-DNA genotyping of codon 129 across a dated skeletal series
     - a modern whole-genome selection scan at PRNP with demographic history modelled (Entry 008)

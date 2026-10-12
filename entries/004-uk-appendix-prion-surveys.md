@@ -124,7 +124,7 @@ Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties a
 
 ## Where it stands
 
-- **Established.** Abnormal prion protein is present in UK appendix tissue at about 1 in 2,000 (Gill 2013, verified).
+- **Shown.** Abnormal prion protein is present in UK appendix tissue at about 1 in 2,000 (Gill 2013, verified).
 - **Unresolved.** Whether it means incubating vCJD. One molecular test (Guntoro 2022) leans against established infection; the direct infectivity test (Wadsworth 2011) found no transmission from the formalin-fixed survey positives, which fixation or a low prion titre could explain; the amplification-plus-strain-typing platform that could discriminate (Suleiman 2023) has been built but not yet run on the positive specimens.
 - **Not untried — unreported.** The deciding experiment is often described as one nobody has done. It was commissioned in 2016, is funded under a named Department of Health and Social Care award whose title is the experiment itself, and was announced as imminent in a 2023 paper. Three years on, no result has been published. A sibling award from the same programme funded the Guntoro methylation study above, which did report.
 - **The obstacles are technical, not ethical.** The barrier is commonly assumed to be tissue access or donor consent. Neither holds: no unfixed tissue exists and never did, but the derived sections were banked for exactly this purpose and access has been granted three times, and consent is not required precisely because the specimens were irreversibly anonymised. What actually blocks the work is an unmeasured detection floor for the assay, an unmeasured false-positive rate on this tissue (see [[006-the-appendix-assay-false-positive-rate|Entry 006]]), a substrate tuned to a genotype most of the specimens do not have, and blocks up to sixty years old against a method validated to about twenty.
@@ -137,7 +137,7 @@ Suleiman S, McGuire L, Chong A, et al. "Conservation of vCJD strain properties a
 - Establish whether the survey blocks were treated with formic acid during processing, which Wadsworth 2011 notes reduces prion infectivity by about two to three orders of magnitude and would make a negative result uninterpretable.
 
 > [!summary]
-> Presence of abnormal PrP at ~1 in 2,000 → established (Gill 2013).
+> Presence of abnormal PrP at ~1 in 2,000 → shown (Gill 2013).
 > That it is incubating vCJD → not demonstrated; one test leans against, the deciding test is unreported.
 > That a donor would have fallen ill → unanswerable; the tissue was unlinked from donors.
 

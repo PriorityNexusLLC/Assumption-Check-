@@ -54,7 +54,7 @@ Verification: Unlocated
 
 Nicholas, 4th-century Christian bishop of Myra (in Lycia, in present-day Türkiye). Known through later accounts for anonymous gift-giving.
 
-- **What it establishes:** There was a historical figure at the root of the tradition. The gift-giving stories around him come from later sources, not contemporary record.
+- **What it shows:** There was a historical figure at the root of the tradition. The gift-giving stories around him come from later sources, not contemporary record.
 - **Next step:** Pull the earliest surviving accounts and date them, rather than relying on retellings.
 
 ### 1600s — Sinterklaas — the Dutch tradition
@@ -63,7 +63,7 @@ Tags: Load-bearing
 
 The feast of St. Nicholas and the Dutch "Sinterklaas" gift custom, carried to North America by Dutch settlers.
 
-- **What it establishes:** The name and the gift-bringer role that the English "Santa Claus" descends from.
+- **What it shows:** The name and the gift-bringer role that the English "Santa Claus" descends from.
 - **Next step:** Confirm the route from Sinterklaas to the American figure with dated primary sources.
 
 ### 1823 — The poem that fixed the modern details
@@ -73,7 +73,7 @@ Verification: Unlocated
 
 > — the sleigh, the reindeer, the chimney, and the night before Christmas all appear here.
 
-- **What it establishes:** Much of the specific modern image traces to one widely-read poem, not to ancient tradition.
+- **What it shows:** Much of the specific modern image traces to one widely-read poem, not to ancient tradition.
 - **Next step:** Read the 1823 text at source and weigh the disputed authorship.
 
 ### 1860s — The look — Thomas Nast
@@ -81,7 +81,7 @@ Verification: Unlocated
 
 Thomas Nast's illustrations in *Harper's Weekly* (1860s–1880s), widely credited with the rotund, bearded, workshop-at-the-North-Pole image.
 
-- **What it establishes:** The visual Santa was built up in the popular press over decades.
+- **What it shows:** The visual Santa was built up in the popular press over decades.
 - **Next step:** Locate the specific issues and dates.
 
 ### 1931 — A sub-myth — "Coca-Cola made Santa red"
@@ -90,7 +90,7 @@ Tags: Flagged claim
 
 Haddon Sundblom's Coca-Cola advertisements (from 1931) spread the red-and-white Santa widely.
 
-- **What it establishes:** The ads popularized one version — but the claim that Coca-Cola **invented** the red suit is itself a drift: red-suited Santas appear well before 1931. A claim inside the claim, logged for its own trace.
+- **What it shows:** The ads popularized one version — but the claim that Coca-Cola **invented** the red suit is itself a drift: red-suited Santas appear well before 1931. A claim inside the claim, logged for its own trace.
 - **Next step:** Date pre-1931 red-suit depictions to settle the sub-myth directly.
 
 ## What would settle it — next steps

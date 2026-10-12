@@ -173,7 +173,7 @@ Traced expecting citation drift. The transmission evidence held up: two independ
 
 ## Where it stands
 
-- **Established.** Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show that material from the ~100,000 × g pellet of infected-cell medium causes disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls).
+- **Shown.** Two independent studies — Février 2004 (sheep strain) and Vella 2007 (human-derived strain), different groups — show that material from the ~100,000 × g pellet of infected-cell medium causes disease when injected into the brains of PrP-overexpressing mice (both 5/5; ~77 and ~90–98 days; clean controls).
 - **Not established: that the pellet's infectivity is carried inside vesicles.** The pellet contains free prion aggregate as well as vesicles, and the protease-protection test normally used to show enclosure cannot distinguish them for this protein. Février's sucrose-gradient fraction transmitted 5/5, which answers part of the objection; it does not establish enclosure. This claim as stated therefore rests on an open question — see [[011-prion-infectivity-inside-vesicles|Entry 011]].
 - **Still open.** Both demonstrations use the most permissive assay. These are the tests that would extend the claim beyond it.
     - transmission by any route other than injection into the brain

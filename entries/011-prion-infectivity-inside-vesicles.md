@@ -106,7 +106,7 @@ The same study, comparing vesicles isolated at 20,000 × g (large) and 110,000 �
 
 ## Where it stands
 
-- **Established.** Preparations called exosomal contain prion protein, and material from them transmits disease on intracerebral injection into PrP-overexpressing mice (see [[001-the-exosome-prion-chain|Entry 001]], where that chain is verified at source).
+- **Shown.** Preparations called exosomal contain prion protein, and material from them transmits disease on intracerebral injection into PrP-overexpressing mice (see [[001-the-exosome-prion-chain|Entry 001]], where that chain is verified at source).
 - **Unresolved.** Whether the transmitting material is inside vesicles. The preparation is a mixture by construction, and the standard enclosure assay cannot distinguish the cases for this protein.
 - **Pointing away from the claim.** The better-separated comparison in Soukup 2023 puts the greater converting activity in the large-vesicle fraction, which this literature does not call exosomes — though the size of that difference is unstable and in places reverses.
 
