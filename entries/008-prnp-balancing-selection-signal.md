@@ -10,7 +10,7 @@ Also in:
   - Bioinformatics
 lifecycle: Active
 stage: Under Investigation
-Stage note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the reanalyses and the 2003 anchor are read at abstract only, full texts paywalled or rate-limited"
+Stage note: "Mead 2003 read at source 12 Oct 2026, including Table 2; three of six chain sources still read at abstract only"
 hypothesis: Under Test
 Peer review: Unreviewed
 contested: true
@@ -70,16 +70,18 @@ Oldest first. Verification reflects checks at the publisher on 9 October 2026.
 
 ### 2003 — The original positive signal
 Tier: T1
-Verification: Located, not read
-Tags: Peer-reviewed; Load-bearing; Full text paywalled
+Verification: Verified at source
+Tags: Peer-reviewed; Load-bearing
 
 Mead S, Stumpf MPH, Whitfield J, Beck JA, Poulter M, Campbell T, Uphill JB, Goldstein D, Alpers M, Fisher EMC, Collinge J. "Balancing Selection at the Prion Protein Gene Consistent with Prehistoric Kuru-like Epidemics." *Science* 2003;300(5619):640–643. [doi:10.1126/science.1083320](https://doi.org/10.1126/science.1083320) · PMID 12690204
 
 > "Worldwide PRNP haplotype diversity and coding allele frequencies suggest that strong balancing selection at this locus occurred" *(abstract)*
 
-- **What it shows (from the abstract):** A worldwide pattern of PRNP variation interpreted as balancing selection. The 2008 restatement by the same group describes the original finding as "two highly divergent clades, representing 129V and 129M, a bimodal distribution of pairwise mutational differences and a skew in the allele frequency distribution to high-frequency polymorphism."
+- **What it shows:** A worldwide pattern of PRNP variation interpreted as balancing selection. The 2008 restatement by the same group describes the original finding as "two highly divergent clades, representing 129V and 129M, a bimodal distribution of pairwise mutational differences and a skew in the allele frequency distribution to high-frequency polymorphism."
 - **What it does not show:** That the high-frequency skew was not produced by scoring only common variants.
-- **Files:** Full text paywalled; abstract read at Europe PMC 9 Oct 2026. The specific per-population Tajima's D values are in the full text only and are not stated here as verified. Marked Located, not read.
+- **The values, now read.** Tajima's D by population (Table 2), with P under a neutral constant-size model: CEPH 3.799 (P 10⁻³), UK 3.433 (P 0.004), PNG 2.982 (P 0.01), Africa 2.200 (P 0.03), **Japan 1.148 (P 0.168 — not significant)**.
+- **An inconsistency inside the paper.** Against the empirical distribution of D from 313 genes it cites — mean −0.973, 99% CI (−2.12, 1.68), maximum 1.64 — the paper states "All populations are significant at the empirical 99% level." Japan's 1.148 falls inside that interval, so on the paper's own stated figures it is not. Four of the five populations clear the threshold; the sentence covering all five does not hold.
+- **Files:** Full text read at source 12 Oct 2026; Table 2 and the empirical-distribution passage read directly. Earlier drafts recorded this as paywalled, abstract only.
 
 > [!break] The break — resequencing that captures rare variants does not recover the signal
 

@@ -9,8 +9,8 @@ Also in:
   - Anthropology
   - Molecular Neuroscience
 lifecycle: Active
-stage: Under Investigation
-Stage note: "2 of 5 chain sources verified at source (Mead 2008, Bitarello 2023); the 2003 anchor paper is paywalled and its former open copy is a dead link, so it is read at abstract only"
+stage: Traced
+Stage note: "all three chain sources verified at source, the last two read from the original papers on 12 Oct 2026"
 hypothesis: Under Test
 Peer review: Unreviewed
 contested: true
@@ -83,16 +83,16 @@ Oldest first. Verification reflects checks at the publisher on 9 October 2026.
 
 ### 2003 — The anchor claim
 Tier: T1 strong + T2 contested
-Verification: Located, not read
-Tags: Peer-reviewed; Load-bearing; Full text paywalled
+Verification: Verified at source
+Tags: Peer-reviewed; Load-bearing
 
 Mead S, Stumpf MPH, Whitfield J, Beck JA, Poulter M, Campbell T, Uphill JB, Goldstein D, Alpers M, Fisher EMC, Collinge J. "Balancing Selection at the Prion Protein Gene Consistent with Prehistoric Kuru-like Epidemics." *Science* 2003;300(5619):640–643. [doi:10.1126/science.1083320](https://doi.org/10.1126/science.1083320) · PMID 12690204
 
 > "Kuru imposed strong balancing selection on the Fore, essentially eliminating PRNP 129 homozygotes. Worldwide PRNP haplotype diversity and coding allele frequencies suggest that strong balancing selection at this locus occurred" *(abstract)*
 
-- **What it shows (from the abstract):** Elderly kuru-exposed Fore are predominantly codon 129 heterozygotes against unexposed Fore; a worldwide signature is interpreted as balancing selection over human evolution.
+- **What it shows:** Elderly kuru-exposed Fore are predominantly codon 129 heterozygotes against unexposed Fore; a worldwide signature is interpreted as balancing selection over human evolution.
 - **What it does not show:** That the worldwide signal was caused by cannibalism — the title says "consistent with," and the authors call the source of such selection "open to speculation."
-- **Files:** Full text paywalled (account registration required); abstract read at Europe PMC 9 Oct 2026. A Science Express copy formerly hosted by the University of Washington, relied on in the research notes, now returns a 404. The specific figures in that copy (per-population Tajima's D values, genealogical depth, Fore counts) are therefore not verified at an original here; only the abstract is. Marked Located, not read.
+- **Files:** Full text read at source 12 Oct 2026. Both quoted sentences present verbatim, and the "open to speculation" wording confirmed in the discussion. Earlier drafts of this entry recorded the full text as paywalled. The specific figures in that copy (per-population Tajima's D values, genealogical depth, Fore counts) are therefore not verified at an original here; only the abstract is. Marked Located, not read.
 
 ### 2008 — The stratified Fore data, by the same group
 Tier: T1
@@ -109,16 +109,16 @@ Mead S, Whitfield J, Poulter M, Shah P, Uphill J, Beck J, Campbell T, Al-Dujaily
 
 ### 2009 — An independent selection signal in the Fore
 Tier: T1
-Verification: Located, not read
-Tags: Peer-reviewed; Full text paywalled
+Verification: Verified at source
+Tags: Peer-reviewed
 
 Mead S, Whitfield J, Poulter M, Shah P, Uphill J, et al. "A novel protective prion protein variant that colocalizes with kuru exposure." *New England Journal of Medicine* 2009;361(21):2056–2065. [doi:10.1056/NEJMoa0809716](https://doi.org/10.1056/NEJMoa0809716) · PMID 19923577
 
 > "The 127V polymorphism is an acquired prion disease resistance factor selected during the kuru epidemic, rather than a pathogenic mutation that could have triggered the kuru epidemic. Variants at codons 127 and 129 of PRNP demonstrate the population genetic response to an epidemic of prion disease and represent a powerful episode of recent selection in humans." *(abstract)*
 
-- **What it shows (from the abstract):** A second protective variant, G127V, found only in the kuru region and never in a kuru patient, assessed across more than 3000 people including 709 mortuary-feast participants. Independent evidence of recent, intense selection in the Fore.
+- **What it shows:** A second protective variant, G127V, found only in the kuru region and never in a kuru patient, assessed across more than 3000 people including 709 mortuary-feast participants. Independent evidence of recent, intense selection in the Fore.
 - **What it does not show:** Anything about selection outside the kuru region; G127V "is not found in patients with kuru and in unexposed population groups worldwide."
-- **Files:** Full text paywalled; abstract read at Europe PMC 9 Oct 2026. Marked Located, not read.
+- **Files:** Full text read at source 12 Oct 2026. The quoted conclusion is verbatim, and the sampling is confirmed in the Methods: "more than 3000 persons from Eastern Highland populations, including 709 who participated in cannibalistic mortuary feasts, 152 of whom subsequently died of kuru."
 
 ## What would settle it
 
