@@ -55,7 +55,7 @@ Each entry then defines what the tiers mean for its own field.
 
 Per-source tags also record **Peer-reviewed vs Preprint**, **Replication** status, and attached **source files**.
 
-> **Peer-reviewed / Verified — not the same as true.** Every tag describes how far the checking has gone, not whether the claim is correct.
+> **Badges show how far the checking has gone.** Each one is explained on the Method page.
 
 ### Domains
 

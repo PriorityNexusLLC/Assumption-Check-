@@ -343,8 +343,8 @@
   </section>
 
   <div class="callout">
-    <p class="big">Peer-reviewed / Verified — not the same as true.</p>
-    <p class="sub">Every tag tells you how far the checking has gone — not whether the claim is right. The badges are explained on each entry and on the Method page.</p>
+    <p class="big">Badges show how far the checking has gone.</p>
+    <p class="sub">Each badge is explained on its entry and on the Method page.</p>
   </div>
 
   <section class="doors">
@@ -989,8 +989,8 @@
           : '<span class="pill ' + (VERIFY_CLS[norm(k)] || "u") + '">' + counts[k] + ' ' + esc(k.toLowerCase()) + '</span>').join("") +
         '</div>';
     }
-    if (!e.intro.some(b => b.t === "callout" && b.kind === "callout")) html += '<div class="callout"><p class="big">Peer-reviewed / Verified — not the same as true.</p>' +
-      '<p class="sub">The badges on this entry tell you how far the checking has gone — not whether the claim is right. Each tag is explained in full just below, and on the <a href="#method">Method</a> page.</p></div>';
+    if (!e.intro.some(b => b.t === "callout" && b.kind === "callout")) html += '<div class="callout"><p class="big">Badges show how far the checking has gone.</p>' +
+      '<p class="sub">Each badge on this entry is explained just below, and on the <a href="#method">Method</a> page.</p></div>';
 
     html += renderBlocks(e.intro);
     e.sections.forEach(s => {
