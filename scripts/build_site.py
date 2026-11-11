@@ -35,7 +35,7 @@ DOMAINS = ROOT / "domains"
 SITE = ROOT / "site.json"
 
 DEFAULTS = {
-    "base_url": "https://prioritynexusllc.github.io/Assumption-Check-",
+    "base_url": "https://prioritynexusllc.org/Assumption-Check-",
     "name": "Assumption Check",
     "tagline": "What's been tested, and what would settle it.",
     "operator": "Priority Nexus LLC",
