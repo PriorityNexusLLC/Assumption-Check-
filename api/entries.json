@@ -45,7 +45,7 @@
    "conflicts": "None declared",
    "node_count": 8,
    "verified_count": 8,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/001-the-exosome-prion-chain/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/001-the-exosome-prion-chain/"
   },
   {
    "num": "002",
@@ -89,7 +89,7 @@
    "conflicts": "None declared",
    "node_count": 5,
    "verified_count": 0,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/002-the-origin-of-santa-claus/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/002-the-origin-of-santa-claus/"
   },
   {
    "num": "003",
@@ -137,7 +137,7 @@
    "conflicts": "None declared",
    "node_count": 5,
    "verified_count": 5,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/003-chronic-wasting-disease-and-humans/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/003-chronic-wasting-disease-and-humans/"
   },
   {
    "num": "004",
@@ -185,7 +185,7 @@
    "conflicts": "None declared",
    "node_count": 5,
    "verified_count": 5,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/004-the-uk-appendix-prion-surveys/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/004-the-uk-appendix-prion-surveys/"
   },
   {
    "num": "005",
@@ -234,7 +234,7 @@
    "conflicts": "None declared",
    "node_count": 4,
    "verified_count": 3,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/005-the-autoclave-parameters-for-human-prions/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/005-the-autoclave-parameters-for-human-prions/"
   },
   {
    "num": "006",
@@ -283,7 +283,7 @@
    "conflicts": "None declared",
    "node_count": 3,
    "verified_count": 3,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/006-the-appendix-assay-false-positive-rate/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/006-the-appendix-assay-false-positive-rate/"
   },
   {
    "num": "007",
@@ -334,7 +334,7 @@
    "conflicts": "None declared",
    "node_count": 3,
    "verified_count": 3,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/007-codon-129-and-kuru-selection/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/007-codon-129-and-kuru-selection/"
   },
   {
    "num": "008",
@@ -379,7 +379,7 @@
    "conflicts": "None declared",
    "node_count": 6,
    "verified_count": 3,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/008-the-prnp-balancing-selection-signal/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/008-the-prnp-balancing-selection-signal/"
   },
   {
    "num": "009",
@@ -427,7 +427,7 @@
    "conflicts": "None declared",
    "node_count": 9,
    "verified_count": 9,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/009-atypical-bse-and-spontaneous-origin/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/009-atypical-bse-and-spontaneous-origin/"
   },
   {
    "num": "010",
@@ -474,7 +474,7 @@
    "conflicts": "None declared",
    "node_count": 8,
    "verified_count": 7,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/010-cross-seeding-as-true-templating/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/010-cross-seeding-as-true-templating/"
   },
   {
    "num": "011",
@@ -522,7 +522,7 @@
    "conflicts": "None declared",
    "node_count": 2,
    "verified_count": 2,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/011-prion-infectivity-inside-extracellular-vesicles/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/011-prion-infectivity-inside-extracellular-vesicles/"
   },
   {
    "num": "012",
@@ -566,7 +566,7 @@
    "conflicts": "This entry arose from the registry's own work. The counterexample was found while trying to read a source for Entry 010, and the measurement below was run by the registry rather than taken from a published study.",
    "node_count": 2,
    "verified_count": 2,
-   "url": "https://prioritynexusllc.github.io/Assumption-Check-/entry/012-open-access-flags-and-the-papers-behind-them/"
+   "url": "https://prioritynexusllc.org/Assumption-Check-/entry/012-open-access-flags-and-the-papers-behind-them/"
   }
  ]
 }
