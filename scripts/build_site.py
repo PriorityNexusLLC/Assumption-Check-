@@ -216,7 +216,7 @@ def page(cfg, title, description, canonical, body, css, fonts, jsonld=None, dept
 %(ld)s
 </head><body>
 <!-- pnbar: the Priority Nexus site menu -->
-<div class="pnbar"><div><a class="b" href="https://prioritynexusllc.org/"><img src="https://prioritynexusllc.org/pn-logo.png" alt=""><span>Priority Nexus LLC</span></a><a href="https://prioritynexusllc.org/">Home</a><a href="https://prioritynexusllc.org/about/">About</a><a class="here" href="https://prioritynexusllc.org/projects/">Projects</a><a href="https://prioritynexusllc.org/when-a-limit-breaks/">When a Limit Breaks</a><a href="https://prioritynexusllc.org/school/">School Concept</a><a href="https://prioritynexusllc.org/resources/">Resources</a><a href="https://prioritynexusllc.org/contact/">Contact</a></div></div>
+<div class="pnbar"><div><a class="b" href="https://prioritynexusllc.org/"><img src="https://prioritynexusllc.org/pn-logo.png" alt=""><span>Priority Nexus LLC</span></a><a href="https://prioritynexusllc.org/">Home</a><a href="https://prioritynexusllc.org/about/">About</a><a class="here" href="https://prioritynexusllc.org/projects/">Projects</a><a href="https://prioritynexusllc.org/when-a-limit-breaks/">When a Limit Breaks</a><a href="https://prioritynexusllc.org/resources/">Resources</a><a href="https://prioritynexusllc.org/contact/">Contact</a></div></div>
 <div class="bar"><div class="bar-inner">
   <a class="wordmark" href="%(up)sindex.html"><b>%(site)s</b></a>
   <div class="bar-spacer"></div>
