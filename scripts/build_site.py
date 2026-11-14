@@ -232,6 +232,7 @@ def page(cfg, title, description, canonical, body, css, fonts, jsonld=None, dept
   <span class="mono"><a href="%(canonical)s">%(canonical)s</a></span>
 </footer>
 </main>
+<script data-goatcounter="https://prioritynexusllc.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>fetch("https://prioritynexusllc.goatcounter.com/counter/TOTAL.json").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j)return;document.querySelectorAll(".visits").forEach(function(e){e.textContent=" · "+j.count+" visits"})}).catch(function(){})</script>
 </body></html>
 """ % {
         "title": em.esc(title), "site": em.esc(cfg["name"]), "desc": em.esc(description),
